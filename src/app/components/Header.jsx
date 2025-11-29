@@ -12,7 +12,7 @@ const Header = () => {
             
             {/* Right Side: Button & Menu */}
             <div className="flex items-center gap-6 relative z-10">
-                <button className="py-[14px] px-[28px] rounded-full border border-white outfit hover:bg-white hover:text-black transition-colors">
+                <button className="py-[14px] px-[28px] rounded-full border border-white outfit hover:bg-[#C9FF90] hover:border-[#C9FF90] hover:text-[#17241F] transition-colors">
                     Book A Free Strategy Call
                 </button>
                 <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="cursor-pointer">

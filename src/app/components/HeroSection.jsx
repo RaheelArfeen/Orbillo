@@ -18,7 +18,7 @@ const HeroSection = () => {
 
             <section className='z-20 text-center'>
                 <p className='outfit uppercase text-[#C7C7C7] font-bold text-lg mb-3'>Hi! We Are orbillo</p>
-                <h1 className='text-6xl capitalize leading-[120%] max-w-[850px] reloceta'>We help businesses grow with <span className='text-[#C9FF90] underline decoration-white decoration-3 underline-offset-5'>strategy-Driven</span> designs & development</h1>
+                <h1 className='md:text-6xl text-4xl p-2 capitalize leading-[120%] max-w-[850px] reloceta'>We help businesses grow with <span className='text-[#C9FF90] underline decoration-white decoration-3 underline-offset-5'>strategy-Driven</span> designs & development</h1>
                 <div className='flex items-center justify-center gap-2 mt-12 mb-34'>
                     <button className='py-4 px-[38px] rounded-full bg-[#C9FF90] text-[#17241F] outfit text-xl'>Schedule A Meeting</button>
                     <button className='p-6 flex items-center gap-3 outfit text-xl'>
@@ -35,7 +35,7 @@ const HeroSection = () => {
                 <Image
                     src={ItemsImage}
                     alt="Items"
-                    className="w-auto h-auto"
+                    className="w-full max-w-[90%] h-auto"
                     priority
                 />
             </div>
