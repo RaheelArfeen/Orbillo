@@ -81,15 +81,15 @@ const WhyUs = () => {
     });
 
     return (
-        <div className='relative'>
+        <div className='relative bg-[#07302C]'>
 
             {/* Background Image Wrapper */}
-            <div className='fixed inset-0 top-0 -z-10 h-full w-full overflow-hidden '>
+            <div className='inset-0 top-0 -z-10 h-full w-full overflow-hidden '>
                 <Image
                     src={Bg}
                     alt='What we do background'
                     fill
-                    className='object-cover opacity-60'
+                    className='object-cover '
                 />
             </div>
 

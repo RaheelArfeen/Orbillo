@@ -25,10 +25,16 @@ const Home = () => {
     }, []);
 
     return (
-        <div>
+        <div className="bg-[#0e2412]"> 
             <HeroSection />
-            <div className='bg-white rounded-b-[80px] md:rounded-b-[150px]'><AboutUs /></div>
-            <div className='relative'><WhatWeDo /></div>
+            
+            <div className="relative z-10">
+                <AboutUs />
+            </div>
+            <div className='relative z-0'> 
+                <WhatWeDo />
+            </div>
+            
             <WhatWeDo2 />
             <div className="relative"><WhyUs/></div>
             <Feedback/>

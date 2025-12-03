@@ -3,7 +3,7 @@
 @import "tailwindcss";
 
 body {
-    background: #07302C;
+    /* background: #07302C; */
     color: white;
 }
 
@@ -24,12 +24,17 @@ body {
 }
 
 @keyframes marquee {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
-  }
-  
-  .animate-marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.animate-marquee {
     display: flex;
     width: fit-content;
     animation: marquee 60s linear infinite;
-  }
+}

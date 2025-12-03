@@ -9,7 +9,7 @@ export default function BasicLayout({ children }) {
                 <Header />
             </div>
             {children}
-            {/* <Footer /> */}
+            <Footer />
         </div>
     );
 }

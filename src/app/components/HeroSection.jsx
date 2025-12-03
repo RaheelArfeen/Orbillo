@@ -34,7 +34,7 @@ const HeroSection = () => {
                 <h1 className='md:text-6xl text-4xl p-2 capitalize leading-[120%] max-w-[850px] reloceta'>We help businesses grow with <span className='text-[#C9FF90] underline decoration-[#C9FF90] decoration-3 underline-offset-5'>strategy-Driven</span> designs & development</h1>
                 <div className='flex items-center justify-center gap-3 mt-12 mb-34'>
                     <a href="https://calendly.com/teamorbillo/30min?back=1&month=2025-11" target="_blank" rel="noopener noreferrer">
-                        <button className='py-4 px-[38px] rounded-full bg-[#C9FF90] text-[#17241F] hover:bg-[#17241F] hover:text-[#C9FF90] transition duration-300 outfit text-xl cursor-pointer'>Schedule A Meeting</button>
+                        <button className='py-4 px-[38px] rounded-full bg-[#C9FF90] text-[#17241F] hover:bg-[#17241F] hover:text-[#C9FF90] transition duration-300 hover:border-b border-[#4d6641] outfit text-xl cursor-pointer'>Schedule A Meeting</button>
                     </a>
                     <a
                         href="https://wa.me/8801711252085"

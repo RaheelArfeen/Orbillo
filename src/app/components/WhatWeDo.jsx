@@ -37,12 +37,12 @@ const WhatWeDo = () => {
     return (
         <div className='relative'>
             {/* Background Image */}
-            <div className='absolute inset-0 -top-30 -z-10'>
+            <div className='absolute inset-0 -top-35 -z-10'>
                 <Image
                     src={Bg}
                     alt='What we do background'
                     fill
-                    className='object-cover opacity-60'
+                    className='object-cover'
                 />
             </div>
 
