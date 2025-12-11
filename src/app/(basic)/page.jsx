@@ -25,19 +25,24 @@ const Home = () => {
     }, []);
 
     return (
-        <div className="bg-[#0e2412]"> 
+        <div className="bg-[#0e2412]">
             <HeroSection />
-            
+
             <div className="relative z-10">
                 <AboutUs />
             </div>
-            <div className='relative z-0'> 
+
+            <div className="relative z-0">
                 <WhatWeDo />
             </div>
-            
+
             <WhatWeDo2 />
-            <div className="relative"><WhyUs/></div>
-            <Feedback/>
+
+            <div className="relative">
+                <WhyUs />
+            </div>
+
+            <Feedback />
         </div>
     );
 };

@@ -1,14 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
 
 @import "tailwindcss";
 
 body {
     /* background: #07302C; */
     color: white;
+    overflow-x: hidden;
 }
 
 .outfit {
     font-family: "Outfit", sans-serif;
+}
+
+
+.reloceta {
+    font-family: "Recoleta", sans-serif;
+}
+
+.jakartaSnas {
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.spartan {
+    font-family: "League Spartan", sans-serif;
 }
 
 /* style.css */
@@ -17,24 +33,4 @@ body {
     src: url("./Fonts/Recoleta-RegularDEMO.otf") format("opentype");
     font-weight: normal;
     font-style: normal;
-}
-
-.reloceta {
-    font-family: "Recoleta", sans-serif;
-}
-
-@keyframes marquee {
-    0% {
-        transform: translateX(0);
-    }
-
-    100% {
-        transform: translateX(-50%);
-    }
-}
-
-.animate-marquee {
-    display: flex;
-    width: fit-content;
-    animation: marquee 60s linear infinite;
 }

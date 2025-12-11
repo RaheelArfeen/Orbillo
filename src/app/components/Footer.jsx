@@ -1,21 +1,28 @@
-import { FaFacebookF } from "react-icons/fa";
+import { FaBehance, FaDribbble, FaLinkedin, FaTwitter } from "react-icons/fa";
 import Image from 'next/image';
 import React from 'react';
 import CTAbg from '../assets/FooterCTAbg.svg';
 import Logo from '../assets/Logo/LightLogo.svg';
-import FooterBG from '../assets/FooterBg.png';
+import FooterEffect from '../assets/FooterEffect.png';
+import FooterLogo from '../assets/FooterLogo.png';
+import FooterLogo2 from '../assets/FooterLogo2.png';
+import Link from "next/link";
+
+const SOCIAL_LINKS = [
+    { icon: FaLinkedin, url: "https://www.linkedin.com/company/teamorbillo/posts/?feedView=all" },
+    { icon: FaTwitter, url: "https://x.com/TeamOrbillo" },
+    { icon: FaDribbble, url: "https://dribbble.com/teamorbillo" },
+    { icon: FaBehance, url: "https://www.behance.net/teamorbillo" },
+];
 
 const Footer = () => {
     return (
-        // FIX 1: Added 'z-50' here. 
-        // This ensures the entire footer (including the floating CTA) sits ON TOP of the previous section.
-        <div className="relative z-50 overflow-visible mt-[200px]">
+        <div className="relative overflow-visible lg:mt-0 mt-[200px]">
 
             {/* CTA Section */}
-            <section className='w-full max-w-[1380px] h-[400px] mx-auto rounded-[64px] overflow-hidden absolute -top-[200px] left-1/2 -translate-x-1/2 shadow-2xl'>
+            <section className='w-[95%] md:w-[90%] max-w-[1380px] max-h-[400px] mx-auto lg:rounded-[64px] rounded-4xl overflow-hidden absolute lg:-top-[200px] md:-top-[430px] -top-[400px] left-1/2 -translate-x-1/2 z-50 px-4'>
 
-                {/* Background Image Wrapper */}
-                <div className="absolute inset-0 -z-10">
+                <div className="absolute inset-0 -z-50">
                     <Image
                         src={CTAbg}
                         alt="Footer CTA background"
@@ -25,12 +32,12 @@ const Footer = () => {
                 </div>
 
                 {/* TEXT */}
-                <div className="py-16 px-40">
-                    <h1 className="w-[650px] text-5xl reloceta text-[#07302C]">
+                <div className="md:py-16 pt-12 pb-8 lg:px-40 md:px-12 px-6">
+                    <h1 className="max-w-[650px] md:text-left text-center md:text-5xl sm:text-4xl text-2xl max-[350px]:text-xl reloceta text-[#07302C]">
                         Ready to turn your business into a digital success story?
                     </h1>
-                    <div className="flex items-center gap-3 mt-20 z-50">
-                        <button className="py-4 px-8 text-white rounded-full bg-[linear-gradient(-45deg,#169689_34%,#002A15_88%)] hover:bg-white hover:bg-none hover:text-[#17241F] transition-all duration-300 outfit text-xl">
+                    <div className="flex md:flex-row flex-col items-center gap-3 md:mt-20 mt-6 z-50">
+                        <button className="md:py-4 py-3 px-8 text-white rounded-full bg-[linear-gradient(-45deg,#169689_34%,#002A15_88%)] hover:bg-white hover:bg-none hover:text-[#17241F] transition-all duration-300 outfit md:text-xl">
                             Book A Free Discovery Call
                         </button>
 
@@ -52,63 +59,103 @@ const Footer = () => {
             </section>
 
             {/* Footer Body */}
-            <section className='max-w-[1920px] mx-auto text-white pt-[320px] pb-30 relative -z-20 overflow-hidden h-[1000px]'>
+            <div className="bg-[#07302C] 2xl:rounded-t-[100px] xl:rounded-t-[60px] lg:rounded-t-[100px] overflow-hidden z-50">
+                <section className='mx-auto text-white 2xl:pt-[320px] lg:py-[250px] pt-20 pb-30 relative z-20 overflow-hidden 2xl:h-[1020px] xl:h-[800px] md:h-[600px] h-[800px]'>
 
-                <div className="absolute instet-0 top-0 -z-10">
-                    <Image src={FooterBG} />
-                </div>
+                    <div className="absolute instet-0 bottom-0 -z-50 w-full">
+                        <Image src={FooterEffect} />
+                    </div>
 
-                <div className='max-w-[1380px] mx-auto flex items-start justify-between px-4'>
-                    <div>
-                        <Image src={Logo} alt='Logo' />
-                        <p className='max-w-[300px] text-white/79 outfit text-lg mt-6'>
-                            The digital growth partner you have always been looking for!
-                        </p>
-
-                        <div className="flex items-center gap-4 mt-14">
-                            {[1, 2, 3, 4].map((_, index) => (
-                                <span key={index} className="w-8 h-8 border border-white/20 rounded-full flex items-center hover:bg-white hover:text-[#2B2B2B] justify-center transition duration-300 cursor-pointer">
-                                    <FaFacebookF size={16} />
-                                </span>
-                            ))}
+                    <div className="w-full max-w-[1920px] mx-auto">
+                        <div className="hidden lg:flex absolute instet-0 bottom-0 left-1/2 -translate-x-1/2 w-full -z-50">
+                            <Image src={FooterLogo} />
+                        </div>
+                        <div className="lg:hidden flex absolute instet-0 bottom-5 left-1/2 -translate-x-1/2 w-full -z-50">
+                            <Image src={FooterLogo2} />
                         </div>
                     </div>
-                    <div>
-                        <p className="outfit text-white/55 tracking-[2.7px] font-bold text-lg uppercase mb-6">Services</p>
-                        <div className="flex flex-col gap-4 text-white/85 outfit text-lg">
-                            <span>Brand Design</span>
-                            <span>UI/UX Design</span>
-                            <span>Social Media Design</span>
-                            <span>Web Development</span>
-                        </div>
-                    </div>
-                    <div>
-                        <p className="outfit text-white/55 tracking-[2.7px] font-bold text-lg uppercase mb-6">Quick Links</p>
-                        <div className="flex flex-col gap-4 text-white/85 outfit text-lg">
-                            <span>Home</span>
-                            <span>About Us</span>
-                            <span>Works</span>
-                            <span>Testimonials</span>
-                        </div>
-                    </div>
-                </div>
 
-                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full">
-                    {/* <div className="absolute bottom-0 w-full flex items-center justify-center">
-                        <img src="https://framerusercontent.com/images/FFgoE0QAe1nNBXr9yWr1UmdLnfY.png?width=1920&height=1052" alt="" />
-                    </div> */}
+                    <div className="max-w-[1380px] mx-auto flex md:flex-row flex-col items-start justify-between 2xl:px-4 md:px-12 px-4 z-50">
 
-                    <div className="w-full px-[300px] py-1 bg-[#062B28]/30 backdrop-blur-md">
-                        <div className="outfit text-white/65 flex items-center justify-between">
-                            <p>All rights reserved © 2025 Orbillo.com</p>
-                            <p className="space-x-6">
-                                <span>Terms & Conditions</span>
-                                <span>Privacy Policy</span>
+                        {/* Logo Section */}
+                        <div className="w-full md:w-auto flex flex-col max-md:items-center mb-10">
+                            <Image src={Logo} alt='Logo' />
+
+                            <p className='max-w-[300px] text-white/79 outfit max-md:text-center text-lg mt-6'>
+                                The digital growth partner you have always been looking for!
                             </p>
+
+                            <div className="flex items-center gap-4 mt-14">
+                                {SOCIAL_LINKS.map(({ icon: Icon, url }, idx) => (
+                                    <a
+                                        key={idx}
+                                        href={url}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="w-9 h-9 border-2 border-[#FFFFFF] rounded-full flex items-center justify-center text-[#FFFFFF] hover:bg-[#FFFFFF] hover:text-[#17241F] transition-all duration-300"
+                                    >
+                                        <Icon size={16} />
+                                    </a>
+                                ))}
+                            </div>
+                        </div>
+
+                        {/* Services + Quick Links wrapper for small screen */}
+                        <div className="md:w-1/2 w-full flex flex-wrap space-y-10 flex-row justify-between mt-10 md:mt-0">
+
+                            {/* Services */}
+                            <div>
+                                <p className="outfit text-white/55 tracking-[2.7px] font-bold text-lg uppercase mb-6">
+                                    Services
+                                </p>
+                                <div className="flex flex-col gap-4 text-white/85 outfit text-lg">
+                                    <span className="cursor-pointer hover:text-white hover:scale-105 transition-all duration-300">Brand Design</span>
+                                    <span className="cursor-pointer hover:text-white hover:scale-105 transition-all duration-300">UI/UX Design</span>
+                                    <span className="cursor-pointer hover:text-white hover:scale-105 transition-all duration-300">Social Media Design</span>
+                                    <span className="cursor-pointer hover:text-white hover:scale-105 transition-all duration-300">Web Development</span>
+                                </div>
+                            </div>
+
+                            {/* Quick Links */}
+                            <div>
+                                <p className="outfit text-white/55 tracking-[2.7px] font-bold text-lg uppercase mb-6">
+                                    Quick Links
+                                </p>
+                                <div className="flex flex-col gap-4 text-white/85 outfit text-lg">
+                                    <Link href={'/'} className="cursor-pointer hover:text-white hover:scale-105 transition-all duration-300">Home</Link>
+                                    <Link href={'/about'} className="cursor-pointer hover:text-white hover:scale-105 transition-all duration-300">About Us</Link>
+                                    <Link href={'/works'} className="cursor-pointer hover:text-white hover:scale-105 transition-all duration-300">Works</Link>
+                                    <Link href={'/testimonials'} className="cursor-pointer hover:text-white hover:scale-105 transition-all duration-300">Testimonials</Link>
+                                </div>
+                            </div>
+
+                            {/* <div>
+                                <p className="outfit text-white/55 tracking-[2.7px] font-bold text-lg uppercase mb-6">
+                                    Contacts
+                                </p>
+                                <div className="flex flex-col gap-4 text-white/85 outfit text-lg">
+                                    <span className="flex items-center gap-2"><Mail size={20} /> hello@orbillo.com</span>
+                                    <span className="flex items-center gap-2"><Phone size={20} /> +880 1XXX-XXXXXX</span>
+                                    <span className="flex items-start gap-2 max-w-[450px]"><MapPin size={20} className="mt-1" /> <span>Dhaka, Bangladesh <p className="text-[#336661]">(Available for meetings by appointment)</p></span></span>
+                                    <span className="flex items-start gap-2 max-w-[450px]"><Clock size={20} className="mt-1" /> <span>Sunday – Thursday | 10 AM – 7 PM <p>Friday – Saturday | Closed</p></span></span>
+                                </div>
+                            </div> */}
                         </div>
                     </div>
-                </div>
-            </section>
+
+                    <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full">
+                        <div className="w-full flex items-center justify-between py-1 bg-[#062B28]/30 backdrop-blur-md">
+                            <div className="max-w-[1350px] w-full mx-auto outfit text-white/65 flex items-center justify-between max-md:justify-center px-6">
+                                <p>All rights reserved © 2025 Orbillo.com</p>
+                                <p className="space-x-6 hidden md:flex">
+                                    <span>Terms & Conditions</span>
+                                    <span>Privacy Policy</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
         </div>
     );
 };
