@@ -43,7 +43,7 @@ const OurCollaboration = () => {
                 {/* text-white reloceta text-3xl md:text-4xl leading-[130%] md:leading-[140%] -tracking-[1px */}
 
                 {/* Grid Wrapper */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-20">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-20">
                     {GRID_DATA.map((item, index) => (
                         <div key={index} className="flex items-center justify-center h-[350px] rounded-2xl overflow-hidden"
                             style={{ backgroundColor: item.BgColor || 'transparent' }}

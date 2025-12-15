@@ -7,6 +7,7 @@ import FooterEffect from '../assets/FooterEffect.png';
 import FooterLogo from '../assets/FooterLogo.png';
 import FooterLogo2 from '../assets/FooterLogo2.png';
 import Link from "next/link";
+import { Clock, Mail, MapPin, Phone } from "lucide-react";
 
 const SOCIAL_LINKS = [
     { icon: FaLinkedin, url: "https://www.linkedin.com/company/teamorbillo/posts/?feedView=all" },
@@ -20,7 +21,7 @@ const Footer = () => {
         <div className="relative overflow-visible lg:mt-0 mt-[200px]">
 
             {/* CTA Section */}
-            <section className='w-[95%] md:w-[90%] max-w-[1380px] max-h-[400px] mx-auto lg:rounded-[64px] rounded-4xl overflow-hidden absolute lg:-top-[200px] md:-top-[430px] -top-[400px] left-1/2 -translate-x-1/2 z-50 px-4'>
+            <section className='w-[95%] md:w-[90%] max-w-[1380px] max-h-[400px] mx-auto lg:rounded-[64px] rounded-4xl overflow-hidden absolute lg:-top-[200px] md:-top-[430px] -top-[350px] left-1/2 -translate-x-1/2 z-50 px-4'>
 
                 <div className="absolute inset-0 -z-50">
                     <Image
@@ -60,7 +61,7 @@ const Footer = () => {
 
             {/* Footer Body */}
             <div className="bg-[#07302C] 2xl:rounded-t-[100px] xl:rounded-t-[60px] lg:rounded-t-[100px] overflow-hidden z-50">
-                <section className='mx-auto text-white 2xl:pt-[320px] lg:py-[250px] pt-20 pb-30 relative z-20 overflow-hidden 2xl:h-[1020px] xl:h-[800px] md:h-[600px] h-[800px]'>
+                <section className='mx-auto text-white 2xl:pt-[320px] lg:py-[250px] pt-20 pb-30 relative z-20 overflow-hidden 2xl:h-[1020px] xl:h-[800px] md:h-[1000px] h-[1100px]'>
 
                     <div className="absolute instet-0 bottom-0 -z-50 w-full">
                         <Image src={FooterEffect} />
@@ -75,13 +76,13 @@ const Footer = () => {
                         </div>
                     </div>
 
-                    <div className="max-w-[1380px] mx-auto flex md:flex-row flex-col items-start justify-between 2xl:px-4 md:px-12 px-4 z-50">
+                    <div className="max-w-[1380px] mx-auto flex lg:flex-row flex-col items-start justify-between 2xl:px-4 md:px-12 px-4 z-50 lg:gap-20">
 
                         {/* Logo Section */}
-                        <div className="w-full md:w-auto flex flex-col max-md:items-center mb-10">
+                        <div className="w-full lg:w-1/4 flex flex-col max-lg:items-center mb-10 md:mb-24">
                             <Image src={Logo} alt='Logo' />
 
-                            <p className='max-w-[300px] text-white/79 outfit max-md:text-center text-lg mt-6'>
+                            <p className='max-w-[300px] text-white/79 outfit max-lg:text-center text-lg mt-6'>
                                 The digital growth partner you have always been looking for!
                             </p>
 
@@ -101,7 +102,7 @@ const Footer = () => {
                         </div>
 
                         {/* Services + Quick Links wrapper for small screen */}
-                        <div className="md:w-1/2 w-full flex flex-wrap space-y-10 flex-row justify-between mt-10 md:mt-0">
+                        <div className="lg:w-3/4 w-full bg--500 flex flex-wrap space-y-10 flex-row justify-between mt-10 md:mt-0">
 
                             {/* Services */}
                             <div>
@@ -109,10 +110,10 @@ const Footer = () => {
                                     Services
                                 </p>
                                 <div className="flex flex-col gap-4 text-white/85 outfit text-lg">
-                                    <span className="cursor-pointer hover:text-white hover:scale-105 transition-all duration-300">Brand Design</span>
-                                    <span className="cursor-pointer hover:text-white hover:scale-105 transition-all duration-300">UI/UX Design</span>
-                                    <span className="cursor-pointer hover:text-white hover:scale-105 transition-all duration-300">Social Media Design</span>
-                                    <span className="cursor-pointer hover:text-white hover:scale-105 transition-all duration-300">Web Development</span>
+                                    <span className="hover:text-white hover:scale-105 transition-all duration-300">Brand Design</span>
+                                    <span className="hover:text-white hover:scale-105 transition-all duration-300">UI/UX Design</span>
+                                    <span className="hover:text-white hover:scale-105 transition-all duration-300">Social Media Design</span>
+                                    <span className="hover:text-white hover:scale-105 transition-all duration-300">Web Development</span>
                                 </div>
                             </div>
 
@@ -129,17 +130,17 @@ const Footer = () => {
                                 </div>
                             </div>
 
-                            {/* <div>
+                            <div>
                                 <p className="outfit text-white/55 tracking-[2.7px] font-bold text-lg uppercase mb-6">
                                     Contacts
                                 </p>
                                 <div className="flex flex-col gap-4 text-white/85 outfit text-lg">
                                     <span className="flex items-center gap-2"><Mail size={20} /> hello@orbillo.com</span>
                                     <span className="flex items-center gap-2"><Phone size={20} /> +880 1XXX-XXXXXX</span>
-                                    <span className="flex items-start gap-2 max-w-[450px]"><MapPin size={20} className="mt-1" /> <span>Dhaka, Bangladesh <p className="text-[#336661]">(Available for meetings by appointment)</p></span></span>
-                                    <span className="flex items-start gap-2 max-w-[450px]"><Clock size={20} className="mt-1" /> <span>Sunday – Thursday | 10 AM – 7 PM <p>Friday – Saturday | Closed</p></span></span>
+                                    <span className="flex items-start gap-2 max-w-[450px]"><MapPin size={20} className="mt-1" /> <span>Dinajpur, Bangladesh <p className="text-[#336661]">(Available for meetings)</p></span></span>
+                                    <span className="flex items-start gap-2 max-w-[450px]"><Clock size={20} className="mt-1" /> <span>Sun – Thu | 10 AM – 7 PM <p className="opacity-60">Fri – Sat | Closed</p></span></span>
                                 </div>
-                            </div> */}
+                            </div>
                         </div>
                     </div>
 

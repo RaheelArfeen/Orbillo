@@ -37,7 +37,7 @@ const Hero = () => {
                     <span>Business</span>
                 </h1>
 
-                    <p className='text-center outfit text-xl md:text-xl text-[#CDD5D4] max-w-[600px]'>At Orbillo, we make digital simple, powerful and growth-focused... so you can focus on what you do best.</p>
+                <p className='text-center outfit text-lg md:text-xl text-[#CDD5D4] max-w-[600px]'>At Orbillo, we make digital simple, powerful and growth-focused... so you can focus on what you do best.</p>
             </section>
         </div>
     );

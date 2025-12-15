@@ -127,7 +127,7 @@ const AboutUs = () => {
         // 1. INITIAL STATES
         // Set all spans to the INACTIVE color initially
         gsap.set(spans, { color: inactiveColor, opacity: 1 });
-        
+
         // Set the very first span to ACTIVE color immediately
         gsap.set(spans[0], { color: activeColor, opacity: 1 });
 
@@ -160,9 +160,9 @@ const AboutUs = () => {
             // 1. Text Highlight Transition
             if (index > 0) {
                 // Animate color from inactive to active
-                tl.to(currentText, { 
-                    color: activeColor, 
-                    duration: 1 
+                tl.to(currentText, {
+                    color: activeColor,
+                    duration: 1
                 }, `step-${index}-start`);
             }
 
@@ -194,9 +194,9 @@ const AboutUs = () => {
                 }, exitTime);
 
                 // Text reverts to inactive color
-                tl.to(currentText, { 
-                    color: inactiveColor, 
-                    duration: 0.75 
+                tl.to(currentText, {
+                    color: inactiveColor,
+                    duration: 0.75
                 }, exitTime);
             }
         });
@@ -209,34 +209,36 @@ const AboutUs = () => {
         <div className='w-full px-2 md:px-0 pb-4'>
             <div
                 ref={containerRef}
-                className='bg-white h-[90vh] md:h-[95vh] w-full rounded-b-[40px] md:rounded-b-[100px] overflow-hidden flex flex-col shadow-sm relative z-10'
+                className='bg-white h-[95vh] w-full rounded-b-[40px] md:rounded-b-[100px] overflow-hidden flex flex-col shadow-sm relative z-10'
             >
                 {/* --- FLOATING ICON LAYERS --- */}
-                {stepsData.map((stepItems, groupIndex) => (
-                    <div
-                        key={groupIndex}
-                        ref={(el) => (groupsRef.current[groupIndex] = el)}
-                        className="absolute inset-0 z-0 pointer-events-none w-full h-full"
-                    >
-                        {stepItems.map((item, iconIndex) => (
-                            <div
-                                key={iconIndex}
-                                className="absolute flex items-center justify-center bg-white border border-[#E9E9E9] shadow-lg rounded-xl px-4 py-3 md:px-6 md:py-4 will-change-transform"
-                                style={{
-                                    top: item.pos.top,
-                                    bottom: item.pos.bottom,
-                                    left: item.pos.left,
-                                    right: item.pos.right,
-                                    transform: item.pos.x ? `translateX(${item.pos.x})` : 'none'
-                                }}
-                            >
-                                <div className="h-6 md:h-8 px-4 text-2xl flex items-center justify-center text-[#002A15]">
-                                    {item.content}
+                <div className='hidden lg:block'>
+                    {stepsData.map((stepItems, groupIndex) => (
+                        <div
+                            key={groupIndex}
+                            ref={(el) => (groupsRef.current[groupIndex] = el)}
+                            className="absolute inset-0 z-0 pointer-events-none w-full h-full"
+                        >
+                            {stepItems.map((item, iconIndex) => (
+                                <div
+                                    key={iconIndex}
+                                    className="absolute flex items-center justify-center bg-white border border-[#E9E9E9] shadow-lg rounded-xl px-4 py-3 md:px-6 md:py-4 will-change-transform"
+                                    style={{
+                                        top: item.pos.top,
+                                        bottom: item.pos.bottom,
+                                        left: item.pos.left,
+                                        right: item.pos.right,
+                                        transform: item.pos.x ? `translateX(${item.pos.x})` : 'none'
+                                    }}
+                                >
+                                    <div className="h-6 md:h-8 px-4 text-2xl flex items-center justify-center text-[#002A15]">
+                                        {item.content}
+                                    </div>
                                 </div>
-                            </div>
-                        ))}
-                    </div>
-                ))}
+                            ))}
+                        </div>
+                    ))}
+                </div>
 
                 {/* --- MAIN CONTENT --- */}
                 <div className='flex-grow flex flex-col justify-center items-center w-full max-w-[1380px] mx-auto px-4 md:px-8 py-8 md:py-6 h-full relative z-10'>
@@ -247,7 +249,7 @@ const AboutUs = () => {
 
                     <h1
                         ref={textRef}
-                        className='text-xl sm:text-2xl md:text-[32px] xl:text-4xl md:max-w-[1100px] max-w-[450px] text-center mx-auto leading-relaxed reloceta font-medium transition-all duration-300'
+                        className='text-xl sm:text-2xl md:text-[30px] xl:text-4xl md:max-w-[1100px] max-w-[450px] text-center mx-auto leading-relaxed reloceta font-medium transition-all duration-300'
                     >
                         <span className='md:inline-block mx-1 transition-colors'>We blend strategy, creativity & technology to deliver</span>
                         <span className='md:inline-block mx-1 transition-colors'><span className='underline decoration-2 md:decoration-3 underline-offset-4 md:underline-offset-8'>measurable results</span> - because every pixel every click, and</span>
