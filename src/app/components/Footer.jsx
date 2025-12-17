@@ -34,13 +34,15 @@ const Footer = () => {
 
                 {/* TEXT */}
                 <div className="md:py-16 pt-12 pb-8 lg:px-40 md:px-12 px-6">
-                    <h1 className="max-w-[650px] md:text-left text-center md:text-5xl sm:text-4xl text-2xl max-[350px]:text-xl reloceta text-[#07302C]">
+                    <h1 className="max-w-[650px] md:text-left text-center md:text-5xl sm:text-4xl text-2xl max-[350px]:text-xl recoleta text-[#07302C]">
                         Ready to turn your business into a digital success story?
                     </h1>
                     <div className="flex md:flex-row flex-col items-center gap-3 md:mt-20 mt-6 z-50">
-                        <button className="md:py-4 py-3 px-8 text-white rounded-full bg-[linear-gradient(-45deg,#169689_34%,#002A15_88%)] hover:bg-white hover:bg-none hover:text-[#17241F] transition-all duration-300 outfit md:text-xl">
-                            Book A Free Discovery Call
-                        </button>
+                        <Link href={'https://calendly.com/teamorbillo/30min?back=1&month=2025-11'}>
+                            <button className="md:py-4 py-3 px-8 text-white rounded-full bg-[linear-gradient(-45deg,#169689_34%,#002A15_88%)] hover:bg-white hover:bg-none hover:text-[#17241F] outfit md:text-xl">
+                                Book A Free Discovery Call
+                            </button>
+                        </Link>
 
                         <a
                             href="https://wa.me/8801711252085"
@@ -61,14 +63,14 @@ const Footer = () => {
 
             {/* Footer Body */}
             <div className="bg-[#07302C] 2xl:rounded-t-[100px] xl:rounded-t-[60px] lg:rounded-t-[100px] overflow-hidden z-50">
-                <section className='mx-auto text-white 2xl:pt-[320px] lg:py-[250px] pt-20 pb-30 relative z-20 overflow-hidden 2xl:h-[1020px] xl:h-[800px] md:h-[1000px] h-[1100px]'>
+                <section className='mx-auto text-white 2xl:pt-[320px] lg:py-[250px] pt-20 pb-30 relative z-20 overflow-hidden 2xl:h-[1100px] xl:h-[800px] md:h-[1000px] sm:h-[1000px] h-[1100px]'>
 
                     <div className="absolute instet-0 bottom-0 -z-50 w-full">
                         <Image src={FooterEffect} />
                     </div>
 
-                    <div className="w-full max-w-[1920px] mx-auto">
-                        <div className="hidden lg:flex absolute instet-0 bottom-0 left-1/2 -translate-x-1/2 w-full -z-50">
+                    <div className="w-full max-w-[1920px] mx-auto pointer-events-none">
+                        <div className="hidden lg:flex absolute instet-0 bottom-0 left-1/2 -translate-x-1/2 -z-50 max-w-[1600px] w-full">
                             <Image src={FooterLogo} />
                         </div>
                         <div className="lg:hidden flex absolute instet-0 bottom-5 left-1/2 -translate-x-1/2 w-full -z-50">
@@ -110,10 +112,10 @@ const Footer = () => {
                                     Services
                                 </p>
                                 <div className="flex flex-col gap-4 text-white/85 outfit text-lg">
-                                    <span className="hover:text-white hover:scale-105 transition-all duration-300">Brand Design</span>
-                                    <span className="hover:text-white hover:scale-105 transition-all duration-300">UI/UX Design</span>
-                                    <span className="hover:text-white hover:scale-105 transition-all duration-300">Social Media Design</span>
-                                    <span className="hover:text-white hover:scale-105 transition-all duration-300">Web Development</span>
+                                    <Link href={'/'} className="hover:text-white hover:scale-105 transition-all duration-300 cursor-pointer">Brand Design</Link>
+                                    <Link href={'/'} className="hover:text-white hover:scale-105 transition-all duration-300 cursor-pointer">UI/UX Design</Link>
+                                    <Link href={'/'} className="hover:text-white hover:scale-105 transition-all duration-300 cursor-pointer">Social Media Design</Link>
+                                    <Link href={'/'} className="hover:text-white hover:scale-105 transition-all duration-300 cursor-pointer">Web Development</Link>
                                 </div>
                             </div>
 
@@ -125,8 +127,8 @@ const Footer = () => {
                                 <div className="flex flex-col gap-4 text-white/85 outfit text-lg">
                                     <Link href={'/'} className="cursor-pointer hover:text-white hover:scale-105 transition-all duration-300">Home</Link>
                                     <Link href={'/about'} className="cursor-pointer hover:text-white hover:scale-105 transition-all duration-300">About Us</Link>
-                                    <Link href={'/works'} className="cursor-pointer hover:text-white hover:scale-105 transition-all duration-300">Works</Link>
-                                    <Link href={'/testimonials'} className="cursor-pointer hover:text-white hover:scale-105 transition-all duration-300">Testimonials</Link>
+                                    <Link href={'/contact'} className="cursor-pointer hover:text-white hover:scale-105 transition-all duration-300">Contact Us</Link>
+                                    {/* <Link href={'/testimonials'} className="cursor-pointer hover:text-white hover:scale-105 transition-all duration-300">Testimonials</Link> */}
                                 </div>
                             </div>
 
@@ -147,7 +149,7 @@ const Footer = () => {
                     <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full">
                         <div className="w-full flex items-center justify-between py-1 bg-[#062B28]/30 backdrop-blur-md">
                             <div className="max-w-[1350px] w-full mx-auto outfit text-white/65 flex items-center justify-between max-md:justify-center px-6">
-                                <p>All rights reserved © 2025 Orbillo.com</p>
+                                <p>All rights reserved © {new Date().getFullYear()} Orbillo.com</p>
                                 <p className="space-x-6 hidden md:flex">
                                     <span>Terms & Conditions</span>
                                     <span>Privacy Policy</span>

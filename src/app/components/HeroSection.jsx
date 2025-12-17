@@ -32,7 +32,7 @@ const HeroSection = () => {
 
             <section className='z-20 text-center pt-30 mb-20 px-4'>
                 <p className='outfit uppercase text-[#C7C7C7] font-bold text-sm md:text-lg mb-3 tracking-[2.7px]'>Hi! We Are orbillo</p>
-                <h1 className='lg:text-6xl md:text-5xl min-[400px]:text-3xl text-2xl max-[350px]:text-xl 2 max-[350px]:p-0 capitalize leading-[130%] md:max-w-[850px] max-w-[450px] reloceta'>
+                <h1 className='lg:text-6xl md:text-5xl min-[400px]:text-3xl text-2xl max-[350px]:text-xl 2 max-[350px]:p-0 capitalize leading-[130%] md:max-w-[850px] max-w-[450px] recoleta'>
                     <span>We help businesses grow with</span> {' '}
                     <span>
                         <span className='text-[#C9FF90] underline decoration-[#C9FF90] decoration-3 underline-offset-5'>strategy-Driven</span> designs & {' '}
@@ -42,7 +42,7 @@ const HeroSection = () => {
 
                 <div className='flex flex-col md:flex-row items-center justify-center gap-3 mt-12 mb-34 px-10'>
                     <button className='md:py-4 py-3 px-10 rounded-full bg-[#C9FF90] text-[#17241F] hover:bg-[#17241F] hover:text-[#C9FF90] transition duration-300 border-b border-[#C9FF90] hover:border-[#4d6641] outfit md:text-xl text-base  max-[350px]:text-xs cursor-pointer'>
-                        <a href="https://calendly.com/teamorbillo/30min?back=1&month=2025-11" target="_blank" rel="noopener noreferrer">Schedule A Meeting</a>
+                        <a href="https://calendly.com/teamorbillo/30min" target="_blank" rel="noopener noreferrer">Schedule A Meeting</a>
                     </button>
                     <button className='px-6 md:py-4 py-3 flex items-center justify-center outfit md:text-xl text-base max-[350px]:text-xs cursor-pointer hover:bg-white/10 rounded-full transition duration-300'>
                         <a

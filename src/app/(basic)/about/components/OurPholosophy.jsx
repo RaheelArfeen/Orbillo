@@ -80,7 +80,7 @@ const OurPhilosophy = () => {
                             <p className='outfit uppercase text-[#ffffff] font-bold text-xs md:text-lg tracking-[2.7px] whitespace-nowrap mb-4 md:mb-8'>
                                 Our Philosophy
                             </p>
-                            <p className='reloceta text-2xl md:text-4xl leading-[140%] tracking-[-0.2px] text-[#FFFFFF] max-w-[900px]'>
+                            <p className='recoleta text-2xl md:text-4xl leading-[140%] tracking-[-0.2px] text-[#FFFFFF] max-w-[900px]'>
                                 Founded by industry professionals who’ve spent <span className='text-[#C9FF90] underline decoration-[#C9FF90] decoration-3 underline-offset-5'>10–15 years</span> in the creative and digital field, Orbillo was built on one goal — to bridge the gap between <span className='text-[#C9FF90] underline decoration-[#C9FF90] decoration-3 underline-offset-5'>design and business outcomes.</span>
                             </p>
                         </div>
@@ -119,7 +119,7 @@ const OurPhilosophy = () => {
                                         </motion.div>
                                         <motion.div style={{ opacity: opacities[index], y: yOffsets[index] }} className={`text-left ${index === 2 ? 'lg:pl-20 px-8' : 'lg:pl-12 pl-6'}`}>
                                             <p className="outfit text-xl lg:text-2xl mb-2 text-white/90">{item.label}</p>
-                                            <h3 className="reloceta text-2xl lg:text-4xl text-white">{item.title}</h3>
+                                            <h3 className="recoleta text-2xl lg:text-4xl text-white">{item.title}</h3>
                                         </motion.div>
                                     </div>
                                 ))}
@@ -156,7 +156,7 @@ const OurPhilosophy = () => {
                                             className="text-left pt-2"
                                         >
                                             <p className="outfit text-lg text-white/70 mb-1">{item.label}</p>
-                                            <h3 className="reloceta text-3xl text-white">{item.title}</h3>
+                                            <h3 className="recoleta text-3xl text-white">{item.title}</h3>
                                         </motion.div>
                                     </div>
                                 ))}

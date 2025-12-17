@@ -16,7 +16,7 @@ const FeaturedClients = () => {
                             Our Featured Clients
                         </p>
                         {/* Made text smaller on mobile (3xl) vs desktop (4xl) */}
-                        <h1 className='text-[#696969] reloceta text-3xl md:text-4xl leading-[130%] md:leading-[140%] max-w-full md:max-w-[690px] -tracking-[1px]'>
+                        <h1 className='text-[#696969] recoleta text-3xl md:text-4xl leading-[130%] md:leading-[140%] max-w-full md:max-w-[690px] -tracking-[1px]'>
                             We’ve proudly collaborated with businesses that believe in the power of design
                         </h1>
                     </div>

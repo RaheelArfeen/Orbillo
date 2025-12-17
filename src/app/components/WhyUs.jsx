@@ -53,7 +53,7 @@ const Card = ({ i, title, description, color }) => {
 
                     <div className="flex justify-between items-center h-[60px] shrink-0">
                         <div className="flex flex-row items-center gap-6">
-                            <h2 className="text-3xl md:text-4xl font-serif text-white leading-none mt-[-4px]">
+                            <h2 className="text-3xl md:text-4xl recoleta text-white leading-none mt-[-4px]">
                                 {title}
                             </h2>
                         </div>
@@ -101,7 +101,7 @@ const WhyUs = () => {
                             <p className='uppercase outfit text-sm lg:text-lg font-bold text-white/55 tracking-[2.7px]'>
                                 Why us
                             </p>
-                            <h3 className='text-[28px] md:text-[40px] md:max-w-[700px] max-w-[500px] reloceta text-white leading-tight'>
+                            <h3 className='text-[28px] md:text-[40px] md:max-w-[700px] max-w-[500px] recoleta text-white leading-tight'>
                                 <p>We offer a wide rande of <span className='text-[#C9FF90] underline decoration-[#C9FF90] decoration-2 underline-offset-2'>design services</span> to small & medium sized businesses <span className='text-[#C9FF90] underline decoration-[#C9FF90] decoration-2 underline-offset-2'>worldwide</span></p>
                             </h3>
                         </div>

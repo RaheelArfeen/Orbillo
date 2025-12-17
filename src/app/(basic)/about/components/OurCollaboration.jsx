@@ -34,13 +34,13 @@ const OurCollaboration = () => {
     return (
         <div>
             <section className="max-w-[1320px] mx-auto py-25 px-4">
-                <h1 className="reloceta max-w-[720px] text-[#696969] text-center mx-auto text-3xl md:text-4xl leading-[130%] md:leading-[140%] -tracking-[1px">
+                <h1 className="recoleta max-w-[720px] text-[#696969] text-center mx-auto text-3xl md:text-4xl leading-[130%] md:leading-[140%] -tracking-[1px">
                     We’ve proudly <span className="text-[#040404] underline decoration-[#040404] decoration-3 underline-offset-5">collaborated</span> with
                     <br />
                     <span className="text-[#040404] underline decoration-[#040404] decoration-3 underline-offset-5">businesses</span> that believe in the <span className="text-[#040404] underline decoration-[#040404] decoration-3 underline-offset-5">power of design</span>
                 </h1>
 
-                {/* text-white reloceta text-3xl md:text-4xl leading-[130%] md:leading-[140%] -tracking-[1px */}
+                {/* text-white recoleta text-3xl md:text-4xl leading-[130%] md:leading-[140%] -tracking-[1px */}
 
                 {/* Grid Wrapper */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-20">
@@ -57,7 +57,7 @@ const OurCollaboration = () => {
                             ) : (
                                 <div className="text-center flex items-center justify-center" style={{ color: item.TextColor || 'white' }}>
                                     <div className=''>
-                                        <p className="reloceta text-[175px] flex justify-center  text-center leading-46 -tracking-[2px]">{item.Text} <span>+</span></p>
+                                        <p className="recoleta text-[175px] flex justify-center  text-center leading-46 -tracking-[2px]">{item.Text} <span>+</span></p>
                                         <p className="spartan text-3xl font-medium">{item.description}</p>
                                     </div>
                                 </div>

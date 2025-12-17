@@ -70,7 +70,7 @@ const LetsTalk = () => {
                             Let’s Talk!
                         </p>
                         <div className='w-full md:max-w-[500px] mb-12'>
-                            <p className='reloceta text-xl md:text-2xl xl:text-3xl leading-[140%] tracking-[-0.2px] text-[#FDFFF5]'>
+                            <p className='recoleta text-xl md:text-2xl xl:text-3xl leading-[140%] tracking-[-0.2px] text-[#FDFFF5]'>
                                 Tell us about your project, goals, and timeline our team will get back to you <span className='text-[#C9FF90] underline decoration-[#C9FF90] decoration-3 underline-offset-5'>within 24 hours.</span>
                             </p>
                         </div>
@@ -105,7 +105,8 @@ const LetsTalk = () => {
                                 <div className="relative">
                                     <input
                                         type="text"
-                                        placeholder="Your Name"
+                                        placeholder="Your Name *"
+                                        required
                                         className='w-full bg-transparent border-b border-[#FFFFFF]/20 py-3 text-white placeholder-[#FFFFFF]/40 focus:outline-none focus:border-[#C9FF90] transition-colors outfit text-lg'
                                     />
                                 </div>
@@ -113,12 +114,14 @@ const LetsTalk = () => {
                                 <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
                                     <input
                                         type="email"
-                                        placeholder="Your Email"
+                                        placeholder="Your Email *"
+                                        required
                                         className='w-full bg-transparent border-b border-[#FFFFFF]/20 py-3 text-white placeholder-[#FFFFFF]/40 focus:outline-none focus:border-[#C9FF90] transition-colors outfit text-lg'
                                     />
                                     <input
                                         type="text"
-                                        placeholder="Your Whatsapp Number"
+                                        placeholder="Your Whatsapp Number *"
+                                        required
                                         className='w-full bg-transparent border-b border-[#FFFFFF]/20 py-3 text-white placeholder-[#FFFFFF]/40 focus:outline-none focus:border-[#C9FF90] transition-colors outfit text-lg'
                                     />
                                 </div>
@@ -126,7 +129,8 @@ const LetsTalk = () => {
                                 <div>
                                     <input
                                         type="text"
-                                        placeholder="Your Company Name"
+                                        placeholder="Your Company Name *"
+                                        required
                                         className='w-full bg-transparent border-b border-[#FFFFFF]/20 py-3 text-white placeholder-[#FFFFFF]/40 focus:outline-none focus:border-[#C9FF90] transition-colors outfit text-lg'
                                     />
                                 </div>
@@ -137,7 +141,7 @@ const LetsTalk = () => {
                                         className={`w-full bg-transparent border-b pr-6 ${isOpen ? 'border-[#C9FF90]' : 'border-[#FFFFFF]/20'} py-3 cursor-pointer flex justify-between items-center transition-colors group`}
                                     >
                                         <span className={`outfit text-lg ${selectedService ? 'text-white' : 'text-[#FFFFFF]/40'}`}>
-                                            {selectedService || 'Choose Service'}
+                                            {selectedService || 'Choose Service *'}
                                         </span>
                                         <FaCaretDown
                                             className={`text-[#FFFFFF]/40 transition-all duration-300 ${isOpen ? 'rotate-180 text-[#C9FF90]' : 'group-hover:text-[#C9FF90]'}`}
@@ -163,7 +167,8 @@ const LetsTalk = () => {
 
                                 <div>
                                     <textarea
-                                        placeholder="Your Message"
+                                        placeholder="Your Message *"
+                                        required
                                         rows={3}
                                         className='w-full bg-transparent border-b border-[#FFFFFF]/20 py-3 text-white placeholder-[#FFFFFF]/40 focus:outline-none focus:border-[#C9FF90] transition-colors outfit text-lg resize-none'
                                     ></textarea>

@@ -8,12 +8,12 @@ const Feedback = () => {
             <div className="w-full bg-[#5ba32b] py-6 border-y border-[#C9FF90]/30 relative z-30">
                 <Marquee
                     autoFill={true}
-                    pauseOnHover={true}
+                    pauseOnHover={false}
                     speed={80} // Adjust speed as needed
                     className="overflow-hidden"
                 >
                     <div className="flex items-center">
-                        <span className="text-white text-3xl md:text-6xl font-serif mx-6 md:mx-10 tracking-wide reloceta">
+                        <span className="text-white text-3xl md:text-6xl font-serif mx-6 md:mx-10 tracking-wide recoleta">
                             Client’s Feedback
                         </span>
                         {/* Dot Separator */}
@@ -23,7 +23,7 @@ const Feedback = () => {
             </div>
 
             {/* Testimonial Section */}
-            <section className="py-[120px] md:py-[160px] flex max-[350px]:flex-col max-md:items-center items-end justify-center gap-6 md:gap-10 px-4 overflow-hidden">
+            <section className="py-[120px] md:py-[160px] flex max-[350px]:flex-col max-md:items-center items-end justify-center gap-6 md:gap-18 px-4 overflow-hidden">
 
                 {/* Image */}
                 <div className="h-[240px] sm:h-[300px] md:h-[400px] w-[180px] sm:w-[240px] md:w-[300px] rounded-lg overflow-hidden flex-shrink-0">
@@ -53,7 +53,7 @@ const Feedback = () => {
 
                     {/* Person */}
                     <div className="mt-10 md:mt-20">
-                        <p className="text-xl sm:text-2xl md:text-3xl text-[#07302C] reloceta">Abu Sayeed</p>
+                        <p className="text-xl sm:text-2xl md:text-3xl text-[#07302C] recoleta">Abu Sayeed</p>
                         <span className="outfit text-sm sm:text-base md:text-lg uppercase md:tracking-[2.7px] tracking-[2px] text-[#373737]">
                             Founder, RankMet LLC
                         </span>

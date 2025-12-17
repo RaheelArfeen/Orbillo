@@ -249,7 +249,7 @@ const AboutUs = () => {
 
                     <h1
                         ref={textRef}
-                        className='text-xl sm:text-2xl md:text-[30px] xl:text-4xl md:max-w-[1100px] max-w-[450px] text-center mx-auto leading-relaxed reloceta font-medium transition-all duration-300'
+                        className='text-xl sm:text-2xl md:text-[3px] xl:text-4xl md:max-w-[1100px] max-w-[450px] text-center mx-auto leading-relaxed recoleta font-medium transition-all duration-300'
                     >
                         <span className='md:inline-block mx-1 transition-colors'>We blend strategy, creativity & technology to deliver</span>
                         <span className='md:inline-block mx-1 transition-colors'><span className='underline decoration-2 md:decoration-3 underline-offset-4 md:underline-offset-8'>measurable results</span> - because every pixel every click, and</span>

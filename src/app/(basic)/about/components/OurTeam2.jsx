@@ -36,12 +36,12 @@ const OurTeam2 = () => {
             <div className="w-full bg-[#5ba32b] py-4 md:py-6 border-y border-[#C9FF90]/30 relative z-30">
                 <Marquee
                     autoFill={true}
-                    pauseOnHover={true}
+                    pauseOnHover={false}
                     speed={80}
                     className="overflow-hidden"
                 >
                     <div className="flex items-center">
-                        <span className="text-white text-3xl md:text-6xl font-serif mx-6 md:mx-10 tracking-wide reloceta">
+                        <span className="text-white text-3xl md:text-6xl font-serif mx-6 md:mx-10 tracking-wide recoleta">
                             Our Team
                         </span>
                         <span className="text-white text-3xl md:text-5xl font-black">•</span>
@@ -60,7 +60,7 @@ const OurTeam2 = () => {
                             <p className='outfit uppercase text-[#696969] font-bold text-sm md:text-lg tracking-[2.7px] mb-4 md:mb-7'>
                                 Meet the Team
                             </p>
-                            <h1 className='text-white reloceta text-3xl md:text-4xl leading-[130%] md:leading-[140%] -tracking-[1px]'>
+                            <h1 className='text-white recoleta text-3xl md:text-4xl leading-[130%] md:leading-[140%] -tracking-[1px]'>
                                 We’re a diverse group of <span className='text-[#C9FF90] underline decoration-[#C9FF90] decoration-3 underline-offset-4 md:underline-offset-5'>problem-solvers — designers, developers, and marketers</span> — who share one common goal: helping your <span className='text-[#C9FF90] underline decoration-[#C9FF90] decoration-3 underline-offset-4 md:underline-offset-5'>business grow.</span>
                             </h1>
                         </div>

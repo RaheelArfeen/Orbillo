@@ -2,6 +2,8 @@
 
 import React from 'react';
 import Marquee from 'react-fast-marquee';
+import CountUp from 'react-countup';
+import { useInView } from 'react-intersection-observer';
 
 // 1. Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -36,22 +38,28 @@ const GRID_ITEMS = [
 ];
 
 const STATS_DATA = [
-    { value: '2', label: 'Countries' },
-    { value: '90', label: 'Days in Operation', plus: true },
-    { value: '120', label: 'Projects Completed', plus: true },
-    { value: '440', label: 'Cups of Coffee', plus: true },
+    { value: 2, label: 'Countries' }, // Changed strings to numbers for CountUp
+    { value: 90, label: 'Days in Operation', plus: true },
+    { value: 120, label: 'Projects Completed', plus: true },
+    { value: 440, label: 'Cups of Coffee', plus: true },
 ];
 
 const WhatWeDo = () => {
+    // Setup the intersection observer
+    const { ref, inView } = useInView({
+        triggerOnce: true, // Animation runs only once
+        threshold: 0.3,    // Starts when 30% of the section is visible
+    });
+
     return (
         <div className='relative bg-[#EFEEEA] '>
             <style>{customSwiperStyles}</style>
 
             {/* Marquee Section */}
             <div className="w-full bg-[#5ba32b] py-6 border-y border-[#C9FF90]/30 relative z-30">
-                <Marquee autoFill={true} pauseOnHover={true} speed={80} className="overflow-hidden">
+                <Marquee autoFill={true} pauseOnHover={false} speed={80} className="overflow-hidden">
                     <div className="flex items-center">
-                        <span className="text-white text-3xl md:text-6xl font-serif mx-6 md:mx-10 tracking-wide reloceta">
+                        <span className="text-white text-3xl md:text-6xl font-serif mx-6 md:mx-10 tracking-wide recoleta">
                             Featured Works
                         </span>
                         <span className="text-white text-5xl font-black">•</span>
@@ -67,7 +75,7 @@ const WhatWeDo = () => {
                             <p className='uppercase outfit text-sm lg:text-lg font-bold text-[#696969] tracking-[2.7px]'>
                                 What We Do
                             </p>
-                            <h3 className='text-[28px] md:text-[40px] md:max-w-[700px] max-w-[500px] reloceta text-[#373737]/85 leading-tight'>
+                            <h3 className='text-[28px] md:text-[40px] md:max-w-[700px] max-w-[500px] recoleta text-[#373737]/85 leading-tight'>
                                 <p>We offer a wide rande of <span className='text-[#041E1D] underline decoration-[#041E1D] decoration-2 underline-offset-2'>design services</span> to small & medium sized businesses <span className='text-[#041E1D] underline decoration-[#041E1D] decoration-2 underline-offset-2'>worldwide</span></p>
                             </h3>
                         </div>
@@ -122,7 +130,8 @@ const WhatWeDo = () => {
                 </section>
 
                 {/* --- Section: Stats --- */}
-                <section className='w-full pt-8 lg:pt-16'>
+                {/* Attach the ref here so the observer knows when this section is visible */}
+                <section ref={ref} className='w-full pt-8 lg:pt-16'>
                     <div className='max-w-[1380px] mx-auto'>
                         <div className='grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-12'>
                             {STATS_DATA.map((stat, index) => (
@@ -130,8 +139,20 @@ const WhatWeDo = () => {
                                     key={index}
                                     className='bg-[#e5e2e2] rounded-xl flex flex-col items-center justify-center space-y-2 py-12 lg:py-0 lg:bg-transparent lg:h-auto'
                                 >
-                                    <h3 className='text-[60px] lg:text-[72px] leading-none reloceta font-medium text-[#559B36] flex items-start'>
-                                        {stat.value} <span className='text-3xl lg:text-5xl relative top-0 lg:bottom-4'>{stat.plus ? '+' : ''}</span>
+                                    <h3 className='text-[60px] lg:text-[72px] leading-none recoleta font-medium text-[#559B36] flex items-start'>
+                                        {inView ? (
+                                            <CountUp
+                                                start={0}
+                                                end={stat.value}
+                                                duration={2.5}
+                                                separator=","
+                                            />
+                                        ) : (
+                                            <span>0</span>
+                                        )}
+                                        <span className='text-3xl lg:text-5xl relative top-0 lg:bottom-4'>
+                                            {stat.plus ? '+' : ''}
+                                        </span>
                                     </h3>
                                     <p className='outfit uppercase text-[10px] lg:text-[13px] font-bold tracking-[1.5px] lg:tracking-[2.7px] text-[#373737]/55 text-center px-2'>
                                         {stat.label}

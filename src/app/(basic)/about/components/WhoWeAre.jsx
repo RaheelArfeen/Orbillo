@@ -17,7 +17,7 @@ const WhoWeAre = () => {
                     </p>
                 </div>
 
-                <div className='reloceta text-3xl md:text-5xl 2xl:text-7xl text-[#07302C] flex flex-col gap-4 md:gap-5 mt-16 md:mt-32 lg:mt-40'>
+                <div className='recoleta text-3xl md:text-5xl 2xl:text-7xl text-[#07302C] flex flex-col gap-4 md:gap-5 mt-16 md:mt-32 lg:mt-40'>
 
                     <div className='hidden lg:block max-2xl:max-w-[1000px] w-full mx-auto'>
                         <div className='flex flex-wrap items-center justify-start gap-3 md:gap-6 w-full mb-2'>

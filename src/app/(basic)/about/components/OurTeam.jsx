@@ -46,12 +46,12 @@ const OurTeam = () => {
             <div className="w-full bg-[#5ba32b] py-6 border-y border-[#C9FF90]/30 relative z-30">
                 <Marquee
                     autoFill={true}
-                    pauseOnHover={true}
+                    pauseOnHover={false}
                     speed={80}
                     className="overflow-hidden"
                 >
                     <div className="flex items-center">
-                        <span className="text-white text-3xl lg:text-6xl font-serif mx-6 lg:mx-10 tracking-wide reloceta">
+                        <span className="text-white text-3xl lg:text-6xl font-serif mx-6 lg:mx-10 tracking-wide recoleta">
                             Our Team
                         </span>
                         <span className="text-white text-5xl font-black">•</span>
@@ -71,7 +71,7 @@ const OurTeam = () => {
                                 {section.tag}
                             </p>
 
-                            <h1 className='reloceta text-3xl lg:text-4xl text-[#17241F] mb-4 lg:mb-6 leading-tight'>
+                            <h1 className='recoleta text-3xl lg:text-4xl text-[#17241F] mb-4 lg:mb-6 leading-tight'>
                                 {section.title}
                             </h1>
 
