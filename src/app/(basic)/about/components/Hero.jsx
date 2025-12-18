@@ -1,29 +1,33 @@
+import Image from 'next/image';
 import React from 'react';
+import HeroBg from "@/app/assets/Hero.svg"
 
 const Hero = () => {
     return (
         <div className="relative overflow-hidden flex items-center justify-center">
             {/* Dark Overlay */}
-            <div className='absolute inset-0 z-15 bg-linear-to-b from-transparent to-[#11180B]/30'></div>
+            <div className='absolute inset-0 z-15 bg-linear-to-b from-transparent to-[#11180B]/50'></div>
 
             {/* Green Overlay */}
-            <div className="absolute inset-0 z-10 bg-[#022B10] mix-blend-darken"></div>
+            <div className="absolute inset-0 z-10 bg-[#07302C] mix-blend-darken"></div>
 
             {/* Top lighting */}
             <div className='absolute -top-10 -translate-y-1/2 h-[450px] w-[600px] bg-[#D6F55B]/33 rounded-full blur-[150px] z-20'></div>
 
             {/* Background Video */}
-            <div className="absolute inset-0 z-5">
-                <video
-                    className="w-full h-full object-cover"
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                >
-                    <source src="/videos/BackgroundVideo.mp4" type="video/mp4" />
-                    Your browser does not support the video tag.
-                </video>
+            <div className="absolute inset-0 z-10">
+                {/* <video
+                                                                                className="w-full h-full object-cover"
+                                                                                autoPlay
+                                                                                loop
+                                                                                muted
+                                                                                playsInline
+                                                                            >
+                                                                                <source src="/videos/BackgroundVideo.mp4" type="video/mp4" />
+                                                                                Your browser does not support the video tag.
+                                                                            </video> */}
+
+                <Image src={HeroBg} className='opacity-15' />
 
             </div>
 

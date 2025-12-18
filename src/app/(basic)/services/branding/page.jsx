@@ -1,5 +1,4 @@
 import React from 'react';
-import BrandingHero from './components/BrandingHero';
 import WhatWeDo from './components/WhatWeDo';
 import OurWork from './components/OurWork';
 import WorkProcess from './components/WorkProcess';
@@ -8,11 +7,12 @@ import OurWrokMarque from './components/OurWrokMarque';
 import Feedback from './components/Feedback';
 import Faq from './components/Faq';
 import OurCollaboration from './components/OurCollaboration';
+import Hero from './components/Hero';
 
 const page = () => {
     return (
         <div>
-            <BrandingHero/>
+            <Hero/>
             <WhatWeDo/>
             <OurWork/>
             <WorkProcess/>

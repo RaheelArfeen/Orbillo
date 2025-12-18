@@ -112,10 +112,10 @@ const Footer = () => {
                                     Services
                                 </p>
                                 <div className="flex flex-col gap-4 text-white/85 outfit text-lg">
-                                    <Link href={'/'} className="hover:text-white hover:scale-105 transition-all duration-300 cursor-pointer">Brand Design</Link>
-                                    <Link href={'/'} className="hover:text-white hover:scale-105 transition-all duration-300 cursor-pointer">UI/UX Design</Link>
-                                    <Link href={'/'} className="hover:text-white hover:scale-105 transition-all duration-300 cursor-pointer">Social Media Design</Link>
-                                    <Link href={'/'} className="hover:text-white hover:scale-105 transition-all duration-300 cursor-pointer">Web Development</Link>
+                                    <Link href={'/services/branding'} className="hover:text-white hover:scale-105 transition-all duration-300 cursor-pointer">Brand Design</Link>
+                                    <Link href={'/services/ui-ux'} className="hover:text-white hover:scale-105 transition-all duration-300 cursor-pointer">UI/UX Design</Link>
+                                    <Link href={'/services/social-media'} className="hover:text-white hover:scale-105 transition-all duration-300 cursor-pointer">Social Media Design</Link>
+                                    <Link href={'/services/wordpress'} className="hover:text-white hover:scale-105 transition-all duration-300 cursor-pointer">Web Development</Link>
                                 </div>
                             </div>
 

@@ -74,12 +74,12 @@ const OurWork = () => {
                 </div>
 
                 <div className='grid md:grid-cols-3 gap-6'>
-                    <img src="https://i.ibb.co.com/QjkLQMHV/image.png" alt="" />
-                    <img src="https://i.ibb.co.com/tP4HSkxb/image.png" alt="" />
-                    <img src="https://i.ibb.co.com/DDDYzw2G/image.png" alt="" />
-                    <img src="https://i.ibb.co.com/8nb5gsyy/image.png" alt="" />
-                    <img src="https://i.ibb.co.com/FbBMx9TT/image.png" alt="" />
-                    <img src="https://i.ibb.co.com/7d8vbQXX/image.png" alt="" />
+                    <img className='rounded-lg' src="https://i.ibb.co.com/QjkLQMHV/image.png" alt="" />
+                    <img className='rounded-lg' src="https://i.ibb.co.com/tP4HSkxb/image.png" alt="" />
+                    <img className='rounded-lg' src="https://i.ibb.co.com/DDDYzw2G/image.png" alt="" />
+                    <img className='rounded-lg' src="https://i.ibb.co.com/8nb5gsyy/image.png" alt="" />
+                    <img className='rounded-lg' src="https://i.ibb.co.com/FbBMx9TT/image.png" alt="" />
+                    <img className='rounded-lg' src="https://i.ibb.co.com/7d8vbQXX/image.png" alt="" />
                 </div>
 
                 <div className='flex items-center justify-center w-full mt-15'>
