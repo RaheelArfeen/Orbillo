@@ -17,7 +17,7 @@ const HeroSection = () => {
             <div className='absolute -top-10 -translate-y-1/2 h-[450px] w-[600px] bg-[#D6F55B]/33 rounded-full blur-[150px] z-20'></div>
 
             {/* Background Video */}
-            <div className="absolute inset-0 z-10">
+            <div className="absolute inset-0 z-10 w-full h-full">
                 {/* <video
                                                         className="w-full h-full object-cover"
                                                         autoPlay
@@ -29,7 +29,7 @@ const HeroSection = () => {
                                                         Your browser does not support the video tag.
                                                     </video> */}
 
-                <Image src={HeroBg} className='opacity-15' />
+                <Image src={HeroBg} className='opacity-15 object-cover w-full h-full' />
 
             </div>
 

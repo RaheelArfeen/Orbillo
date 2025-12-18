@@ -27,7 +27,7 @@ const Hero = () => {
                                                                                 Your browser does not support the video tag.
                                                                             </video> */}
 
-                <Image src={HeroBg} className='opacity-15' />
+                <Image src={HeroBg} className='opacity-15 object-cover w-full h-full' />
 
             </div>
 

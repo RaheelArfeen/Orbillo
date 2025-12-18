@@ -30,7 +30,7 @@ const Hero = () => {
                                                                                 Your browser does not support the video tag.
                                                                             </video> */}
 
-                <Image src={HeroBg} className='opacity-15' />
+                <Image src={HeroBg} className='opacity-15 object-cover w-full h-full' />
 
             </div>
 
@@ -65,10 +65,8 @@ const Hero = () => {
                 </div>
             </section>
 
-            <section className='z-50 absolute bottom-0 w-[35%] flex gap-2 md:gap-4 items-end justify-center'>
-                <Image className='lg:w-[45%]' src={Left} />
-                <Image className='lg:w-[45%]' src={Middle} />
-                <Image className='lg:w-[45%]' src={Right} />
+            <section className='z-50 absolute bottom-0 max-w-[900px] min-w-[800px] flex gap-2 md:gap-4 items-end justify-center'>
+                <img src={'https://i.ibb.co.com/jYWrByq/image.png'} />
             </section>
 
         </div>

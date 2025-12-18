@@ -36,7 +36,7 @@ const Card = ({ i, title, content, bgColor, id, progress, range, targetScale }) 
     const scale = useTransform(progress, range, [1, targetScale]);
 
     return (
-        <div className="h-[35vh] flex items-start justify-center sticky top-[15vh]">
+        <div className="h-[40vh] flex items-start justify-center sticky top-[15vh]">
             <motion.div
                 style={{
                     scale,
@@ -63,7 +63,7 @@ const WorkProcess = () => {
     const smoothProgress = useSpring(scrollYProgress, {
         stiffness: 200,
         damping: 30,
-        restDelta: 0.001
+        restDelta: 0.1
     });
 
     return (

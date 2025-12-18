@@ -1,7 +1,7 @@
 'use client'
 
 import Image from 'next/image';
-import Bg from './Image/OurWorkMarqueBg.png'
+import Bg from './Image/OurWorkMarqueBg.png' // Ensure this path is correct for your project
 import React from 'react';
 
 // DATA
@@ -23,7 +23,6 @@ const TAGS_ROW_3 = [
 ];
 
 // --- 1. CSS STYLES FOR ANIMATION ---
-// You can put this in your globals.css, but I included it here for easy copy-paste.
 const animationStyles = `
   @keyframes scroll {
     0% { transform: translateX(0); }
@@ -41,7 +40,14 @@ const animationStyles = `
     will-change: transform;
     animation: scroll-reverse linear infinite;
   }
-  /* Hardware acceleration hack to prevent flickering */
+  
+  /* PAUSE ON HOVER LOGIC */
+  .pause-on-hover:hover .animate-marquee,
+  .pause-on-hover:hover .animate-marquee-reverse {
+    animation-play-state: paused;
+  }
+
+  /* Hardware acceleration hack */
   .gpu-hack {
     transform: translate3d(0, 0, 0);
     backface-visibility: hidden;
@@ -49,20 +55,27 @@ const animationStyles = `
   }
 `;
 
-const Tag = ({ text, highlight = false }) => (
+// --- 2. UPDATED TAG COMPONENT ---
+const Tag = ({ text }) => (
     <div
         className={`
-            ${!highlight && 'bg-linear-230 from-[#6BBE46]/70 to-[#07302C]'}
-            rounded-full mx-1 sm:mx-2 p-px shrink-0
+            group cursor-pointer
+            /* Default: Gradient Border */
+            /* Hover: Solid Green Border Color */
+            hover:bg-none
+            rounded-full mx-1 sm:mx-2 p-px shrink-0 transition-colors duration-300
         `}
     >
         <div
             className={`
-                inline-flex items-center justify-center px-3 py-1.5 sm:px-4 sm:py-2 md:px-5 md:py-2.5 lg:px-6 lg:py-4 rounded-full text-sm sm:text-base md:text-lg lg:text-2xl whitespace-nowrap transition-all duration-300 outfit
-                ${highlight
-                    ? 'bg-transparent text-[#C9FF90] border border-[#C9FF90]'
-                    : 'bg-[#02403A] text-[#C9FF90] backdrop-blur-sm'
-                }
+                inline-flex items-center justify-center px-3 py-1.5 sm:px-4 sm:py-2 md:px-5 md:py-2.5 lg:px-6 lg:py-4 rounded-full 
+                text-sm sm:text-base md:text-lg lg:text-2xl whitespace-nowrap transition-all duration-300 outfit
+                
+                /* Default: Dark Green Background */
+                bg-[#02403A] text-[#C9FF90] backdrop-blur-sm
+                
+                /* Hover: Transparent Background (reveals the solid border color from parent) */
+                group-hover:bg-transparent group-hover:text-[#C9FF90]
             `}
         >
             {text}
@@ -70,34 +83,27 @@ const Tag = ({ text, highlight = false }) => (
     </div>
 );
 
-// --- 2. OPTIMIZED MARQUEE ROW ---
+// --- 3. OPTIMIZED MARQUEE ROW ---
 const MarqueeRow = ({ items, direction = 'left', duration = '40s' }) => {
-    // We duplicate the items to create the seamless loop illusion
-    const loopedItems = [...items, ...items];
-
     return (
-        <div className="relative w-full overflow-hidden py-2 mask-linear-fade flex select-none">
-             {/* Structure: 
-                We have TWO identical sets of items running side-by-side. 
-                As Set 1 moves off screen, Set 2 takes its place perfectly.
-             */}
-            <div 
+        // Added 'pause-on-hover' class here
+        <div className="pause-on-hover relative w-full overflow-hidden py-2 mask-linear-fade flex select-none">
+            <div
                 className={`flex min-w-full shrink-0 items-center justify-around gap-2 gpu-hack ${direction === 'left' ? 'animate-marquee' : 'animate-marquee-reverse'}`}
                 style={{ animationDuration: duration }}
             >
                 {items.map((item, idx) => (
-                    <Tag key={`original-${idx}`} text={item} highlight={idx % 8 === 3} />
+                    <Tag key={`original-${idx}`} text={item} />
                 ))}
             </div>
-            
-            {/* Duplicate set for seamless looping */}
-            <div 
+
+            <div
                 className={`flex min-w-full shrink-0 items-center justify-around gap-2 gpu-hack ${direction === 'left' ? 'animate-marquee' : 'animate-marquee-reverse'}`}
                 style={{ animationDuration: duration }}
-                aria-hidden="true" // Hide duplicate from screen readers
+                aria-hidden="true"
             >
                 {items.map((item, idx) => (
-                    <Tag key={`dupe-${idx}`} text={item} highlight={idx % 8 === 3} />
+                    <Tag key={`dupe-${idx}`} text={item} />
                 ))}
             </div>
         </div>
@@ -131,14 +137,14 @@ const OurWorkMarque = () => {
                 </div>
 
                 <div className="w-full flex flex-col space-y-4 md:space-y-6 mask-gradient overflow-hidden">
-                    {/* Top Row: Moves Right (slower duration = slower speed) */}
+                    {/* Top Row: Moves Right */}
                     <MarqueeRow items={TAGS_ROW_1} direction="right" duration="50s" />
 
                     {/* Middle Row: Moves Left */}
-                    <MarqueeRow items={TAGS_ROW_2} direction="left" duration="40s" />
+                    <MarqueeRow items={TAGS_ROW_2} direction="left" duration="50s" />
 
                     {/* Bottom Row: Moves Right */}
-                    <MarqueeRow items={TAGS_ROW_3} direction="right" duration="55s" />
+                    <MarqueeRow items={TAGS_ROW_3} direction="right" duration="50s" />
                 </div>
             </section >
         </div>

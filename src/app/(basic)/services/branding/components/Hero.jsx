@@ -18,7 +18,7 @@ const Hero = () => {
             <div className='absolute -top-10 -translate-y-1/2 h-[450px] w-[600px] bg-[#D6F55B]/33 rounded-full blur-[150px] z-20'></div>
 
             {/* Background Video */}
-            <div className="absolute inset-0 z-10">
+            <div className="absolute inset-0 z-10 w-full h-full">
                 {/* <video
                                                                     className="w-full h-full object-cover"
                                                                     autoPlay
@@ -30,7 +30,7 @@ const Hero = () => {
                                                                     Your browser does not support the video tag.
                                                                 </video> */}
 
-                <Image src={HeroBg} className='opacity-15' />
+                <Image src={HeroBg} className='opacity-15 object-cover w-full h-full' />
 
             </div>
 
@@ -65,10 +65,8 @@ const Hero = () => {
                 </div>
             </section>
 
-            <section className='z-50 absolute bottom-0 w-[50%] flex gap-2 md:gap-4 items-end justify-center scale-110'>
-                <Image className='lg:w-[45%]' src={Left} />
-                <Image className='lg:w-[45%]' src={Middle} />
-                <Image className='lg:w-[45%]' src={Right} />
+            <section className='z-50 absolute bottom-0 min-w-[800px] max-w-[1200px] flex gap-2 md:gap-4 items-end justify-center scale-110'>
+                <img src='https://i.ibb.co.com/BHpf4HHv/image.png' />
             </section>
 
         </div>
