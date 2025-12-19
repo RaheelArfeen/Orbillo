@@ -23,7 +23,7 @@ const sections = [
         description:
             "We aim to become a trusted creative ally, elevating brands worldwide through smart design and meaningful visual communication.",
         image: "https://i.ibb.co.com/Z6xp6b2D/image.png",
-        ImgText: 'Everything we create is Everything we create is',
+        ImgText: 'Everything we create is',
         // Mobile: Top left inside. Desktop: Top left offset.
         ImgTextPosition: 'top-4 left-4 lg:top-[160px] lg:left-[0px]',
         ImgTextBg: 'bg-[#FDBD39]',
@@ -115,7 +115,7 @@ const OurTeam = () => {
                                     className='w-full h-auto object-cover rounded-xl pointer-events-none'
                                     alt={section.tag}
                                 />
-                                <div className={`absolute z-50 ${section.ImgTextPosition} ${section.ImgTextBg} py-3 px-5 rounded-lg max-w-[180px] lg:max-w-[215px] h-fit shadow-sm`}>
+                                <div className={`absolute z-50 ${section.ImgTextPosition} ${section.ImgTextBg} py-3 px-5 rounded-lg h-fit shadow-sm`}>
                                     <p className='text-[#373737] outfit text-xs lg:text-base leading-[140%] font-medium'>
                                         {section.ImgText}
                                     </p>
