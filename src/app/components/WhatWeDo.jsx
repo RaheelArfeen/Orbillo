@@ -70,19 +70,23 @@ const WhatWeDo = () => {
                             key={index}
                             className='group relative md:rounded-[32px] rounded-2xl md:min-h-[420px] min-h-[300px] overflow-hidden'
                         >
+                            {/* Animated Border Gradient */}
                             <div className='absolute left-[-50%] top-[-50%] w-[200%] h-[200%] z-0
                                 bg-[conic-gradient(transparent_10deg,#C9FF9060_45deg_55deg,transparent_70deg_180deg,#C9FF9060_250deg_200deg,transparent_260deg)]
                                 animate-[spin_10s_ease-in-out_infinite]'
                             />
 
+                            {/* Main Card Content Container */}
                             <div className='absolute inset-[2px] md:rounded-[32px] rounded-2xl z-10 flex flex-col justify-between px-7 py-8 
-                                transition-all duration-300 ease-out
+                                transition-all duration-500 ease-in-out
                                 bg-[#1C413D] text-white
-                                group-hover:bg-[#C9FF90] group-hover:text-[#052e26]'
+                                group-hover:text-[#052e26]'
                             >
-                                <div className="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-300 pointer-events-none rounded-[32px] bg-[linear-gradient(to_right,#000000_1px,transparent_1px),linear-gradient(to_bottom,#000000_1px,transparent_1px)] bg-[size:48px_48px]"></div>
 
-                                <div className='flex justify-end relative z-10'>
+                                <img className='absolute inset-0 top-0 left-0 w-full h-full scale-105 object-cover opacity-0 group-hover:opacity-100 transition duration-300' src="https://i.ibb.co.com/1JQtDmLt/svgviewer-png-output-1.png" alt="" />
+
+                                {/* Content: Icon */}
+                                <div className='flex justify-end relative z-20'>
                                     <div
                                         className='md:w-16 w-12 md:h-16 h-12 transition-colors duration-300 bg-[#C9FF90] group-hover:bg-[#1A3C38]'
                                         style={{
@@ -98,12 +102,12 @@ const WhatWeDo = () => {
                                     />
                                 </div>
 
-                                <div className='relative z-10 space-y-3 md:space-y-4'>
+                                {/* Content: Text */}
+                                <div className='relative z-20 space-y-3 md:space-y-4'>
                                     <h3 className='recoleta md:text-2xl text-[18px]'>
                                         {item.title}
                                     </h3>
-                                    {/* Text */}
-                                    <p className='outfit md:text-lg text-[14px] font-light text-white/79 group-hover:text-[#052e26]/80 transition-colors duration-300'>
+                                    <p className='outfit md:text-lg text-[14px] font-light text-white/70 group-hover:text-[#052e26] transition-colors duration-300'>
                                         {item.description}
                                     </p>
                                 </div>
