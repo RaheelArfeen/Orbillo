@@ -73,7 +73,7 @@ const OurWorks = () => {
                             <p className='uppercase outfit text-sm lg:text-lg font-bold text-[#696969] tracking-[2.7px] text-center'>
                                 Our works
                             </p>
-                            <h3 className='text-[28px] md:text-[40px] max-w-[580px] recoleta text-center text-[#C9FF90] leading-tight -tracking-[0.48px]'>
+                            <h3 className='text-[28px] md:text-[40px] max-w-[580px] recoleta text-center text-[#16332F] leading-tight -tracking-[0.48px]'>
                                 We Craft Digital Experiences That Matter, Perform and Inspire
                             </h3>
 
@@ -89,8 +89,8 @@ const OurWorks = () => {
                         <Swiper
                             modules={[Pagination]}
                             spaceBetween={16}
-                            slidesPerView={1.1}
-                            centeredSlides={true}
+                            slidesPerView={1.15}
+                            centeredSlides={false}
                             pagination={{ clickable: true }}
                             className="w-full"
                         >

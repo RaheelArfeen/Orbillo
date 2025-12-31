@@ -39,7 +39,7 @@ const WhatWeDo = () => {
     ];
 
     return (
-        <div className='relative bg-[#041E1D] z-0'>
+        <div className='relative bg-[#041E1D] z-0 overflow-hidden'>
 
             <div className='h-[700px] w-[700px] bg-[#C9FF90]/21 rounded-full absolute -z-5 -top-35 -right-100 blur-[100px]'></div>
             <div className='h-[500px] w-[700px] bg-[#C9FF90]/21 rounded-full absolute -z-5 -top-80 left-30 blur-[100px]'></div>
