@@ -46,7 +46,7 @@ const Footer = () => {
                                 className="group relative md:py-4 py-3 px-8 rounded-full text-white outfit md:text-xl transition-all duration-300 overflow-hidden cursor-pointer"
                             >
                                 <span className="relative z-10 group-hover:text-[#17241F] transition duration-300">
-                                    Book A Free Discovery Call
+                                    Schedule A Discovery Call
                                 </span>
 
                                 <div className="pointer-events-none absolute inset-0 rounded-full bg-black/40 transition-opacity duration-300 group-hover:opacity-0" />
@@ -74,7 +74,8 @@ const Footer = () => {
 
             {/* Footer Body */}
             <div className="bg-[#07302C] 2xl:rounded-t-[100px] xl:rounded-t-[60px] lg:rounded-t-[100px] overflow-hidden z-50">
-                <section className='mx-auto text-white 2xl:pt-[320px] lg:py-[250px] pt-20 pb-30 relative z-20 overflow-hidden 2xl:h-[1100px] xl:h-[800px] md:h-[1000px] sm:h-[1000px] h-[1100px]'>
+                {/* 2xl:h-[1100px] xl:h-[800px] md:h-[1000px] sm:h-[1000px] h-[1100px] */}
+                <section className='mx-auto text-white 2xl:pt-[320px] lg:py-[250px] pt-20 pb-30 relative z-20 overflow-hidden 2xl:h-[1000px] xl:h-[800px] md:h-[900px] h-[800px]'>
 
                     <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-screen  -z-50">
                         <Image
@@ -98,7 +99,7 @@ const Footer = () => {
                     <div className="max-w-[1380px] mx-auto flex lg:flex-row flex-col items-start justify-between 2xl:px-4 md:px-12 px-4 z-50 lg:gap-20">
 
                         {/* Logo Section */}
-                        <div className="w-full lg:w-1/4 flex flex-col max-lg:items-center mb-10 md:mb-24">
+                        <div className="w-full lg:w-3/4 flex flex-col max-lg:items-center mb-10 md:mb-24">
                             <Image src={Logo} alt='Logo' />
 
                             <p className='max-w-[300px] text-white/79 outfit max-lg:text-center text-lg mt-6'>
@@ -121,7 +122,20 @@ const Footer = () => {
                         </div>
 
                         {/* Services + Quick Links wrapper for small screen */}
-                        <div className="lg:w-3/4 w-full bg--500 flex flex-wrap space-y-10 flex-row justify-between mt-10 md:mt-0">
+                        <div className="w-full max-w-2xl mx-auto bg--500 flex flex-wrap space-y-10 flex-row justify-between mt-10 md:mt-0">
+
+                            {/* Quick Links */}
+                            <div>
+                                <p className="outfit text-white/55 tracking-[2.7px] font-bold text-lg uppercase mb-6">
+                                    Quick Links
+                                </p>
+                                <div className="flex flex-col gap-4 text-white/85 outfit text-lg">
+                                    <Link href={'/'} className="cursor-pointer hover:text-white hover:scale-105 transition-all duration-300">Home</Link>
+                                    <Link href={'/about'} className="cursor-pointer hover:text-white hover:scale-105 transition-all duration-300">About Us</Link>
+                                    <Link href={'/contact'} className="cursor-pointer hover:text-white hover:scale-105 transition-all duration-300">Contact Us</Link>
+                                    {/* <Link href={'/contact'} className="cursor-pointer hover:text-white hover:scale-105 transition-all duration-300">Testimonials</Link> */}
+                                </div>
+                            </div>
 
                             {/* Services */}
                             <div>
@@ -133,31 +147,6 @@ const Footer = () => {
                                     <Link href={'/services/ui-ux'} className="hover:text-white hover:scale-105 transition-all duration-300 cursor-pointer">UI/UX Design</Link>
                                     <Link href={'/services/social-media'} className="hover:text-white hover:scale-105 transition-all duration-300 cursor-pointer">Social Media Design</Link>
                                     <Link href={'/services/wordpress'} className="hover:text-white hover:scale-105 transition-all duration-300 cursor-pointer">Web Development</Link>
-                                </div>
-                            </div>
-
-                            {/* Quick Links */}
-                            <div>
-                                <p className="outfit text-white/55 tracking-[2.7px] font-bold text-lg uppercase mb-6">
-                                    Quick Links
-                                </p>
-                                <div className="flex flex-col gap-4 text-white/85 outfit text-lg">
-                                    <Link href={'/'} className="cursor-pointer hover:text-white hover:scale-105 transition-all duration-300">Home</Link>
-                                    <Link href={'/about'} className="cursor-pointer hover:text-white hover:scale-105 transition-all duration-300">About Us</Link>
-                                    <Link href={'/contact'} className="cursor-pointer hover:text-white hover:scale-105 transition-all duration-300">Contact Us</Link>
-                                    {/* <Link href={'/testimonials'} className="cursor-pointer hover:text-white hover:scale-105 transition-all duration-300">Testimonials</Link> */}
-                                </div>
-                            </div>
-
-                            <div>
-                                <p className="outfit text-white/55 tracking-[2.7px] font-bold text-lg uppercase mb-6">
-                                    Contacts
-                                </p>
-                                <div className="flex flex-col gap-4 text-white/85 outfit text-lg">
-                                    <span className="flex items-center gap-2"><Mail size={20} /> hello@orbillo.com</span>
-                                    <span className="flex items-center gap-2"><Phone size={20} /> +880 1XXX-XXXXXX</span>
-                                    <span className="flex items-start gap-2 max-w-[450px]"><MapPin size={20} className="mt-1" /> <span>Dinajpur, Bangladesh <p className="text-[#336661]">(Available for meetings)</p></span></span>
-                                    <span className="flex items-start gap-2 max-w-[450px]"><Clock size={20} className="mt-1" /> <span>Sun – Thu | 10 AM – 7 PM <p className="opacity-60">Fri – Sat | Closed</p></span></span>
                                 </div>
                             </div>
                         </div>

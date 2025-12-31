@@ -37,12 +37,19 @@ const Feedback = () => {
                 {/* Right Content */}
                 <div className="py-5 relative max-w-[500px] flex-shrink">
 
+                    {/* className="w-16 h-16 md:w-20 md:h-20" */}
                     {/* SVG */}
                     <div className="absolute -top-5 sm:-top-10 -left-4 sm:-left-10">
-                        <svg width="131" height="96" viewBox="0 0 131 96" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-16 h-16 md:w-20 md:h-20">
-                            <g opacity="0.12">
-                                <path d="M27.975 0.535156H54.3772L36.9548 42.044L36.5739 42.9513H37.5579H57.1915V94.8706H0.5354V42.4921L27.975 0.535156ZM100.844 0.535156H127.246L109.824 42.044L109.443 42.9513H110.427H130.06V94.8706H73.4043V42.4921L100.844 0.535156Z" stroke="#0E3B1F" strokeWidth="1.07083" />
+                        <svg width="157" height="157" viewBox="0 0 157 157" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-24 h-24 md:w-36 md:h-36">
+                            <g opacity="0.28">
+                                <path d="M41.1769 15.5H67.5791L50.1567 57.0088L49.7758 57.9162H50.7598H70.3934V109.835H13.7373V57.4569L41.1769 15.5ZM114.046 15.5H140.448L123.026 57.0088L122.645 57.9162H123.629H143.262V109.835H86.6062V57.4569L114.046 15.5Z" stroke="url(#paint0_linear_1184_670)" stroke-width="1.07083" />
                             </g>
+                            <defs>
+                                <linearGradient id="paint0_linear_1184_670" x1="78.4998" y1="15.5" x2="78.4998" y2="109.835" gradientUnits="userSpaceOnUse">
+                                    <stop offset="0.365385" stop-color="#0E3B1F" />
+                                    <stop offset="1" stop-color="white" />
+                                </linearGradient>
+                            </defs>
                         </svg>
                     </div>
 

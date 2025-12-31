@@ -4,7 +4,6 @@ import Image from 'next/image';
 import React from 'react';
 
 // --- ASSETS ---
-import Bg from '../assets/WhatWeDoBG.png';
 import penTool from '../assets/Icons/PenTool.svg';
 import Layout from '../assets/Icons/Layout.svg';
 import WordPress from '../assets/Icons/WordPress.svg';
@@ -40,16 +39,11 @@ const WhatWeDo = () => {
     ];
 
     return (
-        <div className='relative'>
-            {/* Background Image */}
-            <div className='absolute inset-0 -top-[100px] -z-10'>
-                <Image
-                    src={Bg}
-                    alt='What we do background'
-                    fill
-                    className='object-cover'
-                />
-            </div>
+        <div className='relative bg-[#041E1D] z-0'>
+
+            <div className='h-[700px] w-[700px] bg-[#C9FF90]/21 rounded-full absolute -z-5 -top-35 -right-100 blur-[100px]'></div>
+            <div className='h-[500px] w-[700px] bg-[#C9FF90]/21 rounded-full absolute -z-5 -top-80 left-30 blur-[100px]'></div>
+            <div className='h-[700px] w-[700px] bg-[#C9FF90]/21 rounded-full absolute -z-5 -bottom-35 -left-100 blur-[100px]'></div>
 
             <section className='z-30 max-w-[1380px] mx-auto py-20 px-4'>
                 {/* Header */}
@@ -58,13 +52,13 @@ const WhatWeDo = () => {
                         <p className='uppercase outfit text-sm lg:text-lg font-bold text-white/55 tracking-[2.7px]'>
                             What We Do
                         </p>
-                        <h3 className='text-[28px] md:text-[40px] md:max-w-[700px] max-w-[500px] recoleta text-white leading-tight'>
-                            <p>We offer a wide rande of <span className='text-[#C9FF90] underline decoration-[#C9FF90] decoration-2 underline-offset-2'>design & development services</span> to high ambitious businesses <span className='text-[#C9FF90] underline decoration-[#C9FF90] decoration-2 underline-offset-2'>worldwide</span></p>
+                        <h3 className='text-[28px] md:text-[40px] max-w-[580px] recoleta text-[#C9FF90] leading-tight -tracking-[0.48px]'>
+                            <p>Purpose-led design services built for clarity, usability and long-term brand value.</p>
                         </h3>
                     </div>
                     <div>
-                        <p className='outfit text-xl md:text-2xl text-white/80 lg:max-w-[600px] md:max-w-[400px] max-w-[300px] text-center lg:text-right font-light'>
-                            At Orbillo, we make digital simple, powerful and growth-focused
+                        <p className='outfit text-lg md:text-xl text-white/80 lg:max-w-[900px] md:max-w-[700px] text-center lg:text-right'>
+                            We offer a focused range of design services for businesses that care about clarity, usability, and strong visual identity.
                         </p>
                     </div>
                 </div>
@@ -73,7 +67,7 @@ const WhatWeDo = () => {
                     {services.map((item, index) => (
                         <div
                             key={index}
-                            className='group relative md:rounded-[32px] rounded-2xl md:min-h-[420px] min-h-[300px] overflow-hidden'
+                            className='group relative md:rounded-[20px] rounded-2xl md:min-h-[420px] min-h-[300px] overflow-hidden'
                         >
                             <Link href={item.route}>
                                 {/* Animated Border Gradient */}
@@ -83,13 +77,13 @@ const WhatWeDo = () => {
                                 />
 
                                 {/* Main Card Content Container */}
-                                <div className='absolute inset-[2px] md:rounded-[32px] rounded-2xl z-10 flex flex-col justify-between px-7 py-8 
+                                <div className='absolute inset-[2px] md:rounded-[20px] rounded-2xl z-10 flex flex-col justify-between px-6 py-8 
                                 transition-all duration-500 ease-in-out
                                 bg-[#1C413D] text-white
                                 group-hover:text-[#052e26]'
                                 >
 
-                                    <img className='absolute inset-0 top-0 left-0 w-full h-full scale-105 object-cover opacity-0 group-hover:opacity-100 transition duration-300' src="https://i.ibb.co.com/1JQtDmLt/svgviewer-png-output-1.png" alt="" />
+                                    <img className='absolute inset-0 top-0 left-0 w-full h-full scale-105 object-cover opacity-0 group-hover:opacity-100 transition duration-300 pointer-events-none' src="https://i.ibb.co.com/1JQtDmLt/svgviewer-png-output-1.png" alt="" />
 
                                     {/* Content: Icon */}
                                     <div className='flex justify-end relative z-20'>

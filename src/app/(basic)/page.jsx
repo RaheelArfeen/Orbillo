@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect } from "react";
 import HeroSection from "../components/HeroSection";
-import AboutUs from "../components/AboutUs";
+import AboutUs from "../components/AboutUs.jsx";
 import WhatWeDo from "../components/WhatWeDo";
 import OurWorks from "../components/OurWorks";
 import WhyUs from "../components/WhyUs";

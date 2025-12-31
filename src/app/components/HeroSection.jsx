@@ -36,11 +36,7 @@ const HeroSection = () => {
             <section className='z-20 text-center pt-30 mb-20 px-4'>
                 <p className='outfit uppercase text-[#C7C7C7] font-bold text-sm md:text-lg mb-3 tracking-[2.7px]'>Hi! We Are orbillo</p>
                 <h1 className='lg:text-6xl md:text-5xl min-[400px]:text-3xl text-2xl max-[350px]:text-xl 2 max-[350px]:p-0 capitalize leading-[130%] md:max-w-[850px] max-w-[450px] recoleta'>
-                    <span>We help businesses grow with</span> {' '}
-                    <span>
-                        <span className='text-[#C9FF90] underline decoration-[#C9FF90] decoration-3 underline-offset-5'>strategy-Driven</span> designs & {' '}
-                    </span>
-                    <span>development</span>
+                    We help businesses grow with strategy-Driven designs & development
                 </h1>
 
                 <div className='flex flex-col md:flex-row items-center justify-center gap-3 mt-12 mb-34 px-10'>

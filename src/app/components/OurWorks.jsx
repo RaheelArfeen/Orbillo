@@ -31,10 +31,10 @@ const customSwiperStyles = `
 `;
 
 const GRID_ITEMS = [
-    { id: 1, color: 'bg-[#cbe3be]', imgUrl: 'https://i.ibb.co.com/hJ9rW61H/image.png' },
-    { id: 2, color: 'bg-[#cbe3be]', imgUrl: 'https://i.ibb.co.com/xSpWFDqb/image.png' },
-    { id: 3, color: 'bg-[#cbe3be]', imgUrl: 'https://i.ibb.co.com/B26xhbTX/image.png' },
-    { id: 4, color: 'bg-[#cbe3be]', imgUrl: 'https://i.ibb.co.com/G4dBy5kr/image.png' },
+    { id: 1, color: 'bg-[#cbe3be]', imgUrl: 'https://i.ibb.co.com/hJ9rW61H/image.png', comingSoon: true },
+    { id: 2, color: 'bg-[#cbe3be]', imgUrl: 'https://i.ibb.co.com/xSpWFDqb/image.png', comingSoon: true },
+    { id: 3, color: 'bg-[#cbe3be]', imgUrl: 'https://i.ibb.co.com/B26xhbTX/image.png', comingSoon: true },
+    { id: 4, color: 'bg-[#cbe3be]', imgUrl: 'https://i.ibb.co.com/G4dBy5kr/image.png', comingSoon: true },
 ];
 
 const STATS_DATA = [
@@ -69,58 +69,69 @@ const OurWorks = () => {
                 {/* --- Section: Header --- */}
                 <section className='z-30 max-w-[1380px] mx-auto'>
                     <div className='flex flex-col lg:flex-row items-center justify-between gap-8 mb-12 md:mb-20'>
-                        <div className='space-y-8 lg:text-left text-center w-full flex flex-col items-center lg:items-start'>
-                            <p className='uppercase outfit text-sm lg:text-lg font-bold text-[#696969] tracking-[2.7px]'>
+                        <div className='space-y-8 w-full flex flex-col items-center'>
+                            <p className='uppercase outfit text-sm lg:text-lg font-bold text-[#696969] tracking-[2.7px] text-center'>
                                 Our works
                             </p>
-                            <h3 className='text-[28px] md:text-[40px] md:max-w-[700px] max-w-[500px] recoleta text-[#373737]/85 leading-tight'>
-                                <p>We Craft Digital Experiences That Matter, Perform, and Inspire</p>
+                            <h3 className='text-[28px] md:text-[40px] max-w-[580px] recoleta text-center text-[#C9FF90] leading-tight -tracking-[0.48px]'>
+                                We Craft Digital Experiences That Matter, Perform and Inspire
                             </h3>
-                        </div>
-                        <div>
-                            <p className='outfit text-xl md:text-2xl text-[#373737]/80 lg:max-w-[800px] md:max-w-[400px] max-w-[300px] text-center lg:text-right font-light'>
-                                We partner with startups and growing businesses to create impactful digital products.
+
+                            <p className='outfit text-lg md:text-xl text-[#575757] max-w-[500px] text-center tracking-[0.20px]'>
+                                A selection of projects where design helped businesses communicate better, stand stronger and grow with confidence.
                             </p>
                         </div>
                     </div>
                 </section>
 
                 <section className='z-30 max-w-[1380px] mx-auto'>
-
                     <div className='block lg:hidden'>
                         <Swiper
                             modules={[Pagination]}
                             spaceBetween={16}
-                            slidesPerView={1.2}
-                            centeredSlides={false}
-                            grabCursor={true}
+                            slidesPerView={1.1}
+                            centeredSlides={true}
                             pagination={{ clickable: true }}
                             className="w-full"
                         >
-
-                            {/* The Green Grid Items */}
                             {GRID_ITEMS.map((item) => (
                                 <SwiperSlide key={item.id}>
-                                    <div className={`w-full h-[380px] rounded-xl relative group overflow-hidden`}>
-                                        <img src={item.imgUrl} alt="" className='w-full h-full pointer-events-none object-scale-down' />
+                                    <div className="relative w-full h-[380px] rounded-2xl overflow-hidden shadow-sm">
+                                        <img src={item.imgUrl} alt="work" className='w-full h-full object-cover' />
+                                        {item.comingSoon && (
+                                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-end justify-center pb-10">
+                                                <span className="bg-white text-[#16332F] px-5 py-2 rounded-full text-xs font-bold uppercase tracking-wider shadow-xl">
+                                                    Coming Soon
+                                                </span>
+                                            </div>
+                                        )}
                                     </div>
                                 </SwiperSlide>
                             ))}
                         </Swiper>
                     </div>
 
-                    {/* --- DESKTOP VIEW: ORIGINAL GRID (>= 768px) --- */}
-                    <div className='hidden lg:grid grid-cols-2 gap-6'>
+                    <div className='hidden lg:grid grid-cols-2 gap-8'>
                         {GRID_ITEMS.map((item) => (
                             <div
                                 key={item.id}
-                                className={`w-full h-[480px] rounded-3xl relative group overflow-hidden transition-all duration-300 group`}
+                                className="group relative w-full min-h-[480px] rounded-3xl overflow-hidden cursor-pointer"
                             >
-                                <img src={item.imgUrl} alt="" className='w-full h-full pointer-events-none object-scale-down group-hover:scale-102 transition duration-500' />
+                                <img
+                                    src={item.imgUrl}
+                                    alt="work"
+                                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                />
+                                {item.comingSoon && (
+                                    <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center backdrop-blur-[2px]">
+                                        <span className="translate-y-4 group-hover:translate-y-0 transition-transform duration-500 bg-white text-[#16332F] text-2xl font-bold px-8 py-4 rounded-full shadow-2xl">
+                                            Coming Soon
+                                        </span>
+                                    </div>
+                                )}
                             </div>
                         ))}
                     </div>
-
                 </section>
 
                 {/* --- Section: Stats --- */}

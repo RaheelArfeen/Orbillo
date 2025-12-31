@@ -2,6 +2,7 @@ import { Geist, Geist_Mono, Urbanist, Poppins } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import SmoothScroll from "./smoothScroll";
+import FloatingButton from "./components/FloatingButton";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -49,6 +50,7 @@ export default function RootLayout({ children }) {
         />
 
         <SmoothScroll />
+        <FloatingButton />
       </body>
     </html>
   );

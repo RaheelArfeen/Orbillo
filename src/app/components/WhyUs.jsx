@@ -57,8 +57,8 @@ const projects = [
         )
     },
     {
-        title: "Growth Focused",
-        subTitle: "Delivery",
+        title: "Purpose-Driven",
+        subTitle: "Strategy",
         description: "You stay involved from concept to completion.",
         color: "#591A83",
         icons: (
@@ -82,7 +82,7 @@ const projects = [
     },
     {
         title: "Growth Focused",
-        subTitle: "Delivery",
+        subTitle: "Execution",
         description: "You stay involved from concept to completion.",
         color: "#1E423C",
         icons: (
@@ -104,7 +104,7 @@ const projects = [
 // --- CARD COMPONENT ---
 const Card = ({ i, title, subTitle, icons, description, color }) => {
     const container = useRef(null);
-    const topOffset = `calc(10vh + ${i * 36}px)`;
+    const topOffset = `calc(10vh + ${i * 12}px)`;
 
     return (
         <div
@@ -116,7 +116,7 @@ const Card = ({ i, title, subTitle, icons, description, color }) => {
             <motion.div
                 style={{
                     backgroundColor: color,
-                    "--h-desktop": `calc(700px - (${i * 36}px))`,
+                    "--h-desktop": `calc(700px - (${i * 12}px))`,
                 }}
                 className="
                   relative w-full max-w-[1100px]
@@ -133,15 +133,15 @@ const Card = ({ i, title, subTitle, icons, description, color }) => {
                     {/* TEXT SECTION */}
                     <div className="flex flex-col justify-between flex-1">
                         <div className="flex flex-col gap-3 sm:gap-4">
-                            <h2 className="text-sm sm:text-lg md:text-3xl lg:text-4xl recoleta text-white font-semibold uppercase tracking-tight">
+                            <h2 className="text-sm sm:text-lg md:text-3xl lg:text-4xl recoleta text-white uppercase tracking-tight">
                                 {title}
                             </h2>
 
-                            <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-[60px] recoleta text-white leading-tight">
+                            <h1 className="text-2xl sm:text-4xl md:text-5xl recoleta text-white leading-tight">
                                 {subTitle}
                             </h1>
 
-                            <p className="text-white/80 text-base sm:text-lg md:text-2xl max-w-xl leading-relaxed">
+                            <p className="text-white/80 text-base sm:text-lg md:text-2xl max-w-xl leading-relaxed outline-offset-0 -tracking-[0.24px]">
                                 {description}
                             </p>
                         </div>
@@ -174,17 +174,7 @@ const WhyUs = () => {
     });
 
     return (
-        <div className='relative bg-[#07302C]'>
-
-            {/* Background Image Wrapper */}
-            <div className='inset-0 top-0 -z-10 h-full w-full overflow-hidden '>
-                <Image
-                    src={Bg}
-                    alt='What we do background'
-                    fill
-                    className='object-cover '
-                />
-            </div>
+        <div className='relative bg-[#07302C] z-0'>
 
             {/* CHANGED: Removed 'pb-40' and changed to 'pb-0' */}
             <div className='pt-20 pb-0'>
@@ -193,15 +183,15 @@ const WhyUs = () => {
                     <div className='flex flex-col lg:flex-row items-center justify-between gap-8 mb-20'>
                         <div className='space-y-8 lg:text-left text-center w-full flex flex-col items-center lg:items-start'>
                             <p className='uppercase outfit text-sm lg:text-lg font-bold text-white/55 tracking-[2.7px]'>
-                                Why us
+                                Why Choose Us?
                             </p>
-                            <h3 className='text-[28px] md:text-[40px] md:max-w-[700px] max-w-[500px] recoleta text-white leading-tight'>
-                                <p>We offer a wide rande of <span className='text-[#C9FF90] underline decoration-[#C9FF90] decoration-2 underline-offset-2'>design services</span> to small & medium sized businesses <span className='text-[#C9FF90] underline decoration-[#C9FF90] decoration-2 underline-offset-2'>worldwide</span></p>
+                            <h3 className='text-[28px] md:text-[40px] max-w-[580px] recoleta text-[#C9FF90] leading-tight -tracking-[0.48px]'>
+                                We treat every project like a partnership, not a task.
                             </h3>
                         </div>
                         <div>
-                            <p className='outfit text-xl md:text-2xl text-white/80 lg:max-w-[600px] md:max-w-[400px] max-w-[300px] text-center lg:text-right font-light'>
-                                At Orbillo, we make digital simple, powerful and growth-focused
+                            <p className='outfit text-lg md:text-xl text-white/80 lg:max-w-[900px] md:max-w-[700px] text-center lg:text-right'>
+                                At Orbillo, we approach every project with purpose and clarity. We take time to understand your business, your users, and your goals - then design with intention.
                             </p>
                         </div>
                     </div>
