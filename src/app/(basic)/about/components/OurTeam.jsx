@@ -75,7 +75,7 @@ const OurTeam = () => {
                 {sections.map((section) => (
                     <div
                         key={section.id}
-                        className={`flex flex-col lg:flex-row items-center justify-between py-12 lg:py-24 gap-10 lg:gap-16 border-b border-gray-200 last:border-none ${section.reverse ? "lg:flex-row-reverse" : ""}`}
+                        className={`flex flex-col lg:flex-row items-center justify-between py-12 lg:py-24 gap-10 lg:gap-16 max-md:border-b border-gray-200 last:border-none ${section.reverse ? "lg:flex-row-reverse" : ""}`}
                     >
                         {/* Text Container */}
                         <div className='w-full lg:w-1/2 flex flex-col items-start'>

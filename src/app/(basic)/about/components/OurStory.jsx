@@ -6,7 +6,6 @@ const OurStory = () => {
     return (
         <div className='relative w-full overflow-hidden'>
 
-            {/* Background Image: using object-cover for better responsiveness */}
             <div className='absolute inset-0 -z-10'>
                 <Image
                     src={OurStoryBg}
@@ -15,7 +14,6 @@ const OurStory = () => {
                 />
             </div>
 
-            {/* Container: Added horizontal padding (px) and responsive vertical padding (py) */}
             <section className='max-w-[1380px] mx-auto px-5 md:px-10 py-12 md:py-25'>
 
                 {/* Header Section */}

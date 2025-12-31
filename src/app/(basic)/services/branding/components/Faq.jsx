@@ -1,7 +1,7 @@
-'use client'; // Required for State if using Next.js App Router
+'use client';
 
 import Image from 'next/image';
-import FaqIcon from './Icons/FaqIcon.svg'; // Ensure this path is correct
+import FaqIcon from '../../Icons/FaqIcon.svg';
 import React, { useState } from 'react';
 import { Plus } from 'lucide-react';
 
@@ -40,7 +40,7 @@ const Faq = () => {
     return (
         <div>
             <section className='max-w-[1380px] mx-auto px-5 md:px-10 py-12 md:py-30 relative'>
-                
+
                 <div className='flex flex-col lg:flex-row justify-between gap-10 lg:gap-20'>
 
                     <div className='w-full lg:w-[40%] flex flex-col items-center lg:items-start text-center lg:text-left shrink-0'>
@@ -53,8 +53,8 @@ const Faq = () => {
                             </h1>
 
                             <div className='pointer-events-none'>
-                                <Image 
-                                    src={FaqIcon} 
+                                <Image
+                                    src={FaqIcon}
                                     alt="FAQ Icon"
                                 />
                             </div>
@@ -67,8 +67,8 @@ const Faq = () => {
                             const isOpen = openIndex === index;
 
                             return (
-                                <div 
-                                    key={index} 
+                                <div
+                                    key={index}
                                     onClick={() => toggleFAQ(index)}
                                     className={`px-6 py-6 rounded-xl border border-[#CACACA] w-full cursor-pointer transition-all duration-300 hover:bg-black/2`}
                                 >
@@ -76,11 +76,11 @@ const Faq = () => {
                                         <h1 className={`text-xl md:text-2xl outfit leading-[140%] transition-colors duration-300 ${isOpen ? 'text-[#696969]' : 'text-[#696969]'}`}>
                                             {question.title}
                                         </h1>
-                                        
+
                                         <div className={`shrink-0 transition-transform duration-500 ${isOpen ? 'rotate-45' : 'rotate-0'}`}>
-                                            <Plus 
-                                                strokeWidth={2} 
-                                                className={`text-2xl transition-colors duration-300 ${isOpen ? 'text-[#07302C]' : 'text-[#07302C]'}`} 
+                                            <Plus
+                                                strokeWidth={2}
+                                                className={`text-2xl transition-colors duration-300 ${isOpen ? 'text-[#07302C]' : 'text-[#07302C]'}`}
                                             />
                                         </div>
                                     </div>

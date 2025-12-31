@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import HeroSection from "../components/HeroSection";
 import AboutUs from "../components/AboutUs";
 import WhatWeDo from "../components/WhatWeDo";
-import WhatWeDo2 from "../components/WhatWeDo2";
+import OurWorks from "../components/OurWorks";
 import WhyUs from "../components/WhyUs";
 import Feedback from "../components/Feedback";
 
@@ -36,7 +36,7 @@ const Home = () => {
                 <WhatWeDo />
             </div>
 
-            <WhatWeDo2 />
+            <OurWorks />
 
             <div className="relative">
                 <WhyUs />

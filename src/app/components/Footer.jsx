@@ -39,8 +39,19 @@ const Footer = () => {
                     </h1>
                     <div className="flex md:flex-row flex-col items-center gap-3 md:mt-20 mt-6 z-50">
                         <Link href={'https://calendly.com/teamorbillo/30min?back=1&month=2025-11'}>
-                            <button className="md:py-4 py-3 px-8 text-white rounded-full bg-[linear-gradient(-45deg,#169689_34%,#002A15_88%)] hover:bg-white hover:bg-none hover:text-[#17241F] outfit md:text-xl">
-                                Book A Free Discovery Call
+                            <button
+                                style={{
+                                    background: "linear-gradient(-114deg, #169689 34%, #002A15 88%)",
+                                }}
+                                className="group relative md:py-4 py-3 px-8 rounded-full text-white outfit md:text-xl transition-all duration-300 overflow-hidden cursor-pointer"
+                            >
+                                <span className="relative z-10 group-hover:text-[#17241F] transition duration-300">
+                                    Book A Free Discovery Call
+                                </span>
+
+                                <div className="pointer-events-none absolute inset-0 rounded-full bg-black/40 transition-opacity duration-300 group-hover:opacity-0" />
+
+                                <div className="pointer-events-none absolute inset-0 rounded-full bg-white opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                             </button>
                         </Link>
 
@@ -65,9 +76,15 @@ const Footer = () => {
             <div className="bg-[#07302C] 2xl:rounded-t-[100px] xl:rounded-t-[60px] lg:rounded-t-[100px] overflow-hidden z-50">
                 <section className='mx-auto text-white 2xl:pt-[320px] lg:py-[250px] pt-20 pb-30 relative z-20 overflow-hidden 2xl:h-[1100px] xl:h-[800px] md:h-[1000px] sm:h-[1000px] h-[1100px]'>
 
-                    <div className="absolute instet-0 bottom-0 -z-50 w-full">
-                        <Image src={FooterEffect} />
+                    <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-screen  -z-50">
+                        <Image
+                            src={FooterEffect}
+                            alt="Footer Effect"
+                            className="w-screen h-auto object-cover"
+                            priority
+                        />
                     </div>
+
 
                     <div className="w-full max-w-[1920px] mx-auto pointer-events-none">
                         <div className="hidden lg:flex absolute instet-0 bottom-0 left-1/2 -translate-x-1/2 -z-50 max-w-[1600px] w-full">

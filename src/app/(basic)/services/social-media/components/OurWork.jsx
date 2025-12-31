@@ -2,7 +2,7 @@
 
 import React, { useState, useRef, useEffect } from 'react';
 import Image from 'next/image';
-import OurWorkBg from './Image/OurWork.png';
+import OurWorkBg from '../../Image/OurWork.png';
 import { Mail, MapPin, Phone } from 'lucide-react';
 import { FaBehance, FaCaretDown, FaDribbble, FaLinkedin, FaTwitter } from 'react-icons/fa';
 

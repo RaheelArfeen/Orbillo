@@ -1,7 +1,4 @@
 import React from 'react';
-import Left from './Image/Left.png'
-import Middle from './Image/Middle.png'
-import Right from './Image/Right.png'
 import Image from 'next/image';
 import HeroBg from '@/app/assets/Hero.svg'
 

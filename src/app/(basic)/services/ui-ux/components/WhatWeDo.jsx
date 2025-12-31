@@ -1,9 +1,8 @@
 import Image from 'next/image';
 import React from 'react';
-import Redesign from './Icons/Redesign.svg'
-import Identify from './Icons/Identify.svg'
-import Guidelines from './Icons/Guidelines.svg'
-import Marketing from './Icons/Marketing.svg'
+import Redesign from '../../Icons/Redesign.svg'
+import Identify from '../../Icons/Identify.svg'
+import Guidelines from '../../Icons/Guidelines.svg'
 
 const WhatWeDo = () => {
     const numbers = Array.from({ length: 10 }, (_, i) => i + 1);

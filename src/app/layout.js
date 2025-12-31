@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono, Urbanist, Poppins } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
+import SmoothScroll from "./smoothScroll";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -46,6 +47,8 @@ export default function RootLayout({ children }) {
           src="https://assets.calendly.com/assets/external/widget.js"
           strategy="lazyOnload"
         />
+
+        <SmoothScroll />
       </body>
     </html>
   );

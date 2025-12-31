@@ -31,31 +31,29 @@ const customSwiperStyles = `
 `;
 
 const GRID_ITEMS = [
-    { id: 1, color: 'bg-[#cbe3be]' },
-    { id: 2, color: 'bg-[#cbe3be]' },
-    { id: 3, color: 'bg-[#cbe3be]' },
-    { id: 4, color: 'bg-[#cbe3be]' },
+    { id: 1, color: 'bg-[#cbe3be]', imgUrl: 'https://i.ibb.co.com/hJ9rW61H/image.png' },
+    { id: 2, color: 'bg-[#cbe3be]', imgUrl: 'https://i.ibb.co.com/xSpWFDqb/image.png' },
+    { id: 3, color: 'bg-[#cbe3be]', imgUrl: 'https://i.ibb.co.com/B26xhbTX/image.png' },
+    { id: 4, color: 'bg-[#cbe3be]', imgUrl: 'https://i.ibb.co.com/G4dBy5kr/image.png' },
 ];
 
 const STATS_DATA = [
-    { value: 2, label: 'Countries' }, // Changed strings to numbers for CountUp
+    { value: 2, label: 'Countries' },
     { value: 90, label: 'Days in Operation', plus: true },
     { value: 120, label: 'Projects Completed', plus: true },
     { value: 440, label: 'Cups of Coffee', plus: true },
 ];
 
-const WhatWeDo = () => {
-    // Setup the intersection observer
+const OurWorks = () => {
     const { ref, inView } = useInView({
-        triggerOnce: true, // Animation runs only once
-        threshold: 0.3,    // Starts when 30% of the section is visible
+        triggerOnce: true,
+        threshold: 0.3,
     });
 
     return (
         <div className='relative bg-[#EFEEEA] '>
             <style>{customSwiperStyles}</style>
 
-            {/* Marquee Section */}
             <div className="w-full bg-[#5ba32b] py-6 border-y border-[#C9FF90]/30 relative z-30">
                 <Marquee autoFill={true} pauseOnHover={false} speed={80} className="overflow-hidden">
                     <div className="flex items-center">
@@ -73,15 +71,15 @@ const WhatWeDo = () => {
                     <div className='flex flex-col lg:flex-row items-center justify-between gap-8 mb-12 md:mb-20'>
                         <div className='space-y-8 lg:text-left text-center w-full flex flex-col items-center lg:items-start'>
                             <p className='uppercase outfit text-sm lg:text-lg font-bold text-[#696969] tracking-[2.7px]'>
-                                What We Do
+                                Our works
                             </p>
                             <h3 className='text-[28px] md:text-[40px] md:max-w-[700px] max-w-[500px] recoleta text-[#373737]/85 leading-tight'>
-                                <p>We offer a wide rande of <span className='text-[#041E1D] underline decoration-[#041E1D] decoration-2 underline-offset-2'>design services</span> to small & medium sized businesses <span className='text-[#041E1D] underline decoration-[#041E1D] decoration-2 underline-offset-2'>worldwide</span></p>
+                                <p>We Craft Digital Experiences That Matter, Perform, and Inspire</p>
                             </h3>
                         </div>
                         <div>
-                            <p className='outfit text-xl md:text-2xl text-[#373737]/80 lg:max-w-[600px] md:max-w-[400px] max-w-[300px] text-center lg:text-right font-light'>
-                                At Orbillo, we make digital simple, powerful and growth-focused
+                            <p className='outfit text-xl md:text-2xl text-[#373737]/80 lg:max-w-[800px] md:max-w-[400px] max-w-[300px] text-center lg:text-right font-light'>
+                                We partner with startups and growing businesses to create impactful digital products.
                             </p>
                         </div>
                     </div>
@@ -99,15 +97,12 @@ const WhatWeDo = () => {
                             pagination={{ clickable: true }}
                             className="w-full"
                         >
-                            <SwiperSlide>
-                                <div className='w-full h-[380px] rounded-xl bg-[#d7bfe2]' />
-                            </SwiperSlide>
 
                             {/* The Green Grid Items */}
                             {GRID_ITEMS.map((item) => (
                                 <SwiperSlide key={item.id}>
-                                    <div className={`w-full h-[380px] rounded-xl ${item.color} relative group overflow-hidden`}>
-                                        <div className="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+                                    <div className={`w-full h-[380px] rounded-xl relative group overflow-hidden`}>
+                                        <img src={item.imgUrl} alt="" className='w-full h-full pointer-events-none object-scale-down' />
                                     </div>
                                 </SwiperSlide>
                             ))}
@@ -116,13 +111,12 @@ const WhatWeDo = () => {
 
                     {/* --- DESKTOP VIEW: ORIGINAL GRID (>= 768px) --- */}
                     <div className='hidden lg:grid grid-cols-2 gap-6'>
-                        <div className='w-full h-[480px] rounded-xl bg-[#d7bfe2] col-span-2' />
                         {GRID_ITEMS.map((item) => (
                             <div
                                 key={item.id}
-                                className={`w-full h-[480px] rounded-xl ${item.color} relative group overflow-hidden transition-all duration-300`}
+                                className={`w-full h-[480px] rounded-3xl relative group overflow-hidden transition-all duration-300 group`}
                             >
-                                <div className="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+                                <img src={item.imgUrl} alt="" className='w-full h-full pointer-events-none object-scale-down group-hover:scale-102 transition duration-500' />
                             </div>
                         ))}
                     </div>
@@ -167,4 +161,4 @@ const WhatWeDo = () => {
     );
 };
 
-export default WhatWeDo;
+export default OurWorks;

@@ -1,7 +1,7 @@
 'use client'; // Required for State if using Next.js App Router
 
 import Image from 'next/image';
-import FaqIcon from './Icons/FaqIcon.svg'; // Ensure this path is correct
+import FaqIcon from '../../Icons/FaqIcon.svg'; // Ensure this path is correct
 import React, { useState } from 'react';
 import { Plus } from 'lucide-react';
 
