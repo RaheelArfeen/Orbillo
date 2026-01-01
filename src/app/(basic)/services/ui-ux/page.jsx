@@ -1,4 +1,3 @@
-'use client'
 
 import React from 'react';
 import Hero from './components/Hero';
@@ -10,12 +9,14 @@ import OurWrokMarque from './components/OurWrokMarque';
 import Feedback from './components/Feedback';
 import Faq from './components/Faq';
 import OurCollaboration from './components/OurCollaboration';
-import { PageTitle } from 'react-simple-page-title';
+
+export const metadata = {
+    title: "UI/UX Design | Orbillo",
+};
 
 const page = () => {
     return (
         <div>
-            <PageTitle title='UI/UX Design | Orbillo' />
             <Hero />
             <WhatWeDo />
             <OurWork />

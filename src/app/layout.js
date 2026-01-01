@@ -27,12 +27,12 @@ const poppins = Poppins({
   fallback: ["sans-serif"],
 });
 
+// ✅ Built-in Metadata API (App Router)
 export const metadata = {
   title: "Orbillo - Your Digital Growth Partner",
-  description: "We help businesses grow with strategy-driven design, development, and digital experiences.",
-
+  description:
+    "We help businesses grow with strategy-driven design, development, and digital experiences.",
   metadataBase: new URL("https://orbillo.com"),
-
   openGraph: {
     title: "Orbillo - Your Digital Growth Partner",
     description:
@@ -47,7 +47,6 @@ export const metadata = {
     ],
     type: "website",
   },
-
   twitter: {
     card: "summary_large_image",
     title: "Orbillo - Your Digital Growth Partner",
@@ -56,7 +55,6 @@ export const metadata = {
     images: ["https://orbillo.com/CoverImage.jpg"],
   },
 };
-
 
 export default function RootLayout({ children }) {
   return (
@@ -69,6 +67,7 @@ export default function RootLayout({ children }) {
       >
         {children}
 
+        {/* Scripts & client-only components */}
         <Script
           src="https://assets.calendly.com/assets/external/widget.js"
           strategy="lazyOnload"

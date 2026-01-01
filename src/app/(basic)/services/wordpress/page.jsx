@@ -1,5 +1,3 @@
-'use client'
-
 import React from 'react';
 import Hero from './components/Hero';
 import WhatWeDo from './components/WhatWeDo';
@@ -10,12 +8,14 @@ import OurWrokMarque from './components/OurWrokMarque';
 import Feedback from './components/Feedback';
 import Faq from './components/Faq';
 import OurCollaboration from './components/OurCollaboration';
-import { PageTitle } from 'react-simple-page-title';
+
+export const metadata = {
+    title: "Wordpress Development | Orbillo",
+};
 
 const page = () => {
     return (
         <div>
-            <PageTitle title='Wordpress Development | Orbillo' />
             <Hero />
             <WhatWeDo />
             <OurWork />
