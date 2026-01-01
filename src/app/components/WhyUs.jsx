@@ -1,8 +1,5 @@
 import React, { useRef } from 'react';
-import Image from 'next/image';
 import { useScroll, motion } from 'framer-motion';
-import Bg from '../assets/WhyUsBg.svg';
-import { icons } from 'lucide-react';
 
 // --- MOCK DATA ---
 const projects = [
@@ -133,7 +130,7 @@ const Card = ({ i, title, subTitle, icons, description, color }) => {
                     {/* TEXT SECTION */}
                     <div className="flex flex-col justify-between flex-1">
                         <div className="flex flex-col gap-3 sm:gap-4">
-                            <h2 className="text-sm sm:text-lg md:text-3xl lg:text-4xl recoleta text-white uppercase tracking-tight">
+                            <h2 className="text-sm sm:text-lg md:text-3xl lg:text-4xl recoleta text-white tracking-tight">
                                 {title}
                             </h2>
 

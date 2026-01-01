@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
-import HeroBg from "@/app/assets/Hero.svg"
+import HeroBg from "@/assets/Hero.svg"
 
 const Hero = () => {
     return (

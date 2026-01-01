@@ -4,10 +4,10 @@ import Image from 'next/image';
 import React from 'react';
 
 // --- ASSETS ---
-import penTool from '../assets/Icons/PenTool.svg';
-import Layout from '../assets/Icons/Layout.svg';
-import WordPress from '../assets/Icons/WordPress.svg';
-import MegaPhone from '../assets/Icons/MegaPhone.svg';
+import penTool from '@/assets/Icons/PenTool.svg';
+import Layout from '@/assets/Icons/Layout.svg';
+import WordPress from '@/assets/Icons/WordPress.svg';
+import MegaPhone from '@/assets/Icons/MegaPhone.svg';
 import Link from 'next/link';
 
 const WhatWeDo = () => {

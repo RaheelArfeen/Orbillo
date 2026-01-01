@@ -167,7 +167,7 @@ const AboutUs = () => {
                     {ICONS.map((icon, index) => (
                         <div
                             key={index}
-                            className="border-b border-r border-[#E9E9E9] w-full flex-1 h-20 md:h-24 flex items-center justify-center p-4"
+                            className="border-b border-r border-[#E9E9E9] w-full flex-1 h-20 md:h-24 flex items-center justify-center p-4 hover:bg-black/3 cursor-pointer transition duration-500"
                         >
                             {icon.svg}
                         </div>

@@ -1,8 +1,6 @@
 "use client"
 
 import React, { useState, useRef, useEffect } from 'react';
-import Image from 'next/image';
-import LetsTalkBg from '../../../assets/LetsTalkBg.png';
 import { Mail, MapPin, Phone } from 'lucide-react';
 import { FaBehance, FaCaretDown, FaDribbble, FaLinkedin, FaTwitter } from 'react-icons/fa';
 
@@ -13,7 +11,7 @@ const contactInfo = [
     },
     {
         icon: Phone,
-        text: '+880 1XXX-XXXXXX',
+        text: '+880 1711-252085',
     },
     {
         icon: MapPin,
@@ -54,14 +52,11 @@ const LetsTalk = () => {
     }, []);
 
     return (
-        <div className='relative w-full overflow-hidden'>
-            <div className='absolute top inset-0 -z-10 lg:rounded-t-[100px] overflow-hidden'>
-                <Image
-                    src={LetsTalkBg}
-                    alt="Background"
-                    className='w-full h-full object-cover'
-                />
-            </div>
+        <div className='relative w-full overflow-hidden bg-[#062B28] rounded-t-[80px] md:rounded-t-[100px]'>
+
+            <div className='h-[500px] w-[500px] bg-[#D6F55B]/50 rounded-full absolute -right-60 -top-20 blur-[250px]'></div>
+            <div className='h-[300px] w-[500px] bg-[#D6F55B]/50 rounded-full absolute left-50 -top-50 blur-[250px]'></div>
+            <div className='h-[500px] w-[500px] bg-[#D6F55B]/50 rounded-full absolute -left-60 -bottom-20 blur-[250px]'></div>
 
             <section className='max-w-[1380px] mx-auto px-5 md:px-10 py-12 md:py-25'>
                 <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start'>

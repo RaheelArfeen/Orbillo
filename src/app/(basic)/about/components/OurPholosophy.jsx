@@ -3,7 +3,7 @@
 import React, { useRef } from 'react';
 import Image from 'next/image';
 import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
-import OurPhilosophyBg from '../../../assets/OurPhilosophyBg.png';
+import OurPhilosophyBg from '@/assets/OurPhilosophyBg.png';
 
 const PhilosophyIcon = () => (
     <div className="relative size-12 sm:size-16 lg:size-20 flex-shrink-0 bg-[#07302C] rounded-full z-10">

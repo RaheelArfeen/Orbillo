@@ -1,14 +1,14 @@
 import React from 'react';
-import ItemsImageSvg from '../assets/ItemsImage.svg'
-import ItemsImagePng from '../assets/ItemsImage.png'
-import HeroBg from '@/app/assets/Hero.svg'
+import ItemsImageSvg from '@/assets/ItemsImage.svg'
+import ItemsImagePng from '@/assets/ItemsImage.png'
+import HeroBg from '@/assets/Hero.svg'
 import Image from 'next/image';
 
 const HeroSection = () => {
     return (
         <div className="h-screen relative overflow-hidden flex items-center justify-center">
             {/* Dark Overlay */}
-            <div className='absolute inset-0 z-15 bg-linear-to-b from-transparent to-[#11180B]/50'></div>
+            <div className='absolute inset-0 z-15 bg-linear-to-b from-transparent to-[#11180B]/20'></div>
 
             {/* Green Overlay */}
             <div className="absolute inset-0 z-10 bg-[#07302C] mix-blend-darken"></div>

@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import OurStoryBg from '../../../assets/OurStoryBg.png';
+import OurStoryBg from '@/assets/OurStoryBg.png';
 
 const OurStory = () => {
     return (

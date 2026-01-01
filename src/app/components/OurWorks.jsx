@@ -2,8 +2,6 @@
 
 import React from 'react';
 import Marquee from 'react-fast-marquee';
-import CountUp from 'react-countup';
-import { useInView } from 'react-intersection-observer';
 
 // 1. Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -12,6 +10,8 @@ import { Pagination } from 'swiper/modules';
 // 2. Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
+import Link from 'next/link';
+import Counter from './Counter';
 
 // 3. Custom CSS
 const customSwiperStyles = `
@@ -31,24 +31,16 @@ const customSwiperStyles = `
 `;
 
 const GRID_ITEMS = [
-    { id: 1, color: 'bg-[#cbe3be]', imgUrl: 'https://i.ibb.co.com/hJ9rW61H/image.png', comingSoon: true },
-    { id: 2, color: 'bg-[#cbe3be]', imgUrl: 'https://i.ibb.co.com/xSpWFDqb/image.png', comingSoon: true },
-    { id: 3, color: 'bg-[#cbe3be]', imgUrl: 'https://i.ibb.co.com/B26xhbTX/image.png', comingSoon: true },
-    { id: 4, color: 'bg-[#cbe3be]', imgUrl: 'https://i.ibb.co.com/G4dBy5kr/image.png', comingSoon: true },
+    { id: 1, imgUrl: 'https://i.ibb.co.com/hJ9rW61H/image.png', comingSoon: false, url: 'https://rankmet.com/' },
+    { id: 2, imgUrl: 'https://i.ibb.co.com/G4dBy5kr/image.png', comingSoon: false, url: 'https://greaterdfa.com/' },
+    { id: 3, imgUrl: 'https://i.ibb.co.com/mCTLCg7G/image.png', comingSoon: true },
+    { id: 4, imgUrl: 'https://i.ibb.co.com/B26xhbTX/image.png', comingSoon: true },
 ];
 
-const STATS_DATA = [
-    { value: 2, label: 'Countries' },
-    { value: 90, label: 'Days in Operation', plus: true },
-    { value: 120, label: 'Projects Completed', plus: true },
-    { value: 440, label: 'Cups of Coffee', plus: true },
-];
+
 
 const OurWorks = () => {
-    const { ref, inView } = useInView({
-        triggerOnce: true,
-        threshold: 0.3,
-    });
+
 
     return (
         <div className='relative bg-[#EFEEEA] '>
@@ -70,9 +62,9 @@ const OurWorks = () => {
                 <section className='z-30 max-w-[1380px] mx-auto'>
                     <div className='flex flex-col lg:flex-row items-center justify-between gap-8 mb-12 md:mb-20'>
                         <div className='space-y-8 w-full flex flex-col items-center'>
-                            <p className='uppercase outfit text-sm lg:text-lg font-bold text-[#696969] tracking-[2.7px] text-center'>
+                            {/* <p className='uppercase outfit text-sm lg:text-lg font-bold text-[#696969] tracking-[2.7px] text-center'>
                                 Our works
-                            </p>
+                            </p> */}
                             <h3 className='text-[28px] md:text-[40px] max-w-[580px] recoleta text-center text-[#16332F] leading-tight -tracking-[0.48px]'>
                                 We Craft Digital Experiences That Matter, Perform and Inspire
                             </h3>
@@ -96,16 +88,24 @@ const OurWorks = () => {
                         >
                             {GRID_ITEMS.map((item) => (
                                 <SwiperSlide key={item.id}>
-                                    <div className="relative w-full h-[380px] rounded-2xl overflow-hidden shadow-sm">
-                                        <img src={item.imgUrl} alt="work" className='w-full h-full object-cover' />
-                                        {item.comingSoon && (
-                                            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-end justify-center pb-10">
-                                                <span className="bg-white text-[#16332F] px-5 py-2 rounded-full text-xs font-bold uppercase tracking-wider shadow-xl">
-                                                    Coming Soon
-                                                </span>
-                                            </div>
-                                        )}
-                                    </div>
+                                    <Link href={item.url || '#'}>
+                                        <div className="relative w-full h-[380px] rounded-2xl overflow-hidden shadow-sm">
+                                            <img src={item.imgUrl} alt="work" className='w-full h-full object-cover' />
+                                            {item.comingSoon ? (
+                                                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-full w-full bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-center justify-center ">
+                                                    <span className="translate-y-4 group-hover:translate-y-0 transition-transform duration-500 bg-[#C9FF90] text-[#17241F] text-xl px-5 py-2 font-bold rounded-full shadow-2xl outfit">
+                                                        Coming Soon
+                                                    </span>
+                                                </div>
+                                            ) : (
+                                                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-full w-full bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-center justify-center ">
+                                                    <span className="translate-y-4 group-hover:translate-y-0 transition-transform duration-500 bg-[#C9FF90] text-[#17241F] text-xl px-5 py-2 font-bold rounded-full shadow-2xl outfit">
+                                                        Live Preview
+                                                    </span>
+                                                </div>
+                                            )}
+                                        </div>
+                                    </Link>
                                 </SwiperSlide>
                             ))}
                         </Swiper>
@@ -113,60 +113,37 @@ const OurWorks = () => {
 
                     <div className='hidden lg:grid grid-cols-2 gap-8'>
                         {GRID_ITEMS.map((item) => (
-                            <div
-                                key={item.id}
-                                className="group relative w-full min-h-[480px] rounded-3xl overflow-hidden cursor-pointer"
-                            >
-                                <img
-                                    src={item.imgUrl}
-                                    alt="work"
-                                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                                />
-                                {item.comingSoon && (
-                                    <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center backdrop-blur-[2px]">
-                                        <span className="translate-y-4 group-hover:translate-y-0 transition-transform duration-500 bg-white text-[#16332F] text-2xl font-bold px-8 py-4 rounded-full shadow-2xl">
-                                            Coming Soon
-                                        </span>
-                                    </div>
-                                )}
-                            </div>
+                            <Link href={item.url || '#'} target='_blank'>
+                                <div
+                                    key={item.id}
+                                    className="group relative w-full min-h-[480px] rounded-3xl overflow-hidden cursor-pointer"
+                                >
+                                    <img
+                                        src={item.imgUrl}
+                                        alt="work"
+                                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                    />
+                                    {item.comingSoon ? (
+                                        <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center backdrop-blur-[2px]">
+                                            <span className="translate-y-4 group-hover:translate-y-0 py-3 px-10 rounded-full bg-[#C9FF90] text-[#17241F] transition duration-300 outfit md:text-xl text-base  max-[350px]:text-xs">
+                                                Coming Soon
+                                            </span>
+                                        </div>
+                                    ) : (
+                                        <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center backdrop-blur-[2px]">
+                                            <span className="translate-y-4 group-hover:translate-y-0 py-3 px-10 rounded-full bg-[#C9FF90] text-[#17241F] transition duration-300 outfit md:text-xl text-base  max-[350px]:text-xs">
+                                                Live Preview
+                                            </span>
+                                        </div>
+                                    )}
+                                </div>
+                            </Link>
                         ))}
                     </div>
                 </section>
 
                 {/* --- Section: Stats --- */}
-                {/* Attach the ref here so the observer knows when this section is visible */}
-                <section ref={ref} className='w-full pt-8 lg:pt-16'>
-                    <div className='max-w-[1380px] mx-auto'>
-                        <div className='grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-12'>
-                            {STATS_DATA.map((stat, index) => (
-                                <div
-                                    key={index}
-                                    className='bg-[#e5e2e2] rounded-xl flex flex-col items-center justify-center space-y-2 py-12 lg:py-0 lg:bg-transparent lg:h-auto'
-                                >
-                                    <h3 className='text-[60px] lg:text-[72px] leading-none recoleta font-medium text-[#559B36] flex items-start'>
-                                        {inView ? (
-                                            <CountUp
-                                                start={0}
-                                                end={stat.value}
-                                                duration={2.5}
-                                                separator=","
-                                            />
-                                        ) : (
-                                            <span>0</span>
-                                        )}
-                                        <span className='text-3xl lg:text-5xl relative top-0 lg:bottom-4'>
-                                            {stat.plus ? '+' : ''}
-                                        </span>
-                                    </h3>
-                                    <p className='outfit uppercase text-[10px] lg:text-[13px] font-bold tracking-[1.5px] lg:tracking-[2.7px] text-[#373737]/55 text-center px-2'>
-                                        {stat.label}
-                                    </p>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </section>
+                <Counter />
             </div>
         </div>
     );

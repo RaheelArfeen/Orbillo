@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import HeroBg from '@/app/assets/Hero.svg'
+import HeroBg from '@/assets/Hero.svg'
 import React from 'react';
 
 const Hero = () => {

@@ -1,11 +1,11 @@
 import { FaBehance, FaDribbble, FaLinkedin, FaTwitter } from "react-icons/fa";
 import Image from 'next/image';
 import React from 'react';
-import CTAbg from '../assets/FooterCTAbg.svg';
-import Logo from '../assets/Logo/LightLogo.svg';
-import FooterEffect from '../assets/FooterEffect.png';
-import FooterLogo from '../assets/FooterLogo.png';
-import FooterLogo2 from '../assets/FooterLogo2.png';
+import CTAbg from '@/assets/FooterCTAbg.svg';
+import Logo from '@/assets/Logo/LightLogo.svg';
+import FooterEffect from '@/assets/FooterEffect.png';
+import FooterLogo from '@/assets/FooterLogo.png';
+import FooterLogo2 from '@/assets/FooterLogo2.png';
 import Link from "next/link";
 import { Clock, Mail, MapPin, Phone } from "lucide-react";
 
@@ -38,12 +38,9 @@ const Footer = () => {
                         Ready to turn your business into a digital success story?
                     </h1>
                     <div className="flex md:flex-row flex-col items-center gap-3 md:mt-20 mt-6 z-50">
-                        <Link href={'https://calendly.com/teamorbillo/30min?back=1&month=2025-11'}>
+                        <Link href={'https://calendly.com/teamorbillo/30min?back=1&month=2025-11'} target="_blank">
                             <button
-                                style={{
-                                    background: "linear-gradient(-114deg, #169689 34%, #002A15 88%)",
-                                }}
-                                className="group relative md:py-4 py-3 px-8 rounded-full text-white outfit md:text-xl transition-all duration-300 overflow-hidden cursor-pointer"
+                                className="group relative md:py-4 py-3 px-8 rounded-full text-white outfit md:text-xl transition-all duration-300 overflow-hidden cursor-pointer bg-[linear-gradient(-114deg,#169689_34%,#002A15_88%)] hover:bg-none"
                             >
                                 <span className="relative z-10 group-hover:text-[#17241F] transition duration-300">
                                     Schedule A Discovery Call

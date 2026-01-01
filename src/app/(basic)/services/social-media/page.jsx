@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react';
 import Hero from './components/Hero';
 import WhatWeDo from './components/WhatWeDo';
@@ -8,19 +10,21 @@ import OurWrokMarque from './components/OurWrokMarque';
 import Feedback from './components/Feedback';
 import Faq from './components/Faq';
 import OurCollaboration from './components/OurCollaboration';
+import { PageTitle } from 'react-simple-page-title';
 
 const page = () => {
     return (
         <div>
-            <Hero/>
-            <WhatWeDo/>
-            <OurWork/>
-            <WorkProcess/>
-            <WhyUs/>
-            <OurWrokMarque/>
-            <Feedback/>
-            <Faq/>
-            <OurCollaboration/>
+            <PageTitle title='Social Mdeia Design | Orbillo' />
+            <Hero />
+            <WhatWeDo />
+            <OurWork />
+            <WorkProcess />
+            <WhyUs />
+            <OurWrokMarque />
+            <Feedback />
+            <Faq />
+            <OurCollaboration />
         </div>
     );
 };

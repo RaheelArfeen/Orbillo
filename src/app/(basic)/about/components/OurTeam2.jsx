@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
 import Marquee from 'react-fast-marquee';
-import OurTeamBg from '../../../assets/OurTeamBg.png';
+import OurTeamBg from '@/assets/OurTeamBg.png';
 import { FaFacebookF, FaLinkedinIn } from 'react-icons/fa';
 import { FaXTwitter } from "react-icons/fa6";
 
