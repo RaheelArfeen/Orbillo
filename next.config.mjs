@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // DELETE THIS LINE: output: "export", 
+  output: "export",
+  trailingSlash: true,
 
   images: {
     unoptimized: true,

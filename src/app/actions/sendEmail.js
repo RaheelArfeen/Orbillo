@@ -8,8 +8,8 @@ export async function sendEmail(formData) {
 
         const transporter = nodemailer.createTransport({
             host: process.env.SMTP_HOST,
-            port: parseInt(process.env.SMTP_PORT),
-            secure: true,
+            port: parseInt(process.env.SMTP_PORT) || 587,
+            secure: false,
             auth: {
                 user: process.env.SMTP_USER,
                 pass: process.env.SMTP_PASS,
@@ -19,11 +19,12 @@ export async function sendEmail(formData) {
             }
         });
 
-        const currentYear = new Date().getFullYear();
-        const brandColor = "#C9FF90"; // Orbillo Lime
-        const darkBg = "#062B28";    // Orbillo Dark Green
+        await transporter.verify();
 
-        // 1. ADMIN EMAIL (Internal Lead Notification)
+        const currentYear = new Date().getFullYear();
+        const brandColor = "#C9FF90";
+        const darkBg = "#062B28";
+
         const adminMailOptions = {
             from: `"Orbillo Web" <${process.env.SMTP_USER}>`,
             to: 'hello@orbillo.com',
@@ -69,7 +70,6 @@ export async function sendEmail(formData) {
             </html>`
         };
 
-        // 2. CLIENT EMAIL (Thank You / Confirmation)
         const clientMailOptions = {
             from: `"Orbillo Agency" <${process.env.SMTP_USER}>`,
             to: user_email,
