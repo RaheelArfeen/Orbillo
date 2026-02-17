@@ -59,8 +59,8 @@ const Header = () => {
                         rel="noopener noreferrer"
                         className={`hidden md:block transition-all duration-300 ${open ? 'opacity-0 pointer-events-none translate-x-10' : 'opacity-100 translate-x-0'}`}
                     >
-                        <button className="py-2.5 px-5 lg:py-[14px] lg:px-[28px] rounded-full border border-white outfit text-white hover:bg-[#C9FF90] hover:border-[#C9FF90] hover:text-[#17241F] transition duration-300 cursor-pointer text-sm md:text-lg whitespace-nowrap">
-                            Book A Free Strategy Call
+                        <button className="px-8 py-3 rounded-full font-medium outfit bg-[#B9FF8D] text-[#17241F] hover:bg-[#17241F] hover:text-[#B9FF8D] border-b border-[#C9FF90] hover:border-[#4d6641] transition duration-300 cursor-pointer whitespace-nowrap">
+                            Let's talk
                         </button>
                     </a>
 

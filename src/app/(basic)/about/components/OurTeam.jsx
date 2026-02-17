@@ -1,133 +1,142 @@
 import React from 'react';
 import Marquee from 'react-fast-marquee';
+import { FaFacebookF, FaLinkedinIn } from 'react-icons/fa';
+import { FaXTwitter } from "react-icons/fa6";
 
-const sections = [
+const Members = [
     {
-        id: 1,
-        tag: "Our Mission",
-        title: "Design With Purpose",
-        description:
-            "We solve real business problems through thoughtful, strategic, and purposeful design that creates clarity, connection, and impact.",
-        image: "https://i.ibb.co.com/tTgW9NTX/image.png",
-        ImgText: "100+ Clients Worldwide",
-        ImgTextBg: 'bg-[#C9FF90]',
-        // Mobile: Inside bottom right. Desktop: Hanging off bottom right.
-        ImgTextPosition: 'bottom-4 right-4 lg:-bottom-[10px] lg:right-[10px]',
-        bullets: null,
-        reverse: false,
+        name: 'Arafat Hossain',
+        role: 'Product Designer',
+        imageSrc: 'https://i.ibb.co.com/Q4rG2B0/image.png',
+        spaceTop: false,
+        socials: [
+            { icon: <FaFacebookF />, link: '#' },
+            { icon: <FaLinkedinIn />, link: '#' },
+            { icon: <FaXTwitter />, link: '#' },
+        ]
     },
     {
-        id: 2,
-        tag: "Our Vision",
-        title: "To Become a Global Creative Partner",
-        description:
-            "We aim to become a trusted creative ally, elevating brands worldwide through smart design and meaningful visual communication.",
-        image: "https://i.ibb.co.com/Z6xp6b2D/image.png",
-        ImgText: 'Everything we create is',
-        // Mobile: Top left inside. Desktop: Top left offset.
-        ImgTextPosition: 'top-4 left-4 lg:top-[160px] lg:left-[0px]',
-        ImgTextBg: 'bg-[#FDBD39]',
-        bullets: null,
-        reverse: true,
+        name: 'Rahatul Islam',
+        role: 'Product Designer',
+        imageSrc: 'https://i.ibb.co.com/0VtwWsRC/image.png',
+        spaceTop: true,
+        socials: [
+            { icon: <FaFacebookF />, link: '#' },
+            { icon: <FaLinkedinIn />, link: '#' },
+            { icon: <FaXTwitter />, link: '#' },
+        ]
     },
     {
-        id: 3,
-        tag: "Our Goal",
-        title: "The Standards We Stand By",
-        description: "",
-        image: "https://i.ibb.co.com/SXdLngM9/image.png",
-        // Mobile: Bottom right inside. Desktop: Floating off to the right.
-        ImgTextPosition: 'bottom-4 right-4 lg:top-[160px] lg:-right-[60px]',
-        ImgTextBg: 'bg-[#C9FF90]',
-        ImgText: "Everything we create is",
-        reverse: false,
-        bullets: [
-            "Build authentic brands that truly stand out.",
-            "Design interfaces that simplify life.",
-            "Work collaboratively, transparently, and with ease.",
-            "Push creativity through exploration and continuous learning.",
-            "Become the trusted design partner for clarity and strong identity.",
-        ],
+        name: 'Mohiul Islam',
+        role: 'Product Designer',
+        imageSrc: 'https://i.ibb.co.com/nNNNFyFx/image.png',
+        spaceTop: false,
+        socials: [
+            { icon: <FaFacebookF />, link: '#' },
+            { icon: <FaLinkedinIn />, link: '#' },
+            { icon: <FaXTwitter />, link: '#' },
+        ]
+    },
+    {
+        name: 'Rakibul Islam',
+        role: 'Product Designer',
+        imageSrc: 'https://i.ibb.co.com/6Jr3XbVx/image.png',
+        spaceTop: true,
+        socials: [
+            { icon: <FaFacebookF />, link: '#' },
+            { icon: <FaLinkedinIn />, link: '#' },
+            { icon: <FaXTwitter />, link: '#' },
+        ]
     },
 ];
 
-const OurTeam = () => {
+const OurTeam2 = () => {
     return (
-        <div className="w-full overflow-x-hidden"> {/* Prevent horizontal scroll */}
-
-            <div className="w-full bg-[#5ba32b] py-4 lg:py-6 border-y border-[#C9FF90]/30 relative z-30">
-                <Marquee
-                    autoFill={true}
-                    pauseOnHover={false}
-                    speed={80}
-                    className="overflow-hidden"
-                >
+        <div className='relative w-full bg-[#07302C] overflow-hidden'>
+            {/* Marquee Section */}
+            <div className="w-full bg-[#5ba32b] py-4 md:py-6 border-y border-[#C9FF90]/30 relative z-30">
+                <Marquee autoFill={true} pauseOnHover={false} speed={80} className="overflow-hidden">
                     <div className="flex items-center">
-                        <span className="text-white text-3xl md:text-5xl lg:text-6xl font-serif mx-4 lg:mx-10 tracking-wide recoleta">
+                        <span className="text-white text-3xl md:text-5xl lg:text-6xl font-serif mx-4 lg:mx-10 tracking-tight bricolage">
                             Our Team
                         </span>
-                        <span className="text-white text-3xl md:text-4xl lg:text-5xl font-black">•</span>
+                        <span className="text-white text-3xl md:text-4xl lg:text-5xl font-black">
+                            <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.05155 23.1694L3.41628 20.6729L8.4093 13.3585L0 10.424L1.40155 6.13178L9.85465 8.75969V0H14.6725V8.75969L23.1256 6.13178L24.5271 10.424L16.074 13.3585L21.1109 20.6729L17.4756 23.1694L12.2198 16.2492L7.05155 23.1694Z" fill="white" />
+                            </svg>
+                        </span>
                     </div>
                 </Marquee>
             </div>
 
-            <section className='max-w-[1320px] mx-auto px-5 md:px-8 lg:px-10'>
-                {sections.map((section) => (
-                    <div
-                        key={section.id}
-                        className={`flex flex-col lg:flex-row items-center justify-between py-12 lg:py-24 gap-10 lg:gap-16 max-md:border-b border-gray-200 last:border-none ${section.reverse ? "lg:flex-row-reverse" : ""}`}
-                    >
-                        {/* Text Container */}
-                        <div className='w-full lg:w-1/2 flex flex-col items-start'>
-                            <p className='outfit uppercase text-[#696969] font-bold text-xs lg:text-sm tracking-[2.7px] mb-3 lg:mb-8'>
-                                {section.tag}
+            {/* Background Image */}
+            <div className='absolute size-70 rounded-full -bottom-15 -left-15 blur-[150px] bg-[#C9FF90]/56'></div>
+            <div className='absolute w-50 h-[1000px] rounded-full top-1/2 -translate-y-1/2 -right-15 blur-[250px] bg-[#C9FF90]/56'></div>
+
+            <section className='max-w-[1380px] mx-auto py-12 md:pt-25 pb-48 px-5 md:px-8'>
+                <div className='mb-16 md:mb-30'>
+                    <div className='w-full flex flex-col'>
+                        <div className='w-full max-w-[800px] mb-8'>
+                            <p className='outfit uppercase text-white/55 font-bold text-sm md:text-lg tracking-[2.7px] mb-4 md:mb-8'>
+                                Meet the Team
                             </p>
-
-                            <h1 className='recoleta text-3xl md:text-4xl lg:text-5xl text-[#17241F] mb-4 lg:mb-6 leading-[1.1]'>
-                                {section.title}
+                            <h1 className='text-white bricolage text-3xl md:text-4xl tracking-tight max-w-[620px]'>
+                                We’re a diverse team of designers, developers and marketers focused on helping your business grow.
                             </h1>
-
-                            {/* Description */}
-                            {section.description && !section.bullets && (
-                                <p className='outfit text-base md:text-lg lg:text-2xl text-[#696969] max-w-full lg:max-w-[600px] leading-relaxed'>
-                                    {section.description}
-                                </p>
-                            )}
-
-                            {/* Bullet List */}
-                            {section.bullets && (
-                                <div className='outfit text-base md:text-lg lg:text-2xl text-[#696969] max-w-full lg:max-w-[600px] flex flex-col gap-3'>
-                                    {section.bullets.map((item, index) => (
-                                        <div key={index} className='flex items-start gap-3'>
-                                            <span className='text-lg lg:text-3xl leading-6 lg:leading-8 text-[#696969]'>•</span>
-                                            <span className='leading-snug'>{item}</span>
-                                        </div>
-                                    ))}
-                                </div>
-                            )}
                         </div>
 
-                        {/* Image Container */}
-                        <div className='w-full lg:w-1/2 flex justify-center relative mt-4 lg:mt-0'>
-                            <div className='relative w-full max-w-[500px] lg:max-w-[600px]'>
-                                <img
-                                    src={section.image}
-                                    className='w-full h-auto object-cover rounded-xl pointer-events-none'
-                                    alt={section.tag}
-                                />
-                                <div className={`absolute z-50 ${section.ImgTextPosition} ${section.ImgTextBg} py-3 px-5 rounded-lg h-fit shadow-sm`}>
-                                    <p className='text-[#373737] outfit text-xs lg:text-base leading-[140%] font-medium'>
-                                        {section.ImgText}
-                                    </p>
+                        <div className='flex items-center justify-end'>
+                            <h1 className=' text-2xl outfit text-[#D9D9D9] tracking-tight max-w-[700px]'>Our leadership team brings a collective 60+ years of experience, working with brands across the US, UK, and Asia.</h1>
+                        </div>
+                    </div>
+                </div>
+
+                <div className='grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-4'>
+                    {Members.map((member, index) => (
+                        <div
+                            key={index}
+                            className={`flex flex-col w-full group ${member.spaceTop ? 'lg:relative lg:top-16' : ''}`}
+                        >
+                            <div className='p-px rounded-3xl bg-linear-to-br from-[#C9FF90] via-[#09332D] to-[#C9FF90]'>
+                                <div className='w-full overflow-hidden rounded-3xl shadow-lg max-h-[500px] relative bg-[#2A4341]'>
+                                    <img
+                                        src={member.imageSrc}
+                                        alt={member.name}
+                                        className='w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 pointer-events-none'
+                                    />
+
+                                    {/* Overlay */}
+                                    <div className='h-full w-full bg-gradient-to-b from-transparent to-black/80 absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-500'></div>
+
+                                    {/* Social Icons Mapping */}
+                                    <div className='z-50 absolute -bottom-12 group-hover:bottom-12 left-1/2 -translate-x-1/2 flex items-center gap-4 transition-all duration-500'>
+                                        {member.socials.map((social, idx) => (
+                                            <div
+                                                key={idx}
+                                                style={{ transitionDelay: `${idx * 100}ms` }}
+                                                className='h-10 w-10 border-2 border-white rounded-full flex items-center justify-center hover:bg-white hover:text-black text-white transition-all duration-300 cursor-pointer'
+                                            >
+                                                <span className='text-lg'>{social.icon}</span>
+                                            </div>
+                                        ))}
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                    </div>
-                ))}
+                            <div className='mt-4 md:mt-5 px-2 flex flex-col items-end w-fit'>
+                                <h2 className='bricolage font-semibold text-2xl md:text-4xl text-white tracking-tight leading-tight'>
+                                    {member.name}
+                                </h2>
+                                <p className='outfit text-lg md:text-xl text-[#B4B4B4] mt-1'>
+                                    • {member.role}
+                                </p>
+                            </div>
+                        </div>
+                    ))}
+                </div>
             </section>
         </div>
     );
 };
 
-export default OurTeam;
+export default OurTeam2;

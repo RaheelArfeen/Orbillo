@@ -8,16 +8,16 @@ const WhoWeAre = () => {
 
                 {/* Top Section: Stacked on mobile (flex-col), Row on desktop (md:flex-row) */}
                 <div className='flex flex-col lg:flex-row items-start justify-between gap-10 xl:gap-0'>
-                    <p className='outfit uppercase text-[#696969] font-bold text-sm md:text-lg tracking-[2.7px] whitespace-nowrap'>
+                    <p className='outfit uppercase text-[#696969] font-bold text-sm md:text-base tracking-[2.7px] whitespace-nowrap'>
                         Who We Are
                     </p>
-                    <p className='outfit text-xl md:text-2xl xl:text-3xl leading-[140%] tracking-[-0.2px] text-[#373737] w-full md:max-w-[650px] lg:max-w-[880px] flex flex-col gap-4'>
+                    <p className='outfit text-xl md:text-2xl leading-[140%] tracking-[-0.2px] text-[#373737] w-full max-w-[730px] flex flex-col gap-4'>
                         <span>At Orbillo, we believe that every business challenge can be solved through the right design approach..</span>
                         <span>We’re a team of experienced designers, developers, and marketers — each with over a decade of experience helping brands turn complexity into clarity and strategy into growth.</span>
                     </p>
                 </div>
 
-                <div className='recoleta text-3xl md:text-5xl 2xl:text-7xl text-[#07302C] flex flex-col gap-4 md:gap-5 mt-16 md:mt-32 lg:mt-40'>
+                <div className='bricolage font-medium text-3xl md:text-5xl 2xl:text-7xl text-[#07302C] flex flex-col gap-4 md:gap-5 mt-16 md:mt-32 lg:mt-40'>
 
                     <div className='hidden lg:block max-2xl:max-w-[1000px] w-full mx-auto'>
                         <div className='flex flex-wrap items-center justify-start gap-3 md:gap-6 w-full mb-2'>

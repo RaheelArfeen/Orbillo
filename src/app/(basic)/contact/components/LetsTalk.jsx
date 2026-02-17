@@ -1,9 +1,8 @@
 "use client"
 
 import React, { useState, useRef, useEffect } from 'react';
-import { Mail, MapPin, Phone, Loader2, CheckCircle2, AlertCircle } from 'lucide-react';
+import { Mail, MapPin, Phone, CheckCircle2, AlertCircle, Loader2 } from 'lucide-react';
 import { FaBehance, FaCaretDown, FaDribbble, FaLinkedin, FaTwitter } from 'react-icons/fa';
-import { sendEmail } from '@/app/actions/sendEmail';
 
 const SERVICE_OPTIONS = ["Brand Design", "UI/UX Design", "Social Media Design", "Web Development"];
 
@@ -23,7 +22,6 @@ const SOCIAL_LINKS = [
 const LetsTalk = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [selectedService, setSelectedService] = useState('');
-    const [isSubmitting, setIsSubmitting] = useState(false);
     const [status, setStatus] = useState({ type: null, message: '' });
     const [formData, setFormData] = useState({
         user_name: '', user_email: '', user_whatsapp: '', company_name: '', message: ''
@@ -43,27 +41,30 @@ const LetsTalk = () => {
             return;
         }
 
-        setIsSubmitting(true);
-        setStatus({ type: null, message: '' });
+        setStatus({ type: 'loading', message: 'Sending...' });
 
         try {
-            const result = await sendEmail({
-                ...formData,
-                selected_service: selectedService
+            const response = await fetch('/api/contact', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ ...formData, service: selectedService }),
             });
 
+            const result = await response.json();
+
             if (result.success) {
-                setStatus({ type: 'success', message: 'Message sent! Check your inbox.' });
+                setStatus({ type: 'success', message: 'Sent! Check your inbox.' });
                 setFormData({ user_name: '', user_email: '', user_whatsapp: '', company_name: '', message: '' });
                 setSelectedService('');
             } else {
-                setStatus({ type: 'error', message: result.error || 'Failed to send.' });
+                setStatus({ type: 'error', message: result.error || 'Failed to send' });
             }
         } catch (err) {
-            setStatus({ type: 'error', message: 'Connection error. Please try again.' });
+            setStatus({ type: 'error', message: 'Network error.' });
         } finally {
-            setIsSubmitting(false);
-            setTimeout(() => setStatus({ type: null, message: '' }), 5000);
+            setTimeout(() => {
+                setStatus(prev => prev.type === 'loading' ? { type: null, message: '' } : prev);
+            }, 5000);
         }
     };
 
@@ -124,8 +125,8 @@ const LetsTalk = () => {
                                     </div>
                                     {isOpen && (
                                         <div className="absolute top-full left-0 w-full mt-2 bg-[#0A1F18] border border-[#FFFFFF]/10 rounded-lg overflow-hidden z-50">
-                                            {SERVICE_OPTIONS.map((option, idx) => (
-                                                <div key={idx} onClick={() => { setSelectedService(option); setIsOpen(false); }} className="px-4 py-3 text-white hover:bg-[#C9FF90] hover:text-[#17241F] cursor-pointer outfit transition-colors">
+                                            {SERVICE_OPTIONS.map((option) => (
+                                                <div key={option} onClick={() => { setSelectedService(option); setIsOpen(false); }} className="px-4 py-3 text-white hover:bg-[#C9FF90] hover:text-[#17241F] cursor-pointer outfit transition-colors">
                                                     {option}
                                                 </div>
                                             ))}
@@ -136,10 +137,10 @@ const LetsTalk = () => {
                                 <textarea name="message" value={formData.message} onChange={handleInputChange} placeholder="Your Message *" required rows={3} className='w-full bg-transparent border-b border-[#FFFFFF]/20 py-3 text-white focus:border-[#C9FF90] outline-none resize-none outfit'></textarea>
 
                                 <div className='pt-4 flex items-center gap-6'>
-                                    <button type="submit" disabled={isSubmitting} className='bg-[#C9FF90] hover:bg-white text-[#17241F] py-2 px-10 rounded-full flex items-center gap-2 transition-all outfit disabled:opacity-50'>
-                                        {isSubmitting ? <><Loader2 className="animate-spin" size={18} /><span>Sending...</span></> : 'Submit'}
+                                    <button type="submit" disabled={status.type === 'loading'} className='bg-[#C9FF90] hover:bg-white text-[#17241F] py-2 px-10 rounded-full flex items-center gap-2 transition-all outfit disabled:opacity-50 font-bold'>
+                                        {status.type === 'loading' ? <Loader2 className="animate-spin" size={18} /> : 'Submit'}
                                     </button>
-                                    {status.type && (
+                                    {status.type && status.type !== 'loading' && (
                                         <div className={`flex items-center gap-2 ${status.type === 'success' ? 'text-[#C9FF90]' : 'text-red-400'}`}>
                                             {status.type === 'success' ? <CheckCircle2 size={18} /> : <AlertCircle size={18} />}
                                             <span className="outfit">{status.message}</span>

@@ -1,11 +1,7 @@
 'use client';
 
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import Marquee from 'react-fast-marquee';
-
-// 1. Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination } from 'swiper/modules';
 
 // 2. Import Swiper styles
 import 'swiper/css';
@@ -31,11 +27,145 @@ const customSwiperStyles = `
 `;
 
 const GRID_ITEMS = [
-    { id: 1, imgUrl: 'https://i.ibb.co.com/hJ9rW61H/image.png', comingSoon: false, url: 'https://rankmet.com/' },
-    { id: 2, imgUrl: 'https://i.ibb.co.com/G4dBy5kr/image.png', comingSoon: false, url: 'https://greaterdfa.com/' },
-    { id: 3, imgUrl: 'https://i.ibb.co.com/mCTLCg7G/image.png', comingSoon: true },
-    { id: 4, imgUrl: 'https://i.ibb.co.com/B26xhbTX/image.png', comingSoon: true },
+    {
+        id: 1,
+        title: 'Rankmet LLC | Digital Marketing Agency Website',
+        points: [
+            'Agency Website',
+            'UI/UX design',
+            'Web Development'
+        ],
+        imgUrl: 'https://i.ibb.co.com/DfSVR1kR/image.png',
+        comingSoon: false,
+        url: 'https://rankmet.com/'
+    },
+    {
+        id: 2,
+        title: 'GDFA Freelancers Connect | Event Branding Design',
+        points: [
+            'Agency Website',
+            'UI/UX design',
+            'Web Development'
+        ],
+        imgUrl: 'https://i.ibb.co.com/RTZz2wpC/image.png',
+        comingSoon: false,
+        url: 'https://greaterdfa.com/',
+        reverse: true
+    },
+    {
+        id: 3,
+        title: 'Nestora – Modern Real Estate Landing Page ',
+        points: [
+            'Agency Website',
+            'UI/UX design',
+            'Web Development'
+        ],
+        imgUrl: 'https://i.ibb.co.com/bMmS6jZV/image.png',
+        comingSoon: true
+    },
+    {
+        id: 4,
+        title: 'Wedding & Event Planner Website UI Redesign',
+        points: [
+            'Agency Website',
+            'UI/UX design',
+            'Web Development'
+        ],
+        imgUrl: 'https://i.ibb.co.com/dJ329FSR/image.png',
+        comingSoon: true,
+        reverse: true
+    },
 ];
+
+
+const ProjectCard = ({ item }) => {
+    const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+    const [isHovered, setIsHovered] = useState(false);
+    const cardRef = useRef(null);
+
+    const handleMouseMove = (e) => {
+        if (cardRef.current) {
+            const rect = cardRef.current.getBoundingClientRect();
+            setMousePos({
+                x: e.clientX - rect.left,
+                y: e.clientY - rect.top,
+            });
+        }
+    };
+
+    return (
+        <div className={`flex flex-col gap-8 md:gap-12 items-center ${item.reverse ? 'lg:flex-row-reverse' : 'lg:flex-row'} w-full`}>
+            {/* Image Container */}
+            <Link
+                href={item.url || '#'}
+                target='_blank'
+                className="w-full lg:flex-1"
+            >
+                <div
+                    ref={cardRef}
+                    onMouseMove={handleMouseMove}
+                    onMouseEnter={() => setIsHovered(true)}
+                    onMouseLeave={() => setIsHovered(false)}
+                    className="group relative w-full aspect-video rounded-xl overflow-hidden cursor-none bg-gray-200"
+                >
+                    <img
+                        src={item.imgUrl}
+                        alt={item.title}
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+
+                    {/* The Floating Circle - Hidden on mobile/touch for better UX */}
+                    <div
+                        className={`hidden lg:flex pointer-events-none absolute z-50 items-center justify-center rounded-full font-medium transition-opacity duration-300 ease-out ${item.comingSoon ? 'bg-[#585858] text-[#FFFFFF]' : 'bg-[#C9FF90] text-[#17241F]'}`}
+                        style={{
+                            width: '130px',
+                            height: '130px',
+                            left: mousePos.x,
+                            top: mousePos.y,
+                            transform: 'translate(-50%, -50%)',
+                            opacity: isHovered ? 1 : 0,
+                        }}
+                    >
+                        <span className="outfit text-center leading-tight">
+                            {item.comingSoon ? "Coming Soon" : "View Project"}
+                        </span>
+                    </div>
+                </div>
+            </Link>
+
+            {/* Project Details Beside Image */}
+            <div className="w-full lg:w-1/3 px-2 text-left">
+                <h3 className="text-2xl lg:text-4xl font-medium text-[#212121] bricolage mb-4 lg:mb-6">
+                    {item.title}
+                </h3>
+
+                <div className="flex flex-wrap gap-x-4 gap-y-2 mb-8 lg:mb-12 md:max-w-[400px]">
+                    {item.points.map((point, i) => (
+                        <span key={i} className="text-[#212121]/80 outfit text-sm lg:text-base whitespace-nowrap">
+                            # {point}
+                        </span>
+                    ))}
+                </div>
+
+                {item.comingSoon ? (
+                    <button
+                        className="w-full md:w-auto inline-block px-8 py-3 rounded-full border border-[#4B4B4B] bg-[#4B4B4B] text-white outfit opacity-80"
+                    >
+                        Coming Soon
+                    </button>
+                ) : (
+                    <Link
+                        href={item.url}
+                        target='_blank'
+                        className="w-full md:w-auto text-center inline-block px-8 py-3 rounded-full border border-[#4B4B4B] hover:bg-[#4B4B4B] text-[#4B4B4B] hover:text-white transition-colors duration-300 outfit"
+                    >
+                        View Project
+                    </Link>
+                )}
+            </div>
+        </div>
+    );
+};
 
 
 
@@ -43,106 +173,53 @@ const OurWorks = () => {
 
 
     return (
-        <div className='relative bg-[#EFEEEA] '>
+        <div className='relative bg-[#F4F3F1] '>
             <style>{customSwiperStyles}</style>
 
             <div className="w-full bg-[#5ba32b] py-6 border-y border-[#C9FF90]/30 relative z-30">
                 <Marquee autoFill={true} pauseOnHover={false} speed={80} className="overflow-hidden">
                     <div className="flex items-center">
-                        <span className="text-white text-3xl md:text-6xl font-serif mx-6 md:mx-10 tracking-wide recoleta">
+                        <span className="text-white text-3xl md:text-6xl font-medium mx-6 md:mx-10 tracking-tight bricolage">
                             Featured Works
                         </span>
-                        <span className="text-white text-5xl font-black">•</span>
+                        <span className="text-white text-5xl font-black">
+                            <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.05155 23.1694L3.41628 20.6729L8.4093 13.3585L0 10.424L1.40155 6.13178L9.85465 8.75969V0H14.6725V8.75969L23.1256 6.13178L24.5271 10.424L16.074 13.3585L21.1109 20.6729L17.4756 23.1694L12.2198 16.2492L7.05155 23.1694Z" fill="white" />
+                            </svg>
+                        </span>
                     </div>
                 </Marquee>
             </div>
 
-            <div className='py-20 px-4'>
+            <div className='py-20 px-4 max-w-[1380px] mx-auto'>
                 {/* --- Section: Header --- */}
-                <section className='z-30 max-w-[1380px] mx-auto'>
+                <section className='z-30 mx-auto'>
                     <div className='flex flex-col lg:flex-row items-center justify-between gap-8 mb-12 md:mb-20'>
-                        <div className='space-y-8 w-full flex flex-col items-center'>
-                            {/* <p className='uppercase outfit text-sm lg:text-lg font-bold text-[#696969] tracking-[2.7px] text-center'>
-                                Our works
-                            </p> */}
-                            <h3 className='text-[28px] md:text-[40px] max-w-[580px] recoleta text-center text-[#16332F] leading-tight -tracking-[0.48px]'>
-                                We Craft Digital Experiences That Matter, Perform and Inspire
-                            </h3>
+                        <div className='space-y-4 w-full flex flex-col items-center'>
+                            <h1 className="text-[36px] sm:text-[48px] md:text-[50px] font-medium text-[#212121] bricolage tracking-tight max-w-[700px] leading-[1.1] md:leading-[60px] text-center">
+                                Results {''}
+                                <span className="playfair italic text-4xl sm:text-4xl md:text-5xl">That Speak</span> {' '}
+                                For Themselves
+                            </h1>
 
-                            <p className='outfit text-lg md:text-xl text-[#575757] max-w-[500px] text-center tracking-[0.20px]'>
-                                A selection of projects where design helped businesses communicate better, stand stronger and grow with confidence.
+                            <p className='outfit text-lg md:text-xl text-[#4B4B4B] max-w-[440px] text-center tracking-[0.20px]'>
+                                We partner with founders to transform ideas into market-ready products.
                             </p>
                         </div>
                     </div>
                 </section>
 
-                <section className='z-30 max-w-[1380px] mx-auto'>
-                    <div className='block lg:hidden'>
-                        <Swiper
-                            modules={[Pagination]}
-                            spaceBetween={16}
-                            slidesPerView={1.15}
-                            centeredSlides={false}
-                            pagination={{ clickable: true }}
-                            className="w-full"
-                        >
-                            {GRID_ITEMS.map((item) => (
-                                <SwiperSlide key={item.id}>
-                                    <Link href={item.url || '#'}>
-                                        <div className="relative w-full h-[380px] rounded-2xl overflow-hidden shadow-sm">
-                                            <img src={item.imgUrl} alt="work" className='w-full h-full object-cover' />
-                                            {item.comingSoon ? (
-                                                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-full w-full bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-center justify-center ">
-                                                    <span className="translate-y-4 group-hover:translate-y-0 transition-transform duration-500 bg-[#C9FF90] text-[#17241F] text-xl px-5 py-2 font-bold rounded-full shadow-2xl outfit">
-                                                        Coming Soon
-                                                    </span>
-                                                </div>
-                                            ) : (
-                                                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-full w-full bg-gradient-to-t from-black/60 via-transparent to-transparent flex items-center justify-center ">
-                                                    <span className="translate-y-4 group-hover:translate-y-0 transition-transform duration-500 bg-[#C9FF90] text-[#17241F] text-xl px-5 py-2 font-bold rounded-full shadow-2xl outfit">
-                                                        Live Preview
-                                                    </span>
-                                                </div>
-                                            )}
-                                        </div>
-                                    </Link>
-                                </SwiperSlide>
-                            ))}
-                        </Swiper>
-                    </div>
-
-                    <div className='hidden lg:grid grid-cols-2 gap-8'>
+                <section className='max-w-[1380px] mx-auto mb-48'>
+                    <div className='grid gap-48'>
                         {GRID_ITEMS.map((item) => (
-                            <Link href={item.url || '#'} target='_blank'>
-                                <div
-                                    key={item.id}
-                                    className="group relative w-full min-h-[480px] rounded-3xl overflow-hidden cursor-pointer"
-                                >
-                                    <img
-                                        src={item.imgUrl}
-                                        alt="work"
-                                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                                    />
-                                    {item.comingSoon ? (
-                                        <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center backdrop-blur-[2px]">
-                                            <span className="translate-y-4 group-hover:translate-y-0 py-3 px-10 rounded-full bg-[#C9FF90] text-[#17241F] transition duration-300 outfit md:text-xl text-base  max-[350px]:text-xs">
-                                                Coming Soon
-                                            </span>
-                                        </div>
-                                    ) : (
-                                        <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center backdrop-blur-[2px]">
-                                            <span className="translate-y-4 group-hover:translate-y-0 py-3 px-10 rounded-full bg-[#C9FF90] text-[#17241F] transition duration-300 outfit md:text-xl text-base  max-[350px]:text-xs">
-                                                Live Preview
-                                            </span>
-                                        </div>
-                                    )}
-                                </div>
-                            </Link>
+                            <ProjectCard key={item.id} item={item} />
                         ))}
                     </div>
                 </section>
 
-                {/* --- Section: Stats --- */}
+            </div>
+            {/* --- Section: Stats --- */}
+            <div className='bg-white'>
                 <Counter />
             </div>
         </div>

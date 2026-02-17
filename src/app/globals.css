@@ -1,40 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,600&display=swap');
 
 @import "tailwindcss";
 
-body {
-    /* background: #07302C; */
-    color: white;
+@theme {
+    --font-playfair: var(--font-playfair);
+    --font-bricolage: var(--font-bricolage);
+}
+
+body{
     overflow-x: hidden;
+}
+
+.playfair{
+    font-family: var(--font-playfair), serif;
 }
 
 .outfit {
     font-family: "Outfit", sans-serif;
 }
 
-
-.recoleta {
-    font-family: "Recoleta", sans-serif;
+.bricolage {
+    font-family: "Bricolage Grotesque", sans-serif;
 }
-
-.jakartaSnas {
-    font-family: "Plus Jakarta Sans", sans-serif;
-}
-
-.spartan {
-    font-family: "League Spartan", sans-serif;
-}
-
-/* style.css */
-@font-face {
-    font-family: "Recoleta";
-    src: url("./Fonts/Recoleta-RegularDEMO.otf") format("opentype");
-    font-weight: normal;
-    font-style: normal;
-}
-
 
 html.lenis {
     height: auto;

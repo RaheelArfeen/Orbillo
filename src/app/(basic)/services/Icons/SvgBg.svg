@@ -1,5 +1,5 @@
 <svg width="313" height="482" viewBox="0 0 313 482" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <g clip-path="url(#clip0_700_3883)">
+    <g clipPath="url(#clip0_700_3883)">
     <path d="M0 20C0 8.9543 8.95431 0 20 0H293C304.046 0 313 8.95431 313 20V462C313 473.046 304.046 482 293 482H20C8.95431 482 0 473.046 0 462V20Z" fill="url(#pattern0_700_3883)"/>
     <mask id="mask0_700_3883" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="313" height="482">
     <path d="M20 0.5H293C303.77 0.5 312.5 9.23045 312.5 20V462C312.5 472.77 303.77 481.5 293 481.5H20C9.23045 481.5 0.5 472.77 0.5 462V20L0.506836 19.4971C0.773602 8.95996 9.3986 0.5 20 0.5Z" fill="url(#pattern1_700_3883)" stroke="url(#paint0_linear_700_3883)"/>
@@ -31,10 +31,10 @@
     <feGaussianBlur stdDeviation="87" result="effect1_foregroundBlur_700_3883"/>
     </filter>
     <linearGradient id="paint0_linear_700_3883" x1="387.739" y1="-122.354" x2="-220.362" y2="566.806" gradientUnits="userSpaceOnUse">
-    <stop stop-color="#BEF188"/>
-    <stop offset="0.365485" stop-color="#16332F"/>
-    <stop offset="0.5453" stop-color="#16332F"/>
-    <stop offset="1" stop-color="#BEF188"/>
+    <stop stopColor="#BEF188"/>
+    <stop offset="0.365485" stopColor="#16332F"/>
+    <stop offset="0.5453" stopColor="#16332F"/>
+    <stop offset="1" stopColor="#BEF188"/>
     </linearGradient>
     <clipPath id="clip0_700_3883">
     <path d="M0 20C0 8.9543 8.95431 0 20 0H293C304.046 0 313 8.95431 313 20V462C313 473.046 304.046 482 293 482H20C8.95431 482 0 473.046 0 462V20Z" fill="white"/>

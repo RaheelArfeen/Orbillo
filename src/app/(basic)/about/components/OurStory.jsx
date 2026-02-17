@@ -1,54 +1,23 @@
 import React from 'react';
-import Image from 'next/image';
-import OurStoryBg from '@/assets/OurStoryBg.png';
 
 const OurStory = () => {
     return (
-        <div className='relative w-full overflow-hidden'>
+        <div className='relative w-full overflow-hidden bg-[#062B28] rounded-t-[100px]'>
 
-            <div className='absolute inset-0 -z-10'>
-                <Image
-                    src={OurStoryBg}
-                    alt="Background"
-                    className='w-full h-full max-lg:object-cover'
-                />
-            </div>
+            <div className='h-[300px] w-[300px] bg-[#D6F55B]/52 rounded-full blur-[200px] absolute -top-20 -left-20'></div>
+            <div className='h-[300px] w-[300px] bg-[#D6F55B]/52 rounded-full blur-[200px] absolute -bottom-20 -right-20'></div>
 
-            <section className='max-w-[1380px] mx-auto px-5 md:px-10 py-12 md:py-25'>
-
-                {/* Header Section */}
-                <div className='flex flex-col lg:flex-row items-start justify-between gap-6 md:gap-10'>
-                    <p className='outfit uppercase text-[#FFFFFF] font-bold text-sm md:text-lg tracking-[2.7px] shrink-0'>
-                        Our Story
-                    </p>
-                    <div className='w-full md:max-w-[880px]'>
-                        <p className='outfit text-xl md:text-2xl xl:text-3xl leading-[140%] tracking-[-0.2px] text-[#FDFFF5] flex flex-col gap-4'>
-                            Founded by industry professionals who’ve spent 10–15 years in the creative and digital field, Orbillo was built on one goal — to bridge the gap between design and business outcomes.
-                        </p>
-                    </div>
+            <section className='max-w-[1380px] mx-auto px-5 md:px-10 py-12 md:py-25 flex items-center justify-between gap-16'>
+                <div>
+                    <img className='max-w-[600px]' src="https://i.ibb.co.com/2133gQ9W/image.png" alt="" />
                 </div>
-
-                {/* Content Section: Stacks vertically on mobile, horizontal on desktop */}
-                <div className='flex flex-col lg:flex-row items-start lg:items-center justify-between mt-12 lg:mt-20 gap-10 xl:gap-0'>
-
-                    {/* Text Block */}
-                    <div className='outfit text-xl md:text-2xl xl:text-3xl leading-[140%] tracking-[-0.2px] text-[#A7A7A7] w-full lg:max-w-[880px] flex flex-col gap-6 md:gap-8'>
-                        <p>
-                            We’ve worked across industries, helping startups scale and enterprises simplify their digital presence with strategic design thinking.
-                        </p>
-                        <p>
-                            We’ve worked across industries, helping startups scale and enterprises simplify their digital presence with strategic design thinking.
-                        </p>
-                    </div>
-
-                    {/* Image Block: Full width on mobile, fixed height on desktop */}
-                    <div className='w-full flex justify-center lg:justify-end'>
-                        <img
-                            src={'https://i.ibb.co.com/1t2d9R2x/Our-Story.png'}
-                            alt="Our Story Visual"
-                            className='w-full lg:max-w-[400px] lg:max-w-none h-auto lg:h-[400px] object-contain'
-                        />
-                    </div>
+                <div>
+                    <h3 className='outfit uppercase text-[#696969] font-bold text-sm md:text-base tracking-[2.7px] whitespace-nowrap mb-6'>Our Story</h3>
+                    <h1 className='text-[#FDFFF5] bricolage font-medium text-3xl md:text-4xl tracking-tight max-w-[600px] mb-12'>Orbillo, founded by industry pros with 10–15 years experience, bridges design and business.</h1>
+                    <p className='text-[#E4E4E4] outfit text-2xl tracking mb-12 tracking-tight'>We’ve worked across industries, helping startups scale and enterprises simplify their digital presence with strategic design thinking.</p>
+                    <button className="w-full sm:w-auto px-8 py-3 rounded-full font-medium outfit border bg-[#B9FF8D] text-[#17241F] hover:bg-[#17241F] hover:text-[#B9FF8D] transition duration-300 cursor-pointer whitespace-nowrap">
+                    Let’s Talk
+                    </button>
                 </div>
             </section>
         </div>

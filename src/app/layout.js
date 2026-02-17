@@ -1,4 +1,4 @@
-import { Geist, Geist_Mono, Urbanist, Poppins } from "next/font/google";
+import { Geist, Geist_Mono, Urbanist, Poppins, Playfair_Display, Bricolage_Grotesque } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import SmoothScroll from "./smoothScroll";
@@ -25,6 +25,18 @@ const poppins = Poppins({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
   fallback: ["sans-serif"],
+});
+
+const playfair = Playfair_Display({
+  subsets: ['latin'],
+  weight: ['600'],
+  style: ['italic'],
+  variable: '--font-playfair',
+});
+
+const bricolage = Bricolage_Grotesque({
+  subsets: ['latin'],
+  variable: '--font-bricolage',
 });
 
 // ✅ Built-in Metadata API (App Router)
@@ -88,7 +100,7 @@ export default function RootLayout({ children }) {
 
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${urbanist.variable} ${poppins.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${urbanist.variable} ${poppins.variable} ${playfair.variable} ${bricolage.variable} antialiased`}
       >
         {children}
 

@@ -3,7 +3,7 @@ import React, { useRef } from 'react';
 import CountUp from 'react-countup';
 
 const STATS_DATA = [
-    { value: 2, label: 'Countries' },
+    { value: 15, label: 'Clients Served', plus: true },
     { value: 90, label: 'Days in Operation', plus: true },
     { value: 120, label: 'Projects Completed', plus: true },
     { value: 440, label: 'Cups of Coffee', plus: true },
@@ -18,7 +18,7 @@ const Counter = () => {
     });
 
     return (
-        <section ref={sectionRef} className="w-full pt-8 lg:pt-16">
+        <section ref={sectionRef} className="w-full py-6 lg:py-12">
             <div className="max-w-[1380px] mx-auto">
                 <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-12">
                     {STATS_DATA.map((stat, index) => (

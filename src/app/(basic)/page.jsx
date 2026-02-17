@@ -1,11 +1,13 @@
 "use client";
 import React, { useEffect } from "react";
 import HeroSection from "../components/HeroSection";
-import AboutUs from "../components/AboutUs.jsx";
-import WhatWeDo from "../components/WhatWeDo";
+import WhyPeopleLoveUs from "../components/WhyPeopleLoveUs.jsx";
+import OurServices from "../components/OurServices";
 import OurWorks from "../components/OurWorks";
 import WhyUs from "../components/WhyUs";
 import Feedback from "../components/Feedback";
+import Partnership from "../components/Partnership";
+import FAQsection from "../components/FAQsection";
 
 const Home = () => {
 
@@ -29,11 +31,11 @@ const Home = () => {
             <HeroSection />
 
             <div className="relative z-10">
-                <AboutUs />
+                <WhyPeopleLoveUs />
             </div>
 
             <div className="relative z-0">
-                <WhatWeDo />
+                <OurServices />
             </div>
 
             <OurWorks />
@@ -43,6 +45,8 @@ const Home = () => {
             </div>
 
             <Feedback />
+            <Partnership />
+            <FAQsection />
         </div>
     );
 };

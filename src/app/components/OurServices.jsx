@@ -10,29 +10,29 @@ import WordPress from '@/assets/Icons/WordPress.svg';
 import MegaPhone from '@/assets/Icons/MegaPhone.svg';
 import Link from 'next/link';
 
-const WhatWeDo = () => {
+const OurServices = () => {
     const services = [
         {
-            title: "Branding & Identity",
-            description: "At Orbillo, we make digital simple, powerful and growth-focused",
+            title: "Brand Identity",
+            description: "Logos, visual systems & brand guidelines",
             icon: penTool,
             route: '/services/branding',
         },
         {
-            title: "UI/UX Design",
-            description: "At Orbillo, we make digital simple, powerful and growth-focused",
+            title: "UI / UX Design",
+            description: "Logos, visual systems & brand guidelines",
             icon: Layout,
             route: '/services/ui-ux',
         },
         {
-            title: "Wordpress Development",
-            description: "At Orbillo, we make digital simple, powerful and growth-focused",
+            title: "Web Development",
+            description: "Logos, visual systems & brand guidelines",
             icon: WordPress,
             route: '/services/wordpress',
         },
         {
-            title: "Social Media Design",
-            description: "At Orbillo, we make digital simple, powerful and growth-focused",
+            title: "Social Designs",
+            description: "Logos, visual systems & brand guidelines",
             icon: MegaPhone,
             route: '/services/social-media',
         },
@@ -49,18 +49,17 @@ const WhatWeDo = () => {
                 {/* Header */}
                 <div className='flex flex-col lg:flex-row items-center justify-between gap-8 mb-20'>
                     <div className='space-y-8 lg:text-left text-center w-full flex flex-col items-center lg:items-start'>
-                        <p className='uppercase outfit text-sm lg:text-lg font-bold text-white/55 tracking-[2.7px]'>
-                            What We Do
+                        <p className='uppercase outfit text-sm lg:text-base font-bold text-white/55 tracking-[2.7px]'>
+                            Our Services
                         </p>
-                        <h3 className='text-[28px] md:text-[40px] max-w-[580px] recoleta text-[#C9FF90] leading-tight -tracking-[0.48px]'>
-                            <p>Purpose-led design services built for clarity, usability and long-term brand value.</p>
-                        </h3>
+                        <h1 className="text-[36px] sm:text-[48px] md:text-[50px] font-semibold text-white bricolage max-w-[650px] leading-[1.1] md:leading-[60px] mb-6 tracking-tight">
+                            End‑to‑End Digital Design   {''}
+                            <span className="playfair italic text-4xl sm:text-4xl md:text-5xl">& Product Services</span>
+                        </h1>
                     </div>
-                    <div>
-                        <p className='outfit text-lg md:text-xl text-white/80 lg:max-w-[900px] md:max-w-[700px] text-center lg:text-right'>
-                            We offer a focused range of design services for businesses that care about clarity, usability, and strong visual identity.
-                        </p>
-                    </div>
+                    <p className='outfit text-lg md:text-xl text-white/80 max-w-[400px]  text-center lg:text-right'>
+                        We offer a focused range of design services for businesses that care about clarity, usability, and strong visual identity.
+                    </p>
                 </div>
 
                 <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 md:gap-6 gap-3'>
@@ -104,10 +103,10 @@ const WhatWeDo = () => {
 
                                     {/* Content: Text */}
                                     <div className='relative z-20 space-y-3 md:space-y-4'>
-                                        <h3 className='recoleta md:text-2xl text-[18px]'>
+                                        <h3 className='bricolage md:text-3xl text-[18px] tracking-tighter'>
                                             {item.title}
                                         </h3>
-                                        <p className='outfit md:text-lg text-[14px] font-light text-white/70 group-hover:text-[#052e26] transition-colors duration-300'>
+                                        <p className='outfit md:text-xl text-base text-white/70 group-hover:text-[#052e26] transition-colors duration-300'>
                                             {item.description}
                                         </p>
                                     </div>
@@ -121,4 +120,4 @@ const WhatWeDo = () => {
     );
 };
 
-export default WhatWeDo;
+export default OurServices;
