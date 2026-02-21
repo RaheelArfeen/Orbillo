@@ -8,6 +8,7 @@ import WhyUs from "../components/WhyUs";
 import Feedback from "../components/Feedback";
 import Partnership from "../components/Partnership";
 import FAQsection from "../components/FAQsection";
+import Counter from "../components/Counter";
 
 const Home = () => {
 
@@ -39,6 +40,9 @@ const Home = () => {
             </div>
 
             <OurWorks />
+            <div className='bg-white'>
+                <Counter />
+            </div>
 
             <div className="relative">
                 <WhyUs />

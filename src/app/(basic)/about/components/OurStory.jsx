@@ -7,9 +7,9 @@ const OurStory = () => {
             <div className='h-[300px] w-[300px] bg-[#D6F55B]/52 rounded-full blur-[200px] absolute -top-20 -left-20'></div>
             <div className='h-[300px] w-[300px] bg-[#D6F55B]/52 rounded-full blur-[200px] absolute -bottom-20 -right-20'></div>
 
-            <section className='max-w-[1380px] mx-auto px-5 md:px-10 py-12 md:py-25 flex items-center justify-between gap-16'>
+            <section className='max-w-[1380px] mx-auto px-5 md:px-10 py-12 md:py-25 flex flex-col lg:flex-row items-center justify-between gap-16'>
                 <div>
-                    <img className='max-w-[600px]' src="https://i.ibb.co.com/2133gQ9W/image.png" alt="" />
+                    <img className='max-w-[600px] w-full xl:w-auto' src="https://i.ibb.co.com/2133gQ9W/image.png" alt="" />
                 </div>
                 <div>
                     <h3 className='outfit uppercase text-[#696969] font-bold text-sm md:text-base tracking-[2.7px] whitespace-nowrap mb-6'>Our Story</h3>

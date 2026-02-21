@@ -91,19 +91,21 @@ const OurTeam2 = () => {
                     </div>
                 </div>
 
-                <div className='grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-4'>
+                <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-4'>
                     {Members.map((member, index) => (
                         <div
                             key={index}
                             className={`flex flex-col w-full group ${member.spaceTop ? 'lg:relative lg:top-16' : ''}`}
                         >
                             <div className='p-px rounded-3xl bg-linear-to-br from-[#C9FF90] via-[#09332D] to-[#C9FF90]'>
-                                <div className='w-full overflow-hidden rounded-3xl shadow-lg max-h-[500px] relative bg-[#2A4341]'>
-                                    <img
-                                        src={member.imageSrc}
-                                        alt={member.name}
-                                        className='w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 pointer-events-none'
-                                    />
+                                <div className='w-full overflow-hidden rounded-3xl shadow-lg relative bg-[#2A4341]'>
+                                    <div className="w-full max-h-[500px] overflow-hidden">
+                                        <img
+                                            src={member.imageSrc}
+                                            alt={member.name}
+                                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 pointer-events-none"
+                                        />
+                                    </div>
 
                                     {/* Overlay */}
                                     <div className='h-full w-full bg-gradient-to-b from-transparent to-black/80 absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-500'></div>
@@ -124,10 +126,10 @@ const OurTeam2 = () => {
                             </div>
 
                             <div className='mt-4 md:mt-5 px-2 flex flex-col items-end w-fit'>
-                                <h2 className='bricolage font-semibold text-2xl md:text-4xl text-white tracking-tight leading-tight'>
+                                <h2 className='bricolage font-semibold text-4xl text-white tracking-tight leading-tight'>
                                     {member.name}
                                 </h2>
-                                <p className='outfit text-lg md:text-xl text-[#B4B4B4] mt-1'>
+                                <p className='outfit text-xl text-[#B4B4B4] mt-1'>
                                     • {member.role}
                                 </p>
                             </div>

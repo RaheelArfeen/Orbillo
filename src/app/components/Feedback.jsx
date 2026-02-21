@@ -27,7 +27,7 @@ const Feedback = () => {
             </div>
 
             {/* Testimonial Section */}
-            <section className="py-[120px] md:py-[160px] flex max-[350px]:flex-col max-md:items-center items-end justify-center gap-6 md:gap-18 px-4 overflow-hidden">
+            <section className="py-[120px] md:py-40 max-md:max-w-[400px] mx-auto flex flex-col md:flex-row max-md:items-center items-end justify-center gap-6 md:gap-18 px-4 overflow-hidden">
 
                 {/* Image */}
                 <div className="h-[240px] sm:h-[300px] md:h-[400px] w-[180px] sm:w-[240px] md:w-[300px] rounded-lg overflow-hidden flex-shrink-0">
@@ -56,13 +56,13 @@ const Feedback = () => {
                     </div>
 
                     {/* Text */}
-                    <p className="md:text-2xl text-base sm:text-lg text-[#373737] outfit leading-snug">
+                    <p className="text-2xl text-[#373737] outfit leading-snug">
                         Very few firms can make products look beautiful and work well at the same time, and that’s what I love about Orbillo!
                     </p>
 
                     {/* Person */}
                     <div className="mt-10 md:mt-20">
-                        <p className="text-xl sm:text-2xl md:text-3xl text-[#212121] bricolage">Abu Sayeed</p>
+                        <p className="text-2xl md:text-3xl text-[#212121] bricolage">Abu Sayeed</p>
                         <span className="outfit text-sm sm:text-base md:text-lg uppercase md:tracking-[2.7px] tracking-[2px] font-medium text-[#575757]">
                             Founder, RankMet LLC
                         </span>

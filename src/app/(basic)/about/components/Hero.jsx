@@ -17,7 +17,6 @@ const Hero = () => {
             {/* Background Video */}
             <div className="absolute inset-0 z-10">
                 <Image src={HeroBg} className='opacity-15 object-cover w-full h-full' />
-
             </div>
 
             <section className='z-20 text-center py-30 pt-50 mb-20 px-4 flex flex-col items-center justify-center gap-4'>

@@ -47,13 +47,13 @@ const FAQsection = () => {
                     <h1 className="text-[36px] sm:text-[48px] md:text-[50px] font-semibold text-[#212121] bricolage max-w-[500px] leading-[1.1] md:leading-[60px] mb-6 tracking-tight">
                         Questions? We’re Here <span className="playfair italic text-4xl sm:text-4xl md:text-5xl">to Help</span>
                     </h1>
-                    <div className='mt-20 hidden lg:block'>
-                        <img className='max-h-[220px]' src="https://i.ibb.co.com/dJz1Qr5S/image.png" alt="FAQ Illustration" />
+                    <div className='md:mt-20'>
+                        <img className='max-h-[180px] md:max-h-[220px]' src="https://i.ibb.co.com/dJz1Qr5S/image.png" alt="FAQ Illustration" />
                     </div>
                 </div>
 
                 {/* Right Side: Accordion */}
-                <div className='flex flex-col gap-4 w-full max-w-[700px]'>
+                <div className='flex flex-col gap-4 w-full lg:max-w-[700px]'>
                     {questions.map((Q) => {
                         const isOpen = openId === Q.id;
                         return (
@@ -64,7 +64,7 @@ const FAQsection = () => {
                                         onClick={() => toggleFAQ(Q.id)}
                                         className='w-full flex items-center justify-between py-5 px-6 md:px-10 text-left hover:bg-gray-50/50 transition-colors'
                                     >
-                                        <h1 className='bricolage text-xl md:text-2xl font-medium text-[#212121] tracking-tight'>
+                                        <h1 className='bricolage text-xl md:text-2xl max-sm:max-w-xs font-medium text-[#212121] tracking-tight'>
                                             {Q.question}
                                         </h1>
 

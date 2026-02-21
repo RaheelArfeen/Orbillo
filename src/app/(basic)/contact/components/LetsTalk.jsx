@@ -86,11 +86,8 @@ const LetsTalk = () => {
                 <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start'>
                     <div className='relative z-10'>
                         <p className='outfit uppercase text-[#FFFFFF]/65 font-bold text-sm md:text-lg tracking-[2.7px] mb-8 md:mb-12'>Let’s Talk!</p>
-                        <div className='w-full md:max-w-[500px] mb-12'>
-                            <p className='recoleta text-xl md:text-2xl xl:text-3xl leading-[140%] tracking-[-0.2px] text-[#FDFFF5]'>
-                                Tell us about your project, goals, and timeline. Our team will get back to you <span className='text-[#C9FF90] underline decoration-[#C9FF90] decoration-3 underline-offset-5'>within 24 hours.</span>
-                            </p>
-                        </div>
+                        <h1 className='bricolage font-medium text-xl md:text-2xl xl:text-3xl leading-[140%] tracking-[-0.2px] text-[#FDFFF5] w-full md:max-w-[500px] mb-12'>Tell us about your project, goals, and timeline. Our team will get back to you <span className='text-[#C9FF90] underline decoration-[#C9FF90] decoration-3 underline-offset-5'>within 24 hours.</span></h1>
+
                         <div className='space-y-4'>
                             {contactInfo.map(({ icon: Icon, text }, index) => (
                                 <div key={index} className="flex items-center gap-6">

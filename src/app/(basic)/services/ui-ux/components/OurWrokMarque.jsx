@@ -81,7 +81,7 @@ const OurWorkMarque = () => {
                         <p className='uppercase outfit text-sm lg:text-lg font-bold text-[#E3E3E3]/55 tracking-[2.7px]'>
                             Our Work
                         </p>
-                        <h3 className='text-[28px] md:text-[40px] md:max-w-[850px] max-w-[500px] recoleta text-white leading-tight'>
+                        <h3 className='text-[28px] md:text-[40px] md:max-w-[850px] max-w-[500px] bricolage text-white leading-tight'>
                             <p>From Tech to Retail: Tailored Brand Design for Every Industry</p>
                         </h3>
                     </div>

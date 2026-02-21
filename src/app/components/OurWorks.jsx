@@ -7,7 +7,6 @@ import Marquee from 'react-fast-marquee';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import Link from 'next/link';
-import Counter from './Counter';
 
 // 3. Custom CSS
 const customSwiperStyles = `
@@ -149,7 +148,7 @@ const ProjectCard = ({ item }) => {
 
                 {item.comingSoon ? (
                     <button
-                        className="w-full md:w-auto inline-block px-8 py-3 rounded-full border border-[#4B4B4B] bg-[#4B4B4B] text-white outfit opacity-80"
+                        className="inline-block px-8 py-3 rounded-full border border-[#4B4B4B] bg-[#4B4B4B] text-white outfit opacity-80"
                     >
                         Coming Soon
                     </button>
@@ -157,7 +156,7 @@ const ProjectCard = ({ item }) => {
                     <Link
                         href={item.url}
                         target='_blank'
-                        className="w-full md:w-auto text-center inline-block px-8 py-3 rounded-full border border-[#4B4B4B] hover:bg-[#4B4B4B] text-[#4B4B4B] hover:text-white transition-colors duration-300 outfit"
+                        className="text-center inline-block px-8 py-3 rounded-full border border-[#4B4B4B] hover:bg-[#4B4B4B] text-[#4B4B4B] hover:text-white transition-colors duration-300 outfit"
                     >
                         View Project
                     </Link>
@@ -196,31 +195,27 @@ const OurWorks = () => {
                 <section className='z-30 mx-auto'>
                     <div className='flex flex-col lg:flex-row items-center justify-between gap-8 mb-12 md:mb-20'>
                         <div className='space-y-4 w-full flex flex-col items-center'>
-                            <h1 className="text-[36px] sm:text-[48px] md:text-[50px] font-medium text-[#212121] bricolage tracking-tight max-w-[700px] leading-[1.1] md:leading-[60px] text-center">
+                            <h1 className="text-[36px] sm:text-[48px] md:text-[50px] font-medium text-[#212121] bricolage tracking-tight max-w-[700px] leading-[1.1] md:leading-[60px] md:text-center">
                                 Results {''}
                                 <span className="playfair italic text-4xl sm:text-4xl md:text-5xl">That Speak</span> {' '}
                                 For Themselves
                             </h1>
 
-                            <p className='outfit text-lg md:text-xl text-[#4B4B4B] max-w-[440px] text-center tracking-[0.20px]'>
+                            <p className='outfit text-lg md:text-xl text-[#4B4B4B] max-w-[440px] md:text-center tracking-[0.20px]'>
                                 We partner with founders to transform ideas into market-ready products.
                             </p>
                         </div>
                     </div>
                 </section>
 
-                <section className='max-w-[1380px] mx-auto mb-48'>
-                    <div className='grid gap-48'>
+                <section className='max-w-[1380px] mx-auto mb-12 md:mb-48'>
+                    <div className='grid gap-12 md:gap-48'>
                         {GRID_ITEMS.map((item) => (
                             <ProjectCard key={item.id} item={item} />
                         ))}
                     </div>
                 </section>
 
-            </div>
-            {/* --- Section: Stats --- */}
-            <div className='bg-white'>
-                <Counter />
             </div>
         </div>
     );

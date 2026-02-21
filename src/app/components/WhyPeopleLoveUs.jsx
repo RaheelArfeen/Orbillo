@@ -4,7 +4,7 @@ import React from 'react';
 import Marquee from "react-fast-marquee";
 
 const FeatureItem = ({ text }) => (
-    <p className="flex items-center gap-2.5 text-sm md:text-lg outline-offset-0 text-[#4B4B4B]">
+    <p className="flex items-center gap-2.5 text-base md:text-lg outline-offset-0 text-[#4B4B4B]">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" className="shrink-0 size-4 md:size-5">
             <path d="M17 3.33782C15.5291 2.48697 13.8214 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12C22 11.3151 21.9311 10.6462 21.8 10" stroke="#559B36" strokeWidth="1.5" strokeLinecap="round" />
             <path d="M8 12.5C8 12.5 9.5 12.5 11.5 16C11.5 16 17.0588 6.83333 22 5" stroke="#559B36" strokeWidth="1.5" strokeLinecap="round" />
@@ -236,7 +236,7 @@ const WhyPeopleLoveUs = () => {
     return (
         <div className='w-full bg-white flex flex-col items-center'>
 
-            <div className="w-full -mt-[150px] mb-24 overflow-visible">
+            <div className="w-full -mt-[125px] md:-mt-[150px] mb-24 overflow-visible">
                 <Marquee
                     gradient={false}
                     speed={50}
@@ -244,9 +244,9 @@ const WhyPeopleLoveUs = () => {
                     className="py-4"
                 >
                     {images.map((src, index) => (
-                        <div key={index} className="mx-3 max-h-[300px]">
+                        <div key={index} className="mx-2 md:mx-3 max-h-[300px]">
                             <img
-                                className="shadow-md w-full h-full object-cover rounded-3xl pointer-events-none bg-white"
+                                className="shadow-md h-full max-md:max-w-[250px] md:w-full object-cover rounded-2xl md:rounded-3xl pointer-events-none bg-white"
                                 src={src}
                                 alt={`Gallery image ${index + 1}`}
                             />
@@ -257,7 +257,7 @@ const WhyPeopleLoveUs = () => {
 
             <div className='w-full max-w-[1200px] mx-auto flex flex-col items-center pb-24 px-4'>
 
-                <section className='w-full flex flex-col lg:flex-row justify-between items-center gap-12 lg:gap-20 pb-12 md:pb-20'>
+                <section className='w-full flex flex-col-reverse lg:flex-row justify-between items-center gap-12 lg:gap-20 pb-12 md:pb-20'>
                     <div className='bg-[#DCEDCE] rounded-3xl md:rounded-4xl w-full lg:max-w-[480px] aspect-[4/5] md:h-[580px] flex-shrink-0'></div>
 
                     <div>
@@ -287,9 +287,9 @@ const WhyPeopleLoveUs = () => {
                             href="https://calendly.com/teamorbillo/30min"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-block w-full sm:w-auto"
+                            className="inline-block"
                         >
-                            <button className="w-full sm:w-auto px-8 py-3 rounded-full font-medium outfit border border-[#9CF366] bg-[#B9FF8D] text-[#17241F] hover:bg-[#17241F] hover:text-[#B9FF8D] transition duration-300 cursor-pointer whitespace-nowrap">
+                            <button className="px-8 py-3 rounded-full font-medium outfit border border-[#9CF366] bg-[#B9FF8D] text-[#17241F] hover:bg-[#17241F] hover:text-[#B9FF8D] transition duration-300 cursor-pointer whitespace-nowrap">
                                 Book A Discovery Call
                             </button>
                         </a>

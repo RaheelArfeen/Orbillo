@@ -4,11 +4,13 @@ import Hero from './components/Hero';
 import WhatWeDo from './components/WhatWeDo';
 import OurWork from './components/OurWork';
 import WorkProcess from './components/WorkProcess';
-import WhyUs from './components/WhyUs';
 import OurWrokMarque from './components/OurWrokMarque';
 import Feedback from './components/Feedback';
 import Faq from './components/Faq';
-import OurCollaboration from './components/OurCollaboration';
+import Partnership from './components/Partnership';
+import Counter from './components/Counter';
+import CTAsection from './components/CTAsection';
+import Pricing from './components/Pricing';
 
 export const metadata = {
     title: "UI/UX Design | Orbillo",
@@ -19,13 +21,15 @@ const page = () => {
         <div>
             <Hero />
             <WhatWeDo />
-            <OurWork />
             <WorkProcess />
-            <WhyUs />
+            <OurWork />
+            <Partnership />
+            <Counter />
+            <CTAsection />
             <OurWrokMarque />
             <Feedback />
+            <Pricing />
             <Faq />
-            <OurCollaboration />
         </div>
     );
 };

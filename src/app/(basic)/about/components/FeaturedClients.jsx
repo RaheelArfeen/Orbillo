@@ -206,7 +206,7 @@ const FeaturedClients = () => {
 
     return (
         <div>
-            <section className='max-w-[1380px] mx-auto py-12 md:py-25 px-5 2xl:px-0 flex items-center justify-between'>
+            <section className='max-w-[1380px] mx-auto py-12 md:py-25 px-5 2xl:px-0 flex flex-col lg:flex-row items-center justify-between space-y-10'>
 
                 <div className='flex flex-col md:flex-row items-start md:items-end justify-between w-full gap-8 md:gap-0'>
                     <div className='w-full md:w-auto'>
@@ -224,11 +224,11 @@ const FeaturedClients = () => {
                 </div>
 
                 <div className="flex flex-col items-center">
-                    <div className="flex flex-wrap justify-center items-center w-full max-w-5xl">
+                    <div className="flex flex-wrap justify-center items-center min-w-fit max-w-5xl">
                         {ICONS.map((icon, index) => (
                             <div
                                 key={index}
-                                className="border border-[#E9E9E9] flex items-center justify-center px-5 py-12 h-25 md:opacity-50 hover:opacity-100 cursor-pointer transition duration-500 -ml-[1px] -mt-[1px] w-fit"
+                                className="border border-[#E9E9E9] flex items-center justify-center px-3 2xl:px-5 py-12 h-25 md:opacity-50 hover:opacity-100 cursor-pointer transition duration-500 -ml-[1px] -mt-[1px] w-fit"
                             >
                                 <span>{icon.svg}</span>
                             </div>

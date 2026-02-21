@@ -1,3 +1,5 @@
+'use client'
+
 import { useInView } from 'framer-motion';
 import React, { useRef } from 'react';
 import CountUp from 'react-countup';

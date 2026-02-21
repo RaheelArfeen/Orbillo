@@ -66,7 +66,7 @@ const HeroSection = () => {
                 </div>
 
                 {/* Feature List */}
-                <div className="outfit text-white/80 flex flex-row items-center gap-6 md:gap-8 mt-12">
+                <div className="outfit text-white/80 flex flex-row items-center gap-6 md:gap-8 md:mt-12 mt-8">
                     <FeatureItem text="Free Site Audit" />
                     <FeatureItem text="Milestone Payments" />
                     <FeatureItem text="Ongoing Support" />

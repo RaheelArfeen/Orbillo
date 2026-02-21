@@ -15,7 +15,7 @@ const WhyUs = () => {
                         WHY US
                     </p>
 
-                    <h1 className='text-[32px] md:text-[40px] md:max-w-[450px] max-w-full recoleta text-[#07302C] leading-tight [font-variant-ligatures:none]'>
+                    <h1 className='text-[32px] md:text-[40px] md:max-w-[450px] max-w-full bricolage text-[#07302C] leading-tight [font-variant-ligatures:none]'>
                         Design is not decoration it’s <span className='text-[#559B36] underline decoration-[#559B36] decoration-3 underline-offset-5'>direction..</span>
                     </h1>
 

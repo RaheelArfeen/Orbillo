@@ -138,7 +138,7 @@ const OurPhilosophy = () => {
                                         </motion.div>
                                         <motion.div style={{ opacity: opacities[index], y: yOffsets[index] }} className={`text-left ${index === 2 ? 'lg:pl-12 px-8' : 'lg:pl-12 pl-6'}`}>
                                             <p className="outfit text-xl lg:text-2xl mb-2 text-white/90">{item.label}</p>
-                                            <h3 className="recoleta text-2xl lg:text-4xl text-white">{item.title}</h3>
+                                            <h3 className="bricolage text-2xl lg:text-4xl text-white">{item.title}</h3>
                                         </motion.div>
                                     </div>
                                 ))}
@@ -175,7 +175,7 @@ const OurPhilosophy = () => {
                                             className="text-left pt-2"
                                         >
                                             <p className="outfit text-lg text-white/70 mb-1">{item.label}</p>
-                                            <h3 className="recoleta text-3xl text-white">{item.title}</h3>
+                                            <h3 className="bricolage text-3xl text-white">{item.title}</h3>
                                         </motion.div>
                                     </div>
                                 ))}

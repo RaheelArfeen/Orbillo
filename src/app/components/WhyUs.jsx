@@ -106,7 +106,7 @@ const Card = ({ i, title, subTitle, icons, description, color }) => {
     return (
         <div
             ref={container}
-            className={`sticky flex justify-center px-3 sm:px-4 ${i > 0 ? "-mt-20 sm:-mt-24 md:-mt-16" : ""
+            className={`sticky flex justify-center px-4 ${i > 0 ? "-mt-20 sm:-mt-24 md:-mt-16" : ""
                 }`}
             style={{ top: topOffset }}
         >
@@ -130,15 +130,15 @@ const Card = ({ i, title, subTitle, icons, description, color }) => {
                     {/* TEXT SECTION */}
                     <div className="flex flex-col justify-between flex-1">
                         <div className="flex flex-col">
-                            <h2 className="text-sm sm:text-lg md:text-3xl lg:text-4xl bricolage text-white tracking-tight">
+                            <h2 className="text-3xl lg:text-4xl bricolage text-white tracking-tight">
                                 {title}
                             </h2>
 
-                            <h1 className="text-2xl sm:text-4xl md:text-5xl playfair text-white leading-tight">
+                            <h1 className="text-4xl md:text-5xl playfair text-white leading-tight">
                                 {subTitle}
                             </h1>
 
-                            <p className="text-white/80 text-base sm:text-lg md:text-2xl max-w-xl leading-tight outline-offset-0 -tracking-[0.24px] outfit mt-6">
+                            <p className="text-white/80 text-lg md:text-2xl max-w-xl leading-tight outline-offset-0 -tracking-[0.24px] outfit mt-6">
                                 {description}
                             </p>
                         </div>
@@ -177,12 +177,12 @@ const WhyUs = () => {
             <div className='pt-20 pb-0'>
                 <section className='z-30 max-w-[1380px] mx-auto px-4 relative mb-10'>
                     {/* Header */}
-                    <div className='flex flex-col lg:flex-row items-center justify-between gap-8 mb-20'>
+                    <div className='flex flex-col lg:flex-row items-center justify-between gap-8 md:mb-20'>
                         <div className='space-y-8 lg:text-left text-center w-full flex flex-col items-center lg:items-start'>
                             <p className='uppercase outfit text-sm lg:text-base font-bold text-[#A8A8A8] tracking-[2.7px]'>
                                 Why Choose Us?
                             </p>
-                            <h1 className="text-[36px] sm:text-[48px] md:text-[50px] font-semibold text-white bricolage max-w-[700px] leading-[1.1] md:leading-[60px] mb-6 tracking-tight">
+                            <h1 className="text-[36px] sm:text-[48px] md:text-[50px] font-semibold text-white bricolage max-w-[700px] leading-[1.1] md:leading-[60px] tracking-tight">
                                 We treat every project like a partnership, {''}
                                 <span className="playfair italic text-4xl sm:text-4xl md:text-5xl">not a task.</span>
                             </h1>
@@ -196,7 +196,7 @@ const WhyUs = () => {
                 </section>
 
                 {/* Scrolling cards section */}
-                <section ref={container} className='relative z-20 w-full pt-20'>
+                <section ref={container} className='relative z-20 w-full pt-10 md:pt-20'>
                     {projects.map((project, i) => {
                         return (
                             <Card

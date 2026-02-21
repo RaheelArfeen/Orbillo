@@ -18,7 +18,7 @@ const SOCIAL_LINKS = [
 const services = [
     { label: 'Branding & Identity', href: '/services/branding' },
     { label: 'UI/UX Design', href: '/services/ui-ux' },
-    { label: 'Wordpress Development', href: '/services/wordpress' },
+    { label: 'Web Development', href: '/services/webDevelopment' },
     { label: 'Social Media Design', href: '/services/social-media' },
 ];
 
@@ -87,7 +87,7 @@ const Header = () => {
 
                             {/* LEFT COLUMN: Info & Buttons */}
                             <div className="w-full lg:w-1/2 flex flex-col space-y-4 md:space-y-6 lg:pr-16 order-2 lg:order-1">
-                                <p className="text-[#17241F] recoleta text-2xl lg:text-3xl max-w-[400px] md:max-w-[500px]">
+                                <p className="text-[#17241F] bricolage text-2xl lg:text-3xl max-w-[400px] md:max-w-[500px]">
                                     Tell us about your project, goals, and timeline and our team will get back to you{' '}
                                     <span className="text-[#02403A] underline decoration-[#02403A] decoration-2 underline-offset-3 md:underline-offset-4">
                                         within 24 hours.

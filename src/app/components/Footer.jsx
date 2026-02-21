@@ -21,13 +21,13 @@ const Footer = () => {
         <div className="relative overflow-visible lg:mt-0 mt-[200px]">
 
             {/* CTA Section */}
-            <section className='w-[95%] md:w-[90%] max-w-[1380px] max-h-[400px] mx-auto lg:rounded-[64px] rounded-4xl overflow-hidden absolute lg:-top-[200px] md:-top-[430px] -top-[350px] left-1/2 -translate-x-1/2 z-50 px-4'>
+            <section className='w-[95%] lg:w-[85%] xl:w-[90%] max-w-[1380px] max-h-[400px] mx-auto lg:rounded-[64px] rounded-4xl overflow-hidden absolute lg:-top-[200px] md:-top-[430px] -top-[350px] left-1/2 -translate-x-1/2 z-50 px-4'>
 
                 <div className="absolute inset-0 -z-50">
                     <Image
                         src={CTAbg}
                         alt="Footer CTA background"
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover pointer-events-none"
                         priority
                     />
                 </div>
@@ -71,21 +71,20 @@ const Footer = () => {
 
             {/* Footer Body */}
             <div className="bg-[#07302C] 2xl:rounded-t-[100px] xl:rounded-t-[60px] lg:rounded-t-[100px] overflow-hidden z-50">
-                {/* 2xl:h-[1100px] xl:h-[800px] md:h-[1000px] sm:h-[1000px] h-[1100px] */}
-                <section className='mx-auto text-white 2xl:pt-[320px] lg:py-[250px] pt-20 pb-30 relative z-20 overflow-hidden 2xl:h-[1000px] xl:h-[800px] md:h-[900px] h-[800px]'>
+                <section className='mx-auto text-white 2xl:pt-[320px] lg:py-[250px] pt-20 pb-30 relative z-20 overflow-hidden 2xl:h-[900px] xl:h-[800px] lg:h-[750px] md:h-[950px] h-[800px]'>
 
                     <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-screen  -z-50">
                         <Image
                             src={FooterEffect}
                             alt="Footer Effect"
-                            className="w-screen h-auto object-cover"
+                            className="w-screen h-auto object-cover pointer-events-none"
                             priority
                         />
                     </div>
 
 
                     <div className="w-full max-w-[1920px] mx-auto pointer-events-none">
-                        <div className="hidden lg:flex absolute instet-0 bottom-0 left-1/2 -translate-x-1/2 -z-50 max-w-[1600px] w-full">
+                        <div className="hidden lg:flex absolute instet-0 -bottom-30 left-1/2 -translate-x-1/2 -z-50 max-w-[1600px] w-full">
                             <Image src={FooterLogo} />
                         </div>
                         <div className="lg:hidden flex absolute instet-0 bottom-5 left-1/2 -translate-x-1/2 w-full -z-50">
@@ -97,7 +96,7 @@ const Footer = () => {
 
                         {/* Logo Section */}
                         <div className="w-full lg:w-3/4 flex flex-col max-lg:items-center mb-10 md:mb-24">
-                            <Image src={Logo} alt='Logo' />
+                            <Image src={Logo} alt='Logo' className="pointer-events-none" />
 
                             <p className='max-w-[300px] text-white/79 outfit max-lg:text-center text-lg mt-6'>
                                 The digital growth partner you have always been looking for!
@@ -143,7 +142,7 @@ const Footer = () => {
                                     <Link href={'/services/branding'} className="hover:text-white hover:scale-105 transition-all duration-300 cursor-pointer">Brand Design</Link>
                                     <Link href={'/services/ui-ux'} className="hover:text-white hover:scale-105 transition-all duration-300 cursor-pointer">UI/UX Design</Link>
                                     <Link href={'/services/social-media'} className="hover:text-white hover:scale-105 transition-all duration-300 cursor-pointer">Social Media Design</Link>
-                                    <Link href={'/services/wordpress'} className="hover:text-white hover:scale-105 transition-all duration-300 cursor-pointer">Web Development</Link>
+                                    <Link href={'/services/webDevelopment'} className="hover:text-white hover:scale-105 transition-all duration-300 cursor-pointer">Web Development</Link>
                                 </div>
                             </div>
                         </div>

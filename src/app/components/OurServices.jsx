@@ -6,7 +6,7 @@ import React from 'react';
 // --- ASSETS ---
 import penTool from '@/assets/Icons/PenTool.svg';
 import Layout from '@/assets/Icons/Layout.svg';
-import WordPress from '@/assets/Icons/WordPress.svg';
+import webDevelopment from '@/assets/Icons/webDevelopment.svg';
 import MegaPhone from '@/assets/Icons/MegaPhone.svg';
 import Link from 'next/link';
 
@@ -27,8 +27,8 @@ const OurServices = () => {
         {
             title: "Web Development",
             description: "Logos, visual systems & brand guidelines",
-            icon: WordPress,
-            route: '/services/wordpress',
+            icon: webDevelopment,
+            route: '/services/webDevelopment',
         },
         {
             title: "Social Designs",
@@ -52,17 +52,17 @@ const OurServices = () => {
                         <p className='uppercase outfit text-sm lg:text-base font-bold text-white/55 tracking-[2.7px]'>
                             Our Services
                         </p>
-                        <h1 className="text-[36px] sm:text-[48px] md:text-[50px] font-semibold text-white bricolage max-w-[650px] leading-[1.1] md:leading-[60px] mb-6 tracking-tight">
+                        <h1 className="text-[36px] sm:text-[48px] md:text-[50px] font-semibold text-white bricolage max-w-[650px] leading-[1.1] md:leading-[60px] tracking-tight">
                             End‑to‑End Digital Design   {''}
                             <span className="playfair italic text-4xl sm:text-4xl md:text-5xl">& Product Services</span>
                         </h1>
                     </div>
-                    <p className='outfit text-lg md:text-xl text-white/80 max-w-[400px]  text-center lg:text-right'>
+                    <p className='outfit text-lg md:text-xl text-white/80 max-w-[400px] text-center lg:text-right'>
                         We offer a focused range of design services for businesses that care about clarity, usability, and strong visual identity.
                     </p>
                 </div>
 
-                <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 md:gap-6 gap-3'>
+                <div className='grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 md:gap-6 gap-3'>
                     {services.map((item, index) => (
                         <div
                             key={index}
@@ -82,7 +82,8 @@ const OurServices = () => {
                                 group-hover:text-[#052e26]'
                                 >
 
-                                    <img className='absolute inset-0 top-0 left-0 w-full h-full scale-105 object-cover opacity-0 group-hover:opacity-100 transition duration-300 pointer-events-none' src="https://i.ibb.co.com/1JQtDmLt/svgviewer-png-output-1.png" alt="" />
+                                    <img className='absolute inset-0 top-0 left-0 w-full h-full scale-105 object-cover opacity-0 z-20 group-hover:opacity-100 transition duration-300 pointer-events-none' src="https://i.ibb.co.com/1JQtDmLt/svgviewer-png-output-1.png" alt="" />
+                                    <div className='absolute inset-0 top-0 left-0 w-full h-full bg-[#c1f288] scale-105 opacity-0 group-hover:opacity-100 transition duration-300 pointer-events-none z-10'></div>
 
                                     {/* Content: Icon */}
                                     <div className='flex justify-end relative z-20'>
@@ -103,10 +104,10 @@ const OurServices = () => {
 
                                     {/* Content: Text */}
                                     <div className='relative z-20 space-y-3 md:space-y-4'>
-                                        <h3 className='bricolage md:text-3xl text-[18px] tracking-tighter'>
+                                        <h3 className='bricolage md:text-3xl text-xl font-semibold tracking-tighter'>
                                             {item.title}
                                         </h3>
-                                        <p className='outfit md:text-xl text-base text-white/70 group-hover:text-[#052e26] transition-colors duration-300'>
+                                        <p className='outfit md:text-xl text-lg text-white/70 group-hover:text-[#052e26] transition-colors duration-300'>
                                             {item.description}
                                         </p>
                                     </div>
