@@ -235,18 +235,20 @@ const WhatWeDo = () => {
     ]
 
     const images = [
-        "https://i.ibb.co.com/8D8G16yY/image.png",
-        "https://i.ibb.co.com/s9tQZRzn/image.png",
-        "https://i.ibb.co.com/Q789kkxV/image.png",
-        "https://i.ibb.co.com/j9hyR0hd/image.png",
-        "https://i.ibb.co.com/6zc60RV/image.png",
-        "https://i.ibb.co.com/cSqx3LLz/image.png",
-        "https://i.ibb.co.com/8D8G16yY/image.png",
-        "https://i.ibb.co.com/s9tQZRzn/image.png",
-        "https://i.ibb.co.com/Q789kkxV/image.png",
-        "https://i.ibb.co.com/j9hyR0hd/image.png",
-        "https://i.ibb.co.com/6zc60RV/image.png",
-        "https://i.ibb.co.com/cSqx3LLz/image.png"
+        "https://i.ibb.co.com/67KvF8K9/image.png",
+        "https://i.ibb.co.com/wNF057Gd/image.png",
+        "https://i.ibb.co.com/Qvbtr4rd/image.png",
+        "https://i.ibb.co.com/84DpyyZ2/image.png",
+        "https://i.ibb.co.com/Fb9KvKG2/image.png",
+        "https://i.ibb.co.com/BVhnNzZL/image.png",
+        "https://i.ibb.co.com/h12vBb5D/image.png",
+        "https://i.ibb.co.com/67KvF8K9/image.png",
+        "https://i.ibb.co.com/wNF057Gd/image.png",
+        "https://i.ibb.co.com/Qvbtr4rd/image.png",
+        "https://i.ibb.co.com/84DpyyZ2/image.png",
+        "https://i.ibb.co.com/Fb9KvKG2/image.png",
+        "https://i.ibb.co.com/BVhnNzZL/image.png",
+        "https://i.ibb.co.com/h12vBb5D/image.png",
     ];
 
     return (
@@ -263,9 +265,9 @@ const WhatWeDo = () => {
                         className="py-4 my-25"
                     >
                         {images.map((src, index) => (
-                            <div key={index} className="mx-2 md:mx-3 max-h-[300px]">
+                            <div key={index} className="mx-2 md:mx-3 max-w-[300px] h-[200px] md:h-[300px]">
                                 <img
-                                    className="shadow-md h-full max-md:max-w-[250px] md:w-full object-cover rounded-2xl md:rounded-3xl pointer-events-none bg-white"
+                                    className="shadow-md w-full h-full object-cover rounded-2xl md:rounded-3xl pointer-events-none bg-white"
                                     src={src}
                                     alt={`Gallery image ${index + 1}`}
                                 />

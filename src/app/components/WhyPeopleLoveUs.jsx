@@ -217,18 +217,20 @@ const ICONS = [
 ]
 
 const images = [
-    "https://i.ibb.co.com/8D8G16yY/image.png",
-    "https://i.ibb.co.com/s9tQZRzn/image.png",
-    "https://i.ibb.co.com/Q789kkxV/image.png",
-    "https://i.ibb.co.com/j9hyR0hd/image.png",
-    "https://i.ibb.co.com/6zc60RV/image.png",
-    "https://i.ibb.co.com/cSqx3LLz/image.png",
-    "https://i.ibb.co.com/8D8G16yY/image.png",
-    "https://i.ibb.co.com/s9tQZRzn/image.png",
-    "https://i.ibb.co.com/Q789kkxV/image.png",
-    "https://i.ibb.co.com/j9hyR0hd/image.png",
-    "https://i.ibb.co.com/6zc60RV/image.png",
-    "https://i.ibb.co.com/cSqx3LLz/image.png"
+    "https://i.ibb.co.com/67KvF8K9/image.png",
+    "https://i.ibb.co.com/wNF057Gd/image.png",
+    "https://i.ibb.co.com/Qvbtr4rd/image.png",
+    "https://i.ibb.co.com/84DpyyZ2/image.png",
+    "https://i.ibb.co.com/Fb9KvKG2/image.png",
+    "https://i.ibb.co.com/BVhnNzZL/image.png",
+    "https://i.ibb.co.com/h12vBb5D/image.png",
+    "https://i.ibb.co.com/67KvF8K9/image.png",
+    "https://i.ibb.co.com/wNF057Gd/image.png",
+    "https://i.ibb.co.com/Qvbtr4rd/image.png",
+    "https://i.ibb.co.com/84DpyyZ2/image.png",
+    "https://i.ibb.co.com/Fb9KvKG2/image.png",
+    "https://i.ibb.co.com/BVhnNzZL/image.png",
+    "https://i.ibb.co.com/h12vBb5D/image.png",
 ];
 
 const WhyPeopleLoveUs = () => {
@@ -244,9 +246,9 @@ const WhyPeopleLoveUs = () => {
                     className="py-4"
                 >
                     {images.map((src, index) => (
-                        <div key={index} className="mx-2 md:mx-3 max-h-[300px]">
+                        <div key={index} className="mx-2 md:mx-3 max-w-[350px] flex-1 h-[200px] md:h-[300px]">
                             <img
-                                className="shadow-md h-full max-md:max-w-[250px] md:w-full object-cover rounded-2xl md:rounded-3xl pointer-events-none bg-white"
+                                className="shadow-md w-full h-full object-cover rounded-2xl md:rounded-3xl pointer-events-none bg-white"
                                 src={src}
                                 alt={`Gallery image ${index + 1}`}
                             />
@@ -258,7 +260,9 @@ const WhyPeopleLoveUs = () => {
             <div className='w-full max-w-[1200px] mx-auto flex flex-col items-center pb-24 px-4'>
 
                 <section className='w-full flex flex-col-reverse lg:flex-row justify-between items-center gap-12 lg:gap-20 pb-12 md:pb-20'>
-                    <div className='bg-[#DCEDCE] rounded-3xl md:rounded-4xl w-full lg:max-w-[480px] aspect-[4/5] md:h-[580px] flex-shrink-0'></div>
+                    <div className='bg-linear-to-bl from-[#DCEDCE] to-[#D1EED9] rounded-3xl md:rounded-4xl w-full lg:max-w-[480px] aspect-[4/5] md:h-[580px] flex-shrink-0 flex items-center justify-center relative overflow-hidden'>
+                        <img className='max-w-[400px]' src="https://i.ibb.co.com/2133gQ9W/image.png" alt="" />
+                    </div>
 
                     <div>
                         <h3 className='uppercase outfit text-xs md:text-sm lg:text-base font-bold text-[#747474] tracking-[2.7px] mb-4 md:mb-5'>
