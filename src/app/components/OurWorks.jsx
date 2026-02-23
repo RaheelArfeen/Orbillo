@@ -2,11 +2,16 @@
 
 import React, { useRef, useState } from 'react';
 import Marquee from 'react-fast-marquee';
+import Rankmet from '@/assets/Rankmet.jpg'
+import GDFA from '@/assets/GDFA.jpg'
+import Nestora from '@/assets/Nestora.jpg'
+import Resa from '@/assets/Resa.jpg'
 
 // 2. Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
 import Link from 'next/link';
+import Image from 'next/image';
 
 // 3. Custom CSS
 const customSwiperStyles = `
@@ -34,7 +39,7 @@ const GRID_ITEMS = [
             'UI/UX design',
             'Web Development'
         ],
-        imgUrl: 'https://i.ibb.co.com/DfSVR1kR/image.png',
+        Image: Rankmet,
         comingSoon: false,
         url: 'https://rankmet.com/'
     },
@@ -46,7 +51,7 @@ const GRID_ITEMS = [
             'UI/UX design',
             'Web Development'
         ],
-        imgUrl: 'https://i.ibb.co.com/RTZz2wpC/image.png',
+        Image: GDFA,
         comingSoon: false,
         url: 'https://greaterdfa.com/',
         reverse: true
@@ -59,7 +64,7 @@ const GRID_ITEMS = [
             'UI/UX design',
             'Web Development'
         ],
-        imgUrl: 'https://i.ibb.co.com/bMmS6jZV/image.png',
+        Image: Nestora,
         url: 'https://www.behance.net/gallery/241794947/Nestora-Modern-Real-Estate-Landing-Page-UIUX-Design'
     },
     {
@@ -70,7 +75,7 @@ const GRID_ITEMS = [
             'UI/UX design',
             'Web Development'
         ],
-        imgUrl: 'https://i.ibb.co.com/dJ329FSR/image.png',
+        Image: Resa,
         comingSoon: true,
         reverse: true
     },
@@ -107,10 +112,8 @@ const ProjectCard = ({ item }) => {
                     onMouseLeave={() => setIsHovered(false)}
                     className="group relative w-full aspect-video rounded-xl overflow-hidden cursor-none bg-gray-200"
                 >
-                    <img
-                        src={item.imgUrl}
-                        alt={item.title}
-                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    <Image
+                        src={item.Image}
                     />
 
                     {/* The Floating Circle - Hidden on mobile/touch for better UX */}

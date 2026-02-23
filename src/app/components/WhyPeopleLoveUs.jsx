@@ -2,6 +2,13 @@
 
 import React from 'react';
 import Marquee from "react-fast-marquee";
+import Image1 from '@/assets/1.jpg'
+import Image2 from '@/assets/2.jpg'
+import Image3 from '@/assets/3.jpg'
+import Image4 from '@/assets/4.jpg'
+import Image5 from '@/assets/5.jpg'
+import Image6 from '@/assets/6.jpg'
+import Image from 'next/image';
 
 const FeatureItem = ({ text }) => (
     <p className="flex items-center gap-2.5 text-base md:text-lg outline-offset-0 text-[#4B4B4B]">
@@ -217,19 +224,43 @@ const ICONS = [
 ]
 
 const images = [
-    "https://i.ibb.co.com/67KvF8K9/image.png",
-    "https://i.ibb.co.com/wNF057Gd/image.png",
-    "https://i.ibb.co.com/Qvbtr4rd/image.png",
-    "https://i.ibb.co.com/84DpyyZ2/image.png",
-    "https://i.ibb.co.com/Fb9KvKG2/image.png",
-    "https://i.ibb.co.com/BVhnNzZL/image.png",
-    "https://i.ibb.co.com/67KvF8K9/image.png",
-    "https://i.ibb.co.com/wNF057Gd/image.png",
-    "https://i.ibb.co.com/Qvbtr4rd/image.png",
-    "https://i.ibb.co.com/84DpyyZ2/image.png",
-    "https://i.ibb.co.com/Fb9KvKG2/image.png",
-    "https://i.ibb.co.com/BVhnNzZL/image.png",
-];
+    {
+        image: Image1
+    },
+    {
+        image: Image2
+    },
+    {
+        image: Image3
+    },
+    {
+        image: Image4
+    },
+    {
+        image: Image5
+    },
+    {
+        image: Image6
+    },
+    {
+        image: Image1
+    },
+    {
+        image: Image2
+    },
+    {
+        image: Image3
+    },
+    {
+        image: Image4
+    },
+    {
+        image: Image5
+    },
+    {
+        image: Image6
+    },
+]
 
 const WhyPeopleLoveUs = () => {
 
@@ -245,9 +276,9 @@ const WhyPeopleLoveUs = () => {
                 >
                     {images.map((src, index) => (
                         <div key={index} className="mx-2 md:mx-3 max-w-[350px] flex-1 h-[200px] md:h-[300px]">
-                            <img
-                                className="shadow-md w-full h-full object-cover rounded-2xl md:rounded-3xl pointer-events-none bg-white"
-                                src={src}
+                            <Image
+                                className="shadow-md w-full h-full object-cover rounded-2xl md:rounded-3xl pointer-events-none"
+                                src={src.image}
                                 alt={`Gallery image ${index + 1}`}
                             />
                         </div>
