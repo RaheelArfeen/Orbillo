@@ -223,14 +223,12 @@ const images = [
     "https://i.ibb.co.com/84DpyyZ2/image.png",
     "https://i.ibb.co.com/Fb9KvKG2/image.png",
     "https://i.ibb.co.com/BVhnNzZL/image.png",
-    "https://i.ibb.co.com/h12vBb5D/image.png",
     "https://i.ibb.co.com/67KvF8K9/image.png",
     "https://i.ibb.co.com/wNF057Gd/image.png",
     "https://i.ibb.co.com/Qvbtr4rd/image.png",
     "https://i.ibb.co.com/84DpyyZ2/image.png",
     "https://i.ibb.co.com/Fb9KvKG2/image.png",
     "https://i.ibb.co.com/BVhnNzZL/image.png",
-    "https://i.ibb.co.com/h12vBb5D/image.png",
 ];
 
 const WhyPeopleLoveUs = () => {

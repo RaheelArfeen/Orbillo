@@ -3,14 +3,14 @@ import React from 'react';
 import Hero from './components/Hero';
 import WhatWeDo from './components/WhatWeDo';
 import OurWork from './components/OurWork';
-import WorkProcess from './components/WorkProcess';
-import OurWrokMarque from './components/OurWrokMarque';
-import Feedback from './components/Feedback';
-import Faq from './components/Faq';
-import Partnership from './components/Partnership';
-import Counter from './components/Counter';
-import CTAsection from './components/CTAsection';
+import WorkProcess from '../components/WorkProcess';
+import OurWrokMarque from '../components/OurWrokMarque';
+import Feedback from '@/app/components/Feedback';
+import Counter from '../components/Counter';
 import Pricing from './components/Pricing';
+import FAQsection from '@/app/components/FAQsection';
+import Partnership from '@/app/components/Partnership';
+import CTAsection from '../components/CTAsection';
 
 export const metadata = {
     title: "UI/UX Design | Orbillo",
@@ -29,7 +29,7 @@ const page = () => {
             <OurWrokMarque />
             <Feedback />
             <Pricing />
-            <Faq />
+            <FAQsection />
         </div>
     );
 };

@@ -108,7 +108,7 @@ const Partnership = () => {
                         <div className='px-7 py-8'>
                             <h1 className='text-[#212121] bricolage font-medium text-[32px] mb-5 tracking-tight'>Outcome-Driven Design</h1>
 
-                            <div className='flex flex-col gap-2'>
+                            <div className='flex flex-col gap-2 text-[#575656]'>
                                 <p className='w-full outfit tracking-tight py-3 px-3.5 bg-linear-to-r from-[#F2FFE5] to-white border border-[#E9E9E9] rounded-lg'>Clear process. No noise.</p>
                                 <div className='flex justify-end'>
                                     <p className='max-w-[355px] outfit tracking-tight py-3 px-3.5 bg-linear-to-l from-[#F2FFE5] to-white border border-[#E9E9E9] rounded-lg'>You get high-quality output without unnecessary back-and-forth.</p>

@@ -6,9 +6,9 @@ import OurVission from './components/OurVission';
 import OurPholosophy from './components/OurPholosophy';
 import FeaturedClients from './components/FeaturedClients';
 import OurTeam from './components/OurTeam';
-import Feedback from './components/Feedback';
-import Partnership from './components/Partnership';
-import FAQsection from './components/FAQsection';
+import Feedback from '@/app/components/Feedback';
+import Partnership from '@/app/components/Partnership';
+import FAQsection from '@/app/components/FAQsection';
 
 export const metadata = {
     title: "About | Orbillo",

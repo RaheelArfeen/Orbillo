@@ -3,7 +3,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Marquee from 'react-fast-marquee';
-import Bg from '../../Image/OurWorkMarqueBg.png';
+import Bg from '../Image/OurWorkMarqueBg.png';
 
 // DATA
 const TAGS_ROW_1 = [

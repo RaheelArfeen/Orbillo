@@ -60,7 +60,7 @@ const GRID_ITEMS = [
             'Web Development'
         ],
         imgUrl: 'https://i.ibb.co.com/bMmS6jZV/image.png',
-        comingSoon: true
+        url: 'https://www.behance.net/gallery/241794947/Nestora-Modern-Real-Estate-Landing-Page-UIUX-Design'
     },
     {
         id: 4,
