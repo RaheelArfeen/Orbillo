@@ -1,4 +1,6 @@
 import React from 'react';
+import challanges from '@/assets/challanges.avif'
+import Image from 'next/image';
 
 const Challanges = () => {
     return (
@@ -11,8 +13,8 @@ const Challanges = () => {
                         <p>We’re a team of experienced designers, developers, and marketers — each with over a decade of experience</p>
                     </h1>
                 </div>
-                <div className='max-w-[620px]'>
-                    <img src="https://i.ibb.co.com/5hY70cgJ/image.png" className='w-full h-full' alt="" />
+                <div className='max-w-[550px]'>
+                    <Image src={challanges} className='w-full h-full' alt="" />
                 </div>
             </section>
         </div>

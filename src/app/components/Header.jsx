@@ -2,8 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import LightLogo from '@/assets/Logo/LightLogo.svg'
-import DarkLogo from '@/assets/Logo/DarkLogo.svg'
+import Logo from './Logo/logo.jsx'
 import { useState } from "react";
 import { ChevronsDown } from "lucide-react";
 import { FaDribbble, FaBehance, FaLinkedinIn, FaTwitter } from "react-icons/fa";
@@ -39,14 +38,7 @@ const Header = () => {
                 {/* Logo Section */}
                 <div className="relative z-50 w-32 md:w-40 lg:w-50 h-auto flex-shrink-0">
                     <Link href="/">
-                        <div className={`absolute top-0 left-0 transition-opacity duration-500 ease-in-out ${open ? 'opacity-0' : 'opacity-100'}`}>
-                            <Image src={LightLogo} alt="Logo" priority className="w-full h-auto" />
-                        </div>
-                        <div className={`absolute top-0 left-0 transition-opacity duration-500 ease-in-out ${open ? 'opacity-100' : 'opacity-0'}`}>
-                            <Image src={DarkLogo} alt="Logo" priority className="w-full h-auto" />
-                        </div>
-                        {/* Invisible placeholder to maintain width */}
-                        <Image src={LightLogo} alt="Spacer" className="w-full h-auto opacity-0 pointer-events-none" />
+                        <Logo className={`transition-colors duration-500 ${open ? 'text-[#17241F]' : 'text-white'}`} />
                     </Link>
                 </div>
 

@@ -2,10 +2,10 @@
 
 import React, { useRef, useState } from 'react';
 import Marquee from 'react-fast-marquee';
-import Rankmet from '@/assets/Rankmet.jpg'
-import GDFA from '@/assets/GDFA.jpg'
-import Nestora from '@/assets/Nestora.jpg'
-import Resa from '@/assets/Resa.jpg'
+import Rankmet from '@/assets/projects/Rankmet.jpg'
+import GDFA from '@/assets/projects/GDFA.jpg'
+import Nestora from '@/assets/projects/Nestora.jpg'
+import Resa from '@/assets/projects/Resa.jpg'
 
 // 2. Import Swiper styles
 import 'swiper/css';

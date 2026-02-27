@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const questions = [
     {
@@ -31,67 +32,94 @@ const questions = [
 ];
 
 const FAQsection = () => {
-    // Track which ID is currently open
     const [openId, setOpenId] = useState(null);
 
-    const toggleFAQ = (id) => {
-        setOpenId(openId === id ? null : id);
-    };
-
     return (
-        <div className='w-full bg-white'>
+        <div className='w-full bg-white overflow-hidden'>
             <section className='max-w-[1380px] mx-auto py-20 px-4 flex flex-col lg:flex-row items-start justify-between gap-12'>
-                {/* Left Side: Content */}
-                <div className='lg:sticky lg:top-10'>
-                    <h3 className='uppercase outfit text-sm lg:text-base font-bold text-[#696969] tracking-[2.7px] mb-8'>FAQ</h3>
-                    <h1 className="text-[36px] sm:text-[48px] md:text-[50px] font-semibold text-[#212121] bricolage max-w-[500px] leading-[1.1] md:leading-[60px] mb-6 tracking-tight">
-                        Questions? We’re Here <span className="playfair italic text-4xl sm:text-4xl md:text-5xl">to Help</span>
+
+                {/* Left Side */}
+                <div className='lg:sticky lg:top-10 shrink-0'>
+                    <h3 className='uppercase outfit text-sm font-bold text-[#696969] tracking-[2.7px] mb-8'>FAQ</h3>
+                    <h1 className="text-[36px] md:text-[50px] font-semibold text-[#212121] bricolage max-w-[500px] leading-[1.1] mb-6 tracking-tight">
+                        Questions? We’re Here <span className="playfair italic text-4xl md:text-5xl">to Help</span>
                     </h1>
                     <div className='md:mt-20'>
                         <img className='max-h-[180px] md:max-h-[220px]' src="https://i.ibb.co.com/dJz1Qr5S/image.png" alt="FAQ Illustration" />
                     </div>
                 </div>
 
-                {/* Right Side: Accordion */}
-                <div className='flex flex-col gap-4 w-full lg:max-w-[700px]'>
+                {/* Right Side: Optimized Accordion */}
+                <motion.div
+                    layout
+                    className='flex flex-col gap-4 w-full lg:max-w-[700px]'
+                >
                     {questions.map((Q) => {
                         const isOpen = openId === Q.id;
-                        return (
-                            <div key={Q.id} className='p-px bg-gradient-to-r from-[#CACACA]/32 to-[#02403A]/42 rounded-xl transition-all duration-300'>
-                                <div className='w-full h-full bg-white rounded-xl overflow-hidden'>
-                                    {/* Question Header */}
-                                    <button
-                                        onClick={() => toggleFAQ(Q.id)}
-                                        className='w-full flex items-center justify-between py-5 px-6 md:px-10 text-left hover:bg-gray-50/50 transition-colors'
-                                    >
-                                        <h1 className='bricolage text-xl md:text-2xl max-sm:max-w-xs font-medium text-[#212121] tracking-tight'>
-                                            {Q.question}
-                                        </h1>
 
-                                        {/* Animated Icon */}
-                                        <div className={`relative flex items-center justify-center w-6 h-6 transition-transform duration-300 ${isOpen ? 'rotate-45' : 'rotate-0'}`}>
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M5 12H19" stroke="#07302C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                                <path d="M12 5V19" stroke="#07302C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        return (
+                            <motion.div
+                                layout
+                                key={Q.id}
+                                initial={false}
+                                className='p-px bg-gradient-to-r from-[#CACACA]/32 to-[#02403A]/42 rounded-xl'
+                            >
+                                <div className='bg-white rounded-xl overflow-hidden'>
+                                    <button
+                                        onClick={() => setOpenId(isOpen ? null : Q.id)}
+                                        className='w-full flex items-center justify-between py-5 px-6 md:px-10 text-left'
+                                    >
+                                        <span className='bricolage text-xl md:text-2xl font-medium text-[#212121] tracking-tight'>
+                                            {Q.question}
+                                        </span>
+
+                                        <motion.div
+                                            animate={{ rotate: isOpen ? 45 : 0 }}
+                                            transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                                            className="ml-4 shrink-0"
+                                        >
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                <path d="M5 12H19" stroke="#07302C" strokeWidth="2" strokeLinecap="round" />
+                                                <path d="M12 5V19" stroke="#07302C" strokeWidth="2" strokeLinecap="round" />
                                             </svg>
-                                        </div>
+                                        </motion.div>
                                     </button>
 
-                                    {/* Expandable Answer */}
-                                    <div
-                                        className={`overflow-hidden transition-all duration-500 ease-in-out ${isOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'}`}
-                                    >
-                                        <div className='px-6 md:px-10 pb-6'>
-                                            <p className='text-[#696969] leading-relaxed text-lg'>
-                                                {Q.answer}
-                                            </p>
-                                        </div>
-                                    </div>
+                                    <AnimatePresence initial={false}>
+                                        {isOpen && (
+                                            <motion.div
+                                                key="content"
+                                                initial={{ height: 0, opacity: 0 }}
+                                                animate={{
+                                                    height: "auto",
+                                                    opacity: 1,
+                                                    transition: {
+                                                        height: { type: "spring", stiffness: 300, damping: 30 },
+                                                        opacity: { duration: 0.2 }
+                                                    }
+                                                }}
+                                                exit={{
+                                                    height: 0,
+                                                    opacity: 0,
+                                                    transition: {
+                                                        height: { type: "spring", stiffness: 300, damping: 30, restDelta: 0.01 },
+                                                        opacity: { duration: 0.1 }
+                                                    }
+                                                }}
+                                            >
+                                                <div className='px-6 md:px-10 pb-8'>
+                                                    <p className='text-[#696969] leading-relaxed text-lg'>
+                                                        {Q.answer}
+                                                    </p>
+                                                </div>
+                                            </motion.div>
+                                        )}
+                                    </AnimatePresence>
                                 </div>
-                            </div>
+                            </motion.div>
                         );
                     })}
-                </div>
+                </motion.div>
             </section>
         </div>
     );

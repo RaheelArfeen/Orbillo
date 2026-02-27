@@ -1,5 +1,9 @@
 import React from 'react';
 import Marquee from 'react-fast-marquee';
+import mission from '../OurVissionImages/Mission.avif'
+import vission from '../OurVissionImages/Vission.avif'
+import goal from '../OurVissionImages/Goal.avif'
+import Image from 'next/image';
 
 const sections = [
     {
@@ -8,7 +12,7 @@ const sections = [
         title: "Design With Purpose",
         description:
             "We solve real business problems through thoughtful, strategic, and purposeful design that creates clarity, connection, and impact.",
-        image: "https://i.ibb.co.com/YTBHycMM/image.png",
+        image: mission,
     },
     {
         id: 2,
@@ -16,7 +20,7 @@ const sections = [
         title: "To Become a Global Creative Partner",
         description:
             "We aim to become a trusted creative ally, elevating brands worldwide through smart design and meaningful visual communication.",
-        image: "https://i.ibb.co.com/Jwgn4pFp/image.png",
+        image: vission,
         reverse: true,
     },
     {
@@ -24,7 +28,7 @@ const sections = [
         tag: "Our Goal",
         title: "The Standards We Stand By",
         description: "",
-        image: "https://i.ibb.co.com/vCKKjM4Z/image.png",
+        image: goal,
         bullets: [
             "Build authentic brands that truly stand out.",
             "Design interfaces that simplify life.",
@@ -98,7 +102,7 @@ const OurTeam = () => {
                         {/* Image Container */}
                         <div className='flex justify-center relative mt-4 lg:mt-0'>
                             <div className='relative w-full max-w-[500px]'>
-                                <img
+                                <Image
                                     src={section.image}
                                     className='w-full h-auto object-cover rounded-xl pointer-events-none'
                                     alt={section.tag}

@@ -1,9 +1,15 @@
 import Image from 'next/image';
 import React from 'react';
-import ProductDesign from '../../Icons/ProductDesign.svg'
-import MobileUX from '../../Icons/MobileUX.svg'
-import Redesign from '../../Icons/Redesign.svg'
-import Prototype from '../../Icons/Prototype.svg'
+import ProductDesign from '../Icons/ProductDesign.svg'
+import MobileUX from '../Icons/MobileUX.svg'
+import Redesign from '../Icons/Redesign.svg'
+import Prototype from '../Icons/Prototype.svg'
+import Image1 from '@/assets/marquee/1.jpg'
+import Image2 from '@/assets/marquee/2.jpg'
+import Image3 from '@/assets/marquee/3.jpg'
+import Image4 from '@/assets/marquee/4.jpg'
+import Image5 from '@/assets/marquee/5.jpg'
+import Image6 from '@/assets/marquee/6.jpg'
 import Marquee from 'react-fast-marquee';
 
 const WhatWeDo = () => {
@@ -235,21 +241,43 @@ const WhatWeDo = () => {
     ]
 
     const images = [
-        "https://i.ibb.co.com/67KvF8K9/image.png",
-        "https://i.ibb.co.com/wNF057Gd/image.png",
-        "https://i.ibb.co.com/Qvbtr4rd/image.png",
-        "https://i.ibb.co.com/84DpyyZ2/image.png",
-        "https://i.ibb.co.com/Fb9KvKG2/image.png",
-        "https://i.ibb.co.com/BVhnNzZL/image.png",
-        "https://i.ibb.co.com/h12vBb5D/image.png",
-        "https://i.ibb.co.com/67KvF8K9/image.png",
-        "https://i.ibb.co.com/wNF057Gd/image.png",
-        "https://i.ibb.co.com/Qvbtr4rd/image.png",
-        "https://i.ibb.co.com/84DpyyZ2/image.png",
-        "https://i.ibb.co.com/Fb9KvKG2/image.png",
-        "https://i.ibb.co.com/BVhnNzZL/image.png",
-        "https://i.ibb.co.com/h12vBb5D/image.png",
-    ];
+        {
+            image: Image1
+        },
+        {
+            image: Image2
+        },
+        {
+            image: Image3
+        },
+        {
+            image: Image4
+        },
+        {
+            image: Image5
+        },
+        {
+            image: Image6
+        },
+        {
+            image: Image1
+        },
+        {
+            image: Image2
+        },
+        {
+            image: Image3
+        },
+        {
+            image: Image4
+        },
+        {
+            image: Image5
+        },
+        {
+            image: Image6
+        },
+    ]
 
     return (
         <div>
@@ -265,10 +293,10 @@ const WhatWeDo = () => {
                         className="py-4 my-25"
                     >
                         {images.map((src, index) => (
-                            <div key={index} className="mx-2 md:mx-3 max-w-[300px] h-[200px] md:h-[300px]">
-                                <img
-                                    className="shadow-md w-full h-full object-cover rounded-2xl md:rounded-3xl pointer-events-none bg-white"
-                                    src={src}
+                            <div key={index} className="mx-2 md:mx-3 max-w-[350px] flex-1 h-[200px] md:h-[300px]">
+                                <Image
+                                    className="shadow-md w-full h-full object-cover rounded-2xl md:rounded-3xl pointer-events-none"
+                                    src={src.image}
                                     alt={`Gallery image ${index + 1}`}
                                 />
                             </div>

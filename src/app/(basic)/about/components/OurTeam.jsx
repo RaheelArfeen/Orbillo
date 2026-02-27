@@ -2,12 +2,17 @@ import React from 'react';
 import Marquee from 'react-fast-marquee';
 import { FaFacebookF, FaLinkedinIn } from 'react-icons/fa';
 import { FaXTwitter } from "react-icons/fa6";
+import ArafatHossain from '../TeamMembers/ArafatHossain.avif'
+import Image from 'next/image';
+import RahatulIslam from '../TeamMembers/RahatulIslam.avif'
+import MohiulIslam from '../TeamMembers/MohiulIslam.avif'
+import RakibulIslam from '../TeamMembers/RakibulIslam.avif'
 
 const Members = [
     {
         name: 'Arafat Hossain',
         role: 'Product Designer',
-        imageSrc: 'https://i.ibb.co.com/Q4rG2B0/image.png',
+        imageSrc: ArafatHossain,
         spaceTop: false,
         socials: [
             { icon: <FaFacebookF />, link: '#' },
@@ -18,7 +23,7 @@ const Members = [
     {
         name: 'Rahatul Islam',
         role: 'Product Designer',
-        imageSrc: 'https://i.ibb.co.com/0VtwWsRC/image.png',
+        imageSrc: RahatulIslam,
         spaceTop: true,
         socials: [
             { icon: <FaFacebookF />, link: '#' },
@@ -29,7 +34,7 @@ const Members = [
     {
         name: 'Mohiul Islam',
         role: 'Product Designer',
-        imageSrc: 'https://i.ibb.co.com/nNNNFyFx/image.png',
+        imageSrc: MohiulIslam,
         spaceTop: false,
         socials: [
             { icon: <FaFacebookF />, link: '#' },
@@ -40,7 +45,7 @@ const Members = [
     {
         name: 'Rakibul Islam',
         role: 'Product Designer',
-        imageSrc: 'https://i.ibb.co.com/6Jr3XbVx/image.png',
+        imageSrc: RakibulIslam,
         spaceTop: true,
         socials: [
             { icon: <FaFacebookF />, link: '#' },
@@ -100,7 +105,7 @@ const OurTeam2 = () => {
                             <div className='p-px rounded-3xl bg-linear-to-br from-[#C9FF90] via-[#09332D] to-[#C9FF90]'>
                                 <div className='w-full overflow-hidden rounded-3xl shadow-lg relative bg-[#2A4341]'>
                                     <div className="w-full max-h-[500px] overflow-hidden">
-                                        <img
+                                        <Image
                                             src={member.imageSrc}
                                             alt={member.name}
                                             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 pointer-events-none"

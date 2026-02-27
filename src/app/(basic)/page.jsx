@@ -5,7 +5,7 @@ import WhyPeopleLoveUs from "../components/WhyPeopleLoveUs.jsx";
 import OurServices from "../components/OurServices";
 import OurWorks from "../components/OurWorks";
 import WhyUs from "../components/WhyUs";
-import Feedback from "../components/Feedback";
+import Feedback from "../components/Feedback/Feedback";
 import Partnership from "../components/Partnership";
 import FAQsection from "../components/FAQsection";
 import Counter from "../components/Counter";

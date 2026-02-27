@@ -8,6 +8,7 @@ import penTool from '@/assets/Icons/PenTool.svg';
 import Layout from '@/assets/Icons/Layout.svg';
 import webDevelopment from '@/assets/Icons/webDevelopment.svg';
 import MegaPhone from '@/assets/Icons/MegaPhone.svg';
+import HoverBg from '@/assets/ServicesCardBg.png'
 import Link from 'next/link';
 
 const OurServices = () => {
@@ -82,7 +83,7 @@ const OurServices = () => {
                                 group-hover:text-[#052e26]'
                                 >
 
-                                    <img className='absolute inset-0 top-0 left-0 w-full h-full scale-105 object-cover opacity-0 z-20 group-hover:opacity-100 transition duration-300 pointer-events-none' src="https://i.ibb.co.com/1JQtDmLt/svgviewer-png-output-1.png" alt="" />
+                                    <Image className='absolute inset-0 top-0 left-0 w-full h-full scale-105 object-cover opacity-0 z-20 group-hover:opacity-100 transition duration-300 pointer-events-none' src={HoverBg} alt="" />
                                     <div className='absolute inset-0 top-0 left-0 w-full h-full bg-[#c1f288] scale-105 opacity-0 group-hover:opacity-100 transition duration-300 pointer-events-none z-10'></div>
 
                                     {/* Content: Icon */}

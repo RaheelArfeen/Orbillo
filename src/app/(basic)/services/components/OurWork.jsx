@@ -1,5 +1,11 @@
 import Image from 'next/image';
-import OurWorkBg from '../../Image/OurWork.png';
+import OurWorkBg from '../Image/OurWork.avif';
+import work1 from '../Image/OurWorkImages/1.avif'
+import work2 from '../Image/OurWorkImages/2.avif'
+import work3 from '../Image/OurWorkImages/3.avif'
+import work4 from '../Image/OurWorkImages/4.avif'
+import work5 from '../Image/OurWorkImages/5.avif'
+import work6 from '../Image/OurWorkImages/6.avif'
 
 const OurWork = () => {
     return (
@@ -23,12 +29,12 @@ const OurWork = () => {
                 </div>
 
                 <div className='grid md:grid-cols-3 gap-6'>
-                    <img className='rounded-lg' src="https://i.ibb.co.com/b5C4jw0P/image.png" alt="" />
-                    <img className='rounded-lg' src="https://i.ibb.co.com/C3fy6Bjh/image.png" alt="" />
-                    <img className='rounded-lg' src="https://i.ibb.co.com/DDDYzw2G/image.png" alt="" />
-                    <img className='rounded-lg' src="https://i.ibb.co.com/8nb5gsyy/image.png" alt="" />
-                    <img className='rounded-lg' src="https://i.ibb.co.com/FbBMx9TT/image.png" alt="" />
-                    <img className='rounded-lg' src="https://i.ibb.co.com/7d8vbQXX/image.png" alt="" />
+                    <Image src={work1} className='w-full h-full rounded-lg' />
+                    <Image src={work2} className='w-full h-full rounded-lg' />
+                    <Image src={work3} className='w-full h-full rounded-lg' />
+                    <Image src={work4} className='w-full h-full rounded-lg' />
+                    <Image src={work5} className='w-full h-full rounded-lg' />
+                    <Image src={work6} className='w-full h-full rounded-lg' />
                 </div>
 
                 <div className='flex items-center justify-center w-full mt-15'>

@@ -2,12 +2,13 @@
 
 import React from 'react';
 import Marquee from "react-fast-marquee";
-import Image1 from '@/assets/1.jpg'
-import Image2 from '@/assets/2.jpg'
-import Image3 from '@/assets/3.jpg'
-import Image4 from '@/assets/4.jpg'
-import Image5 from '@/assets/5.jpg'
-import Image6 from '@/assets/6.jpg'
+import Image1 from '@/assets/marquee/1.jpg'
+import Image2 from '@/assets/marquee/2.jpg'
+import Image3 from '@/assets/marquee/3.jpg'
+import Image4 from '@/assets/marquee/4.jpg'
+import Image5 from '@/assets/marquee/5.jpg'
+import Image6 from '@/assets/marquee/6.jpg'
+import TableMeeting from '@/assets/TableMeeting.png'
 import Image from 'next/image';
 
 const FeatureItem = ({ text }) => (
@@ -290,7 +291,7 @@ const WhyPeopleLoveUs = () => {
 
                 <section className='w-full flex flex-col-reverse lg:flex-row justify-between items-center gap-12 lg:gap-20 pb-12 md:pb-20'>
                     <div className='bg-linear-to-bl from-[#DCEDCE] to-[#D1EED9] rounded-3xl md:rounded-4xl w-full lg:max-w-[480px] aspect-[4/5] md:h-[580px] flex-shrink-0 flex items-center justify-center relative overflow-hidden'>
-                        <img className='max-w-[400px]' src="https://i.ibb.co.com/2133gQ9W/image.png" alt="" />
+                        <Image className='max-w-[400px] pointer-events-none' src={TableMeeting} />
                     </div>
 
                     <div>

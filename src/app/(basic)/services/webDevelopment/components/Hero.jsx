@@ -1,5 +1,7 @@
 import Image from 'next/image';
 import HeroBg from '@/assets/Hero.svg'
+import leftCube from '../../Image/leftCube.avif'
+import rightCube from '../../Image/rightCube.avif'
 import React from 'react';
 
 const Hero = () => {
@@ -14,15 +16,15 @@ const Hero = () => {
             {/* Top lighting */}
             <div className='absolute -top-10 -translate-y-1/2 h-[450px] w-[600px] bg-[#D6F55B]/33 rounded-full blur-[150px] z-20'></div>
 
-            {/* Background Video */}
+            {/* Background Image */}
             <div className="absolute inset-0 z-10">
                 <Image src={HeroBg} className='opacity-15 object-cover w-full h-full' />
 
             </div>
 
-            <img className='absolute -left-20 -bottom-50 z-10 opacity-50' src="https://i.ibb.co.com/0RnndYBJ/image.png" alt="" />
+            <Image className='absolute max-w-[550px] w-full -left-20 -bottom-50 z-10 opacity-50' src={leftCube} alt="" />
 
-            <img className='absolute -right-40 -bottom-60 z-10 opacity-50' src="https://i.ibb.co.com/d0SjKD4D/image.png" alt="" />
+            <Image className='absolute max-w-[950px] w-full -right-40 -bottom-60 z-10  opacity-50' src={rightCube} alt="" />
 
 
             <section className='z-20 text-center pt-30 mb-40 px-4'>

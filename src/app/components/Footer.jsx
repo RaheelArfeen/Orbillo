@@ -1,13 +1,12 @@
 import { FaBehance, FaDribbble, FaLinkedin, FaTwitter } from "react-icons/fa";
 import Image from 'next/image';
 import React from 'react';
-import CTAbg from '@/assets/FooterCTAbg.svg';
-import Logo from '@/assets/Logo/LightLogo.svg';
-import FooterEffect from '@/assets/FooterEffect.png';
-import FooterLogo from '@/assets/FooterLogo.png';
-import FooterLogo2 from '@/assets/FooterLogo2.png';
+import CTAbg from '@/assets/footer/FooterCTAbg.svg';
+import FooterEffect from '@/assets/footer/FooterEffect.avif';
+import FooterLogo from '@/assets/footer/FooterLogo.png';
+import FooterLogo2 from '@/assets/footer/FooterLogo2.png';
 import Link from "next/link";
-import { Clock, Mail, MapPin, Phone } from "lucide-react";
+import Logo from './Logo/logo.jsx';
 
 const SOCIAL_LINKS = [
     { icon: FaLinkedin, url: "https://www.linkedin.com/company/teamorbillo/posts/?feedView=all" },
@@ -96,7 +95,9 @@ const Footer = () => {
 
                         {/* Logo Section */}
                         <div className="w-full lg:w-3/4 flex flex-col max-lg:items-center mb-10 md:mb-24">
-                            <Image src={Logo} alt='Logo' className="pointer-events-none" />
+                            <Link href={'/'}>
+                                <Logo className={`transition-colors duration-500 text-white`} />
+                            </Link>
 
                             <p className='max-w-[300px] text-white/79 outfit max-lg:text-center text-lg mt-6'>
                                 The digital growth partner you have always been looking for!
