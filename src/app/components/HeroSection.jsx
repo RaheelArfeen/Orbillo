@@ -1,4 +1,8 @@
+import Image from 'next/image';
 import React from 'react';
+import user1 from '@/assets/user1.webp'
+import user2 from '@/assets/user2.webp'
+import user3 from '@/assets/user3.webp'
 
 const FeatureItem = ({ text }) => (
     <p className="flex items-center gap-2.5 text-sm md:text-lg">
@@ -23,9 +27,9 @@ const HeroSection = () => {
                 {/* Social Proof Badge */}
                 <div className="flex flex-row items-center gap-4 mb-8">
                     <div className="flex -space-x-3 md:-space-x-4">
-                        <img className="size-10 md:size-11 rounded-full border-2 border-[#17241F]" src="https://i.ibb.co.com/39BWLc9D/image.png" alt="Client" />
-                        <img className="size-10 md:size-11 rounded-full border-2 border-[#17241F]" src="https://i.ibb.co.com/mPh0JXG/image.png" alt="Client" />
-                        <img className="size-10 md:size-11 rounded-full border-2 border-[#17241F]" src="https://i.ibb.co.com/ZzB6w75W/image.png" alt="Client" />
+                        <Image className="size-10 md:size-11 rounded-full border-2 border-[#17241F]" src={user1} alt="Client" />
+                        <Image className="size-10 md:size-11 rounded-full border-2 border-[#17241F]" src={user2} alt="Client" />
+                        <Image className="size-10 md:size-11 rounded-full border-2 border-[#17241F]" src={user3} alt="Client" />
                     </div>
 
                     <div className="relative py-2 px-5 bg-gradient-to-r from-[#305939] to-[#173324] rounded-full max-w-[230px] overflow-hidden group">

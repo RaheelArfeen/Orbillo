@@ -33,7 +33,7 @@ const Footer = () => {
 
                 {/* TEXT */}
                 <div className="md:py-16 pt-12 pb-8 lg:px-40 md:px-12 px-6">
-                    <h1 className="max-w-[650px] md:text-left text-center md:text-5xl sm:text-4xl text-2xl max-[350px]:text-xl bricolage text-[#07302C]">
+                    <h1 className="max-w-[650px] md:text-left text-center md:text-5xl sm:text-4xl text-3xl max-[350px]:text-xl bricolage font-medium tracking-tighter text-[#07302C]">
                         Ready to turn your business into a digital success story?
                     </h1>
                     <div className="flex md:flex-row flex-col items-center gap-3 md:mt-20 mt-6 z-50">
@@ -110,7 +110,7 @@ const Footer = () => {
                                         href={url}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="w-9 h-9 border-2 border-[#FFFFFF] rounded-full flex items-center justify-center text-[#FFFFFF] hover:bg-[#FFFFFF] hover:text-[#17241F] transition-all duration-300"
+                                        className="w-9 h-9 border border-[#FFFFFF] rounded-full flex items-center justify-center text-[#FFFFFF] hover:bg-[#FFFFFF] hover:text-[#17241F] transition-all duration-300"
                                     >
                                         <Icon size={16} />
                                     </a>

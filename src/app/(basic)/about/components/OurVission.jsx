@@ -52,7 +52,7 @@ const OurTeam = () => {
                 >
                     <div className="flex items-center">
                         <span className="text-white text-3xl md:text-5xl lg:text-6xl font-serif mx-4 lg:mx-10 tracking-tight bricolage">
-                            Our Vission
+                            Our Vision
                         </span>
                         <span className="text-white text-3xl md:text-4xl lg:text-5xl font-black">
                             <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -3,27 +3,31 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import Marquee from 'react-fast-marquee';
 import { motion, AnimatePresence } from 'framer-motion';
+import Earnest from './Images/Earnest.avif'
+import Luis from './Images/Luis.avif'
+import Sayeed from './Images/Sayeed.avif'
+import Image from 'next/image';
 
 const feedbackData = [
     {
         id: 1,
         name: "Earnest Adu",
         role: "Australia",
-        image: "https://i.ibb.co.com/KpMBD8yy/image.png",
+        image: Earnest,
         quote: "Great job! A complex job was assigned, which got dealt with swiftly with complete attention to detail. Always got responses back quickly. Would highly recommend, and I will probably be a repeat buyer!"
     },
     {
         id: 2,
         name: "Luis Bazan",
         role: "Peru",
-        image: "https://i.ibb.co.com/MD5cFSFF/image.png",
+        image: Luis,
         quote: "Excellent professional, he solved all our doubts and the problem we had, the truth is that he is very effective in his work, I recommend him 100%"
     },
     {
         id: 3,
         name: "Abu Sayeed",
         role: "Founder, RankMet LLC",
-        image: "https://i.ibb.co.com/21yzK5J7/Client.png",
+        image: Sayeed,
         quote: "Very few firms can make products look beautiful and work well at the same time, and that’s what I love about Orbillo!"
     },
 ];
@@ -111,7 +115,7 @@ const Feedback = () => {
                                     whileHover={isActive ? { y: -10 } : {}}
                                     className="h-[240px] sm:h-[300px] md:h-[400px] w-[180px] sm:w-[240px] md:w-[300px] rounded-lg overflow-hidden flex-shrink-0 shadow-2xl"
                                 >
-                                    <img
+                                    <Image
                                         src={item.image}
                                         alt={item.name}
                                         className="object-cover w-full h-full pointer-events-none"

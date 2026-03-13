@@ -122,7 +122,6 @@ const Card = ({ i, title, subTitle, icons, description, color }) => {
                   py-10 sm:py-14 md:py-25
                   shadow-2xl border-t border-x border-white/10
                   overflow-hidden
-                  min-h-[55vh]
                   md:h-[var(--h-desktop)]
                 "
             >

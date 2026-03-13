@@ -29,7 +29,7 @@ const Hero = () => {
 
             <section className='z-20 text-center pt-30 mb-40 px-4'>
                 <h3 className='outfit uppercase text-[#C7C7C7] font-bold text-sm md:text-lg mb-3 tracking-[2px]'>Home / Services</h3>
-                <h1 className="text-[36px] sm:text-[48px] md:text-[50px] font-semibold text-[#C9FF90] bricolage leading-[1.1] md:leading-[60px] mb-4 tracking-tight">Web Development</h1>
+                <h1 className="text-[36px] sm:text-[48px] md:text-[50px] font-semibold text-[#C9FF90] bricolage leading-[1.1] md:leading-[60px] mb-4 tracking-tight">Social Media Design</h1>
                 <p className='outift text-2xl text-white/79 tracking-tight max-w-[520px] mb-9'>We’re a team of designers and developers with over a decade of experience helping brands grow.</p>
 
                 <div className='flex flex-col md:flex-row items-center justify-center gap-3 mt-12 px-10'>

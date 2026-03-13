@@ -1,4 +1,7 @@
 import React from 'react';
+import Image1 from '../Images/Image1.webp'
+import Image2 from '../Images/Image2.webp'
+import Image from 'next/image';
 
 const WhoWeAre = () => {
     return (
@@ -17,56 +20,38 @@ const WhoWeAre = () => {
                     </p>
                 </div>
 
-                <div className='bricolage font-medium text-3xl md:text-5xl 2xl:text-7xl text-[#07302C] flex flex-col gap-4 md:gap-5 mt-16 md:mt-32 lg:mt-40'>
+                <div className='bricolage mt-16 flex flex-col gap-10 font-medium text-[#07302C] md:mt-32 md:gap-5 lg:mt-40'>
 
-                    <div className='hidden lg:block max-2xl:max-w-[1000px] w-full mx-auto'>
-                        <div className='flex flex-wrap items-center justify-start gap-3 md:gap-6 w-full mb-2'>
-                            <h1 className='text-[#317D3D]'>We Dont Just Design</h1>
+                    {/* First Row - Centered on Mobile, Left-aligned on Desktop */}
+                    <div className='flex flex-col items-center gap-3 md:flex-row md:justify-start md:gap-6'>
+                        <h1 className='text-center text-4xl text-[#317D3D] md:text-left md:text-5xl 2xl:text-7xl'>
+                            We Don't Just Design
+                        </h1>
 
-                            <img
-                                src={'https://i.ibb.co.com/dwTf5zm8/Image1.png'}
-                                className='h-8 sm:h-12 md:h-15 w-auto object-contain'
-                                alt='Image 1'
+                        <div className='flex items-center gap-3'>
+                            <Image
+                                src={Image1}
+                                className='h-10 w-auto object-contain md:h-12 lg:h-15'
+                                alt='Decorative Icon'
                             />
-                            <span>For Screens;</span>
-                        </div>
-
-                        <div className='flex flex-wrap items-center justify-start md:justify-end gap-3 md:gap-6 w-full'>
-                            <img
-                                src={'https://i.ibb.co.com/bMfPwJHL/Image2.png'}
-                                className='h-7 sm:h-10 md:h-13 w-auto object-contain'
-                                alt='Image 2'
-                            />
-                            <span>We Design for</span>
-                            <h1 className='text-[#317D3D]'>Business Impact.</h1>
+                            <span className='text-4xl md:text-5xl 2xl:text-7xl'>For Screens;</span>
                         </div>
                     </div>
 
-
-                    <div className='block lg:hidden text-3xl md:text-3xl 2xl:text-7xl'>
-                        <div className='flex flex-col items-center justify-start gap-3 md:gap-6 w-full'>
-                            <div className='flex flex-wrap items-center justify-start gap-3 md:gap-6 w-full'>
-                                <span className='text-[#317D3D]'>We Dont Just Design</span>
-
-                                <img
-                                    src={'https://i.ibb.co.com/dwTf5zm8/Image1.png'}
-                                    className='h-8 sm:h-12 lg:h-15 w-auto object-contain'
-                                    alt='Image 1'
-                                />
-                                <span>For Screens;</span>
-
-                            </div>
-
-                            <div className='flex flex-wrap items-center justify-start md:justify-end gap-3 md:gap-6 w-full'>
-                                <img
-                                    src={'https://i.ibb.co.com/bMfPwJHL/Image2.png'}
-                                    className='h-7 sm:h-10 lg:h-13 w-auto object-contain'
-                                    alt='Image 2'
-                                />
-                                <span>We Design for</span>
-                                <span className='text-[#317D3D]'>Business Impact.</span>
-                            </div>
+                    {/* Second Row - Centered on Mobile, Right-aligned on Desktop */}
+                    <div className='flex flex-col items-center gap-3 md:flex-row md:justify-end md:gap-6'>
+                        <div className='flex items-center gap-3'>
+                            <Image
+                                src={Image2}
+                                className='h-9 w-auto object-contain md:h-10 lg:h-13'
+                                alt='Impact Icon'
+                            />
+                            <span className='text-4xl md:text-5xl 2xl:text-7xl'>We Design for</span>
                         </div>
+
+                        <h1 className='text-center text-4xl text-[#317D3D] md:text-left md:text-5xl 2xl:text-7xl'>
+                            Business Impact.
+                        </h1>
                     </div>
 
                 </div>

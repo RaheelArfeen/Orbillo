@@ -13,7 +13,7 @@ import CTAsection from '../components/CTAsection';
 import WhatWeDo from '../components/WhatWeDo';
 
 export const metadata = {
-    title: "UI/UX Design | Orbillo",
+    title: "Branding & Identity | Orbillo",
 };
 
 const page = () => {

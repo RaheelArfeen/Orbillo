@@ -2,6 +2,8 @@
 
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import FAQIcon from '../../assets/FAQIcon.webp'
+import Image from 'next/image';
 
 const questions = [
     {
@@ -35,7 +37,7 @@ const FAQsection = () => {
     const [openId, setOpenId] = useState(null);
 
     return (
-        <div className='w-full bg-white overflow-hidden'>
+        <div className='w-full bg-white overflow-hidden '>
             <section className='max-w-[1380px] mx-auto py-20 px-4 flex flex-col lg:flex-row items-start justify-between gap-12'>
 
                 {/* Left Side */}
@@ -45,14 +47,14 @@ const FAQsection = () => {
                         Questions? We’re Here <span className="playfair italic text-4xl md:text-5xl">to Help</span>
                     </h1>
                     <div className='md:mt-20'>
-                        <img className='max-h-[180px] md:max-h-[220px]' src="https://i.ibb.co.com/dJz1Qr5S/image.png" alt="FAQ Illustration" />
+                        <Image className='max-w-[180px] md:max-w-[220px]' src={FAQIcon} alt="FAQ Illustration" />
                     </div>
                 </div>
 
                 {/* Right Side: Optimized Accordion */}
                 <motion.div
                     layout
-                    className='flex flex-col gap-4 w-full lg:max-w-[700px]'
+                    className='flex flex-col gap-4 w-full lg:max-w-[700px] h-[75vh]'
                 >
                     {questions.map((Q) => {
                         const isOpen = openId === Q.id;

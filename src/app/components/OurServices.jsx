@@ -63,7 +63,7 @@ const OurServices = () => {
                     </p>
                 </div>
 
-                <div className='grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 md:gap-6 gap-3'>
+                <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 md:gap-6 gap-3'>
                     {services.map((item, index) => (
                         <div
                             key={index}
@@ -89,7 +89,7 @@ const OurServices = () => {
                                     {/* Content: Icon */}
                                     <div className='flex justify-end relative z-20'>
                                         <div
-                                            className='md:w-16 w-12 md:h-16 h-12 transition-colors duration-300 bg-[#C9FF90] group-hover:bg-[#1A3C38]'
+                                            className='md:size-16 size-12 transition-colors duration-300 bg-[#C9FF90] group-hover:bg-[#1A3C38]'
                                             style={{
                                                 maskImage: `url(${item.icon.src})`,
                                                 WebkitMaskImage: `url(${item.icon.src})`,
@@ -105,10 +105,10 @@ const OurServices = () => {
 
                                     {/* Content: Text */}
                                     <div className='relative z-20 space-y-3 md:space-y-4'>
-                                        <h3 className='bricolage md:text-3xl text-xl font-semibold tracking-tighter'>
+                                        <h3 className='bricolage text-3xl font-semibold tracking-tighter'>
                                             {item.title}
                                         </h3>
-                                        <p className='outfit md:text-xl text-lg text-white/70 group-hover:text-[#052e26] transition-colors duration-300'>
+                                        <p className='outfit text-xl text-white/70 group-hover:text-[#052e26] transition-colors duration-300'>
                                             {item.description}
                                         </p>
                                     </div>

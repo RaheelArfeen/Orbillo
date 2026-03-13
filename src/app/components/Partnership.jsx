@@ -1,4 +1,8 @@
 import React from 'react';
+import Brands from '@/assets/Brands.webp'
+import Impact from '@/assets/Impact.webp'
+import Focused from '@/assets/Focused.webp'
+import Image from 'next/image';
 
 const Tag = ({ text }) => (
     <p className='outfit text-[#07302C] px-3 py-2 text-lg md:text-sm lg:text-base bg-linear-to-r from-white to-[#C9FF90] w-fit rounded-full border border-[#D6E3C8]'>
@@ -19,7 +23,7 @@ const Partnership = () => {
                 {/* cards section */}
                 <div className='mt-20 flex flex-col lg:flex-row w-full gap-6'>
                     <div className='flex flex-col gap-6'>
-                        <div className='flex flex-col md:flex-row items-stretch gap-6'>
+                        <div className='flex flex-col lg:flex-row items-stretch gap-6'>
                             <div className='bg-[#F2F8ED] rounded-xl flex flex-col justify-between'>
                                 <div className='px-7 py-8 mb-3'>
                                     <h1 className='text-[#212121] bricolage font-medium text-2xl lg:text-3xl mb-2.5'>What We Build for Brands</h1>
@@ -27,9 +31,9 @@ const Partnership = () => {
                                 </div>
 
                                 <div className="relative">
-                                    <img
+                                    <Image
                                         className="rounded-xl pointer-events-none"
-                                        src="https://i.ibb.co.com/4nxxCkM9/image.png"
+                                        src={Brands}
                                         alt=""
                                     />
 
@@ -99,12 +103,12 @@ const Partnership = () => {
                                 </div>
 
                                 <div>
-                                    <img className='md:max-h-[220px] md:absolute right-0 md:right-6 bottom-0 pointer-events-none' src="https://i.ibb.co.com/0yFPN8vw/image.png" alt="" />
+                                    <Image className='md:max-w-[420px] md:absolute right-0 md:right-6 bottom-0 pointer-events-none' src={Impact} alt="" />
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div className='bg-[#F3F7EF] w-full lg:max-w-1/3 h-[800px] lg:h-auto rounded-xl relative overflow-hidden'>
+                    <div className='bg-[#F3F7EF] w-full lg:max-w-1/3 h-[550px] lg:h-auto rounded-xl relative overflow-hidden'>
                         <div className='px-7 py-8'>
                             <h1 className='text-[#212121] bricolage font-medium text-[32px] mb-5 tracking-tight'>Outcome-Driven Design</h1>
 
@@ -117,8 +121,8 @@ const Partnership = () => {
                             </div>
                         </div>
 
-                        <div className='absolute bottom-0 left-0 right-0'>
-                            <img className='max-h-[550px] w-full pointer-events-none' src="https://i.ibb.co.com/xq1BnSsW/image.png" alt="" />
+                        <div className='absolute -bottom-50 md:-bottom-10 left-0 right-0'>
+                            <Image className='w-full max-w-[550px] pointer-events-none' src={Focused} alt="" />
                         </div>
                     </div>
                 </div>

@@ -46,7 +46,7 @@ const Counter = () => {
                                 )}
                             </h3>
 
-                            <p className="outfit uppercase text-[10px] lg:text-[13px] font-bold tracking-[1.5px] lg:tracking-[2.7px] text-[#373737]/55 text-center px-2">
+                            <p className="outfit uppercase text-[14px] font-bold tracking-[1.5px] lg:tracking-[2.7px] text-[#373737]/55 text-center px-2">
                                 {stat.label}
                             </p>
                         </div>
