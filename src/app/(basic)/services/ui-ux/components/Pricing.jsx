@@ -72,9 +72,9 @@ const Pricing = () => {
                 {/* Cards Container */}
                 <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
                     {pricingCards.map((card) => {
-                        // The image is visible if:
-                        // 1. This card is currently hovered
-                        // 2. OR no card is hovered and this is the "Popular" card
+                        // Logic for showing image:
+                        // Show if this specific card is hovered
+                        // OR if NOTHING is hovered and this is the Standard card
                         const showImage = hoveredId === card.id || (hoveredId === null && card.popular);
 
                         return (
@@ -84,30 +84,31 @@ const Pricing = () => {
                                 onMouseLeave={() => setHoveredId(null)}
                                 className="relative flex flex-col group"
                             >
-                                {/* POPULAR BADGE - Positioned outside the overflow-hidden container */}
+                                {/* POPULAR BADGE - Outside the background container so it isn't clipped */}
                                 {card.popular && (
-                                    <div className="absolute -top-3 -right-6 bg-[#6BBE46] text-[#1C413D] text-lg font-medium px-5 py-1.5 rounded-full rotate-12 font-bricolage z-30 shadow-sm">
+                                    <div className="absolute -top-3 -right-6 bg-[#02403A] text-[#fff] text-lg font-medium px-5 py-1.5 rounded-full rotate-12 font-bricolage z-30 shadow-sm">
                                         Popular
                                     </div>
                                 )}
 
-                                {/* CARD INNER WRAPPER */}
+                                {/* CARD WRAPPER */}
                                 <div className={`relative flex flex-col flex-grow p-8 border rounded-4xl transition-all duration-500 min-h-[580px] ${showImage ? 'border-transparent' : 'border-gray-200'}`}>
 
-                                    {/* BACKGROUNDS CONTAINER (Handles the rounded clipping) */}
+                                    {/* BACKGROUND LAYER (Handles the clipping/overflow) */}
                                     <div className="absolute inset-0 z-0 rounded-4xl overflow-hidden">
-                                        {/* Static Default Gradient */}
-                                        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,#DDF290,0%,#DDF290_0%,white_60%)]" />
-
-                                        {/* Image Overlay with Fade Transition */}
+                                        {/* Default Gradient */}
+                                        <div className="absolute inset-0 bg-[linear-gradient(180deg,#DDF290_-20%,#ffffff_30%)]" />
+                                        {/* Hover/Standard Image */}
                                         <div
                                             className={`absolute inset-0 transition-opacity duration-500 ease-in-out ${showImage ? 'opacity-100' : 'opacity-0'}`}
                                         >
-                                            <img
+                                            <Image
                                                 className='w-full h-full object-cover pointer-events-none'
                                                 src={HoverBg}
                                                 alt=""
                                             />
+
+                                            <div className='bg-[#6BBE46]/80 absolute inset-0 mix-blend-hard-light'></div>
                                         </div>
                                     </div>
 
@@ -125,7 +126,7 @@ const Pricing = () => {
                                             <p className='text-5xl'>{card.price} <span className='text-2xl font-normal text-gray-400'>/ month</span></p>
                                         </div>
 
-                                        <hr className='border-gray-200 mb-9' />
+                                        <hr className={`mb-9 transition-all duration-300 ${showImage ? 'border-[#9BCD5E]' : 'border-[#E4E4E4]'}`} />
 
                                         <div className='flex-grow'>
                                             <p className='text-[#696E78] mb-4 font-semibold text-sm'>Key Features</p>

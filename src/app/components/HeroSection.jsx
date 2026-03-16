@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
+import Marquee from "react-fast-marquee";
 import user1 from '@/assets/user1.webp'
 import user2 from '@/assets/user2.webp'
 import user3 from '@/assets/user3.webp'
@@ -32,9 +33,11 @@ const HeroSection = () => {
                         <Image className="size-10 md:size-11 rounded-full border-2 border-[#17241F]" src={user3} alt="Client" />
                     </div>
 
-                    <div className="relative py-2 px-5 bg-gradient-to-r from-[#305939] to-[#173324] rounded-full max-w-[230px] overflow-hidden group">
+                    {/* Scrolling Badge */}
+                    <div className="relative py-2 bg-gradient-to-r from-[#305939] to-[#173324] rounded-full max-w-[230px] overflow-hidden group">
+                        {/* Custom Gradient Border Overlay */}
                         <div
-                            className="absolute inset-0 rounded-full p-[1px] z-50 overflow-hidden"
+                            className="absolute inset-0 rounded-full p-[1px] z-50 pointer-events-none"
                             style={{
                                 background: 'linear-gradient(to right, #B9FF8D, #233F26, #B9FF8D)',
                                 WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
@@ -43,9 +46,12 @@ const HeroSection = () => {
                             }}
                         />
 
-                        <span className="relative z-10 bg-gradient-to-r from-[#B4F98A] to-[#173324] bg-clip-text text-transparent md:text-lg font-medium outfit whitespace-nowrap">
-                            82% retention for 200+ clients
-                        </span>
+                        {/* Marquee Content */}
+                        <Marquee gradient={false} speed={35} pauseOnHover={true}>
+                            <span className="relative z-10 bg-gradient-to-r from-[#B4F98A] to-[#173324] bg-clip-text text-transparent md:text-lg font-medium outfit whitespace-nowrap pr-10">
+                                82% retention for 200+ clients
+                            </span>
+                        </Marquee>
 
                         <div className="absolute inset-0 bg-[#B4F98A]/10 blur-xl pointer-events-none"></div>
                     </div>

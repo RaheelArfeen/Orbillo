@@ -2,8 +2,7 @@
 import React from 'react';
 import Hero from './components/Hero';
 import OurWork from '../components/OurWork';
-import WorkProcess from '../components/WorkProcess';
-import OurWrokMarque from '../components/OurWrokMarque';
+import WorkProcess from './components/WorkProcess';import OurWrokMarque from '../components/OurWrokMarque';
 import Feedback from '@/app/components/Feedback/Feedback';
 import Counter from '../components/Counter';
 import Pricing from './components/Pricing';
