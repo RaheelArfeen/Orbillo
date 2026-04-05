@@ -27,7 +27,7 @@ const Partnership = () => {
                             <div className='flex flex-col lg:flex-row items-stretch gap-6'>
                                 <div className='bg-[#F2F8ED] rounded-xl flex flex-col justify-between'>
                                     <div className='px-7 py-8 mb-3'>
-                                        <h1 className='text-[#212121] bricolage font-medium text-2xl lg:text-3xl mb-2.5'>What We Build for Brands</h1>
+                                        <h1 className='text-[#212121] bricolage font-medium text-2xl lg:text-3xl mb-2.5 tracking-tight'>What We Build for Brands</h1>
                                         <p className='outfit text-sm lg:text-base text-[#575656]'>Thoughtfully designed solutions that help brands grow, connect, and stand out.</p>
                                     </div>
 
@@ -57,7 +57,7 @@ const Partnership = () => {
                                 <div className='bg-linear-to-b from-[#F5F5F5] to-[#EEFFDE] rounded-xl px-7 py-8 relative overflow-hidden'>
                                     {/* Header Section */}
                                     <div>
-                                        <h1 className='text-[#212121] bricolage font-medium text-2xl lg:text-3xl mb-2.5'>Outcome-Driven Design</h1>
+                                        <h1 className='text-[#212121] bricolage font-medium text-2xl lg:text-3xl mb-2.5 tracking-tight'>Outcome-Driven Design</h1>
                                         <p className='outfit text-sm lg:text-base text-[#575656]'>
                                             We design for decisions, not decoration. Every screen is built to reduce friction and move users forward.
                                         </p>
@@ -95,7 +95,7 @@ const Partnership = () => {
 
                             <div className='bg-[#F3F7EF] w-full lg:max-w-1/3 hidden md:block lg:hidden h-auto rounded-xl relative overflow-hidden bg-[url("@/assets/Focused.webp")] bg-size-[100%_60%] md:bg-size-[100%_80%] bg-bottom bg-no-repeat'>
                                 <div className='px-7 py-8'>
-                                    <h1 className='text-[#212121] bricolage font-medium text-[32px] mb-5 tracking-tight'>Outcome-Driven Design</h1>
+                                    <h1 className='text-[#212121] bricolage font-medium text-[32px] mb-5 tracking-tight'>Fast, Focused Delivery</h1>
 
                                     <div className='flex flex-col gap-2 text-[#575656]'>
                                         <p className='w-full outfit tracking-tight py-3 px-3.5 bg-linear-to-r from-[#F2FFE5] to-white border border-[#E9E9E9] rounded-lg'>Clear process. No noise.</p>
@@ -127,7 +127,7 @@ const Partnership = () => {
 
                     <div className='bg-[#F3F7EF] w-full lg:max-w-1/3 h-[600px] lg:h-auto block md:hidden lg:block rounded-xl relative overflow-hidden bg-[url("@/assets/Focused.webp")] bg-size-[100%_60%] md:bg-size-[100%_80%] bg-bottom bg-no-repeat'>
                         <div className='px-7 py-8'>
-                            <h1 className='text-[#212121] bricolage font-medium text-[32px] mb-5 tracking-tight'>Outcome-Driven Design</h1>
+                            <h1 className='text-[#212121] bricolage font-medium text-[32px] mb-5 tracking-tight'>Fast, Focused Delivery</h1>
 
                             <div className='flex flex-col gap-2 text-[#575656]'>
                                 <p className='w-full outfit tracking-tight py-3 px-3.5 bg-linear-to-r from-[#F2FFE5] to-white border border-[#E9E9E9] rounded-lg'>Clear process. No noise.</p>
