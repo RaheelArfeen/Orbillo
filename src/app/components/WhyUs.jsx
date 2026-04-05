@@ -133,7 +133,7 @@ const Card = ({ i, title, subTitle, icons, description, color }) => {
                                 {title}
                             </h2>
 
-                            <h1 className="text-4xl md:text-5xl bricolage font-medium text-white leading-tight">
+                            <h1 className="text-4xl md:text-5xl playfair font-medium text-white leading-tight">
                                 {subTitle}
                             </h1>
 
