@@ -6,7 +6,7 @@ const projects = [
     {
         title: "Strategic",
         subTitle: "Design Thinking",
-        description: "We’ve proudly collaborated with businesses that believe in the power of design",
+        description: "Every decision is backed by audience research and clear business outcomes.",
         color: "#242344",
         icons: (
             <svg width="500" height="500" viewBox="0 0 450 450" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -27,7 +27,7 @@ const projects = [
     {
         title: "Collaborative ",
         subTitle: "Work Process",
-        description: "You stay involved from concept to completion.",
+        description: "You stay involved at every milestone - structured feedback, no overwhelm.",
         color: "#4106AB",
         icons: (
             <svg width="500" height="500" viewBox="0 0 450 450" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -56,7 +56,7 @@ const projects = [
     {
         title: "Purpose-Driven",
         subTitle: "Strategy",
-        description: "You stay involved from concept to completion.",
+        description: "We design around your goals, not trends. Every choice has a measurable purpose.",
         color: "#591A83",
         icons: (
             <svg width="500" height="500" viewBox="0 0 450 450" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -80,7 +80,7 @@ const projects = [
     {
         title: "Growth Focused",
         subTitle: "Execution",
-        description: "You stay involved from concept to completion.",
+        description: "Our systems are built to grow with your business - no annual redesigns needed.",
         color: "#1E423C",
         icons: (
             <svg width="500" height="500" viewBox="0 0 450 450" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -129,11 +129,11 @@ const Card = ({ i, title, subTitle, icons, description, color }) => {
                     {/* TEXT SECTION */}
                     <div className="flex flex-col justify-between flex-1">
                         <div className="flex flex-col">
-                            <h2 className="text-3xl lg:text-4xl bricolage text-white tracking-tight">
+                            <h2 className="text-2xl font-medium bricolage text-white tracking-tight">
                                 {title}
                             </h2>
 
-                            <h1 className="text-4xl md:text-5xl playfair text-white leading-tight">
+                            <h1 className="text-4xl md:text-5xl bricolage font-medium text-white leading-tight">
                                 {subTitle}
                             </h1>
 
@@ -178,12 +178,12 @@ const WhyUs = () => {
                     {/* Header */}
                     <div className='flex flex-col lg:flex-row items-center justify-between gap-8 md:mb-20'>
                         <div className='space-y-8 lg:text-left text-center w-full flex flex-col items-center lg:items-start'>
-                            <p className='uppercase outfit text-sm lg:text-base font-bold text-[#A8A8A8] tracking-[2.7px]'>
+                            <p className='uppercase outfit text-xs md:text-sm lg:text-base font-bold text-[#A8A8A8] tracking-[2.7px] mb-6 md:mb-8'>
                                 Why Choose Us?
                             </p>
-                            <h1 className="text-[36px] sm:text-[48px] md:text-[50px] font-semibold text-white bricolage max-w-[700px] leading-[1.1] md:leading-[60px] tracking-tight">
+                            <h1 className="text-[36px] sm:text-[48px] md:text-[50px] font-medium text-white bricolage max-w-[700px] leading-[1.1] md:leading-[60px] tracking-tight">
                                 We treat every project like a partnership, {''}
-                                <span className="playfair italic text-4xl sm:text-4xl md:text-5xl">not a task.</span>
+                                <span className="playfair italic text-4xl sm:text-4xl md:text-5xl font-semibold">not a task.</span>
                             </h1>
                         </div>
                         <div>

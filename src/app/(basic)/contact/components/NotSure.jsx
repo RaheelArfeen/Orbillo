@@ -18,7 +18,7 @@ const NotSure = () => {
                         'Branding & identity',
                     ].map((item, i) => (
                         <div key={i} className="capitalize flex items-center">
-                            <span className="text-white text-3xl lg:text-6xl font-serif mx-6 lg:mx-10 tracking-tight bricolage">
+                            <span className="text-white text-3xl md:text-6xl font-medium mx-6 md:mx-10 tracking-tight bricolage">
                                 {item}
                             </span>
                             <span className="text-white text-5xl font-black">

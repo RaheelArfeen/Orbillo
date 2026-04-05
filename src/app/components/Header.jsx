@@ -5,13 +5,13 @@ import Link from "next/link";
 import Logo from './Logo/logo.jsx'
 import { useState, useEffect } from "react";
 import { ChevronsDown } from "lucide-react";
-import { FaDribbble, FaBehance, FaLinkedinIn, FaTwitter } from "react-icons/fa";
+import { FaDribbble, FaBehance, FaLinkedinIn, FaTwitter, FaFacebookF } from "react-icons/fa";
 
 const SOCIAL_LINKS = [
+    { icon: FaFacebookF, url: "https://www.facebook.com/teamOrbillo" },
     { icon: FaLinkedinIn, url: "https://www.linkedin.com/company/teamorbillo/posts/?feedView=all" },
-    { icon: FaTwitter, url: "https://x.com/TeamOrbillo" },
-    { icon: FaDribbble, url: "https://dribbble.com/teamorbillo" },
     { icon: FaBehance, url: "https://www.behance.net/teamorbillo" },
+    { icon: FaDribbble, url: "https://dribbble.com/teamorbillo" },
 ];
 
 const services = [
@@ -23,8 +23,8 @@ const services = [
 
 const Header = () => {
     const [open, setOpen] = useState(false);
-    const [servicesOpen, setServicesOpen] = useState(false);
-    
+    const [servicesOpen, setServicesOpen] = useState(true);
+
     // Header Visibility States
     const [visible, setVisible] = useState(true);
     const [lastScrollY, setLastScrollY] = useState(0);
@@ -65,11 +65,11 @@ const Header = () => {
     }, [lastScrollY, open]);
 
     return (
-        <div 
+        <div
             className={`w-full z-50 fixed top-0 left-0 right-0 transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)]
             ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-6 pointer-events-none'}
             ${open ? 'h-screen bg-[#E5FFCA]' : 'h-auto'}
-            ${isScrolled && !open ? 'bg-black/20 backdrop-blur-xl shadow-2xl' : 'bg-transparent'}
+            ${isScrolled && !open ? 'bg-[#093a35] backdrop-blur-xl shadow-2xl' : 'bg-transparent'}
             py-4 md:py-6`}
         >
             <header className="max-w-[1380px] px-4 mx-auto flex justify-between items-center w-full relative z-50">
@@ -97,7 +97,7 @@ const Header = () => {
                     <button onClick={handleOpen} className="relative z-50 flex items-center justify-center p-1">
                         <span className={`block transition-all duration-500 ${open ? 'rotate-90 text-[#17241F]' : 'text-white'}`}>
                             <svg width="40" height="40" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M6 14H42M6 24H42M6 34H42" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeJoin="round"/>
+                                <path d="M6 14H42M6 24H42M6 34H42" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeJoin="round" />
                             </svg>
                         </span>
                     </button>
@@ -111,7 +111,7 @@ const Header = () => {
                 <div className="w-full h-full overflow-y-auto">
                     <div className="max-w-[1380px] w-full mx-auto px-4 min-h-full flex flex-col justify-end lg:justify-center pt-24 pb-8">
                         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end w-full gap-16 lg:gap-4">
-                            
+
                             {/* LEFT COLUMN: Info */}
                             <div className="w-full lg:w-1/2 flex flex-col space-y-6 lg:pr-16 order-2 lg:order-1">
                                 <p className="text-[#17241F] bricolage text-2xl lg:text-3xl max-w-[500px]">

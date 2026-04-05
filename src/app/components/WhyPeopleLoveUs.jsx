@@ -3,16 +3,16 @@
 import React from 'react';
 import Marquee from "react-fast-marquee";
 import Image1 from '@/assets/marquee/1.jpg'
-import Image2 from '@/assets/marquee/2.jpg'
+import Image2 from '@/assets/marquee/2.avif'
 import Image3 from '@/assets/marquee/3.jpg'
-import Image4 from '@/assets/marquee/4.jpg'
+import Image4 from '@/assets/marquee/4.avif'
 import Image5 from '@/assets/marquee/5.jpg'
 import Image6 from '@/assets/marquee/6.jpg'
 import TableMeeting from '@/assets/TableMeeting.png'
 import Image from 'next/image';
 
 const FeatureItem = ({ text }) => (
-    <p className="flex items-center gap-2.5 text-base md:text-lg outline-offset-0 text-[#4B4B4B]">
+    <p className="flex items-center gap-2.5 text-base md:text-lg outline-offset-0 text-[#4B4B4B] outfit">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" className="shrink-0 size-4 md:size-5">
             <path d="M17 3.33782C15.5291 2.48697 13.8214 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12C22 11.3151 21.9311 10.6462 21.8 10" stroke="#559B36" strokeWidth="1.5" strokeLinecap="round" />
             <path d="M8 12.5C8 12.5 9.5 12.5 11.5 16C11.5 16 17.0588 6.83333 22 5" stroke="#559B36" strokeWidth="1.5" strokeLinecap="round" />
@@ -268,7 +268,7 @@ const WhyPeopleLoveUs = () => {
     return (
         <div className='w-full bg-white flex flex-col items-center'>
 
-            <div className="w-full -mt-[125px] md:-mt-[150px] mb-24 overflow-visible">
+            <div className="w-full -mt-[125px] md:-mt-[150px] mb-25 overflow-visible">
                 <Marquee
                     gradient={false}
                     speed={50}
@@ -300,7 +300,7 @@ const WhyPeopleLoveUs = () => {
                         </h3>
 
                         <h1 className="text-[32px] sm:text-[40px] md:text-[50px] font-semibold text-[#212121] bricolage max-w-[550px] leading-[1.2] md:leading-[60px] mb-6 tracking-tight">
-                            Engaging designs That {''}
+                            Engaging Designs That {''}
                             <span className="playfair italic block sm:inline text-3xl sm:text-4xl md:text-5xl">
                                 Attract Audiences
                             </span>
@@ -331,7 +331,7 @@ const WhyPeopleLoveUs = () => {
                 </section>
 
 
-                <div className="flex flex-wrap items-center w-full mt-20 border-t border-l border-[#E9E9E9]">
+                <div className="flex flex-wrap items-center w-full mt-15 border-t border-l border-[#E9E9E9]">
                     {ICONS.map((icon, index) => (
                         <div
                             key={index}

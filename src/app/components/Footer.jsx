@@ -1,7 +1,7 @@
-import { FaBehance, FaDribbble, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaBehance, FaDribbble, FaFacebookF, FaLinkedin, FaTwitter } from "react-icons/fa";
 import Image from 'next/image';
 import React from 'react';
-import CTAbg from '@/assets/footer/FooterCTAbg.svg';
+import CTAbg from '@/assets/footer/FooterCTAbg.avif';
 import FooterEffect from '@/assets/footer/FooterEffect.avif';
 import FooterLogo from '@/assets/footer/FooterLogo.png';
 import FooterLogo2 from '@/assets/footer/FooterLogo2.png';
@@ -9,10 +9,10 @@ import Link from "next/link";
 import Logo from './Logo/logo.jsx';
 
 const SOCIAL_LINKS = [
+    { icon: FaFacebookF, url: "https://www.facebook.com/teamOrbillo" },
     { icon: FaLinkedin, url: "https://www.linkedin.com/company/teamorbillo/posts/?feedView=all" },
-    { icon: FaTwitter, url: "https://x.com/TeamOrbillo" },
-    { icon: FaDribbble, url: "https://dribbble.com/teamorbillo" },
     { icon: FaBehance, url: "https://www.behance.net/teamorbillo" },
+    { icon: FaDribbble, url: "https://dribbble.com/teamorbillo" },
 ];
 
 const Footer = () => {
@@ -20,7 +20,7 @@ const Footer = () => {
         <div className="relative overflow-visible lg:mt-0 mt-[200px]">
 
             {/* CTA Section */}
-            <section className='w-[95%] lg:w-[85%] xl:w-[90%] max-w-[1380px] max-h-[400px] mx-auto lg:rounded-[64px] rounded-4xl overflow-hidden absolute lg:-top-[200px] md:-top-[430px] -top-[350px] left-1/2 -translate-x-1/2 z-50 px-4'>
+            <section className='w-[95%] lg:w-[85%] xl:w-[90%] max-w-[1380px] max-h-[400px] mx-auto rounded-3xl rounded-4xl overflow-hidden absolute lg:-top-[200px] md:-top-[430px] -top-[350px] left-1/2 -translate-x-1/2 z-50 px-4'>
 
                 <div className="absolute inset-0 -z-50">
                     <Image
@@ -33,16 +33,16 @@ const Footer = () => {
 
                 {/* TEXT */}
                 <div className="md:py-16 pt-12 pb-8 lg:px-40 md:px-12 px-6">
-                    <h1 className="max-w-[650px] md:text-left text-center md:text-5xl sm:text-4xl text-3xl max-[350px]:text-xl bricolage font-medium tracking-tighter text-[#07302C]">
-                        Ready to turn your business into a digital success story?
+                    <h1 className="max-w-[650px] md:text-left text-center md:text-[52px] sm:text-4xl text-3xl max-[350px]:text-xl bricolage font-medium tracking-tighter text-[#07302C]">
+                        Read to turn your business into a <span className="playfair sm:text-4xl text-3xl md:text-[54px]">digital success</span> ?
                     </h1>
                     <div className="flex md:flex-row flex-col items-center gap-3 md:mt-20 mt-6 z-50">
-                        <Link href={'https://calendly.com/teamorbillo/30min?back=1&month=2025-11'} target="_blank">
+                        <Link href={'https://calendly.com/teamorbillo/30min'} target="_blank">
                             <button
-                                className="group relative md:py-4 py-3 px-8 rounded-full text-white outfit md:text-xl transition-all duration-300 overflow-hidden cursor-pointer bg-[linear-gradient(-114deg,#169689_34%,#002A15_88%)] hover:bg-none"
+                                className="group relative md:py-4 py-3 px-8 rounded-full text-white font-medium outfit md:text-xl transition-all duration-300 overflow-hidden cursor-pointer bg-[linear-gradient(-114deg,#169689_34%,#002A15_88%)] hover:bg-none"
                             >
                                 <span className="relative z-10 group-hover:text-[#17241F] transition duration-300">
-                                    Schedule A Discovery Call
+                                    Schedule A Call
                                 </span>
 
                                 <div className="pointer-events-none absolute inset-0 rounded-full bg-black/40 transition-opacity duration-300 group-hover:opacity-0" />
@@ -55,7 +55,7 @@ const Footer = () => {
                             href="https://wa.me/8801711252085"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className='px-6 py-4 flex items-center gap-3 outfit text-xl cursor-pointer text-[#07302C] hover:bg-[#07302C]/10 rounded-full transition duration-300'
+                            className='px-6 py-4 flex items-center gap-3 outfit text-xl font-medium cursor-pointer text-[#07302C] hover:bg-[#07302C]/10 rounded-full transition duration-300'
                         >
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M17.1303 14.2326C16.8453 14.0976 15.4803 13.4226 15.2253 13.3176C14.9703 13.2126 14.7903 13.1826 14.5953 13.4676C14.4003 13.7526 13.8753 14.3676 13.7103 14.5626C13.5453 14.7576 13.3953 14.7726 13.1103 14.5626C12.2913 14.2349 11.5352 13.768 10.8753 13.1826C10.2784 12.6189 9.77242 11.9662 9.37534 11.2476C9.21034 10.9776 9.37534 10.8276 9.49534 10.6776C9.61534 10.5276 9.76534 10.3626 9.91534 10.1976C10.0249 10.0548 10.1156 9.89854 10.1853 9.73261C10.2225 9.65541 10.2419 9.57082 10.2419 9.48511C10.2419 9.39941 10.2225 9.31481 10.1853 9.23761C10.1853 9.10261 9.55534 7.73761 9.31534 7.18261C9.07534 6.62761 8.86534 6.70261 8.70034 6.70261H8.10034C7.81452 6.71376 7.54479 6.83783 7.35034 7.04761C7.03648 7.34712 6.78786 7.70823 6.62009 8.10832C6.45231 8.5084 6.36899 8.93882 6.37534 9.37261C6.45295 10.4374 6.84444 11.4553 7.50034 12.2976C8.70436 14.0887 10.3533 15.536 12.2853 16.4976C12.9453 16.7826 13.4553 16.9476 13.8603 17.0826C14.4288 17.2562 15.0303 17.2922 15.6153 17.1876C16.004 17.1088 16.3723 16.9509 16.6974 16.7239C17.0225 16.4968 17.2975 16.2054 17.5053 15.8676C17.6783 15.4505 17.7353 14.9944 17.6703 14.5476C17.5953 14.4426 17.4153 14.3676 17.1303 14.2326Z" fill="#07302C" />
@@ -69,7 +69,7 @@ const Footer = () => {
             </section>
 
             {/* Footer Body */}
-            <div className="bg-[#07302C] 2xl:rounded-t-[100px] xl:rounded-t-[60px] lg:rounded-t-[100px] overflow-hidden z-50">
+            <div className="bg-[#07302C] overflow-hidden z-50">
                 <section className='mx-auto text-white 2xl:pt-[320px] lg:py-[250px] pt-20 pb-30 relative z-20 overflow-hidden 2xl:h-[900px] xl:h-[800px] lg:h-[750px] md:h-[950px] h-[800px]'>
 
                     <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-screen  -z-50">
@@ -129,10 +129,8 @@ const Footer = () => {
                                 <div className="flex flex-col gap-4 text-white/85 outfit text-lg">
                                     <Link href={'/'} className="cursor-pointer hover:text-white hover:scale-105 transition-all duration-300">Home</Link>
                                     <Link href={'/about'} className="cursor-pointer hover:text-white hover:scale-105 transition-all duration-300">About Us</Link>
-                                    <Link href={'/contact'} className="cursor-pointer hover:text-white hover:scale-105 transition-all duration-300">Contact Us</Link>
-                                    <Link href={'#'} className="cursor-pointer hover:text-white hover:scale-105 transition-all duration-300">Works</Link>
                                     <Link href={'#'} className="cursor-pointer group transition-all duration-300 flex items-center gap-2"><span className="group-hover:text-white group-hover:scale-105 transition-all duration-300">Career</span> <div className="outfit text-sm font-semibold text-[#212121] bg-[#6BBE46] w-fit px-2 rounded-full uppercase">HIRING</div></Link>
-                                    <Link href={'#'} className="cursor-pointer hover:text-white hover:scale-105 transition-all duration-300">Testimonials</Link>
+                                    <Link href={'/contact'} className="cursor-pointer hover:text-white hover:scale-105 transition-all duration-300">Contact Us</Link>
                                 </div>
                             </div>
 

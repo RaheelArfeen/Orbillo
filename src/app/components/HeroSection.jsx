@@ -48,12 +48,11 @@ const HeroSection = () => {
 
                         {/* Marquee Content */}
                         <Marquee gradient={false} speed={35} pauseOnHover={true}>
-                            <span className="relative z-10 bg-gradient-to-r from-[#B4F98A] to-[#173324] bg-clip-text text-transparent md:text-lg font-medium outfit whitespace-nowrap pr-10">
+                            <span className="relative z-10 text-[#B4F98A] md:text-lg font-medium outfit whitespace-nowrap pr-10">
                                 82% retention for 200+ clients
                             </span>
                         </Marquee>
-
-                        <div className="absolute inset-0 bg-[#B4F98A]/10 blur-xl pointer-events-none"></div>
+                        <div className='bg-gradient-to-r from-transparent to-[#152c20] absolute inset-0 z-20'></div>
                     </div>
                 </div>
 
@@ -64,7 +63,7 @@ const HeroSection = () => {
                 </h1>
 
                 {/* Subtext */}
-                <p className="text-white/80 bricolage text-lg md:text-[22px] max-w-[700px] text-center mt-6 px-2">
+                <p className="text-white/80 bricolage text-lg md:text-[20px] max-w-[700px] text-center mt-6 px-2">
                     From brand identity to product UX, we design systems that help businesses grow, convert and scale with confidence.
                 </p>
 

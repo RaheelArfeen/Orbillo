@@ -13,6 +13,12 @@ import 'swiper/css/pagination';
 import Link from 'next/link';
 import Image from 'next/image';
 
+const slugMap = {
+    Branding: 'branding',
+    'UI/UX Design': 'ui-ux',
+    'Web Development': 'webDevelopment',
+};
+
 // 3. Custom CSS
 const customSwiperStyles = `
   .swiper-pagination-bullet {
@@ -35,20 +41,20 @@ const GRID_ITEMS = [
         id: 1,
         title: 'Rankmet LLC | Digital Marketing Agency Website',
         points: [
-            'Agency Website',
-            'UI/UX design',
+            'Branding',
+            'UI/UX Design',
             'Web Development'
         ],
         Image: Rankmet,
         comingSoon: false,
-        url: 'https://rankmet.com/'
+        url: 'https://rankmet.com/',
     },
     {
         id: 2,
         title: 'GDFA Freelancers Connect | Event Branding Design',
         points: [
-            'Agency Website',
-            'UI/UX design',
+            'Branding',
+            'UI/UX Design',
             'Web Development'
         ],
         Image: GDFA,
@@ -60,8 +66,8 @@ const GRID_ITEMS = [
         id: 3,
         title: 'Nestora – Modern Real Estate Landing Page ',
         points: [
-            'Agency Website',
-            'UI/UX design',
+            'Branding',
+            'UI/UX Design',
             'Web Development'
         ],
         Image: Nestora,
@@ -71,13 +77,14 @@ const GRID_ITEMS = [
         id: 4,
         title: 'Wedding & Event Planner Website UI Redesign',
         points: [
-            'Agency Website',
-            'UI/UX design',
+            'Branding',
+            'UI/UX Design',
             'Web Development'
         ],
         Image: Resa,
-        comingSoon: true,
-        reverse: true
+        comingSoon: false,
+        reverse: true,
+        url: 'https://www.behance.net/gallery/242684157/Wedding-Event-Planner-Website-UI-Redesign'
     },
 ];
 
@@ -137,14 +144,16 @@ const ProjectCard = ({ item }) => {
 
             {/* Project Details Beside Image */}
             <div className="w-full lg:w-1/3 px-2 text-left">
-                <h3 className="text-2xl lg:text-4xl font-medium text-[#212121] bricolage mb-4 lg:mb-6">
+                <h3 className="text-2xl lg:text-[32px] font-medium tracking-tighter text-[#212121] bricolage mb-4 lg:mb-6">
                     {item.title}
                 </h3>
 
                 <div className="flex flex-wrap gap-x-4 gap-y-2 mb-8 lg:mb-12 md:max-w-[400px]">
                     {item.points.map((point, i) => (
-                        <span key={i} className="text-[#212121]/80 outfit text-sm lg:text-base whitespace-nowrap">
-                            # {point}
+                        <span key={i} className="text-[#212121]/80 outfit text-sm lg:text-lg whitespace-nowrap">
+                            <Link href={`/services/${slugMap[point]}`}>
+                                # {point}
+                            </Link>
                         </span>
                     ))}
                 </div>
@@ -159,7 +168,7 @@ const ProjectCard = ({ item }) => {
                     <Link
                         href={item.url}
                         target='_blank'
-                        className="text-center inline-block px-8 py-3 rounded-full border border-[#4B4B4B] hover:bg-[#4B4B4B] text-[#4B4B4B] hover:text-white transition-colors duration-300 outfit"
+                        className="text-center inline-block px-10 py-3 font-medium text-xl rounded-full border border-[#4B4B4B] hover:bg-[#4B4B4B] text-[#4B4B4B] hover:text-white transition-colors duration-300 outfit"
                     >
                         View Project
                     </Link>
@@ -178,10 +187,10 @@ const OurWorks = () => {
         <div className='relative bg-[#F4F3F1] '>
             <style>{customSwiperStyles}</style>
 
-            <div className="w-full bg-[#5ba32b] py-6 border-y border-[#C9FF90]/30 relative z-30">
+            <div className="w-full bg-[#5ba32b] py-6.5 border-y border-[#C9FF90]/30 relative z-30">
                 <Marquee autoFill={true} pauseOnHover={false} speed={80} className="overflow-hidden">
                     <div className="flex items-center">
-                        <span className="text-white text-3xl md:text-6xl font-medium mx-6 md:mx-10 tracking-tight bricolage">
+                        <span className="text-white text-3xl md:text-[46px] font-medium mx-6 md:mx-10 tracking-tight bricolage">
                             Featured Works
                         </span>
                         <span className="text-white text-5xl font-black">
@@ -200,7 +209,7 @@ const OurWorks = () => {
                         <div className='space-y-4 w-full flex flex-col items-center'>
                             <h1 className="text-[36px] sm:text-[48px] md:text-[50px] font-medium text-[#212121] bricolage tracking-tight max-w-[700px] leading-[1.1] md:leading-[60px] md:text-center">
                                 Results {''}
-                                <span className="playfair italic text-4xl sm:text-4xl md:text-5xl">That Speak</span> {' '}
+                                <span className="playfair italic text-4xl sm:text-4xl md:text-[52px]">That Speak</span> {' '}
                                 For Themselves
                             </h1>
 

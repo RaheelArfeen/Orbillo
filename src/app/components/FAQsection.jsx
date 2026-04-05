@@ -8,28 +8,28 @@ import Image from 'next/image';
 const questions = [
     {
         id: '1',
-        question: 'What is Brand Design?',
-        answer: 'Brand design is the comprehensive visual identity of a company. It is far more than just a logo; it is a holistic system including typography, color palettes, imagery styles, and iconography that work together to communicate a brand’s personality.'
+        question: 'What services does Orbillo offer?',
+        answer: 'Orbillo is a full-service design agency offering Brand Identity Design, UI/UX Design, Web Development and Social Media Design. Whether you’re a startup building from scratch or an established business ready to level up, we handle every dimension of your digital presence.'
     },
     {
         id: '2',
-        question: 'How Much Does Your Brand Design Service Cost?',
-        answer: 'The cost of brand design is an investment scaled to the scope of your business needs. Pricing varies based on deliverables—ranging from a "Brand Essentials" package for startups to a "Full Identity System" for established corporations.'
+        question: 'How does the project process work?',
+        answer: 'Every project starts with a discovery call where we learn about your business, goals and timeline. We work in clear phases - no black boxes, no surprises. You’ll always know where your project stands.'
     },
     {
         id: '3',
-        question: 'How to Choose the Best Brand Design Agency?',
-        answer: 'To choose the right agency, you must look beyond aesthetic appeal and evaluate their strategic process. A top-tier agency doesn’t just design for beauty; they design for business results.'
+        question: 'How much do your services cost?',
+        answer: 'Pricing depends on the service and scope. You can explore our service pages for detailed package breakdowns. Or book a free discovery call and we’ll put together a custom quote for your specific needs.'
     },
     {
         id: '4',
-        question: 'Why Does Branding Matter?',
-        answer: 'Branding matters because it is the primary way a business builds trust and differentiation in a crowded marketplace. It acts as a shortcut for decision-making and tells the customer what they can expect.'
+        question: 'Do you work with international clients?',
+        answer: 'Yes, absolutely. We work with clients across the world including the US, Europe, Australia and Southeast Asia. Our team is fully remote and experienced in asynchronous collaboration.'
     },
     {
         id: '5',
-        question: 'What is Brand Design? (Technical Perspective)',
-        answer: 'From a technical standpoint, brand design is the application of semiotics and psychology to visual assets. It involves the strategic use of color theory, shape language, and grid systems to ensure visual harmony.'
+        question: 'How does Orbillo stand out from other Agencies?',
+        answer: 'We combine strategic thinking with strong visual execution which means we don’t just make things look good, we make sure they work. We structure every project around your business goals, not just design trends'
     },
 ];
 
@@ -85,17 +85,21 @@ const FAQsection = () => {
                                         </span>
 
                                         <motion.div
-                                            animate={{ 
-                                                rotate: isOpen ? 45 : 0,
-                                                scale: isOpen ? 1.1 : 1 
+                                            animate={{
+                                                scale: isOpen ? 1.1 : 1
                                             }}
                                             transition={{ type: "spring", stiffness: 300, damping: 20 }}
                                             className="ml-4 shrink-0"
                                         >
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                                <path d="M5 12H19" stroke="#07302C" strokeWidth="2" strokeLinecap="round" />
-                                                <path d="M12 5V19" stroke="#07302C" strokeWidth="2" strokeLinecap="round" />
-                                            </svg>
+                                            {isOpen ? (
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                    <path d="M5 12H19" stroke="#07302C" strokeWidth="2" strokeLinecap="round" />
+                                                </svg>) : (
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                    <path d="M5 12H19" stroke="#07302C" strokeWidth="2" strokeLinecap="round" />
+                                                    <path d="M12 5V19" stroke="#07302C" strokeWidth="2" strokeLinecap="round" />
+                                                </svg>
+                                            )}
                                         </motion.div>
                                     </button>
 

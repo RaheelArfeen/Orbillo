@@ -21,19 +21,19 @@ const OurServices = () => {
         },
         {
             title: "UI / UX Design",
-            description: "Logos, visual systems & brand guidelines",
+            description: "Website, Mobile Apps & Dashboard interfaces",
             icon: Layout,
             route: '/services/ui-ux',
         },
         {
             title: "Web Development",
-            description: "Logos, visual systems & brand guidelines",
+            description: "Fast, conversion-focused & responsive websites",
             icon: webDevelopment,
             route: '/services/webDevelopment',
         },
         {
             title: "Social Designs",
-            description: "Logos, visual systems & brand guidelines",
+            description: "Posts, carousels & on-brand social media creatives",
             icon: MegaPhone,
             route: '/services/social-media',
         },
