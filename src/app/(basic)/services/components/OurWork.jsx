@@ -10,7 +10,7 @@ import work6 from '../Image/OurWorkImages/6.avif'
 const OurWork = () => {
     return (
         <div className='relative w-full overflow-hidden'>
-            <div className='absolute top inset-0 -z-10 lg:rounded-t-[100px] overflow-hidden'>
+            <div className='absolute top inset-0 -z-10 overflow-hidden'>
                 <Image
                     src={OurWorkBg}
                     alt="Background"

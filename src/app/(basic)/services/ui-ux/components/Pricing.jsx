@@ -129,16 +129,16 @@ const Pricing = () => {
 
                                         <div className='flex items-start mb-4 bricolage text-[#050D1E] font-medium tracking-tighter'>
                                             <span className='text-2xl -mt-1'>$</span>
-                                            <p className='text-5xl'>{card.price} <span className='text-2xl font-normal text-gray-400'>/ month</span></p>
+                                            <p className='text-5xl'>{card.price}</p>
                                         </div>
 
                                         <hr className={`mb-9 transition-all duration-300 ${showImage ? 'border-[#9BCD5E]' : 'border-[#E4E4E4]'}`} />
 
                                         <div className='flex-grow'>
-                                            <p className='text-[#696E78] mb-4 font-semibold text-sm'>Key Features</p>
-                                            <ul className='space-y-3'>
+                                            <p className='text-[#696E78] mb-4 font-bold text-sm uppercase'>Key Deliverables</p>
+                                            <ul className='space-y-1'>
                                                 {card.features.map((feature, idx) => (
-                                                    <li key={idx} className='flex items-center gap-2 text-[#373D4B] text-sm'>
+                                                    <li key={idx} className='flex items-center gap-4 text-[#4B4B4B] text-lg outfit'>
                                                         <svg width="12" height="11" viewBox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                             <path d="M3.19905 10.5112L1.54985 9.37859L3.81502 6.06032L0 4.72903L0.635837 2.78179L4.47073 3.97398V0H6.65642V3.97398L10.4913 2.78179L11.1271 4.72903L7.29225 6.06032L9.57729 9.37859L7.92809 10.5112L5.5437 7.37173L3.19905 10.5112Z" fill="#6BBE46" />
                                                         </svg>

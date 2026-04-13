@@ -1,12 +1,18 @@
 'use client'
 
-import React, { memo } from 'react';
+import React, { memo, useMemo } from 'react';
 import Marquee from 'react-fast-marquee';
 
-// 1. Single source of truth. Move outside to stay static.
-const INDUSTRIES = ['SaaS', 'Software', 'Fintech', 'Finance', 'Healthcare', 'MedTech', 'Telemedicine', 'E-commerce', 'Retail', 'Fashion', 'Apparel', 'Beauty', 'Cosmetics', 'Food', 'Beverage', 'Food Delivery', 'Education', 'E-Learning', 'EdTech', 'Travel', 'Hospitality', 'Real Estate', 'PropTech', 'Interior Design', 'Logistics', 'Transportation', 'Non-profit', 'NGO', 'Media', 'Entertainment', 'Streaming', 'Gaming', 'Fitness', 'Wellness', 'Sports', 'Legal', 'HR', 'Recruitment', 'Productivity', 'Cybersecurity', 'Blockchain', 'Web3', 'Automotive', 'Government'];
+const INDUSTRIES = [
+    'SaaS', 'Software', 'Fintech', 'Finance', 'Healthcare', 'MedTech', 'Telemedicine', 
+    'E-commerce', 'Retail', 'Fashion', 'Apparel', 'Beauty', 'Cosmetics', 'Food', 
+    'Beverage', 'Food Delivery', 'Education', 'E-Learning', 'EdTech', 'Travel', 
+    'Hospitality', 'Real Estate', 'PropTech', 'Interior Design', 'Logistics', 
+    'Transportation', 'Non-profit', 'NGO', 'Media', 'Entertainment', 'Streaming', 
+    'Gaming', 'Fitness', 'Wellness', 'Sports', 'Legal', 'HR', 'Recruitment', 
+    'Productivity', 'Cybersecurity', 'Blockchain', 'Web3', 'Automotive', 'Government'
+];
 
-// 2. Memoize the Tag to prevent unnecessary re-renders
 const Tag = memo(({ text }) => (
     <div className="mx-2 shrink-0 bg-[#02403A] border border-[#C9FF90]/20 rounded-full hover:border-white hover:bg-white hover:text-[#07302C] text-[#C9FF90] transition-colors duration-300 group cursor-pointer">
         <div className="px-3 py-1.5 sm:px-4 sm:py-2 md:px-5 md:py-2.5 lg:px-6 lg:py-4 text-sm sm:text-base md:text-lg lg:text-2xl whitespace-nowrap outfit">
@@ -25,20 +31,30 @@ const MarqueeRow = ({ items, direction = 'left', speed = 40 }) => (
             pauseOnHover={true}
             gradient={false}
             autoFill={true}
-            // 3. Hardware acceleration: Ensures the animation runs on the GPU
             className="flex items-center"
         >
-            {items.map((item, idx) => (
-                <Tag key={`${item}-${idx}`} text={item} />
+            {items.map((item) => (
+                <Tag key={item} text={item} />
             ))}
         </Marquee>
     </div>
 );
 
 const OurWorkMarque = () => {
+    const rows = useMemo(() => {
+        const shuffled = [...INDUSTRIES].sort(() => Math.random() - 0.5);
+        
+        const totalItems = Math.ceil(shuffled.length / 3);
+        
+        return [
+            shuffled.slice(0, totalItems),
+            shuffled.slice(totalItems, totalItems * 2),
+            shuffled.slice(totalItems * 2)
+        ];
+    }, []);
+
     return (
         <div className='relative overflow-hidden bg-[#02403A]'>
-
             <div className='h-100 w-100 rounded-full bg-[#C9FF90]/60 absolute top-30 -left-20 blur-[200px]'></div>
             <div className='h-100 w-100 rounded-full bg-[#C9FF90]/60 absolute -bottom-30 -right-20 blur-[200px]'></div>
 
@@ -55,9 +71,9 @@ const OurWorkMarque = () => {
                 </div>
 
                 <div className="w-full flex flex-col">
-                    <MarqueeRow items={INDUSTRIES} direction="right" />
-                    <MarqueeRow items={INDUSTRIES} direction="left" />
-                    <MarqueeRow items={INDUSTRIES} direction="right" />
+                    <MarqueeRow items={rows[0]} direction="right" speed={45} />
+                    <MarqueeRow items={rows[1]} direction="left" speed={35} />
+                    <MarqueeRow items={rows[2]} direction="right" speed={40} />
                 </div>
             </section>
         </div>

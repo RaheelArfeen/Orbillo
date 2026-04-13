@@ -75,7 +75,7 @@ const WorkProcess = () => {
                         <p className='uppercase outfit text-sm font-bold text-[#07302C]/55 tracking-[2px]'>
                             work Process
                         </p>
-                        <h1 className='text-3xl md:text-5xl md:max-w-[500px] max-w-[500px] bricolage font-semibold text-[#212121] leading-[122%] tracking-tight'>
+                        <h1 className='text-3xl md:text-5xl max-w-[450px] bricolage font-semibold text-[#212121] leading-[122%] tracking-tight'>
                             How We Design, <span className='playfair'>Build & Deliver</span> Your UI UX Project
                         </h1>
                     </div>

@@ -317,18 +317,18 @@ const WhatWeDo = () => {
                     </div>
 
                     <div>
-                        <div className='flex flex-col lg:flex-row items-center justify-between gap-8 mb-20'>
+                        <div className='flex flex-col lg:flex-row items-end justify-between gap-8 mb-20'>
                             <div className='space-y-8 lg:text-left text-center w-full flex flex-col items-center lg:items-start'>
                                 <p className='uppercase outfit text-sm font-bold text-[#07302C]/55 tracking-[2.7px]'>
                                     What We Do
                                 </p>
-                                <h3 className='text-3xl md:text-5xl max-w-[660px] font-semibold bricolage text-[#212121] tracking-tight leading-[122%]'>
+                                <h3 className='text-3xl md:text-5xl max-w-[660px] font-semibold bricolage capitalize text-[#212121] tracking-tight leading-[122%]'>
                                     <p>Everything for a Seamless, <span className='playfair'>High-Performing</span> UI UX Design</p>
                                 </h3>
                             </div>
                             <div>
-                                <p className='outfit text-xl text-[#07302C]/80 max-w-[400px] text-center lg:text-right'>
-                                    At Orbillo, we make digital simple, powerful and growth-focused
+                                <p className='outfit text-xl text-[#4B4B4B] max-w-[600px] text-center lg:text-left'>
+                                    At Orbillo, we turn complex user journeys into simple, engaging and growth-focused digital experiences.
                                 </p>
                             </div>
                         </div>
@@ -346,7 +346,7 @@ const WhatWeDo = () => {
                                     {/* --- NORMAL STATE --- */}
                                     {/* Fades out and moves down slightly on hover */}
                                     <div className="absolute inset-0 z-10 flex flex-col justify-between px-5 py-8 transition-all duration-500 ease-out opacity-100 translate-y-0 group-hover:opacity-0 group-hover:translate-y-4 pointer-events-none">
-                                        <h4 className='bricolage text-2xl leading-[140%] text-white font-semibold tracking-tight'>
+                                        <h4 className='bricolage text-2xl leading-[140%] text-white font-semibold tracking-tight max-w-[250px]'>
                                             {card.title}
                                         </h4>
 
@@ -364,11 +364,11 @@ const WhatWeDo = () => {
                                     {/* --- HOVER STATE --- */}
                                     {/* Fades in and moves up to its final position on hover */}
                                     <div className="absolute inset-0 z-20 flex flex-col justify-between px-5 py-8 transition-all duration-500 ease-out opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0">
-                                        <p className='outfit text-white text-lg leading-relaxed'>
+                                        <p className='outfit text-white/80 text-lg leading-relaxed'>
                                             {card.description}
                                         </p>
 
-                                        <h4 className='bricolage text-2xl leading-[140%] text-white font-semibold tracking-tight'>
+                                        <h4 className='bricolage text-2xl leading-[140%] max-w-[250px] text-white font-semibold tracking-tight'>
                                             {card.title}
                                         </h4>
                                     </div>
