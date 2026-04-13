@@ -8,47 +8,53 @@ const pricingCards = [
     {
         id: 1,
         title: 'Starter',
-        description: 'Perfect for individuals beginning For beginners exploring consistent posting.',
-        price: '0.00',
+        description: 'Perfect for early-stage startups and small businesses.',
+        price: '499.00',
         features: [
-            '50 AI-generated posts/month',
-            '10 Content Prompts/day',
-            'Trending Posts (limited)',
-            'Basic Analytics Dashboard',
-            'Email Support',
-            '1 Social Account',
-            'Basic Post Generator',
+            'Up To 3 Screens (Mobile + Desktop)',
+            'UX Wireframing',
+            'UI Design In Figma',
+            'Style Guide',
+            'Basic Component Library',
+            'Basic Prototyping',
+            '2 Revision Round',
+            'Developer Handoff File',
+            'Async. WhatsApp Support',
         ]
     },
     {
         id: 2,
         title: 'Standard',
-        description: 'Perfect for individuals beginning For beginners exploring consistent posting.',
-        price: '0.00',
+        description: 'Perfect for growing businesses ready to scale their product.',
+        price: '1499.00',
         features: [
-            '50 AI-generated posts/month',
-            '10 Content Prompts/day',
-            'Trending Posts (limited)',
-            'Basic Analytics Dashboard',
-            'Email Support',
-            '1 Social Account',
-            'Basic Post Generator',
+            'Up To 12 Screens',
+            'UX Research And Wireframing',
+            'High-Fidelity UI Design',
+            'Design System (Basic)',
+            'Interactive Prototype',
+            '3 Revision Rounds',
+            'Developer Handoff File',
+            '7-Day Post-Delivery Support',
+            'Priority WhatsApp Support',
         ],
         popular: true
     },
     {
         id: 3,
         title: 'Scale',
-        description: 'Perfect for individuals beginning For beginners exploring consistent posting.',
-        price: '0.00',
+        description: 'Perfect for brands or businesses that need end-to-end design & support.',
+        price: '3999.00',
         features: [
-            '50 AI-generated posts/month',
-            '10 Content Prompts/day',
-            'Trending Posts (limited)',
-            'Basic Analytics Dashboard',
-            'Email Support',
-            '1 Social Account',
-            'Basic Post Generator',
+            'Up To 30 Screens',
+            'Full UX Audit And Research',
+            'High-Fidelity UI Design',
+            'Scalable Design System',
+            'Interactive Prototyping',
+            'Unlimited Revisions',
+            'Developer Handoff File',
+            '30-Day Post-Delivery Support',
+            'Priority Email + WhatsApp Support',
         ]
     },
 ];
@@ -64,8 +70,8 @@ const Pricing = () => {
                     <p className='uppercase text-sm font-bold text-[#696969] tracking-widest mb-4'>
                         PRICING
                     </p>
-                    <h3 className='text-4xl md:text-5xl font-medium text-[#212121] bricolage max-w-2xl mx-auto leading-tight'>
-                        We’ve proudly collaborated with businesses that
+                    <h3 className='text-4xl md:text-5xl font-semibold text-[#212121] bricolage max-w-3xl mx-auto leading-tight tracking-tight'>
+                        Simple, Transparent Pricing for <span className='playfair'>Every Stage</span> of Your Business
                     </h3>
                 </div>
 

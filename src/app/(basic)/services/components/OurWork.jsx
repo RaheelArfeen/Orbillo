@@ -20,11 +20,11 @@ const OurWork = () => {
 
             <section className='max-w-[1380px] mx-auto px-4 py-12 md:py-25'>
                 <div className='space-y-8 text-center w-full flex flex-col items-center mb-12'>
-                    <p className='uppercase outfit text-sm lg:text-lg font-bold text-[#E3E3E3]/55 tracking-[2.7px]'>
-                        Our Work
+                    <p className='uppercase outfit text-sm font-bold text-[#E3E3E3]/55 tracking-[2.7px]'>
+                        Featured Works
                     </p>
-                    <h3 className='text-4xl md:text-[40px] max-w-[800px] bricolage text-white leading-tight'>
-                        <p>Everything You Need for a Consistent, Professional Brand</p>
+                    <h3 className='text-3xl md:text-[50px] font-medium max-w-[700px] bricolage text-white leading-tight tracking-tight'>
+                        <p>Designs That <span className='playfair'>Speak Louder</span> Than Words</p>
                     </h3>
                 </div>
 

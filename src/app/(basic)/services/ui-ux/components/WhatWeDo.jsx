@@ -1,9 +1,9 @@
 import Image from 'next/image';
 import React from 'react';
-import ProductDesign from '../Icons/ProductDesign.svg'
-import MobileUX from '../Icons/MobileUX.svg'
-import Redesign from '../Icons/Redesign.svg'
-import Prototype from '../Icons/Prototype.svg'
+import ProductDesign from '../../Icons/ProductDesign.svg'
+import MobileUX from '../../Icons/MobileUX.svg'
+import Redesign from '../../Icons/Redesign.svg'
+import Prototype from '../../Icons/Prototype.svg'
 import Image1 from '@/assets/marquee/1.jpg'
 import Image2 from '@/assets/marquee/2.avif'
 import Image3 from '@/assets/marquee/3.jpg'
@@ -17,23 +17,20 @@ const WhatWeDo = () => {
     const cards = [
         {
             title: "Product & SaaS Design",
-            description: "Timeless and purpose-driven - tailored for your audience.",
             src: ProductDesign,
         },
         {
-            title: "Mobile & E-commerce UX",
-            description: "Colors, typography, and styles keep your brand consistent.",
+            title: "Mobile Apps & E-commerce",
             src: MobileUX,
         },
         {
             title: "Website UI/UX Design & Redesign",
-            description: "Social media kits, business cards, and templates to launch.",
-            src: Redesign,
+            description: "Fresh, modern web designs that improve usability, reduce bounce rates and strengthen your brand online.",
+            reverse: true,
         },
         {
             title: "MVP Strategy & Rapid Prototyping",
-            description: "Social media kits, business cards, and templates to launch.",
-            src: Prototype
+            src: ProductDesign
         },
     ];
 
@@ -284,7 +281,7 @@ const WhatWeDo = () => {
             <section className='py-12 md:py-25 px-5 2xl:px-0'>
 
                 <section className='flex flex-col items-center'>
-                    <h1 className='text-4xl text-[#373737] tracking-tight max-w-[800px] text-center'>We’re a team of experienced designers, developers, and marketers — each with over a decade of experience helping brands turn complexity into clarity and strategy into growth.</h1>
+                    <h1 className='text-[32px] text-[#212121]/90 tracking-tight max-w-[750px] text-center'>We're a team of passionate UI/UX designers who believe great design is more than aesthetics. We research, strategize and craft user experiences that feel intuitive, reduce drop-offs and drive real business growth.</h1>
 
                     <Marquee
                         gradient={false}
@@ -319,11 +316,11 @@ const WhatWeDo = () => {
                     <div>
                         <div className='flex flex-col lg:flex-row items-center justify-between gap-8 mb-20'>
                             <div className='space-y-8 lg:text-left text-center w-full flex flex-col items-center lg:items-start'>
-                                <p className='uppercase outfit text-sm lg:text-lg font-bold text-[#07302C]/55 tracking-[2.7px]'>
+                                <p className='uppercase outfit text-sm font-bold text-[#07302C]/55 tracking-[2.7px]'>
                                     What We Do
                                 </p>
-                                <h3 className='text-[28px] md:text-[40px] max-w-[750px] bricolage text-[#07302C] leading-tight'>
-                                    <p>Everything You Need for a Consistent, Professional Brand</p>
+                                <h3 className='text-3xl md:text-5xl max-w-[660px] font-semibold bricolage text-[#212121] tracking-tight leading-[122%]'>
+                                    <p>Everything for a Seamless, <span className='playfair'>High-Performing</span> UI UX Design</p>
                                 </h3>
                             </div>
                             <div>
@@ -337,25 +334,35 @@ const WhatWeDo = () => {
                             {cards.map((card, index) => (
                                 <div
                                     key={index}
-                                    className={`group relative flex justify-between rounded-2xl min-h-[480px] overflow-hidden bg-[#07302C] hover:translate-y-[-5px] transition-transform duration-300 ${card.reverse ? 'flex-col-reverse' : 'flex-col'}`}
+                                    className={`group relative flex justify-between rounded-2xl min-h-[350px] overflow-hidden bg-[#07302C] hover:translate-y-[-5px] transition-transform duration-300 ${card.reverse ? 'flex-col-reverse' : 'flex-col'}`}
                                 >
-                                    <div className='relative z-10 px-5 py-8'>
-                                        <h4 className='bricolage text-2xl leading-[140%] text-[#C9FF90] mb-4'>
-                                            {card.title}
-                                        </h4>
-                                        <p className='outfit text-white text-lg'>
-                                            {card.description}
-                                        </p>
+                                    <div
+                                        className={`relative z-10 px-5 py-8 flex flex-col h-full ${card.reverse ? 'justify-between' : ''
+                                            }`}
+                                    >
+                                        <div className={`${card.reverse ? 'order-1' : ''}`}>
+                                            <h4 className="bricolage text-2xl font-semibold tracking-tight leading-[110%] text-white mb-4">
+                                                {card.title}
+                                            </h4>
+                                        </div>
+
+                                        <div className={`${card.reverse ? 'order-[-1]' : ''}`}>
+                                            <p className="outfit text-white/80 text-lg">
+                                                {card.description}
+                                            </p>
+                                        </div>
                                     </div>
 
-                                    <div className={`absolute right-5 flex items-end justify-center pointer-events-none group-hover:scale-105 transition-transform duration-500 ease-out ${card.reverse ? 'top-10 h-[250px] ' : 'bottom-0 h-[300px]'}`}>
-                                        <Image
-                                            src={card.src}
-                                            alt={card.title}
-                                            width={200}
-                                            height={160}
-                                            className="w-full h-full object-contain object-bottom z-10"
-                                        />
+                                    <div className={`absolute bottom-0 right-0 flex items-end justify-center pointer-events-none group-hover:scale-105 transition-transform duration-500 ease-out`}>
+                                        {card.src && (
+                                            <Image
+                                                src={card.src}
+                                                alt={card.title}
+                                                width={200}
+                                                height={160}
+                                                className="w-full h-full object-contain object-bottom z-10"
+                                            />
+                                        )}
                                     </div>
 
                                     <div className="absolute -top-15 -right-35 w-[200px] h-[200px] rounded-full blur-[60px] bg-[#6BBE46]/55 z-0"></div>

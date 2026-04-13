@@ -28,7 +28,7 @@ const Counter = () => {
                             key={index}
                             className="bg-[#e5e2e2] rounded-xl flex flex-col items-center justify-center space-y-2 py-12 lg:py-0 lg:bg-transparent lg:h-auto"
                         >
-                            <h3 className="text-[60px] lg:text-[72px] leading-none bricolage font-medium text-[#559B36] flex items-start">
+                            <h3 className="text-[60px] lg:text-[72px] leading-none bricolage font-medium text-[#08312C] flex items-start">
                                 {inView ? (
                                     <CountUp
                                         start={0}
@@ -46,7 +46,7 @@ const Counter = () => {
                                 )}
                             </h3>
 
-                            <p className="outfit uppercase text-[14px] font-bold tracking-[1.5px] lg:tracking-[2.7px] text-[#373737]/55 text-center px-2">
+                            <p className="outfit uppercase text-[14px] font-bold tracking-[1.5px] lg:tracking-[2.7px] text-[#4B4B4B]/80 text-center px-2">
                                 {stat.label}
                             </p>
                         </div>

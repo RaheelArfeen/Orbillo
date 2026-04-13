@@ -54,9 +54,9 @@ const FAQsection = () => {
                     <h1 className="text-[36px] md:text-[50px] font-semibold text-[#212121] bricolage max-w-[500px] leading-[1.1] mb-6 tracking-tight">
                         Questions? We’re Here <span className="playfair italic text-4xl md:text-5xl">to Help</span>
                     </h1>
-                    <div className='md:mt-20'>
+                    {/* <div className='md:mt-20'>
                         <Image className='max-w-[180px] md:max-w-[220px]' src={FAQIcon} alt="FAQ Illustration" />
-                    </div>
+                    </div> */}
                 </div>
 
                 {/* Right Side */}

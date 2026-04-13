@@ -9,7 +9,7 @@ import Pricing from './components/Pricing';
 import FAQsection from '@/app/components/FAQsection';
 import Partnership from '@/app/components/Partnership';
 import CTAsection from '../components/CTAsection';
-import WhatWeDo from '../components/WhatWeDo';
+import WhatWeDo from './components/WhatWeDo';
 
 export const metadata = {
     title: "UI/UX Design | Orbillo",
@@ -22,12 +22,11 @@ const page = () => {
             <WhatWeDo />
             <WorkProcess />
             <OurWork />
-            <Partnership />
-            <Counter />
-            <CTAsection />
+            <Pricing />
             <OurWrokMarque />
             <Feedback />
-            <Pricing />
+            <Partnership />
+            <Counter />
             <FAQsection />
         </div>
     );
