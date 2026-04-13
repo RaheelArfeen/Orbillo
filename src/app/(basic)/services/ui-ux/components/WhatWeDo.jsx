@@ -17,20 +17,23 @@ const WhatWeDo = () => {
     const cards = [
         {
             title: "Product & SaaS Design",
+            description: "Intuitive, scalable product designs that improve workflows, boost retention and grow your SaaS business online.",
             src: ProductDesign,
         },
         {
             title: "Mobile Apps & E-commerce",
+            description: "Sleek, conversion-focused designs that enhance user experience, drive sales and grow your mobile business online.",
             src: MobileUX,
         },
         {
             title: "Website UI/UX Design & Redesign",
             description: "Fresh, modern web designs that improve usability, reduce bounce rates and strengthen your brand online.",
-            reverse: true,
+            src: Redesign
         },
         {
             title: "MVP Strategy & Rapid Prototyping",
-            src: ProductDesign
+            description: "Smart, structured MVP strategies that validate your idea, reduce risk and accelerate your product launch online.",
+            src: Prototype
         },
     ];
 
@@ -334,39 +337,41 @@ const WhatWeDo = () => {
                             {cards.map((card, index) => (
                                 <div
                                     key={index}
-                                    className={`group relative flex justify-between rounded-2xl min-h-[350px] overflow-hidden bg-[#07302C] hover:translate-y-[-5px] transition-transform duration-300 ${card.reverse ? 'flex-col-reverse' : 'flex-col'}`}
+                                    className="group relative rounded-2xl min-h-[360px] overflow-hidden bg-[#07302C] hover:translate-y-[-5px] transition-all duration-500"
                                 >
-                                    <div
-                                        className={`relative z-10 px-5 py-8 flex flex-col h-full ${card.reverse ? 'justify-between' : ''
-                                            }`}
-                                    >
-                                        <div className={`${card.reverse ? 'order-1' : ''}`}>
-                                            <h4 className="bricolage text-2xl font-semibold tracking-tight leading-[110%] text-white mb-4">
-                                                {card.title}
-                                            </h4>
-                                        </div>
+                                    {/* Background Blur Effects */}
+                                    <div className="absolute -top-15 -right-35 w-[200px] h-[200px] rounded-full blur-[60px] bg-[#6BBE46]/55 z-0 transition-transform duration-700 group-hover:scale-125"></div>
+                                    <div className="absolute bottom-6 -left-30 w-[200px] h-[200px] rounded-full blur-[60px] bg-[#6BBE46]/55 z-0 transition-transform duration-700 group-hover:scale-125"></div>
 
-                                        <div className={`${card.reverse ? 'order-[-1]' : ''}`}>
-                                            <p className="outfit text-white/80 text-lg">
-                                                {card.description}
-                                            </p>
-                                        </div>
-                                    </div>
+                                    {/* --- NORMAL STATE --- */}
+                                    {/* Fades out and moves down slightly on hover */}
+                                    <div className="absolute inset-0 z-10 flex flex-col justify-between px-5 py-8 transition-all duration-500 ease-out opacity-100 translate-y-0 group-hover:opacity-0 group-hover:translate-y-4 pointer-events-none">
+                                        <h4 className='bricolage text-2xl leading-[140%] text-white font-semibold tracking-tight'>
+                                            {card.title}
+                                        </h4>
 
-                                    <div className={`absolute bottom-0 right-0 flex items-end justify-center pointer-events-none group-hover:scale-105 transition-transform duration-500 ease-out`}>
-                                        {card.src && (
+                                        <div className="flex items-end justify-center absolute bottom-0 right-0">
                                             <Image
                                                 src={card.src}
                                                 alt={card.title}
                                                 width={200}
                                                 height={160}
-                                                className="w-full h-full object-contain object-bottom z-10"
+                                                className="w-full h-full object-contain object-bottom"
                                             />
-                                        )}
+                                        </div>
                                     </div>
 
-                                    <div className="absolute -top-15 -right-35 w-[200px] h-[200px] rounded-full blur-[60px] bg-[#6BBE46]/55 z-0"></div>
-                                    <div className="absolute bottom-6 -left-30 w-[200px] h-[200px] rounded-full blur-[60px] bg-[#6BBE46]/55 z-0"></div>
+                                    {/* --- HOVER STATE --- */}
+                                    {/* Fades in and moves up to its final position on hover */}
+                                    <div className="absolute inset-0 z-20 flex flex-col justify-between px-5 py-8 transition-all duration-500 ease-out opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0">
+                                        <p className='outfit text-white text-lg leading-relaxed'>
+                                            {card.description}
+                                        </p>
+
+                                        <h4 className='bricolage text-2xl leading-[140%] text-white font-semibold tracking-tight'>
+                                            {card.title}
+                                        </h4>
+                                    </div>
                                 </div>
                             ))}
                         </div>
