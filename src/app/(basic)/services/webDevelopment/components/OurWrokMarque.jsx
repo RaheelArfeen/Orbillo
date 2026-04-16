@@ -65,7 +65,7 @@ const OurWorkMarque = () => {
                             Our Expertise
                         </p>
                         <h2 className='text-3xl md:text-[50px] md:max-w-[600px] bricolage font-medium text-white leading-tight'>
-                            Built for Your <span className='playfair font-semibold'>Industry Designed</span> for Your Users
+                            Built for Your <span className='playfair font-semibold'>Industry Developed</span> for Your Goals
                         </h2>
                     </div>
                 </div>

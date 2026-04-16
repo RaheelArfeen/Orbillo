@@ -7,26 +7,26 @@ import { useScroll, useTransform, motion, useSpring } from 'framer-motion';
 const CARD_CONTENT = [
     {
         id: '01',
-        title: 'Project Discovery & Requirements',
-        content: 'We begin by understanding your business goals, website objectives, and technical requirements. This step helps us identify what the website needs to achieve and how it should support your brand, marketing, and user experience.',
+        title: 'Discovery & Requirement Mapping',
+        content: 'We understand your goals, audience and technical needs to create a clear development roadmap.',
         bgColor: 'bg-[#E5FFCA]'
     },
     {
         id: '02',
-        title: 'Structure & Development Planning',
-        content: 'Next, we define the website structure and development approach. We map the key pages, content flow, and functionality to ensure the site is organized, intuitive, and ready for development.',
+        title: 'Design & Architecture Planning',
+        content: 'We plan the site structure, tech stack and visual layout before writing a single line of code.',
         bgColor: 'bg-[#FFCFEA]'
     },
     {
         id: '03',
-        title: 'Design Implementation & Development',
-        content: 'Once the structure is finalized, we begin building the website. Our team transforms the approved designs into a responsive and performance-optimized website that works smoothly across devices and browsers.',
+        title: 'Development & Quality Testing',
+        content: 'We build your website with clean, optimized code — tested across devices, browsers and speed benchmarks.',
         bgColor: 'bg-[#FAE4B6]'
     },
     {
         id: '04',
-        title: 'Testing, Launch & Support',
-        content: 'Before launch, we thoroughly test the website for performance, responsiveness, and usability. After everything is ready, we deploy the site and ensure it runs smoothly while providing ongoing support when needed.',
+        title: 'Launch & Post-Delivery Support',
+        content: 'We deploy your site, hand over all assets and stay available until everything is live and running smoothly.',
         bgColor: 'bg-[#E5C6FE]'
     },
 ]
@@ -36,17 +36,17 @@ const Card = ({ i, title, content, bgColor, id, progress, range, targetScale }) 
     const scale = useTransform(progress, range, [1, targetScale]);
 
     return (
-        <div className="h-[35vh] flex items-start justify-center sticky top-[15vh]">
+        <div className="h-[20vh] flex items-start justify-center sticky top-[15vh]">
             <motion.div
                 style={{
                     scale,
                     top: `calc(-5vh + ${i * 25}px)`
                 }}
-                className={`relative flex flex-col justify-center ${bgColor} p-12 rounded-3xl max-w-[650px] w-full text-black origin-top shadow-lg border border-black/5`}
+                className={`relative flex flex-col justify-center ${bgColor} p-12 rounded-3xl max-w-[650px] w-full text-black origin-top`}
             >
-                <span className='bricolage text-2xl font-medium leading-[140%]'>{id}</span>
-                <h1 className='bricolage text-2xl font-medium leading-[140%] mt-8 mb-5'>{title}</h1>
-                <h2 className='outfit text-lg leading-[140%]'>{content}</h2>
+                <span className='outfit text-sm font-bold leading-[140%] text-[#747474] mb-6'>{id}</span>
+                <h1 className='bricolage text-[28px] tracking-tight font-medium leading-[140%] text-[#212121] mb-6'>{title}</h1>
+                <h2 className='outfit text-lg text-[#4B4B4B] leading-[140%]'>{content}</h2>
             </motion.div>
         </div>
     )
@@ -72,11 +72,11 @@ const WorkProcess = () => {
                 <div className='flex items-start justify-between gap-10 lg:gap-0 flex-col lg:flex-row'>
 
                     <div className='lg:sticky lg:top-32 self-start space-y-8 lg:text-left text-center w-full lg:w-[40%] mb-10 flex flex-col items-center lg:items-start'>
-                        <p className='uppercase outfit text-sm lg:text-lg font-bold text-[#07302C]/55 tracking-[2px]'>
+                        <p className='uppercase outfit text-sm font-bold text-[#07302C]/55 tracking-[2px]'>
                             work Process
                         </p>
-                        <h1 className='text-[28px] md:text-[40px] md:max-w-[500px] max-w-[500px] bricolage text-[#07302C] leading-tight tracking-tight'>
-                            How We Shape and Define Your Brand Identity
+                        <h1 className='text-3xl md:text-5xl max-w-[450px] bricolage font-semibold text-[#212121] leading-[122%] tracking-tight'>
+                            How We Plan,  <span className='playfair'>Build & Launch</span> Your Web Project
                         </h1>
                     </div>
 

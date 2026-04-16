@@ -36,17 +36,17 @@ const Card = ({ i, title, content, bgColor, id, progress, range, targetScale }) 
     const scale = useTransform(progress, range, [1, targetScale]);
 
     return (
-        <div className="h-[25vh] flex items-start justify-center sticky top-[15vh]">
+        <div className="h-[20vh] flex items-start justify-center sticky top-[15vh]">
             <motion.div
                 style={{
                     scale,
                     top: `calc(-5vh + ${i * 25}px)`
                 }}
-                className={`relative flex flex-col justify-center ${bgColor} p-12 rounded-3xl max-w-[650px] w-full text-black origin-top shadow-lg border border-black/5`}
+                className={`relative flex flex-col justify-center ${bgColor} p-12 rounded-3xl max-w-[650px] w-full text-black origin-top`}
             >
-                <span className='bricolage text-2xl font-medium leading-[140%]'>{id}</span>
-                <h1 className='bricolage text-2xl font-medium leading-[140%] mt-8 mb-5'>{title}</h1>
-                <h2 className='outfit text-lg leading-[140%]'>{content}</h2>
+                <span className='outfit text-sm font-bold leading-[140%] text-[#747474] mb-6'>{id}</span>
+                <h1 className='bricolage text-[28px] tracking-tight font-medium leading-[140%] text-[#212121] mb-6'>{title}</h1>
+                <h2 className='outfit text-lg text-[#4B4B4B] leading-[140%]'>{content}</h2>
             </motion.div>
         </div>
     )

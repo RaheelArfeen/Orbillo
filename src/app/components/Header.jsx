@@ -97,7 +97,7 @@ const Header = () => {
                     <button onClick={handleOpen} className="relative z-50 flex items-center justify-center p-1">
                         <span className={`block transition-all duration-500 ${open ? 'rotate-90 text-[#17241F]' : 'text-white'}`}>
                             <svg width="40" height="40" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M6 14H42M6 24H42M6 34H42" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeJoin="round" />
+                                <path d="M6 14H42M6 24H42M6 34H42" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokejoin="round" />
                             </svg>
                         </span>
                     </button>

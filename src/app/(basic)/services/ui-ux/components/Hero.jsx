@@ -25,9 +25,8 @@ const Hero = () => {
             <Image className='absolute max-w-[550px] w-full -left-20 -bottom-50 z-10 opacity-50' src={leftCube} alt="" />
 
             <Image className='absolute max-w-[950px] w-full -right-40 -bottom-60 z-10  opacity-50' src={rightCube} alt="" />
-            r
 
-            <section className='z-20 text-center pt-30 mb-40 px-4 flex flex-col items-center justify-center'>
+            <section className='z-20 text-center pt-30 mb-[75px] px-4 flex flex-col items-center justify-center'>
                 <h3 className='outfit uppercase text-[#C7C7C7] font-medium text-sm mb-4 tracking-[1px] py-2 px-4 bg-white/10 rounded-full w-fit space-x-1'><span>Home</span> <span>/</span> <span>Services</span> <span>/</span> <span className='text-white font-semibold'>UI UX Design</span></h3>
                 <h1 className="bricolage text-3xl md:text-5xl text-white font-medium tracking-tighter leading-[120%] mb-4 ">
                     <span className="lg:block">
@@ -39,7 +38,7 @@ const Hero = () => {
                 </h1>
                 <p className='outift text-lg text-white/79 tracking-wide leading-[146%] max-w-[620px] mb-8'>Beautiful interfaces, seamless experiences and UI/UX design that keeps users coming back and your business growing.</p>
 
-                <div className='flex flex-col md:flex-row items-center justify-center gap-3  px-10'>
+                <div className='flex flex-col md:flex-row items-center justify-center gap-3 px-10'>
                     <button className='py-3 px-10 rounded-full bg-[#C9FF90] text-[#07302C] hover:bg-[#07302C] hover:text-[#C9FF90] transition duration-300 border-b border-[#C9FF90] hover:border-[#4d6641] outfit md:text-xl text-base  max-[350px]:text-xs cursor-pointer'>
                         <a href="https://calendly.com/teamorbillo/30min" target="_blank" rel="noopener noreferrer">Book A Discovery Call</a>
                     </button>
