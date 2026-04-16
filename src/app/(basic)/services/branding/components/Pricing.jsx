@@ -7,48 +7,54 @@ import Image from 'next/image';
 const pricingCards = [
     {
         id: 1,
-        title: 'Starter',
-        description: 'Perfect for individuals beginning For beginners exploring consistent posting.',
-        price: '0.00',
+        title: 'Essential',
+        description: 'Perfect for early-stage startups and small businesses.',
+        price: '499.00',
         features: [
-            '50 AI-generated posts/month',
-            '10 Content Prompts/day',
-            'Trending Posts (limited)',
-            'Basic Analytics Dashboard',
-            'Email Support',
-            '1 Social Account',
-            'Basic Post Generator',
+            'Up To 3 Screens (Mobile + Desktop)',
+            'UX Wireframing',
+            'UI Design In Figma',
+            'Style Guide',
+            'Basic Component Library',
+            'Basic Prototyping',
+            '2 Revision Round',
+            'Developer Handoff File',
+            'Async. WhatsApp Support',
         ]
     },
     {
         id: 2,
-        title: 'Standard',
-        description: 'Perfect for individuals beginning For beginners exploring consistent posting.',
-        price: '0.00',
+        title: 'Professional',
+        description: 'Perfect for growing businesses ready to scale their product.',
+        price: '1499.00',
         features: [
-            '50 AI-generated posts/month',
-            '10 Content Prompts/day',
-            'Trending Posts (limited)',
-            'Basic Analytics Dashboard',
-            'Email Support',
-            '1 Social Account',
-            'Basic Post Generator',
+            'Up To 12 Screens',
+            'UX Research And Wireframing',
+            'High-Fidelity UI Design',
+            'Design System (Basic)',
+            'Interactive Prototype',
+            '3 Revision Rounds',
+            'Developer Handoff File',
+            '7-Day Post-Delivery Support',
+            'Priority WhatsApp Support',
         ],
         popular: true
     },
     {
         id: 3,
-        title: 'Scale',
-        description: 'Perfect for individuals beginning For beginners exploring consistent posting.',
-        price: '0.00',
+        title: 'Enterprise',
+        description: 'Perfect for brands or businesses that need end-to-end design & support.',
+        price: '3999.00',
         features: [
-            '50 AI-generated posts/month',
-            '10 Content Prompts/day',
-            'Trending Posts (limited)',
-            'Basic Analytics Dashboard',
-            'Email Support',
-            '1 Social Account',
-            'Basic Post Generator',
+            'Up To 30 Screens',
+            'Full UX Audit And Research',
+            'High-Fidelity UI Design',
+            'Scalable Design System',
+            'Interactive Prototyping',
+            'Unlimited Revisions',
+            'Developer Handoff File',
+            '30-Day Post-Delivery Support',
+            'Priority Email + WhatsApp Support',
         ]
     },
 ];
@@ -64,17 +70,14 @@ const Pricing = () => {
                     <p className='uppercase text-sm font-bold text-[#696969] tracking-widest mb-4'>
                         PRICING
                     </p>
-                    <h3 className='text-4xl md:text-5xl font-medium text-[#212121] bricolage max-w-2xl mx-auto leading-tight'>
-                        We’ve proudly collaborated with businesses that
+                    <h3 className='text-4xl md:text-5xl font-semibold text-[#212121] bricolage max-w-3xl mx-auto leading-tight tracking-tight'>
+                        Simple, Transparent Pricing for <span className='playfair'>Every Stage</span> of Your Business
                     </h3>
                 </div>
 
                 {/* Cards Container */}
                 <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
                     {pricingCards.map((card) => {
-                        // Logic for showing image:
-                        // Show if this specific card is hovered
-                        // OR if NOTHING is hovered and this is the Standard card
                         const showImage = hoveredId === card.id || (hoveredId === null && card.popular);
 
                         return (
@@ -84,19 +87,15 @@ const Pricing = () => {
                                 onMouseLeave={() => setHoveredId(null)}
                                 className="relative flex flex-col group"
                             >
-                                {/* POPULAR BADGE - Outside the background container so it isn't clipped */}
                                 {card.popular && (
                                     <div className="absolute -top-3 -right-6 bg-[#02403A] text-[#fff] text-lg font-medium px-5 py-1.5 rounded-full rotate-12 font-bricolage z-30 shadow-sm">
                                         Popular
                                     </div>
                                 )}
 
-                                {/* CARD WRAPPER */}
                                 <div className={`relative flex flex-col flex-grow p-8 border rounded-4xl transition-all duration-500 min-h-[580px] ${showImage ? 'border-transparent' : 'border-gray-200'}`}>
 
-                                    {/* BACKGROUND LAYER (Handles the clipping/overflow) */}
                                     <div className="absolute inset-0 z-0 rounded-4xl overflow-hidden">
-                                        {/* Default Gradient */}
                                         <div className="absolute inset-0 bg-[linear-gradient(180deg,#DDF290_-20%,#ffffff_30%)]" />
                                         {/* Hover/Standard Image */}
                                         <div
@@ -123,16 +122,16 @@ const Pricing = () => {
 
                                         <div className='flex items-start mb-4 bricolage text-[#050D1E] font-medium tracking-tighter'>
                                             <span className='text-2xl -mt-1'>$</span>
-                                            <p className='text-5xl'>{card.price} <span className='text-2xl font-normal text-gray-400'>/ month</span></p>
+                                            <p className='text-5xl'>{card.price}</p>
                                         </div>
 
                                         <hr className={`mb-9 transition-all duration-300 ${showImage ? 'border-[#9BCD5E]' : 'border-[#E4E4E4]'}`} />
 
                                         <div className='flex-grow'>
-                                            <p className='text-[#696E78] mb-4 font-semibold text-sm'>Key Features</p>
-                                            <ul className='space-y-3'>
+                                            <p className='text-[#696E78] mb-4 font-bold text-sm uppercase'>Key Deliverables</p>
+                                            <ul className='space-y-1'>
                                                 {card.features.map((feature, idx) => (
-                                                    <li key={idx} className='flex items-center gap-2 text-[#373D4B] text-sm'>
+                                                    <li key={idx} className='flex items-center gap-4 text-[#4B4B4B] text-lg outfit'>
                                                         <svg width="12" height="11" viewBox="0 0 12 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                             <path d="M3.19905 10.5112L1.54985 9.37859L3.81502 6.06032L0 4.72903L0.635837 2.78179L4.47073 3.97398V0H6.65642V3.97398L10.4913 2.78179L11.1271 4.72903L7.29225 6.06032L9.57729 9.37859L7.92809 10.5112L5.5437 7.37173L3.19905 10.5112Z" fill="#6BBE46" />
                                                         </svg>
