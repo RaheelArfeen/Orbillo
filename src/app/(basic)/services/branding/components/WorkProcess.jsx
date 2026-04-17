@@ -20,7 +20,7 @@ const CARD_CONTENT = [
     {
         id: '03',
         title: 'Design & Refinement ',
-        content: 'We craft your full brand identity — logo, typography, color system and assets — refined until it’s exactly right.',
+        content: 'We craft your full brand identity, logo, typography, color system and assets, refined until it’s exactly right.',
         bgColor: 'bg-[#FAE4B6]'
     },
     {

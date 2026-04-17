@@ -76,7 +76,7 @@ const WorkProcess = () => {
                             work Process
                         </p>
                         <h1 className='text-3xl md:text-5xl max-w-[450px] bricolage font-semibold text-[#212121] leading-[122%] tracking-tight'>
-                            How We Plan,  <span className='playfair'>Build & Launch</span> Your Web Project
+                            How We Plan, <br /> <span className='playfair'> Build & Launch</span> Your Web Project
                         </h1>
                     </div>
 

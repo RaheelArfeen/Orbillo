@@ -25,7 +25,7 @@ const OurWork = () => {
                         Featured Works
                     </p>
                     <h3 className='text-3xl md:text-[50px] font-medium max-w-[700px] bricolage text-white leading-tight tracking-tight'>
-                        <p>Designs That <span className='playfair'>Speak Louder</span> Than Words</p>
+                        <p>Brands That <span className='playfair'>Speak Louder</span> Than Words</p>
                     </h3>
                 </div>
 

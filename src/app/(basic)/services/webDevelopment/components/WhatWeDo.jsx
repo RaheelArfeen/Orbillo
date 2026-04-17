@@ -109,7 +109,7 @@ const WhatWeDo = () => {
             <section className='py-12 md:py-25 px-5 2xl:px-0'>
 
                 <section className='flex flex-col items-center'>
-                    <h1 className='text-[32px] text-[#212121]/90 tracking-tight max-w-[750px] text-center'>We're a team of passionate web developers who believe great websites are more than pretty pages. We architect, develop and optimize web experiences that perform, scale and drive real business results.</h1>
+                    <h1 className='text-[32px] text-[#212121]/90 tracking-tight max-w-[750px] text-center bricolage'>We're a team of passionate web developers who believe great websites are more than pretty pages. We architect, develop and optimize web experiences that perform, scale and drive real business results.</h1>
 
                     <Marquee
                         gradient={false}

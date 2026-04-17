@@ -8,28 +8,28 @@ import { motion, AnimatePresence } from 'framer-motion';
 const questions = [
     {
         id: '1',
-        question: 'What does a branding package include?  ',
-        answer: 'Our branding packages include everything from logo design and color systems to full brand guidelines and digital assets. Each package is scoped to your stage — whether you’re launching, growing or rebranding.'
+        question: 'What does a branding package include?',
+        answer: 'Our branding packages include everything from logo design and color systems to full brand guidelines and digital assets. Each package is scoped to your stage, whether you’re launching, growing or rebranding.'
     },
     {
         id: '2',
-        question: 'How long does a branding project take?  ',
-        answer: 'A starter brand identity typically takes 1–2 weeks. Full brand strategy and identity projects may take 3–4 weeks. We always share a clear timeline before we begin.'
+        question: 'How long does a branding project take?',
+        answer: 'A starter brand identity typically takes 1 to 2 weeks. Full brand strategy and identity projects may take 3 to 4 weeks. We always share a clear timeline before we begin.'
     },
     {
         id: '3',
-        question: 'How much do your branding services cost? ',
-        answer: 'Yes! We are a global team working with clients across North America, Europe, Australia and beyond. All communication, delivery and support happen remotely — smoothly and professionally.'
+        question: 'How much do your branding services cost?',
+        answer: 'Our packages start at $299 for early-stage businesses and scale based on scope. All pricing is transparent with no hidden fees.'
     },
     {
         id: '4',
-        question: 'Do you work with international clients? ',
-        answer: 'Yes! We are a global team working with clients across North America, Europe, Australia and beyond. All communication, delivery and support happen remotely — smoothly and professionally.'
+        question: 'Do you work with international clients?',
+        answer: 'Yes! We are a global team working with clients across North America, Europe, Australia and beyond. All communication, delivery and support happen remotely, smoothly and professionally.'
     },
     {
         id: '5',
-        question: 'What makes Orbillo different from other branding agencies? ',
-        answer: 'We don’t just make things look good — we build brands with purpose.Every identity we create is backed by research, strategy and a deep understanding of your market and audience.'
+        question: 'How is Orbillo different from other branding agencies?',
+        answer: 'We don’t just make things look good. We build brands with purpose. Every identity we create is backed by research, strategy and a deep understanding of your market and audience.'
     },
 ];
 
@@ -80,7 +80,7 @@ const FAQsection = () => {
                                         // Added cursor-pointer and a slight hover transition
                                         className={`w-full flex items-center justify-between py-5 px-6 md:px-10 text-left cursor-pointer transition-colors duration-200 ${!isOpen ? 'hover:bg-gray-50' : ''}`}
                                     >
-                                        <span className='bricolage text-xl md:text-2xl font-medium text-[#212121] tracking-tight'>
+                                        <span className='bricolage text-xl md:text-2xl font-medium text-[#212121] tracking-tight capitalize'>
                                             {Q.question}
                                         </span>
 

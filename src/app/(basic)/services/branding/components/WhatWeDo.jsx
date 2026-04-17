@@ -21,7 +21,7 @@ const WhatWeDo = () => {
 
     const cards = [
         {
-            title: "Logo & Visual Identity Design ",
+            title: "Logo Design & Visual Identity",
             description: "Distinctive, timeless logos and visual systems that communicate your brand's personality at every touchpoint.",
             src: ProductDesign,
         },
@@ -109,7 +109,7 @@ const WhatWeDo = () => {
             <section className='py-12 md:py-25 px-5 2xl:px-0'>
 
                 <section className='flex flex-col items-center'>
-                    <h1 className='text-[32px] text-[#212121]/90 tracking-tight max-w-[750px] text-center'>We're a team of passionate brand designers who believe great branding is more than a logo. We research, strategize and craft brand identities that feel authentic, build recognition and drive real business growth.</h1>
+                    <h1 className='text-[32px] text-[#212121]/90 tracking-tight max-w-[750px] text-center bricolage'>We're a team of passionate brand designers who believe great branding is more than a logo. We research, strategize and craft brand identities that feel authentic, build recognition and drive real business growth.</h1>
 
                     <Marquee
                         gradient={false}

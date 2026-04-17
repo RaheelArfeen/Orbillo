@@ -48,7 +48,7 @@ const OurServices = () => {
 
             <section className='z-30 max-w-[1380px] mx-auto py-20 px-4'>
                 {/* Header */}
-                <div className='flex flex-col lg:flex-row items-center justify-between gap-8 mb-20'>
+                <div className='flex flex-col lg:flex-row items-end justify-between gap-8 mb-20'>
                     <div className='space-y-8 lg:text-left text-center w-full flex flex-col items-center lg:items-start'>
                         <p className='uppercase outfit text-sm lg:text-base font-bold text-white/55 tracking-[2.7px]'>
                             Our Services

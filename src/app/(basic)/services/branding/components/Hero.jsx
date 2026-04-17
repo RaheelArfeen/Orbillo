@@ -3,6 +3,7 @@ import HeroBg from '@/assets/Hero.svg'
 import leftCube from '../../Image/leftCube.avif'
 import rightCube from '../../Image/rightCube.avif'
 import React from 'react';
+import Link from 'next/link';
 
 const Hero = () => {
     return (
@@ -27,7 +28,7 @@ const Hero = () => {
             <Image className='absolute max-w-[950px] w-full -right-40 -bottom-60 z-10  opacity-50' src={rightCube} alt="" />
 
             <section className='z-20 text-center pt-30 mb-[75px] px-4 flex flex-col items-center justify-center'>
-                <h3 className='outfit uppercase text-[#C7C7C7] font-medium text-sm mb-4 tracking-[1px] py-2 px-4 bg-white/10 rounded-full w-fit space-x-1'><span>Home</span> <span>/</span> <span>Services</span> <span>/</span> <span className='text-white font-semibold'>Branding & Identity</span></h3>
+                <h3 className='outfit uppercase text-[#C7C7C7] font-medium text-sm mb-4 tracking-[1px] py-2 px-4 bg-white/10 rounded-full w-fit space-x-1'><Link href={'/'}><span>Home</span></Link> <span>/</span> <span>Services</span> <span>/</span> <span className='text-white font-semibold'>Branding & Identity</span></h3>
                 <h1 className="bricolage text-3xl md:text-5xl text-white font-medium tracking-tighter leading-[120%] mb-4 ">
                     <span className="lg:block">
                         Your Business Deserves to Be

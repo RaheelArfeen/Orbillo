@@ -6,27 +6,27 @@ import { motion, AnimatePresence } from 'framer-motion';
 const questions = [
     {
         id: '1',
-        question: 'What technologies do you use for web development? ',
-        answer: 'We work with modern, industry-standard technologies including React, Next.js, WordPress, Webflow and custom HTML/CSS/JS — depending on your project’s needs and goals.'
+        question: 'What technologies do you use for web development?',
+        answer: 'We work with modern, industry-standard technologies including React, Next.js, WordPress, Webflow and custom HTML/CSS/JS, depending on your project’s needs and goals.'
     },
     {
         id: '2',
-        question: 'How long does a website project take? ',
-        answer: 'Timelines vary based on scope. A standard business website typically takes 2–3 weeks, while larger or custom projects may take 4–6 weeks. We always provide a clear timeline before we begin.'
+        question: 'How long does a website project take?',
+        answer: 'Timelines vary based on scope. A standard business website typically takes 2 to 3 weeks, while larger or custom projects may take 4 to 6 weeks. We always provide a clear timeline before we begin.'
     },
     {
         id: '3',
         question: 'How much do your web development services cost?',
-        answer: 'Our packages start at $699 for small business websites and scale based on complexity. All pricing is transparent and scoped to your specific needs before any work begins. If you are not sure, what suits best for you, feel free to book a meeting with us'
+        answer: 'Our packages start at $699 for small business websites and scale based on complexity. All pricing is transparent and scoped to your specific needs before any work begins. If you are not sure what suits best for you, feel free to book a meeting with us.'
     },
     {
         id: '4',
-        question: 'Do you work with international clients? ',
-        answer: 'Yes! We are a global team working with clients across North America, Europe, Australia and beyond. All communication, delivery and support happen remotely — smoothly and professionally.'
+        question: 'Do you work with international clients?',
+        answer: 'Yes! We are a global team working with clients across North America, Europe, Australia and beyond. All communication, delivery and support happen remotely, smoothly and professionally.'
     },
     {
         id: '5',
-        question: 'Will my website be mobile-friendly and SEO-ready? ',
+        question: 'Will my website be mobile-friendly and SEO-ready?',
         answer: 'Absolutely. Every website we build is fully responsive across all devices and comes with on-page SEO best practices built in from day one.'
     },
 ];
@@ -78,7 +78,7 @@ const FAQsection = () => {
                                         // Added cursor-pointer and a slight hover transition
                                         className={`w-full flex items-center justify-between py-5 px-6 md:px-10 text-left cursor-pointer transition-colors duration-200 ${!isOpen ? 'hover:bg-gray-50' : ''}`}
                                     >
-                                        <span className='bricolage text-xl md:text-2xl font-medium text-[#212121] tracking-tight'>
+                                        <span className='bricolage capitalize text-xl md:text-2xl font-medium text-[#212121] tracking-tight'>
                                             {Q.question}
                                         </span>
 

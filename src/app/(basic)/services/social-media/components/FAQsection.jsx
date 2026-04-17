@@ -80,7 +80,7 @@ const FAQsection = () => {
                                         // Added cursor-pointer and a slight hover transition
                                         className={`w-full flex items-center justify-between py-5 px-6 md:px-10 text-left cursor-pointer transition-colors duration-200 ${!isOpen ? 'hover:bg-gray-50' : ''}`}
                                     >
-                                        <span className='bricolage text-xl md:text-2xl font-medium text-[#212121] tracking-tight'>
+                                        <span className='bricolage text-xl md:text-2xl font-medium text-[#212121] tracking-tight capitalize'>
                                             {Q.question}
                                         </span>
 

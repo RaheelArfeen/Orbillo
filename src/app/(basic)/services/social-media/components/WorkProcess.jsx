@@ -75,8 +75,8 @@ const WorkProcess = () => {
                         <p className='uppercase outfit text-sm font-bold text-[#07302C]/55 tracking-[2px]'>
                             work Process
                         </p>
-                        <h1 className='text-3xl md:text-5xl max-w-[450px] bricolage font-semibold text-[#212121] leading-[122%] tracking-tight'>
-                            How We Research,  <span className='playfair'>Design & Deliver</span> Your Brand
+                        <h1 className='text-3xl md:text-5xl max-w-[500px] bricolage font-semibold text-[#212121] leading-[122%] tracking-tight'>
+                            How We Research,  <span className='playfair'>Design & Deliver</span> Your Social Media Content
                         </h1>
                     </div>
 
