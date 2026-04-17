@@ -144,3 +144,14 @@ const FAQsection = () => {
 };
 
 export default FAQsection;
+
+
+
+
+
+
+
+
+
+
+
