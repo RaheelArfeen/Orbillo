@@ -6,8 +6,8 @@ import Image from 'next/image';
 
 const pricingCards = [
     {
-        id: 0,
-        title: 'Starter',
+        id: 1,
+        title: 'Essential',
         description: 'Perfect for individuals beginning For beginners exploring consistent posting.',
         price: '99',
         features: [
@@ -21,8 +21,8 @@ const pricingCards = [
         ]
     },
     {
-        id: 1,
-        title: 'Standard',
+        id: 2,
+        title: 'Professional',
         description: 'Perfect for individuals beginning For beginners exploring consistent posting.',
         price: '249',
         features: [
@@ -37,8 +37,8 @@ const pricingCards = [
         popular: true
     },
     {
-        id: 2,
-        title: 'Scale',
+        id: 3,
+        title: 'Enterprise',
         description: 'Perfect for individuals beginning For beginners exploring consistent posting.',
         price: '399',
         features: [

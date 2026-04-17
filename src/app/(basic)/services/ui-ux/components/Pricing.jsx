@@ -7,7 +7,7 @@ import Image from 'next/image';
 const pricingCards = [
     {
         id: 1,
-        title: 'Starter',
+        title: 'Essential',
         description: 'Perfect for early-stage startups and small businesses.',
         price: '499.00',
         features: [
@@ -24,7 +24,7 @@ const pricingCards = [
     },
     {
         id: 2,
-        title: 'Standard',
+        title: 'Professional',
         description: 'Perfect for growing businesses ready to scale their product.',
         price: '1499.00',
         features: [
@@ -42,7 +42,7 @@ const pricingCards = [
     },
     {
         id: 3,
-        title: 'Scale',
+        title: 'Enterprise',
         description: 'Perfect for brands or businesses that need end-to-end design & support.',
         price: '3999.00',
         features: [
