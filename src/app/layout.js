@@ -79,16 +79,20 @@ export default function RootLayout({ children }) {
     '@type': 'ProfessionalService',
     name: 'Orbillo',
     url: 'https://www.orbillo.com',
-    logo: 'https://www.orbillo.com/logo.png',
+    logo: 'https://www.orbillo.com/favicon.svg',
     description: 'Orbillo is a full-service design agency offering branding, UI UX design, web development and social media design for businesses worldwide.',
     foundingDate: '2025',
     areaServed: 'Worldwide',
-    serviceType: [
-      'Brand Identity Design',
-      'UI UX Design',
-      'Web Development',
-      'Social Media Design',
-    ],
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: 'Design Services',
+      itemListElement: [
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Brand Identity Design' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'UI UX Design' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Web Development' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Social Media Design' } },
+      ],
+    },
     sameAs: [
       'https://www.linkedin.com/company/teamorbillo',
       'https://www.behance.net/teamorbillo',
@@ -98,6 +102,7 @@ export default function RootLayout({ children }) {
       '@type': 'ContactPoint',
       contactType: 'customer service',
       availableLanguage: 'English',
+      email: 'teamorbillo@gmail.com',
       url: 'https://wa.me/8801711252085',
     },
   }
