@@ -34,8 +34,6 @@ export const metadata = {
         images: [
             {
                 url: "/orbillo-og.webp",
-                width: 1200,
-                height: 630,
                 alt: "Social Media Design Services | Orbillo",
             },
         ],
