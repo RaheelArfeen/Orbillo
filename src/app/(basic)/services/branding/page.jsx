@@ -13,7 +13,37 @@ import CTAsection from '../components/CTAsection';
 import WhatWeDo from './components/WhatWeDo';
 
 export const metadata = {
-    title: "Branding & Identity | Orbillo",
+    metadataBase: new URL("https://www.orbillo.com"),
+    title: "Logo and Brand Identity Design Services | Branding Agency - Orbillo",
+    description:
+        "Orbillo designs bold, memorable brand identities - logo design, brand strategy, guidelines and more. Built for startups and growing businesses worldwide.",
+    keywords: [
+        "brand identity design",
+        "logo design service",
+        "brand strategy",
+        "brand guidelines",
+        "rebranding",
+        "branding agency Bangladesh",
+    ],
+    openGraph: {
+        title: "Brand Identity Design | Orbillo",
+        description:
+            "From logo to full brand system - we craft identities that build trust, drive recognition and grow your business.",
+        url: "https://www.orbillo.com/services/branding/",
+        siteName: "Orbillo",
+        images: [
+            {
+                url: "/og/branding.jpg",
+                width: 1200,
+                height: 630,
+                alt: "Brand Identity Design | Orbillo",
+            },
+        ],
+        type: "website",
+    },
+    alternates: {
+        canonical: "https://www.orbillo.com/services/branding/",
+    },
 };
 
 const page = () => {

@@ -8,7 +8,7 @@ const pricingCards = [
     {
         id: 1,
         title: 'Essential',
-        description: 'Perfect for individuals beginning For beginners exploring consistent posting.',
+        description: 'Perfect for small businesses and personal brands starting their social media journey.',
         price: '99',
         features: [
             'Image Posts - 10',
@@ -23,7 +23,7 @@ const pricingCards = [
     {
         id: 2,
         title: 'Professional',
-        description: 'Perfect for individuals beginning For beginners exploring consistent posting.',
+        description: 'Perfect for growing businesses ready to build a consistent and engaging social media presence.',
         price: '249',
         features: [
             'Image Posts - 11',
@@ -39,7 +39,7 @@ const pricingCards = [
     {
         id: 3,
         title: 'Enterprise',
-        description: 'Perfect for individuals beginning For beginners exploring consistent posting.',
+        description: 'Perfect for brands and businesses that need a complete, high-volume social media content solution.',
         price: '399',
         features: [
             'Image Posts - 14',

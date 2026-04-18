@@ -64,8 +64,8 @@ const OurWorkMarque = () => {
                         <p className='uppercase outfit text-sm font-bold text-[#E3E3E3]/55 tracking-[2.7px]'>
                             Our Expertise
                         </p>
-                        <h2 className='text-3xl md:text-[50px] md:max-w-[600px] bricolage font-medium text-white leading-tight'>
-                            Built for Your <span className='playfair font-semibold'>Industry Designed</span> for Your Brand
+                        <h2 className='text-3xl md:text-[50px] md:max-w-[650px] bricolage font-medium text-white leading-tight'>
+                            Built for Your <span className='playfair font-semibold'>Industry Designed</span> for Your Audience
                         </h2>
                     </div>
                 </div>

@@ -14,35 +14,36 @@ import WhatWeDo from './components/WhatWeDo';
 
 export const metadata = {
     metadataBase: new URL("https://www.orbillo.com"),
-    title: "Social Media Design Services | Instagram, Facebook and LinkedIn Content - Orbillo",
+    title: "Web Design and Development Services | Fast, SEO-Ready Websites - Orbillo",
     description:
-        "Orbillo creates scroll-stopping social media designs for Facebook, Instagram, LinkedIn and X. On-brand content that builds your audience and grows your business.",
+        "Orbillo builds fast, scalable and SEO-ready websites for businesses worldwide. From landing pages to full custom web apps - built to perform and convert.",
     keywords: [
-        "social media design service",
-        "Instagram post design",
-        "Facebook graphic design",
-        "LinkedIn content design",
-        "social media branding kit",
-        "content templates",
+        "web development service",
+        "website development",
+        "Next.js development",
+        "WordPress developer",
+        "landing page design",
+        "e-commerce website",
+        "custom web app",
     ],
     openGraph: {
-        title: "Social Media Design Services | Orbillo",
+        title: "Web Development Services | Orbillo",
         description:
-            "Scroll-stopping visuals, on-brand content and social media design that builds your audience and grows your business.",
-        url: "https://www.orbillo.com/services/social-media/",
+            "Clean code, pixel-perfect design and web development that loads fast, ranks higher and converts visitors into customers.",
+        url: "https://www.orbillo.com/services/web-development/",
         siteName: "Orbillo",
         images: [
             {
-                url: "/og/social-media.jpg",
+                url: "/og/web-development.jpg",
                 width: 1200,
                 height: 630,
-                alt: "Social Media Design Services | Orbillo",
+                alt: "Web Development Services | Orbillo",
             },
         ],
         type: "website",
     },
     alternates: {
-        canonical: "https://www.orbillo.com/services/social-media/",
+        canonical: "https://www.orbillo.com/services/web-development/",
     },
 };
 

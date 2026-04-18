@@ -41,30 +41,36 @@ const bricolage = Bricolage_Grotesque({
 
 // ✅ Built-in Metadata API (App Router)
 export const metadata = {
-  title: "Orbillo - Your Digital Growth Partner",
+  metadataBase: new URL("https://www.orbillo.com"),
+  title: "Orbillo | UI UX Design, Branding and Web Development Agency",
   description:
-    "We help businesses grow with strategy-driven design, development, and digital experiences.",
-  metadataBase: new URL("https://orbillo.com"),
+    "Orbillo is a full-service design agency offering branding, UI/UX design, web development and social media design for businesses worldwide.",
+  keywords: [
+    "design agency",
+    "branding agency",
+    "UI UX design",
+    "web development",
+    "social media design",
+    "digital agency Bangladesh",
+  ],
   openGraph: {
-    title: "Orbillo - Your Digital Growth Partner",
+    title: "Orbillo | Your Reliable Design Partner",
     description:
-      "We help businesses grow with strategy-driven design, development, and digital experiences.",
-    url: "https://orbillo.com",
+      "Bold branding, stunning UI/UX, powerful web development and scroll-stopping social media design - all under one roof.",
+    url: "https://www.orbillo.com/",
     siteName: "Orbillo",
     images: [
       {
-        url: "https://orbillo.com/CoverImage.jpg",
-        alt: "Orbillo – Your Digital Growth Partner",
+        url: "/orbillo-og.avif",
+        width: 1200,
+        height: 630,
+        alt: "Orbillo | Your Reliable Design Partner",
       },
     ],
     type: "website",
   },
-  twitter: {
-    card: "summary_large_image",
-    title: "Orbillo - Your Digital Growth Partner",
-    description:
-      "We help businesses grow with strategy-driven design, development, and digital experiences.",
-    images: ["https://orbillo.com/CoverImage.jpg"],
+  alternates: {
+    canonical: "https://www.orbillo.com/",
   },
 };
 

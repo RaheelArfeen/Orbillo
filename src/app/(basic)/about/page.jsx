@@ -11,7 +11,36 @@ import Partnership from '@/app/components/Partnership';
 import FAQsection from '@/app/components/FAQsection';
 
 export const metadata = {
-    title: "About | Orbillo",
+    metadataBase: new URL("https://www.orbillo.com"),
+    title: "About Orbillo | Global Design Agency Team",
+    description:
+        "Meet the passionate team at Orbillo - a design agency built to help businesses grow through strategy, creativity and purposeful digital design.",
+    keywords: [
+        "about Orbillo",
+        "design agency team",
+        "digital growth partner",
+        "creative agency Bangladesh",
+        "global design agency",
+    ],
+    openGraph: {
+        title: "About Orbillo | Meet the Team",
+        description:
+            "Four co-founders. One mission. We help brands grow through design that works.",
+        url: "https://www.orbillo.com/about/",
+        siteName: "Orbillo",
+        images: [
+            {
+                url: "/orbillo-og.avif",
+                width: 1200,
+                height: 630,
+                alt: "Orbillo | Your Reliable Design Partner",
+            },
+        ],
+        type: "website",
+    },
+    alternates: {
+        canonical: "https://www.orbillo.com/about/",
+    },
 };
 
 const Page = () => {
