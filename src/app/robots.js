@@ -4,7 +4,15 @@ export default function robots() {
             {
                 userAgent: '*',
                 allow: '/',
-                disallow: ['/api/', '/_next/', '/admin/'],
+                disallow: [
+                    '/api/',
+                    '/_next/',
+                    '/admin/',
+                    '/wp-admin/',
+                    '/wp-content/',
+                    '/wp-includes/',
+                    '/*?*',
+                ],
             },
         ],
         sitemap: 'https://www.orbillo.com/sitemap.xml',
