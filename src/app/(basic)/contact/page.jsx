@@ -24,7 +24,7 @@ export const metadata = {
         siteName: "Orbillo",
         images: [
             {
-                url: "/orbillo-og.avif",
+                url: "/orbillo-og.webp",
                 width: 1200,
                 height: 630,
                 alt: "Orbillo | Your Reliable Design Partner",

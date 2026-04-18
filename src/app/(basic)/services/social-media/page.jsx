@@ -33,7 +33,7 @@ export const metadata = {
         siteName: "Orbillo",
         images: [
             {
-                url: "/og/social-media.jpg",
+                url: "/orbillo-og.webp",
                 width: 1200,
                 height: 630,
                 alt: "Social Media Design Services | Orbillo",

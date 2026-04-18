@@ -34,7 +34,7 @@ export const metadata = {
         siteName: "Orbillo",
         images: [
             {
-                url: "/og/ui-ux.jpg",
+                url: "/orbillo-og.webp",
                 width: 1200,
                 height: 630,
                 alt: "UI/UX Design Services | Orbillo",
