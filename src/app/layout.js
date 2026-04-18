@@ -73,6 +73,35 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+
+  const organizationSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ProfessionalService',
+    name: 'Orbillo',
+    url: 'https://www.orbillo.com',
+    logo: 'https://www.orbillo.com/logo.png',
+    description: 'Orbillo is a full-service design agency offering branding, UI UX design, web development and social media design for businesses worldwide.',
+    foundingDate: '2025',
+    areaServed: 'Worldwide',
+    serviceType: [
+      'Brand Identity Design',
+      'UI UX Design',
+      'Web Development',
+      'Social Media Design',
+    ],
+    sameAs: [
+      'https://www.linkedin.com/company/teamorbillo',
+      'https://www.behance.net/teamorbillo',
+      'https://www.facebook.com/TeamOrbillo',
+    ],
+    contactPoint: {
+      '@type': 'ContactPoint',
+      contactType: 'customer service',
+      availableLanguage: 'English',
+      url: 'https://wa.me/8801711252085',
+    },
+  }
+
   return (
     <html lang="en">
       <head>
@@ -112,6 +141,11 @@ export default function RootLayout({ children }) {
         <Script
           src="https://assets.calendly.com/assets/external/widget.js"
           strategy="lazyOnload"
+        />
+
+        <Script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
         />
 
         <SmoothScroll />
