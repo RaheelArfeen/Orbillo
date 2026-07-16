@@ -4,12 +4,11 @@ import ProductDesign from '../../Icons/ProductDesign.svg'
 import MobileUX from '../../Icons/MobileUX.svg'
 import Redesign from '../../Icons/Redesign.svg'
 import Prototype from '../../Icons/Prototype.svg'
-import Image1 from '@/assets/marquee/1.jpg'
-import Image2 from '@/assets/marquee/2.avif'
-import Image3 from '@/assets/marquee/3.jpg'
-import Image4 from '@/assets/marquee/4.avif'
-import Image5 from '@/assets/marquee/5.jpg'
-import Image6 from '@/assets/marquee/6.jpg'
+import Image1 from '../MarqueImages/1.avif'
+import Image2 from '../MarqueImages/2.avif'
+import Image3 from '../MarqueImages/3.avif'
+import Image4 from '../MarqueImages/4.avif'
+import Image5 from '../MarqueImages/5.avif'
 import Marquee from 'react-fast-marquee';
 import Rankmet from '@/assets/Icons/Clients/Rankmet.svg'
 import Affinity from '@/assets/Icons/Clients/Affinity.svg'
@@ -82,9 +81,6 @@ const WhatWeDo = () => {
             image: Image5
         },
         {
-            image: Image6
-        },
-        {
             image: Image1
         },
         {
@@ -98,9 +94,6 @@ const WhatWeDo = () => {
         },
         {
             image: Image5
-        },
-        {
-            image: Image6
         },
     ]
 

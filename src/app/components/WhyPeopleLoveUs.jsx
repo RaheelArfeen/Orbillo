@@ -2,12 +2,12 @@
 
 import React from 'react';
 import Marquee from "react-fast-marquee";
-import Image1 from '@/assets/marquee/1.jpg'
+import Image1 from '@/assets/marquee/1.avif'
 import Image2 from '@/assets/marquee/2.avif'
-import Image3 from '@/assets/marquee/3.jpg'
+import Image3 from '@/assets/marquee/3.avif'
 import Image4 from '@/assets/marquee/4.avif'
-import Image5 from '@/assets/marquee/5.jpg'
-import Image6 from '@/assets/marquee/6.jpg'
+import Image5 from '@/assets/marquee/5.avif'
+import Image6 from '@/assets/marquee/6.avif'
 import TableMeeting from '@/assets/TableMeeting.png'
 import Image from 'next/image';
 
