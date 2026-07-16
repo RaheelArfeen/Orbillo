@@ -1,11 +1,11 @@
 import Image from 'next/image';
 import OurWorkBg from '../../Image/OurWork.avif';
-import work1 from '../../Image/OurWorkImages/1.avif'
-import work2 from '../../Image/OurWorkImages/2.avif'
-import work3 from '../../Image/OurWorkImages/3.avif'
-import work4 from '../../Image/OurWorkImages/4.avif'
-import work5 from '../../Image/OurWorkImages/5.avif'
-import work6 from '../../Image/OurWorkImages/6.avif'
+import work1 from '../FeaturedWorkImages/1.avif'
+import work2 from '../FeaturedWorkImages/2.avif'
+import work3 from '../FeaturedWorkImages/3.avif'
+import work4 from '../FeaturedWorkImages/4.avif'
+import work5 from '../FeaturedWorkImages/5.avif'
+import work6 from '../FeaturedWorkImages/6.avif'
 import Marquee from 'react-fast-marquee';
 
 const OurWork = () => {
@@ -25,7 +25,7 @@ const OurWork = () => {
                         Featured Works
                     </p>
                     <h3 className='text-3xl md:text-[50px] font-medium max-w-[700px] bricolage text-white leading-tight tracking-tight'>
-                        <p>Website That <span className='playfair'>Speak Louder</span> Than Words</p>
+                        <p>Brands That <span className='playfair'>Speak Louder</span> Than Words</p>
                     </h3>
                 </div>
 
@@ -49,7 +49,7 @@ const OurWork = () => {
                 <Marquee autoFill={true} pauseOnHover={false} speed={80} className="overflow-hidden">
                     <div className="flex items-center">
                         <span className="text-white text-3xl md:text-[46px] font-medium mx-6 md:mx-10 tracking-tight bricolage">
-                            Web Development
+                            Branding & Identity
                         </span>
                         <span className="text-white text-5xl font-black">
                             <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
