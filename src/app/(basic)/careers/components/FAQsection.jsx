@@ -2,34 +2,32 @@
 
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import FAQIcon from '../../assets/FAQIcon.webp'
-import Image from 'next/image';
 
 const questions = [
     {
         id: '1',
-        question: 'What services does Orbillo offer?',
-        answer: 'Orbillo is a full-service design agency offering Brand Identity Design, UI/UX Design, Web Development and Social Media Design. Whether you’re a startup building from scratch or an established business ready to level up, we handle every dimension of your digital presence.'
+        question: 'What roles are you currently hiring for?',
+        answer: 'We regularly open roles across design, development and marketing. All currently open positions are listed in the Open Positions section above — if you don’t see a match, you can still join our talent list.'
     },
     {
         id: '2',
-        question: 'How does the project process work?',
-        answer: 'Every project starts with a discovery call where we learn about your business, goals and timeline. We work in clear phases - no black boxes, no surprises. You’ll always know where your project stands.'
+        question: 'Do you offer remote or hybrid work?',
+        answer: 'Yes. Most of our roles are remote-first with a flexible hybrid setup, designed to help you do your best work without unnecessary commuting.'
     },
     {
         id: '3',
-        question: 'How much do your services cost?',
-        answer: 'Pricing depends on the service and scope. You can explore our service pages for detailed package breakdowns. Or book a free discovery call and we’ll put together a custom quote for your specific needs.'
+        question: 'What does the application process look like?',
+        answer: 'Apply through the role you’re interested in and our team will review your submission. If it’s a good fit, we’ll reach out to schedule a short conversation, followed by a role-specific task or portfolio review.'
     },
     {
         id: '4',
-        question: 'Do you work with international clients?',
-        answer: 'Yes, absolutely. We work with clients across the world including the US, Europe, Australia and Southeast Asia. Our team is fully remote and experienced in asynchronous collaboration.'
+        question: 'What experience level do I need to apply?',
+        answer: 'It depends on the role — each position lists its expected experience level. We value strong fundamentals, a good portfolio and a willingness to learn over years of experience alone.'
     },
     {
         id: '5',
-        question: 'How does Orbillo stand out from other Agencies?',
-        answer: 'We combine strategic thinking with strong visual execution which means we don’t just make things look good, we make sure they work. We structure every project around your business goals, not just design trends'
+        question: 'What is it like working at Orbillo?',
+        answer: 'We keep things simple, collaborative and growth-focused. You’ll work on real projects, get real support for your development, and enjoy a culture built around meaningful work — not busywork.'
     },
 ];
 
@@ -54,9 +52,6 @@ const FAQsection = () => {
                     <h1 className="text-[36px] md:text-[50px] font-semibold text-[#212121] bricolage max-w-[500px] leading-[1.1] mb-6 tracking-tight">
                         Questions? We’re Here <span className="playfair italic text-4xl md:text-5xl">to Help</span>
                     </h1>
-                    {/* <div className='md:mt-20'>
-                        <Image className='max-w-[180px] md:max-w-[220px]' src={FAQIcon} alt="FAQ Illustration" />
-                    </div> */}
                 </div>
 
                 {/* Right Side */}

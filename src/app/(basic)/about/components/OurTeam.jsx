@@ -6,7 +6,6 @@ import ArafatHossain from '../TeamMembers/ArafatHossain.avif'
 import Image from 'next/image';
 import RahatulIslam from '../TeamMembers/RahatulIslam.avif'
 import MohiulIslam from '../TeamMembers/MohiulIslam.avif'
-import RakibulIslam from '../TeamMembers/RakibulIslam.avif'
 
 const Members = [
     {
@@ -42,17 +41,6 @@ const Members = [
             { icon: <FaXTwitter />, link: '#' },
         ]
     },
-    {
-        name: 'Rakibul Islam',
-        role: 'Product Designer',
-        imageSrc: RakibulIslam,
-        spaceTop: true,
-        socials: [
-            { icon: <FaFacebookF />, link: '#' },
-            { icon: <FaLinkedinIn />, link: '#' },
-            { icon: <FaXTwitter />, link: '#' },
-        ]
-    },
 ];
 
 const OurTeam2 = () => {
@@ -67,9 +55,8 @@ const OurTeam2 = () => {
                         </span>
                         <span className="text-white text-3xl md:text-4xl lg:text-5xl font-black">
                             <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M6.0749 12.1C4.94157 12.1 3.91657 11.8334 2.9999 11.3C2.08324 10.75 1.3499 10.025 0.799903 9.12502C0.266569 8.20836 -9.74834e-05 7.18336 -9.74834e-05 6.05002C-9.74834e-05 4.91669 0.266569 3.90002 0.799903 3.00002C1.3499 2.08336 2.08324 1.35836 2.9999 0.825023C3.91657 0.275024 4.94157 2.3663e-05 6.0749 2.3663e-05C7.19157 2.3663e-05 8.20824 0.275024 9.1249 0.825023C10.0416 1.35836 10.7666 2.08336 11.2999 3.00002C11.8332 3.90002 12.0999 4.91669 12.0999 6.05002C12.0999 7.18336 11.8332 8.20836 11.2999 9.12502C10.7666 10.025 10.0416 10.75 9.1249 11.3C8.20824 11.8334 7.19157 12.1 6.0749 12.1Z" fill="white"/>
-</svg>
-
+                                <path d="M6.0749 12.1C4.94157 12.1 3.91657 11.8334 2.9999 11.3C2.08324 10.75 1.3499 10.025 0.799903 9.12502C0.266569 8.20836 -9.74834e-05 7.18336 -9.74834e-05 6.05002C-9.74834e-05 4.91669 0.266569 3.90002 0.799903 3.00002C1.3499 2.08336 2.08324 1.35836 2.9999 0.825023C3.91657 0.275024 4.94157 2.3663e-05 6.0749 2.3663e-05C7.19157 2.3663e-05 8.20824 0.275024 9.1249 0.825023C10.0416 1.35836 10.7666 2.08336 11.2999 3.00002C11.8332 3.90002 12.0999 4.91669 12.0999 6.05002C12.0999 7.18336 11.8332 8.20836 11.2999 9.12502C10.7666 10.025 10.0416 10.75 9.1249 11.3C8.20824 11.8334 7.19157 12.1 6.0749 12.1Z" fill="white" />
+                            </svg>
                         </span>
                     </div>
                 </Marquee>
@@ -97,7 +84,7 @@ const OurTeam2 = () => {
                     </div>
                 </div>
 
-                <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-4'>
+                <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12'>
                     {Members.map((member, index) => (
                         <div
                             key={index}

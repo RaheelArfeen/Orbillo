@@ -1,15 +1,51 @@
-'use client';
+import React from 'react';
+import Hero from './components/Hero';
+import WhatWeDo from './components/WhatWeDo';
+import OpenPosition from './components/OpenPosition';
+import OurTeam from './components/OurTeam';
+import FAQsection from './components/FAQsection';
 
-import { useEffect } from 'react';
+export const metadata = {
+    metadataBase: new URL("https://www.orbillo.com"),
+    title: "Careers at Orbillo | Join Our Design & Development Team",
+    description:
+        "Build your career with Orbillo. Explore open roles in design, development and marketing, and join a team helping brands grow across the US, UK and Asia.",
+    keywords: [
+        "Orbillo careers",
+        "design agency jobs",
+        "hiring designers",
+        "web developer jobs",
+        "join Orbillo"
+    ],
+    openGraph: {
+        title: "Careers at Orbillo | Grow With Us",
+        description:
+            "Explore open roles at Orbillo and join a diverse team of designers, developers and marketers.",
+        url: "https://www.orbillo.com/careers/",
+        siteName: "Orbillo",
+        images: [
+            {
+                url: "/orbillo-og.webp",
+                alt: "Orbillo | Your Reliable Design Partner",
+            },
+        ],
+        type: "website",
+    },
+    alternates: {
+        canonical: "https://www.orbillo.com/careers/",
+    },
+};
 
-const Page = () => {
-    useEffect(() => {
-        window.location.replace('https://docs.google.com/forms/d/e/1FAIpQLSe7mgXo7cVJGjyHBl6CxxqZvIuE_1hrBnawGdBmW1p-EPjfLQ/viewform');
-    }, []);
-
+const Contact = () => {
     return (
-        <div className="bg-white fixed inset-0 z-[9999] flex items-center justify-center"></div>
+        <div>
+            <Hero />
+            <WhatWeDo />
+            <OpenPosition />
+            <OurTeam />
+            <FAQsection />
+        </div>
     );
 };
 
-export default Page;
+export default Contact;

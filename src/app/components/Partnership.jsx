@@ -21,7 +21,7 @@ const Partnership = () => {
                 <p className='text-[#4B4B4B] text-xl otufit leading-normal max-w-[600px] text-center mt-3.5'>A collaborative, goal-driven approach to creating high-performing and beautifully designed digital experiences</p>
 
                 {/* cards section */}
-                <div className='mt-20 flex flex-col lg:flex-row w-full gap-6'>
+                <div className='mt-12 sm:mt-16 lg:mt-20 flex flex-col lg:flex-row w-full gap-6'>
                     <div className='flex flex-col gap-6'>
                         <div className='flex gap-6'>
                             <div className='flex flex-col lg:flex-row items-stretch gap-6'>
@@ -38,7 +38,7 @@ const Partnership = () => {
                                             alt=""
                                         />
 
-                                        <div className="absolute bottom-5 left-3 xl:left-5 flex gap-1.5">
+                                        <div className="absolute bottom-5 left-3 right-3 sm:right-auto xl:left-5 flex flex-wrap sm:flex-nowrap gap-1.5">
                                             <p className="text-sm xl:text-lg font-medium uppercase px-4 py-2.5 bg-white rounded-full text-[#212121]">
                                                 Branding
                                             </p>
@@ -82,7 +82,7 @@ const Partnership = () => {
                                             <div className="flex justify-end -mt-3 mr-4">
                                                 <Tag text="UX Strategy & Flow" />
                                             </div>
-                                            <div className="flex jus tify-start">
+                                            <div className="flex justify-start">
                                                 <Tag text="Visual Design & Prototype" />
                                             </div>
                                             <div className="flex justify-end">
@@ -114,7 +114,7 @@ const Partnership = () => {
 
                             <div className='z-10 flex flex-col md:flex-row justify-between relative'>
                                 <div className='px-8 py-8 md:py-16'>
-                                    <h1 className="text-[26px] md:text-[32px] font-medium text-[#212121] bricolage md:max-w-[200px] leading-[20px] md:leading-[35px] tracking-tight mb-3 md:mb-5">Design That Drives Impact</h1>
+                                    <h1 className="text-[26px] md:text-[32px] font-medium text-[#212121] bricolage md:max-w-[200px] leading-[32px] md:leading-[35px] tracking-tight mb-3 md:mb-5">Design That Drives Impact</h1>
                                     <p className='outfit tracking-tight text-base text-[#596948] md:max-w-[320px]'>We are a design agency focused on creating meaningful digital experiences.</p>
                                 </div>
 

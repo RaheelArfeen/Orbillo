@@ -7,6 +7,7 @@ export default function robots() {
                 disallow: [
                     '/api/',
                     '/_next/',
+                    '/addBlog',
                     '/admin/',
                     '/wp-admin/',
                     '/wp-content/',
