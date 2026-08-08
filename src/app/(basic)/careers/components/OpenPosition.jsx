@@ -158,7 +158,7 @@ const OpenPosition = () => {
                     <p className="outfit uppercase text-white/55 font-semibold text-lg tracking-[2.7px] mb-6">
                         Open Position
                     </p>
-                    <h2 className="bricolage font-semibold text-white text-3xl md:text-5xl leading-[1.15] tracking-tight max-w-[820px] mx-auto">
+                    <h2 className="bricolage font-semibold text-white text-3xl md:text-[50px] leading-[1.15] tracking-tight max-w-[820px] mx-auto">
                         We&apos;re a <span className="playfair">Diverse Group</span> of
                         Designers, Developers and Marketers.
                     </h2>

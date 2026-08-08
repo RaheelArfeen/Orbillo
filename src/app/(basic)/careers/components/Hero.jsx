@@ -20,7 +20,7 @@ const Hero = () => {
             </div>
 
             <section className='z-20 text-center py-30 pt-50 mb-20 px-4 flex flex-col items-center justify-center gap-4'>
-                <p className='outfit uppercase text-[#EAEAEA] font-bold text-sm md:text-base tracking-[2.7px]'>Careers</p>
+                <p className='outfit uppercase text-[#B4BFBE] font-semibold text-lg tracking-[2.7px]'>Careers</p>
                 <h1 className="text-[32px] sm:text-[40px] md:text-[50px] font-semibold text-[#FFFFFF] bricolage leading-[1.2] md:leading-[60px] tracking-tight">
                     Build Your Career With Us
                 </h1>

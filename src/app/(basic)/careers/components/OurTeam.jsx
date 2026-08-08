@@ -17,10 +17,10 @@ const OurTeam = () => {
 
                 {/* Heading */}
                 <div className="flex flex-col">
-                    <p className="outfit uppercase text-[#07302C]/55 font-bold text-sm tracking-[2.7px] mb-6 md:mb-8">
+                    <p className="outfit uppercase text-[#07302C]/55 font-semibold text-lg tracking-[2.7px] mb-6 md:mb-8">
                         Meet the Team
                     </p>
-                    <h2 className="bricolage font-semibold text-[#17241F] text-3xl md:text-5xl leading-[1.15] tracking-tight max-w-[900px]">
+                    <h2 className="bricolage font-semibold text-[#212121] text-3xl md:text-[50px] leading-[1.15] tracking-tight max-w-[900px]">
                         We&apos;re a diverse group of problem-solvers —{' '}
                         <span className="playfair italic font-medium">
                             designers, developers, and marketers — who share one

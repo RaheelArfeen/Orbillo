@@ -161,7 +161,6 @@ const Header = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <Link onClick={() => setOpen(false)} href="/blogs" className="text-3xl text-[#17241F] hover:opacity-50 transition-opacity font-medium px-4">Blog</Link>
                                 <Link onClick={() => setOpen(false)} href="/careers" className="text-3xl text-[#17241F] hover:opacity-50 transition-opacity font-medium px-4">Careers</Link>
                                 <Link onClick={() => setOpen(false)} href="/contact" className="text-3xl text-[#16332F] hover:opacity-50 transition-opacity font-medium px-4">Contact Us</Link>
                             </div>

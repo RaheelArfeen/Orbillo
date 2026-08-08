@@ -48,8 +48,8 @@ const FAQsection = () => {
 
                 {/* Left Side */}
                 <div className='lg:sticky lg:top-10 shrink-0'>
-                    <h3 className='uppercase outfit text-sm font-bold text-[#696969] tracking-[2.7px] mb-8'>FAQ</h3>
-                    <h1 className="text-[36px] md:text-[50px] font-semibold text-[#212121] bricolage max-w-[500px] leading-[1.1] mb-6 tracking-tight">
+                    <h3 className='uppercase outfit text-lg font-semibold text-[#696969] tracking-[2.7px] mb-8'>FAQ</h3>
+                    <h1 className="text-3xl md:text-[50px] font-semibold text-[#212121] bricolage max-w-[500px] leading-[1.1] mb-6 tracking-tight">
                         Questions? We’re Here <span className="playfair italic text-4xl md:text-5xl">to Help</span>
                     </h1>
                 </div>

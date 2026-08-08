@@ -86,12 +86,12 @@ const WhatWeDo = () => {
                 {/* ================= PRINCIPLES ================= */}
                 <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6 mb-14 md:mb-20">
                     <div className="max-w-[640px]">
-                        <p className="outfit uppercase text-[#07302C]/55 font-bold text-sm tracking-[2.7px] mb-6">
+                        <p className="outfit uppercase text-[#07302C]/55 font-semibold text-lg tracking-[2.7px] mb-6">
                             What We Do
                         </p>
-                        <h2 className="bricolage font-bold text-[#17241F] text-4xl md:text-6xl leading-[1.05] tracking-tight">
-                            Principles <span className="playfair italic font-medium">That Power</span>{' '}
-                            <span className="playfair italic font-medium">Everything</span> We Build
+                        <h2 className="bricolage font-semibold text-[#212121] text-3xl md:text-[50px] leading-[1.05] tracking-tight">
+                            Principles <span className="playfair">That Power</span>{' '}
+                            <span className="playfair">Everything</span> We Build
                         </h2>
                     </div>
 
@@ -137,10 +137,10 @@ const WhatWeDo = () => {
 
                 {/* ================= WORK CULTURE ================= */}
                 <div className="text-center mt-28 md:mt-30 mb-14 md:mb-20">
-                    <p className="outfit uppercase text-[#696969] font-semibold text-base tracking-[2.7px] mb-4">
+                    <p className="outfit uppercase text-[#696969] font-semibold text-lg tracking-[2.7px] mb-4">
                         Work Culture
                     </p>
-                    <h2 className="bricolage font-semibold text-[#212121] text-4xl md:text-[50px] tracking-tight">
+                    <h2 className="bricolage font-semibold text-[#212121] text-3xl md:text-[50px] tracking-tight">
                         Life <span className="playfair">at</span> Orbillo
                     </h2>
                 </div>

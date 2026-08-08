@@ -129,7 +129,6 @@ const Footer = () => {
                                 <div className="flex flex-col gap-4 text-white/85 outfit text-lg">
                                     <Link href={'/'} className="cursor-pointer hover:text-white hover:scale-105 transition-all duration-300">Home</Link>
                                     <Link href={'/about'} className="cursor-pointer hover:text-white hover:scale-105 transition-all duration-300">About Us</Link>
-                                    <Link href={'/blogs'} className="cursor-pointer hover:text-white hover:scale-105 transition-all duration-300">Blog</Link>
                                     <Link href={'/careers'} className="cursor-pointer group transition-all duration-300 flex items-center gap-2"><span className="group-hover:text-white group-hover:scale-105 transition-all duration-300">Career</span></Link>
                                     <Link href={'/contact'} className="cursor-pointer hover:text-white hover:scale-105 transition-all duration-300">Contact Us</Link>
                                 </div>
