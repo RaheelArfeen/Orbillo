@@ -6,6 +6,7 @@ import ArafatHossain from '../TeamMembers/ArafatHossain.avif'
 import Image from 'next/image';
 import RahatulIslam from '../TeamMembers/RahatulIslam.avif'
 import MohiulIslam from '../TeamMembers/MohiulIslam.avif'
+import RakibulIslam from '../TeamMembers/RakibulIslam.avif'
 
 const Members = [
     {
@@ -35,6 +36,17 @@ const Members = [
         role: 'Product Designer',
         imageSrc: MohiulIslam,
         spaceTop: false,
+        socials: [
+            { icon: <FaFacebookF />, link: '#' },
+            { icon: <FaLinkedinIn />, link: '#' },
+            { icon: <FaXTwitter />, link: '#' },
+        ]
+    },
+    {
+        name: 'Rakibul Islam',
+        role: 'Product Designer',
+        imageSrc: RakibulIslam,
+        spaceTop: true,
         socials: [
             { icon: <FaFacebookF />, link: '#' },
             { icon: <FaLinkedinIn />, link: '#' },
@@ -84,7 +96,7 @@ const OurTeam2 = () => {
                     </div>
                 </div>
 
-                <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12'>
+                <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8'>
                     {Members.map((member, index) => (
                         <div
                             key={index}
